@@ -5,5 +5,5 @@
 * We use behavioural sciences to translate data to action by multiple stakeholders.
 * We provide business and data support to innovators who work on the future of sustainable urban living.
 
-##[ReliefRiders] (github.com/ReliefRIders/Index.html)
-##[CycleToWork heatmap] (github.com/CycleToWork/c2w_heatmap.html)
+[ReliefRiders](github.com/ReliefRIders/Index.html)
+[CycleToWork heatmap](github.com/CycleToWork/c2w_heatmap.html)
