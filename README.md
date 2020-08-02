@@ -8,7 +8,6 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Landing Page - Start Bootstrap Theme</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -80,41 +79,7 @@
     </div>
   </section>
 
-  <!-- Image Showcases -->
-  <section class="showcase">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters">
-
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Data Science</h2>
-          <p class="lead mb-0">Unlocking the intelligence of data is essential to making informed decisions. Our philosophy is to apply Occams razor to analytics and be truthful to what the data informs</p>
-	  	<div class="container">
-      			<a class="navbar-brand" href="CycleToWork/c2w_heatmap.html">Cycle To Work Companies heatmap</a>
-      			<a class="navbar-brand" href="ReliefRiders/reliefrider_sorties.html">Choropleth of relief rider sorties</a>
-    		</div>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Energy & Mobility</h2>
-          <p class="lead mb-0">THe MoU with Catapult UK allows us to create test beds for innovators in the energy transition space. We have links with multiple SMEs who provide services arount clean energy and clean air solutions. The Innovation for clean air is one of the first living labs piloted in the city with support from both Govt of UK and Govt of Karnataka.</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Behavioural Science</h2>
-          <p class="lead mb-0">The Cycle To Work leaderboard used gamification to make bicycle commutes count. Well designed leaderboards/lashboards serve as incentives to make behaviour change happen. Our association with BYCS, Netherlands has allowed us to take the leaderboard to the global stage.</p>
-	  	<div class="container">
-      			<a class="navbar-brand" href="https://cycleto.work/leaderboard">Cycle To Work leaderboard</a>
-    		</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+ 
   <!-- Testimonials -->
   <section class="testimonials text-center bg-light">
     <div class="container">
@@ -122,21 +87,18 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
             <h5>Sathya Sankaran <br></h5>(Bicycle Mayor)
             <p class="font-weight-light mb-0">Mobility & Technology <br><a class="navbar-brand" href = "mailto: sathya@urbanmorph.com">[Send email]</a> </p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
             <h5>Sonal Kulkarni</h5>
             <p class="font-weight-light mb-0">Urban & Transport Planning <br><a class="navbar-brand" href = "mailto: sonal@urbanmorph.com">[Send email]</a></p>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-            <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
             <h5>Subbaiah TS</h5>
             <p class="font-weight-light mb-0">Architect & Environment Management <br><a class="navbar-brand" href = "mailto: subbaiah@urbanmorph.com">[Send email]</a></p>
           </div>
@@ -182,37 +144,10 @@
           </ul>
           <p class="text-muted small mb-4 mb-lg-0">&copy; Urban Morph 2020. All Rights Reserved.</p>
         </div>
-        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
-          <ul class="list-inline mb-0">
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/company/urbanmorph/">
-                <i class="fab fa-linkedin fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a href="https://www.facebook.com/umorph">
-                <i class="fab fa-facebook fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item mr-3">
-              <a href="https://twitter.com/morphurbanspace/">
-                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.instagram.com/urbanmorph/">
-                <i class="fab fa-instagram fa-2x fa-fw"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
