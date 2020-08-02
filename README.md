@@ -3,5 +3,5 @@
 * Data Science
 * Behavioural Science
 * Energy & Mobility
-### [Click here to find out about it all](https://urbanmorph.git.io/urbanmorph/)
+### [Find out about it all](https://urbanmorph.github.io/urbanmorph/)
 
