@@ -34,7 +34,7 @@ header.masthead .overlay {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0;
 }
 
 header.masthead h1 {
@@ -93,7 +93,7 @@ header.masthead h1 {
 }
 
 .testimonials .testimonial-item {
-  max-width: 20rem;
+  max-width: 24rem;
 }
 
 .testimonials .testimonial-item img {
