@@ -205,22 +205,3 @@ footer.footer {
   left: 0;
   opacity: 0.1;
 }
-
-.imgabout {
-  position: relative;
-  background-color: #343a40;
-  background: url("../img/SDG.png") no-repeat center center;
-  background-size: contain;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.imgabout .abouttext {
-  position: absolute;
-  background-color: #212529;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
