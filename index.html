@@ -326,7 +326,7 @@
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a class="text-decoration-none" data-toggle="modal" href="#myModal">Locate us</a>
+              <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#myModal">Locate us</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
@@ -367,27 +367,20 @@
     </div>
   </footer>
 
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <!-- Map Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: fit-content;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="myModalLabel">Location</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.9814994013677!2d77.57351221496056!3d13.036849516970182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17395709e185%3A0xec5de6751c0d6277!2sUrban%20Morph!5e0!3m2!1sen!2sin!4v1669205056556!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
         </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.9814994013677!2d77.57351221496056!3d13.036849516970182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17395709e185%3A0xec5de6751c0d6277!2sUrban%20Morph!5e0!3m2!1sen!2sin!4v1669205056556!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        </div>
-        
+      </div>
       </div>
     </div>
   </div>
