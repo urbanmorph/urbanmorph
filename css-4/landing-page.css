@@ -120,20 +120,6 @@ header.masthead h1 {
   opacity: 0.3;
 }
 
-/*--------------------------------------------------------------
-# Sections General - added by Sathya
---------------------------------------------------------------*/
-
-.masthead-title {
-  position: relative;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(255, 255, 255, 0.75);
-  color: black;
-  padding: 4px 8px;
-  margin: 0;
-}
-
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -183,6 +169,20 @@ section {
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+/*--------------------------------------------------------------
+# Custom styling - added by Sathya
+--------------------------------------------------------------*/
+
+.masthead-title {
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  color: black;
+  padding: 4px 8px;
+  margin: 0;
 }
 
 .logo-img {
