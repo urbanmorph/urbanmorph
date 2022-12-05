@@ -164,26 +164,6 @@ footer.footer {
     object-fit: cover;
 }
 
-.imgukind {
-  position: relative;
-  background-color: #343a40;
-  background: url("../img/partners/uk-india.jpeg") no-repeat center center;
-  background-size: cover;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.imgukind .ukindtext {
-  position: absolute;
-  background-color: #212529;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.1;
-}
-
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 blockquote{
   font-size: 1.4em;
@@ -221,20 +201,8 @@ blockquote span{
   margin-top:1em;
 }
 
-.padded-multiline { 
-  line-height: 1.8; 
-  padding: 120px 50px 50px 50px;
-  width: 100%;
-  margin: 20px auto;
-}
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
-.padded-multiline span { 
-  background-color: black;
-  color: #fff; 
-  display: inline;
-  padding: 0.5rem;
-  
-  /* Needs prefixing */
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+.typefont {
+  font-family: 'Special Elite', cursive;
 }
