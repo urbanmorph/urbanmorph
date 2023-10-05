@@ -206,3 +206,8 @@ blockquote span{
 .typefont {
   font-family: 'Special Elite', cursive;
 }
+
+li.borderless {
+  border-bottom: none;
+  border-top: none;
+}
