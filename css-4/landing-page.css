@@ -87,7 +87,7 @@ header.masthead h1 {
 }
 
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -101,7 +101,7 @@ section {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom:20px;
   position: relative;
   color: #45505b;
 }
