@@ -142,9 +142,10 @@ footer.footer {
 --------------------------------------------------------------*/
 
 .masthead-title {
-  position: relative;
-  bottom: 10px;
-  left: 10px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.75);
   color: black;
   padding: 4px 8px;
