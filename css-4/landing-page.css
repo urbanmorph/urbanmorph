@@ -145,15 +145,17 @@ footer.footer {
     max-width: 900px;
     width: 100%;
     margin: 40px auto;
+    position: relative;
 }
 
 #logoCarousel .carousel-item {
     padding: 60px 40px;
     min-height: 400px;
+    transition: transform 0.6s ease-in-out;
 }
 
 .carousel-content {
-    background: white;
+    background: #FBC831;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     padding: 60px 40px;
@@ -163,6 +165,11 @@ footer.footer {
     justify-content: center;
     text-align: center;
     height: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.carousel-content:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .logo-container {
@@ -175,6 +182,11 @@ footer.footer {
     background: #f8f9fa;
     border-radius: 50%;
     padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
 }
 
 .logo-container img {
@@ -188,6 +200,7 @@ footer.footer {
     font-weight: 700;
     color: #333;
     margin-bottom: 20px;
+    transition: color 0.3s ease;
 }
 
 #logoCarousel .carousel-item p {
@@ -195,28 +208,118 @@ footer.footer {
     color: #666;
     line-height: 1.6;
     max-width: 600px;
+    margin: 0 auto;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 30px;
+/* Control buttons */
+#logoCarousel .carousel-control-prev,
+#logoCarousel .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
-.carousel-indicators button {
-    background-color: #667eea;
+#logoCarousel .carousel-control-prev:hover,
+#logoCarousel .carousel-control-next:hover {
+    opacity: 1;
 }
 
 #logoCarousel .carousel-control-prev-icon,
 #logoCarousel .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #0D7576;
     border-radius: 50%;
     padding: 30px;
+    transition: background-color 0.3s ease;
+}
+
+#logoCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
+#logoCarousel .carousel-control-next:hover .carousel-control-next-icon {
+    background-color: rgba(13, 117, 118, 0.8);
+}
+
+/* Indicators */
+#logoCarousel .carousel-indicators {
+    margin-bottom: 20px;
 }
 
 #logoCarousel .carousel-indicators button {
-    background-color: #667eea;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #0D7576;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: none;
+    margin: 0 6px;
+}
+
+#logoCarousel .carousel-indicators button.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-container {
+        margin: 20px auto;
+    }
+    
+    #logoCarousel .carousel-item {
+        padding: 30px 20px;
+        min-height: 350px;
+    }
+    
+    .carousel-content {
+        padding: 40px 30px;
+        border-radius: 15px;
+    }
+    
+    .logo-container {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    
+    #logoCarousel .carousel-item h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    #logoCarousel .carousel-item p {
+        font-size: 1rem;
+    }
+    
+    #logoCarousel .carousel-control-prev-icon,
+    #logoCarousel .carousel-control-next-icon {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #logoCarousel .carousel-item {
+        padding: 20px 15px;
+        min-height: 300px;
+    }
+    
+    .carousel-content {
+        padding: 30px 20px;
+    }
+    
+    .logo-container {
+        width: 80px;
+        height: 80px;
+    }
+    
+    #logoCarousel .carousel-item h2 {
+        font-size: 1.25rem;
+    }
+    
+    #logoCarousel .carousel-item p {
+        font-size: 0.95rem;
+    }
 }
 /*--------------------------------------------------------------
 # Custom styling - added by Sathya
@@ -244,6 +347,15 @@ footer.footer {
     width: 100%;
     height: 15vw;
     object-fit: cover;
+}
+
+.img-fluid.rounded-circle {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-fluid.rounded-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
