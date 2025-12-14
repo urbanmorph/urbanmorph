@@ -400,11 +400,11 @@
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="/cdn-cgi/l/email-protection#ddfdbeb2b3a9bcbea99da8afbfbcb3b0b2afadb5f3beb2b0" class="text-decoration-none">Enquiries</a>
+              <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#enquiriesModal">Enquiries</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="/cdn-cgi/l/email-protection#74541715061111060734010616151a191b06041c5a171b19" class="text-decoration-none">Careers</a>
+              <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#careersModal">Careers</a>
             </li>
           </ul>
           <p class="text-muted small mb-4 mb-lg-0">&copy; Urban Morph 2020. All Rights Reserved.</p>
@@ -437,66 +437,156 @@
     </div>
   </footer>
 
-<!-- Location modal -->
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+<!-- Enquiries Modal -->
+<div class="modal fade" id="enquiriesModal" tabindex="-1" aria-labelledby="enquiriesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header" style="background: linear-gradient(135deg, #23A2A5 0%, #0D7576 100%); color: white;">
-        <h5 class="modal-title" id="myModalLabel">
-          <i class="fas fa-map-marker-alt me-2"></i>Our Location
-        </h5>
+      <div class="modal-header" style="background: linear-gradient(135deg, #23A2A5 0%, #0D7576 100%); color: white; padding: 12px 16px;">
+        <h6 class="modal-title mb-0" id="enquiriesModalLabel">
+          <i class="fas fa-envelope me-2"></i>Send Us an Enquiry
+        </h6>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <!-- Address Section -->
-        <div style="padding: 20px; background: #f8f9fa; border-radius: 5px; margin-bottom: 20px;">
-          <h6 style="color: #0D7576; font-weight: bold; margin-bottom: 10px;">Urban Morph Consultants Pvt Ltd</h6>
-          <p style="margin: 5px 0; color: #333;"><strong>Address:</strong></p>
-          <p style="margin: 5px 0; color: #333;">41, Vishnu Nivas</p>
-          <p style="margin: 5px 0; color: #333;">NGEF Colony, Sanjaynagar</p>
-          <p style="margin: 5px 0; color: #333;">Bengaluru - 560094</p>
-          <p style="margin: 5px 0; color: #333;">Karnataka, India</p>
-          
-          <div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid #23A2A5;">
-            <p style="margin: 5px 0;"><i class="fas fa-envelope" style="color: #23A2A5;"></i> Email: contact@urbanmorph.com</p>
-            <p style="margin: 5px 0;"><i class="fas fa-phone" style="color: #23A2A5;"></i> Phone: Available on request</p>
+      <div class="modal-body" style="padding: 20px;">
+        <form id="enquiriesForm">
+          <div class="mb-3">
+            <label for="enquiryName" class="form-label">Your Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="enquiryName" required placeholder="Enter your name">
           </div>
-        </div>
-        
-        <!-- Google Map -->
-        <div style="border-radius: 5px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3256!2d77.574569!3d13.036464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17c8b27fffff%3A0x1234567890abcdef!2s41%2C%20Vishnu%20Nivas%2C%20NGEF%20Colony%2C%20Sanjaynagar%2C%20Bengaluru%2C%20Karnataka%20560094!5e0!3m2!1sen!2sin!4v1702345678901!5m2!1sen!2sin" 
-            width="100%" 
-            height="400" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-        
-        <!-- Directions Link -->
-        <div class="text-center mt-3">
-          <a href="https://www.google.com/maps/dir/?api=1&destination=13.036464,77.576759" 
-             target="_blank" 
-             class="btn btn-success">
-            <i class="fas fa-directions me-2"></i>Get Directions in Google Maps
-          </a>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+          <div class="mb-3">
+            <label for="enquiryEmail" class="form-label">Your Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="enquiryEmail" required placeholder="your.email@example.com">
+          </div>
+          
+          <div class="mb-3">
+            <label for="enquirySubject" class="form-label">Subject <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="enquirySubject" required placeholder="Brief subject of your enquiry">
+          </div>
+          
+          <div class="mb-3">
+            <label for="enquiryMessage" class="form-label">Message <span class="text-danger">*</span></label>
+            <textarea class="form-control" id="enquiryMessage" rows="5" required placeholder="Describe your enquiry in detail..."></textarea>
+          </div>
+          
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success">
+              <i class="fas fa-paper-plane me-2"></i>Send Enquiry
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Careers Modal -->
+<div class="modal fade" id="careersModal" tabindex="-1" aria-labelledby="careersModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background: linear-gradient(135deg, #23A2A5 0%, #0D7576 100%); color: white; padding: 12px 16px;">
+        <h6 class="modal-title mb-0" id="careersModalLabel">
+          <i class="fas fa-briefcase me-2"></i>Join Our Team
+        </h6>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding: 20px;">
+        <form id="careersForm">
+          <div class="mb-3">
+            <label for="careerName" class="form-label">Your Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="careerName" required placeholder="Enter your name">
+          </div>
+          
+          <div class="mb-3">
+            <label for="careerEmail" class="form-label">Your Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="careerEmail" required placeholder="your.email@example.com">
+          </div>
+          
+          <div class="mb-3">
+            <label for="careerPhone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="careerPhone" placeholder="+91 XXXXXXXXXX">
+          </div>
+          
+          <div class="mb-3">
+            <label for="careerSkills" class="form-label">Brief Summary of Skills <span class="text-danger">*</span></label>
+            <textarea class="form-control" id="careerSkills" rows="4" required placeholder="Describe your key skills, experience, and expertise..."></textarea>
+          </div>
+          
+          <div class="alert alert-warning mb-3" role="alert">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            <strong>Important:</strong> Don't forget to attach your resume to the email before clicking send!
+          </div>
+          
+          <div class="mb-3">
+            <label for="careerLinkedIn" class="form-label">LinkedIn Profile</label>
+            <input type="url" class="form-control" id="careerLinkedIn" placeholder="https://linkedin.com/in/yourprofile">
+          </div>
+          
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success">
+              <i class="fas fa-paper-plane me-2"></i>Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Location modal -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header" style="background: linear-gradient(135deg, #23A2A5 0%, #0D7576 100%); color: white; padding: 12px 16px;">
+        <h6 class="modal-title mb-0" id="myModalLabel">
+          <i class="fas fa-map-marker-alt me-2"></i>Our Location
+        </h6>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding: 16px;">
+        <!-- Compact Address Section -->
+        <div style="margin-bottom: 12px;">
+          <h6 style="color: #0D7576; font-weight: bold; margin-bottom: 6px; font-size: 14px;">Urban Morph Consultants Pvt Ltd</h6>
+          <p style="margin: 0; color: #333; font-size: 13px; line-height: 1.4;">
+            41, Vishnu Nivas, NGEF Colony<br>
+            Sanjaynagar, Bengaluru - 560094<br>
+            Karnataka, India
+          </p>
+          <div style="margin-top: 8px; font-size: 12px;">
+            <p style="margin: 3px 0;"><i class="fas fa-envelope" style="color: #23A2A5; width: 16px;"></i> contact@urbanmorph.com</p>
+            <p style="margin: 3px 0;"><i class="fas fa-phone" style="color: #23A2A5; width: 16px;"></i> Available on request</p>
+          </div>
+        </div>
+        
+        <!-- OpenStreetMap -->
+        <div id="map" style="width: 100%; height: 250px; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
+        
+        <!-- Compact Directions Link -->
+        <div class="text-center mt-2">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=13.036863182101207,77.57569743033378" 
+             target="_blank" 
+             class="btn btn-success btn-sm">
+            <i class="fas fa-directions me-1"></i>Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Leaflet CSS for OpenStreetMap -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="anonymous"/>
+
+<!-- Leaflet JS for OpenStreetMap -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="anonymous"></script>
 
 <!-- Bootstrap Bundle with Popper (REQUIRED for modal to work) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
 <!-- Modal initialization script -->
 <script>
+let map = null; // Store map instance
+
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded, initializing modal...');
   
@@ -539,13 +629,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  // Initialize OpenStreetMap when modal is shown
+  modalElement.addEventListener('shown.bs.modal', function () {
+    console.log('✅ Modal is now visible, initializing map...');
+    
+    // Clear existing map if any
+    if (map !== null) {
+      map.remove();
+    }
+    
+    // Urban Morph location coordinates
+    const lat = 13.036863182101207;
+    const lon = 77.57569743033378;
+    
+    // Initialize the map
+    map = L.map('map').setView([lat, lon], 17);
+    
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 19
+    }).addTo(map);
+    
+    // Add a marker with popup
+    const marker = L.marker([lat, lon]).addTo(map);
+    marker.bindPopup('<b>Urban Morph Consultants Pvt Ltd</b><br>41, Vishnu Nivas<br>NGEF Colony, Sanjaynagar').openPopup();
+    
+    console.log('✅ Map initialized with marker at', lat, lon);
+  });
+  
   // Modal event listeners for debugging
   modalElement.addEventListener('show.bs.modal', function () {
     console.log('✅ Modal is showing');
-  });
-  
-  modalElement.addEventListener('shown.bs.modal', function () {
-    console.log('✅ Modal is now visible');
   });
   
   modalElement.addEventListener('hide.bs.modal', function () {
@@ -554,7 +669,76 @@ document.addEventListener('DOMContentLoaded', function() {
   
   modalElement.addEventListener('hidden.bs.modal', function () {
     console.log('Modal is now hidden');
+    // Clean up map when modal is closed to prevent issues
+    if (map !== null) {
+      map.remove();
+      map = null;
+    }
   });
+});
+
+// Handle Enquiries Form Submission
+document.getElementById('enquiriesForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('enquiryName').value;
+  const email = document.getElementById('enquiryEmail').value;
+  const subject = document.getElementById('enquirySubject').value;
+  const message = document.getElementById('enquiryMessage').value;
+  
+  // Compose email
+  const mailtoLink = `mailto:contact@urbanmorph.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    `Name: ${name}\n` +
+    `Email: ${email}\n` +
+    `Subject: ${subject}\n\n` +
+    `Message:\n${message}`
+  )}`;
+  
+  // Open default email client
+  window.location.href = mailtoLink;
+  
+  // Close modal after a short delay
+  setTimeout(function() {
+    const modal = bootstrap.Modal.getInstance(document.getElementById('enquiriesModal'));
+    modal.hide();
+    
+    // Reset form
+    document.getElementById('enquiriesForm').reset();
+  }, 500);
+});
+
+// Handle Careers Form Submission
+document.getElementById('careersForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = document.getElementById('careerName').value;
+  const email = document.getElementById('careerEmail').value;
+  const phone = document.getElementById('careerPhone').value;
+  const skills = document.getElementById('careerSkills').value;
+  const linkedin = document.getElementById('careerLinkedIn').value;
+  
+  // Compose email body
+  let emailBody = `Name: ${name}\n` +
+                  `Email: ${email}\n` +
+                  `Phone: ${phone || 'Not provided'}\n` +
+                  `LinkedIn: ${linkedin || 'Not provided'}\n\n` +
+                  `Skills Summary:\n${skills}\n\n` +
+                  `--- IMPORTANT ---\n` +
+                  `Please attach your resume to this email before sending.`;
+  
+  const mailtoLink = `mailto:careers@urbanmorph.com?subject=${encodeURIComponent('Job Application - ' + name)}&body=${encodeURIComponent(emailBody)}`;
+  
+  // Open default email client
+  window.location.href = mailtoLink;
+  
+  // Close modal after delay
+  setTimeout(function() {
+    const modal = bootstrap.Modal.getInstance(document.getElementById('careersModal'));
+    modal.hide();
+    
+    // Reset form
+    document.getElementById('careersForm').reset();
+  }, 500);
 });
 </script>
 

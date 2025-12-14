@@ -146,6 +146,19 @@ article a::after {
   content: "";
 }
 
+/* Ensure footer links are clickable and not affected by article styles */
+footer a::after,
+.footer a::after {
+  content: none !important;
+  position: static !important;
+}
+
+footer a,
+.footer a {
+  position: relative;
+  z-index: 10;
+}
+
 /* basic article elements styling */
 article h2 {
   margin: 0 0 18px 0;
