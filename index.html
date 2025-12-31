@@ -115,8 +115,28 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-      opacity: 0.3;
+      background-image: url('img/header.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(35, 162, 165, 0.65) 0%, rgba(13, 117, 118, 0.65) 100%);
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
     }
 
     .hero-content {
@@ -132,14 +152,16 @@
       margin-bottom: 1.5rem;
       line-height: 1.1;
       letter-spacing: -2px;
+      text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .hero-subtitle {
       font-size: clamp(1.1rem, 2vw, 1.4rem);
-      color: rgba(255, 255, 255, 0.95);
+      color: rgba(255, 255, 255, 0.98);
       margin-bottom: 2rem;
       max-width: 700px;
-      font-weight: 300;
+      font-weight: 400;
+      text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     .hero-stats {
@@ -163,13 +185,15 @@
       color: var(--um-yellow);
       display: block;
       font-family: 'Space Mono', monospace;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
     }
 
     .stat-label {
       font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.95);
       text-transform: uppercase;
       letter-spacing: 1px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     }
 
     .cta-buttons {
@@ -427,6 +451,86 @@
       max-height: 2000px;
     }
 
+    /* Partners Section */
+    .partners-section {
+      padding: 5rem 0;
+      background: var(--um-light);
+    }
+
+    .partner-category {
+      margin-bottom: 4rem;
+    }
+
+    .partner-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .partner-category-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--um-dark);
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .partner-category-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(to right, var(--um-teal), var(--um-yellow));
+      border-radius: 2px;
+    }
+
+    .partner-logo-card {
+      background: white;
+      padding: 2rem 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .partner-logo-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .partner-logo {
+      max-width: 100%;
+      max-height: 120px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    .partner-logo-card:hover .partner-logo {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    .partner-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--um-gray);
+      margin: 0;
+      margin-top: auto;
+    }
+
     /* Team Section */
     .team-section {
       padding: 5rem 0;
@@ -646,123 +750,157 @@
       background: linear-gradient(135deg, var(--um-light) 0%, white 100%);
     }
 
-    .testimonial-card {
+    .testimonial-card-new {
       background: white;
       border-radius: 20px;
-      padding: 3rem;
-      margin: 2rem auto;
-      max-width: 900px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-      min-height: 400px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+      padding: 2.5rem;
+      height: 100%;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      border-left: 4px solid var(--um-teal);
     }
 
-    .testimonial-logo {
-      width: 150px;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem;
+    .testimonial-card-new:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 50px rgba(0,0,0,0.12);
     }
 
-    .testimonial-logo img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    .testimonial-content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .quote-icon {
-      font-size: 2.5rem;
+    .quote-icon-new {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 2rem;
       color: var(--um-teal);
-      margin-bottom: 1.5rem;
-      opacity: 0.3;
+      opacity: 0.15;
     }
 
-    .award-badge {
-      font-size: 3rem;
-      color: var(--um-yellow);
-      margin-bottom: 1.5rem;
-    }
-
-    .testimonial-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--um-dark);
+    .testimonial-logo-new {
+      height: 60px;
+      display: flex;
+      align-items: center;
       margin-bottom: 1.5rem;
     }
 
-    .testimonial-text {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: var(--um-gray);
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .award-card {
-      background: linear-gradient(135deg, #fffef9 0%, white 100%);
-      border: 2px solid var(--um-yellow);
-    }
-
-    .carousel-indicators {
-      margin-bottom: -3rem;
-    }
-
-    .carousel-indicators [data-bs-target] {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: var(--um-teal);
-      opacity: 0.5;
-      border: none;
-    }
-
-    .carousel-indicators .active {
-      opacity: 1;
-      background-color: var(--um-yellow);
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-      width: 50px;
-      height: 50px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--um-teal);
-      border-radius: 50%;
-      opacity: 0.8;
+    .testimonial-logo-new img {
+      max-height: 100%;
+      max-width: 150px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.6;
       transition: all 0.3s ease;
     }
 
-    .carousel-control-prev:hover,
-    .carousel-control-next:hover {
+    .testimonial-card-new:hover .testimonial-logo-new img {
+      filter: grayscale(0%);
       opacity: 1;
-      background: var(--um-yellow);
     }
 
-    .carousel-control-prev {
-      left: -25px;
+    .testimonial-text-new {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--um-gray);
+      font-style: italic;
+      margin-bottom: 1.5rem;
     }
 
-    .carousel-control-next {
-      right: -25px;
+    .testimonial-author {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--um-teal);
+      margin: 0;
     }
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      width: 20px;
-      height: 20px;
+    /* Awards Section */
+    .awards-section {
+      padding: 5rem 0;
+      background: white;
+    }
+
+    .award-card-new {
+      background: linear-gradient(135deg, #fffef9 0%, white 100%);
+      border: 2px solid var(--um-yellow);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      height: 100%;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .award-card-new::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(251, 200, 49, 0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .award-card-new:hover::before {
+      opacity: 1;
+    }
+
+    .award-card-new:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(251, 200, 49, 0.3);
+      border-color: var(--um-yellow);
+    }
+
+    .award-icon {
+      font-size: 3rem;
+      color: var(--um-yellow);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .award-logo {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .award-logo img {
+      max-height: 100%;
+      max-width: 120px;
+      object-fit: contain;
+      filter: grayscale(80%);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    .award-card-new:hover .award-logo img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    .award-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--um-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .award-year {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--um-yellow);
+      font-family: 'Space Mono', monospace;
+      margin-bottom: 1rem;
+    }
+
+    .award-description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--um-gray);
+      margin: 0;
     }
 
     /* Contact Section */
@@ -959,28 +1097,12 @@
         margin-bottom: 2rem;
       }
 
-      .testimonial-card {
+      .testimonial-card-new {
         padding: 2rem 1.5rem;
-        min-height: 350px;
       }
 
-      .testimonial-logo {
-        width: 120px;
-        height: 80px;
-      }
-
-      .testimonial-title {
-        font-size: 1.4rem;
-      }
-
-      .testimonial-text {
-        font-size: 1rem;
-      }
-
-      .carousel-control-prev,
-      .carousel-control-next {
-        width: 40px;
-        height: 40px;
+      .award-card-new {
+        padding: 2rem 1.5rem;
       }
 
       .carousel-control-prev {
@@ -1061,7 +1183,7 @@
 
         <div class="hero-stats">
           <div class="stat-item">
-            <span class="stat-number">16</span>
+            <span class="stat-number">17</span>
             <span class="stat-label">Partners</span>
           </div>
           <div class="stat-item">
@@ -1079,7 +1201,7 @@
 </section>
 
 <!-- About Section -->
-<section class="about-section scroll-animate">
+<section class="about-section scroll-animate show">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10">
@@ -1095,7 +1217,7 @@
 </section>
 
 <!-- Services Section -->
-<section class="services-section scroll-animate">
+<section class="services-section scroll-animate show">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="section-title">What We Offer</h2>
@@ -1136,7 +1258,7 @@
           </div>
 
           <div class="mt-4 pt-3" style="border-top: 2px solid var(--um-light);">
-            <p><a href="mailto:contact@urbanmorph.com" class="text-decoration-none" style="color: var(--um-teal); font-weight: 600;">Write to us</a> if you operate in the urban space and have a problem to be solved.</p>
+            <p><a href="/cdn-cgi/l/email-protection#05666a6b7164667145707767646b686a77756d2b666a68" class="text-decoration-none" style="color: var(--um-teal); font-weight: 600;">Write to us</a> if you operate in the urban space and have a problem to be solved.</p>
           </div>
         </div>
       </div>
@@ -1174,7 +1296,7 @@
           </div>
 
           <div class="mt-4 pt-3" style="border-top: 2px solid var(--um-light);">
-            <p><a href="mailto:contact@urbanmorph.com" class="text-decoration-none" style="color: var(--um-teal); font-weight: 600;">Partner with us</a> to drive sustainable urban transformation.</p>
+            <p><a href="/cdn-cgi/l/email-protection#f695999882979582b683849497989b9984869ed895999b" class="text-decoration-none" style="color: var(--um-teal); font-weight: 600;">Partner with us</a> to drive sustainable urban transformation.</p>
           </div>
         </div>
       </div>
@@ -1224,143 +1346,131 @@
   </div>
 </section>
 
-<!-- Testimonials & Awards Section -->
-<section class="testimonials-section scroll-animate">
+<!-- Testimonials Section -->
+<section class="testimonials-section scroll-animate show">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="section-title">Testimonials & Awards</h2>
-      <p class="section-subtitle mx-auto">Recognition and feedback from partners and industry leaders</p>
+      <h2 class="section-title">What Our Partners Say</h2>
+      <p class="section-subtitle mx-auto">Trusted by leading organizations in sustainable urban development</p>
     </div>
 
-    <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
-      <!-- Indicators -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="3"></button>
-        <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="4"></button>
-        <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="5"></button>
-        <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="6"></button>
-      </div>
-
-      <!-- Carousel Items -->
-      <div class="carousel-inner">
-        <!-- Slide 1 - India-UK ITES Center -->
-        <div class="carousel-item active">
-          <div class="testimonial-card">
-            <div class="testimonial-logo">
-              <img src="img/partners/logo-footer-catapult.png" alt="Energy Systems Catapult">
-            </div>
-            <div class="testimonial-content">
-              <div class="quote-icon">
-                <i class="fas fa-quote-left"></i>
-              </div>
-              <h4 class="testimonial-title">India-UK ITES Center</h4>
-              <p class="testimonial-text">"Urban Morph has been a key partner for us on our work in Bengaluru. They have really helped us maximise the impact of our work and develop innovative approaches to the issues we have engaged with."</p>
-            </div>
+    <div class="row g-4">
+      <!-- Testimonial 1 - India-UK ITES Center -->
+      <div class="col-lg-4">
+        <div class="testimonial-card-new">
+          <div class="quote-icon-new">
+            <i class="fas fa-quote-left"></i>
           </div>
-        </div>
-
-        <!-- Slide 2 - MoHUA Smart Cities -->
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <div class="testimonial-logo">
-              <img src="img/partners/ITDP-logo.png" alt="Smart Cities Mission">
-            </div>
-            <div class="testimonial-content">
-              <div class="quote-icon">
-                <i class="fas fa-quote-left"></i>
-              </div>
-              <h4 class="testimonial-title">MoHUA Smart Cities</h4>
-              <p class="testimonial-text">"The industries were onboarded to the cycleto.work (now altmo.app) platform that gamifies cycling for commute through a leaderboard. We congratulate Silvassa Smart City Ltd. for a successful rollout of the #Cycle2Work campaign and thank Urban Morph for their support."</p>
-            </div>
+          <div class="testimonial-logo-new">
+            <img src="img/partners/logo-footer-catapult.png" alt="Energy Systems Catapult">
           </div>
-        </div>
-
-        <!-- Slide 3 - UMI Award -->
-        <div class="carousel-item">
-          <div class="testimonial-card award-card">
-            <div class="testimonial-logo">
-              <img src="img/partners/mohua.png" alt="UMI Award">
-            </div>
-            <div class="testimonial-content">
-              <div class="award-badge">
-                <i class="fas fa-trophy"></i>
-              </div>
-              <h4 class="testimonial-title">Urban Mobility Institute Award 2021</h4>
-              <p class="testimonial-text">The Clean Air Street testbed executed with Urban Morph in Bengaluru receives DULT, Urban Mobility Institute Commendation Award 2021.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 4 - Volvo Award -->
-        <div class="carousel-item">
-          <div class="testimonial-card award-card">
-            <div class="testimonial-logo">
-              <img src="img/partners/volvo-logo.png" alt="Volvo Award">
-            </div>
-            <div class="testimonial-content">
-              <div class="award-badge">
-                <i class="fas fa-trophy"></i>
-              </div>
-              <h4 class="testimonial-title">Volvo Innovation Award 2021</h4>
-              <p class="testimonial-text">The Clean Air Street testbed executed with Urban Morph in Bengaluru receives the Volvo Innovation Awards 2021.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 5 - APAC Award -->
-        <div class="carousel-item">
-          <div class="testimonial-card award-card">
-            <div class="testimonial-logo">
-              <img src="img/partners/apac-award.png" alt="APAC Award">
-            </div>
-            <div class="testimonial-content">
-              <div class="award-badge">
-                <i class="fas fa-trophy"></i>
-              </div>
-              <h4 class="testimonial-title">Excellence in Innovation Award 2022</h4>
-              <p class="testimonial-text">Cycle To Work campaign of Urban Morph with Altmo helps Silvassa Smart City win India Digital Empowerment's Excellence in Innovation Award 2022.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 6 - MoveInSync Award -->
-        <div class="carousel-item">
-          <div class="testimonial-card award-card">
-            <div class="testimonial-logo">
-              <img src="img/partners/movinsync.png" alt="MoveInSync Award">
-            </div>
-            <div class="testimonial-content">
-              <div class="award-badge">
-                <i class="fas fa-trophy"></i>
-              </div>
-              <h4 class="testimonial-title">Mobility Symposium Award 2025</h4>
-              <p class="testimonial-text">Urban Morph wins the Mobility Symposium 2025 award for using Altmo to deliver Active Mobility transformation in companies.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 7 - WRI India -->
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <div class="testimonial-logo">
-              <img src="img/partners/wri-logo.png" alt="WRI India">
-            </div>
-            <div class="testimonial-content">
-              <div class="quote-icon">
-                <i class="fas fa-quote-left"></i>
-              </div>
-              <h4 class="testimonial-title">WRI India</h4>
-              <p class="testimonial-text">"Excited to work closely with Urban Morph in 2026! AltMo is a brilliant innovation."</p>
-            </div>
-          </div>
+          <p class="testimonial-text-new">"Urban Morph has been a key partner for us on our work in Bengaluru. They have really helped us maximise the impact of our work and develop innovative approaches to the issues we have engaged with."</p>
+          <h5 class="testimonial-author">India-UK ITES Center</h5>
         </div>
       </div>
 
-      <!-- Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+      <!-- Testimonial 2 - MoHUA Smart Cities -->
+      <div class="col-lg-4">
+        <div class="testimonial-card-new">
+          <div class="quote-icon-new">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="testimonial-logo-new">
+            <img src="img/partners/mohua.png" alt="Smart Cities Mission">
+          </div>
+          <p class="testimonial-text-new">"The industries were onboarded to the cycleto.work (now altmo.app) platform that gamifies cycling for commute through a leaderboard. We congratulate Silvassa Smart City Ltd. for a successful rollout of the #Cycle2Work campaign and thank Urban Morph for their support."</p>
+          <h5 class="testimonial-author">MoHUA Smart Cities</h5>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 - WRI India -->
+      <div class="col-lg-4">
+        <div class="testimonial-card-new">
+          <div class="quote-icon-new">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <div class="testimonial-logo-new">
+            <img src="img/partners/World_Resources_Institute_logo.png" alt="WRI India">
+          </div>
+          <p class="testimonial-text-new">"Excited to work closely with Urban Morph in 2026! AltMo is a brilliant innovation."</p>
+          <h5 class="testimonial-author">WRI India</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Awards & Recognition Section -->
+<section class="awards-section scroll-animate show">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Awards & Recognition</h2>
+      <p class="section-subtitle mx-auto">Celebrating excellence in sustainable urban mobility innovation</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Award 1 - UMI Award -->
+      <div class="col-md-6 col-lg-3">
+        <div class="award-card-new">
+          <div class="award-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="award-logo">
+            <img src="img/partners/mohua.png" alt="UMI Award">
+          </div>
+          <h5 class="award-title">Urban Mobility Institute Award</h5>
+          <p class="award-year">2021</p>
+          <p class="award-description">Clean Air Street testbed receives DULT, Urban Mobility Institute Commendation Award</p>
+        </div>
+      </div>
+
+      <!-- Award 2 - Volvo Award -->
+      <div class="col-md-6 col-lg-3">
+        <div class="award-card-new">
+          <div class="award-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="award-logo">
+            <img src="img/partners/volvo-logo.png" alt="Volvo Award">
+          </div>
+          <h5 class="award-title">Volvo Innovation Award</h5>
+          <p class="award-year">2021</p>
+          <p class="award-description">Clean Air Street testbed receives the Volvo Innovation Awards</p>
+        </div>
+      </div>
+
+      <!-- Award 3 - APAC Award -->
+      <div class="col-md-6 col-lg-3">
+        <div class="award-card-new">
+          <div class="award-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="award-logo">
+            <img src="img/partners/apac-award.png" alt="APAC Award">
+          </div>
+          <h5 class="award-title">Excellence in Innovation</h5>
+          <p class="award-year">2022</p>
+          <p class="award-description">Cycle To Work campaign helps Silvassa Smart City win India Digital Empowerment Award</p>
+        </div>
+      </div>
+
+      <!-- Award 4 - Mobility Symposium -->
+      <div class="col-md-6 col-lg-3">
+        <div class="award-card-new">
+          <div class="award-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="award-logo">
+            <img src="img/partners/movinsync.png" alt="Mobility Symposium">
+          </div>
+          <h5 class="award-title">Mobility Symposium Award</h5>
+          <p class="award-year">2025</p>
+          <p class="award-description">Using Altmo to deliver Active Mobility transformation in companies</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         <span class="carousel-control-prev-icon"></span>
         <span class="visually-hidden">Previous</span>
       </button>
@@ -1372,8 +1482,124 @@
   </div>
 </section>
 
+<!-- Partners & Collaborators Section -->
+<section class="partners-section scroll-animate show">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Partners & Collaborators</h2>
+      <p class="section-subtitle mx-auto">Working with leading organizations to transform urban mobility and sustainability</p>
+    </div>
+
+    <!-- Government & Public Agencies -->
+    <div class="partner-category">
+      <h3 class="partner-category-title">Government & Public Agencies</h3>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="partner-logo-card">
+            <img src="img/partners/mohua.png" alt="Ministry of Housing and Urban Affairs" class="partner-logo">
+            <p class="partner-name">MoHUA</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="partner-logo-card">
+            <img src="img/partners/Seal_of_Karnataka.png" alt="Government of Karnataka" class="partner-logo">
+            <p class="partner-name">Govt. of Karnataka</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="partner-logo-card">
+            <img src="img/partners/smart_city_logo.png" alt="Smart City Mission" class="partner-logo">
+            <p class="partner-name">Smart Cities</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="partner-logo-card">
+            <img src="img/partners/BTP_logo.jpg" alt="Bengaluru Traffic Police" class="partner-logo">
+            <p class="partner-name">BTP</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Academic & Research -->
+    <div class="partner-category">
+      <h3 class="partner-category-title">Academic & Research Institutions</h3>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="partner-logo-card">
+            <img src="img/partners/IISc_Master_Seal_Black_Transparent.png" alt="Indian Institute of Science" class="partner-logo">
+            <p class="partner-name">IISc Bengaluru</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="partner-logo-card">
+            <img src="img/partners/iisc-ist.png" alt="IISc Sustainable Transportation Lab" class="partner-logo">
+            <p class="partner-name">IISc IST Lab</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="partner-logo-card">
+            <img src="img/partners/MSRIM_logo.png" alt="MS Ramaiah Institute of Management" class="partner-logo">
+            <p class="partner-name">MS Ramaiah</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- International Partners -->
+    <div class="partner-category">
+      <h3 class="partner-category-title">International Development Partners</h3>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="partner-logo-card">
+            <img src="img/partners/ITES_Logo_Tag_Color.png" alt="ITES India UK Centre" class="partner-logo">
+            <p class="partner-name">ITES Centre</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="partner-logo-card">
+            <img src="img/partners/logo-footer-catapult.png" alt="Catapult UK" class="partner-logo">
+            <p class="partner-name">Catapult UK</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="partner-logo-card">
+            <img src="img/partners/BYCS-Logo_Black_rgb.png" alt="BYCS Amsterdam" class="partner-logo">
+            <p class="partner-name">BYCS</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="partner-logo-card">
+            <img src="img/partners/giz_logo.png" alt="GIZ Germany" class="partner-logo">
+            <p class="partner-name">GIZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Foundations & NGOs -->
+    <div class="partner-category">
+      <h3 class="partner-category-title">Foundations & NGOs</h3>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="partner-logo-card">
+            <img src="img/partners/World_Resources_Institute_logo.png" alt="WRI India" class="partner-logo">
+            <p class="partner-name">WRI India</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="partner-logo-card">
+            <img src="img/partners/ITDP-logo.png" alt="ITDP" class="partner-logo">
+            <p class="partner-name">ITDP</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Team Section -->
-<section class="team-section scroll-animate">
+<section class="team-section scroll-animate show">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="section-title">Meet Our Team</h2>
@@ -1390,7 +1616,7 @@
             <div class="team-overlay">
               <div class="team-social">
                 <a href="https://www.linkedin.com/in/sathyasankaran/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:sathya@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="/cdn-cgi/l/email-protection#afdccedbc7d6ceefdaddcdcec1c2c0dddfc781ccc0c2"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -1416,7 +1642,7 @@
             <div class="team-overlay">
               <div class="team-social">
                 <a href="https://www.linkedin.com/in/sonalkulkarni/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:sonal@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="/cdn-cgi/l/email-protection#d9aab6b7b8b599acabbbb8b7b4b6aba9b1f7bab6b4"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -1442,7 +1668,7 @@
             <div class="team-overlay">
               <div class="team-social">
                 <a href="https://www.linkedin.com/in/subbaiah-ts-51a42511/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:subbaiah@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="/cdn-cgi/l/email-protection#5e2d2b3c3c3f373f361e2b2c3c3f3033312c2e36703d3133"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -1471,7 +1697,7 @@
             <div class="team-overlay">
               <div class="team-social">
                 <a href="https://www.linkedin.com/in/knerav-kodolikar-2a620517a/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:knerav@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="/cdn-cgi/l/email-protection#7b10151e091a0d3b0e09191a151614090b1355181416"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -1497,7 +1723,7 @@
             <div class="team-overlay">
               <div class="team-social">
                 <a href="https://www.linkedin.com/in/renuka-kulkarni-3a9408a6/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:renuka@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="/cdn-cgi/l/email-protection#7103141f041a1031040313101f1c1e0301195f121e1c"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -1517,7 +1743,7 @@
             <div class="team-overlay">
               <div class="team-social">
                 <a href="https://www.linkedin.com/in/susheel-nair-30799517/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:susheel@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="/cdn-cgi/l/email-protection#ccbfb9bfa4a9a9a08cb9beaeada2a1a3bebca4e2afa3a1"><i class="fas fa-envelope"></i></a>
               </div>
             </div>
           </div>
@@ -1539,7 +1765,7 @@
 </section>
 
 <!-- Contact Section -->
-<section class="contact-section scroll-animate" id="contact">
+<section class="contact-section scroll-animate show" id="contact">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="section-title" style="color: var(--um-dark);">Let's Shape the Future Together</h2>
@@ -1626,7 +1852,7 @@
       <div class="footer-section">
         <h5>Contact Info</h5>
         <ul>
-          <li><i class="fas fa-envelope"></i> <a href="mailto:contact@urbanmorph.com">contact@urbanmorph.com</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection#65060a0b1104061125101707040b080a17150d4b060a08"><span class="__cf_email__" data-cfemail="8eede1e0faefedfacefbfcecefe0e3e1fcfee6a0ede1e3">[email&#160;protected]</span></a></li>
           <li><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</li>
         </ul>
       </div>
@@ -1734,7 +1960,7 @@
 </div>
 
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
@@ -1875,29 +2101,4 @@ document.getElementById('careersForm').addEventListener('submit', function(e) {
   window.location.href = mailtoLink;
   
   setTimeout(function() {
-    const modal = bootstrap.Modal.getInstance(document.getElementById('careersModal'));
-    modal.hide();
-    document.getElementById('careersForm').reset();
-  }, 500);
-});
-
-// Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (href !== '#' && href !== '#!') {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    }
-  });
-});
-</script>
-
-</body>
-</html>
+    const modal = bootstrap.Modal
