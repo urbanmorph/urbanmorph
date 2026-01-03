@@ -684,31 +684,33 @@
 
     .team-expand-btn {
       background: transparent;
-      border: 2px solid var(--um-teal);
-      color: var(--um-teal);
-      padding: 0.6rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
+      border: none;
+      color: var(--um-gray);
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+      font-weight: 500;
       cursor: pointer;
       transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       align-self: flex-start;
+      opacity: 0.8;
     }
 
     .team-expand-btn:hover {
-      background: var(--um-teal);
-      color: white;
+      color: var(--um-teal);
+      opacity: 1;
     }
 
     .team-expand-btn.active {
-      background: var(--um-teal);
-      color: white;
+      color: var(--um-teal);
+      opacity: 1;
     }
 
     .team-expand-btn i {
       transition: transform 0.3s ease;
+      font-size: 0.75rem;
     }
 
     .team-expand-btn.active i {
@@ -723,7 +725,7 @@
     }
 
     .team-details.show {
-      max-height: 500px;
+      max-height: 800px;
       margin-top: 1rem;
     }
 
@@ -1281,7 +1283,7 @@
           </div>
           <div class="stat-item">
             <span class="stat-number">31</span>
-            <span class="stat-label">Projects Delivered</span>
+            <span class="stat-label">Projects</span>
           </div>
           <div class="stat-item">
             <span class="stat-number">48</span>
@@ -1708,20 +1710,24 @@
             <img src="img/team/sathya.jpg" alt="Sathya Sankaran" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
+                <a href="https://www.sathyasankaran.com" target="_blank"><i class="fas fa-globe"></i></a>
                 <a href="https://www.linkedin.com/in/sathyasankaran/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.x.com/bicyclemayorblr/" target="_blank"><i class="fab fa-x-twitter"></i></a>
                 <a href="/cdn-cgi/l/email-protection#afdccedbc7d6ceefdaddcdcec1c2c0dddfc781ccc0c2"><i class="fas fa-envelope"></i></a>
+                <a href="https://medium.com/@sathya-sankaran" target="_blank"><i class="fab fa-medium"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
             <h4 class="team-name">Sathya Sankaran</h4>
             <p class="team-role">Co-Founder/CEO</p>
-            <p class="team-bio">Computer Science graduate with Post graduation in Public Policy. Three decades of experience using technology and data to solve urban issues in mobility and energy. Architect of AltMo, a gamified mobility intelligence platform for climate-friendly cities.</p>
+            <p class="team-bio">Computer Science graduate with Post graduation in Public Policy. Three decades of experience using technology and data to solve urban issues in mobility and energy. Architect of <a href="https://altmo.app" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">AltMo</a>, a gamified mobility intelligence platform for climate-friendly cities.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'sathya-details')">
               <i class="fas fa-chevron-down"></i> Know more
             </button>
             <div class="team-details" id="sathya-details">
-              <p>Relief Riders initiative won the 2021 UN World Bicycle Day Special Award and was nominated for the 2022 Nobel Peace Prize. Author of "Break the Block: Lessons from Bengaluru's Rail Battle". Host of OoruLabs podcast, India's premiere urban affairs podcast. Strategy lead at Rainmatter Foundation. CEO at WattsNext Energy. Adjunct faculty at Kautilya School and Mount Carmel College. Director at Bioman and Bicycle Mayor of Bengaluru.</p>
+              <p>Author of <a href="https://www.breaktheblock.in" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">"Break the Block: Lessons from Bengaluru's Rail Battle"</a>. Learn more at <a href="https://www.sathyasankaran.com" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">sathyasankaran.com</a>.</p>
+              <p>The data from this platform enabled a 342% increased allocation in the Comprehensive Master Plan for cycling and walking, helped put up more than 20 kms of cycle tracks in Bengaluru and won Silvassa Smart City an award for Excellence in Innovation. It is now <a href="https://org.altmo.app" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">helping corporates</a> meet their ESG goals. His <a href="https://reliefriders.urbanmorph.com" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Relief Riders</a> initiative during the COVID pandemic won the <a href="https://bangaloremirror.indiatimes.com/bangalore/others/bengalurus-good-riders-bag-honour-for-corona-relief/articleshow/86025441.cms" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">2021 UN World Bicycle Day Special Award</a> and nominated for the 2022 Nobel Peace Prize. He is the <strong>host</strong> of <a href="https://podcast.oorulabs.com" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">OoruLabs podcast</a>, India's premiere urban affairs podcast. He is the <strong>strategy lead</strong> delivering a thesis based investing for urban sustainability, waste, energy and materials at <a href="https://www.rainmatter.org" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Rainmatter foundation</a>. He is the <strong>CEO</strong> at <a href="https://wattsnext.in" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">WattsNext Energy</a> which is redefining the way power is delivered for vehicles and built forms. He is an <strong>adjunct faculty</strong> teaching Urban Governance and public problem solving for masters students in public policy at <a href="https://www.kspp.edu.in" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Kautilya School</a>, Hyderabad and <a href="https://mccblr.edu.in/ma-public-policy/" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Mount Carmel</a>, Bengaluru. He is a <strong>Director</strong> at the waste management startup, <a href="https://bioman.tech/" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Bioman</a> and the <strong>Bicycle Mayor</strong> of Bengaluru.</p>
             </div>
           </div>
         </div>
@@ -1742,12 +1748,12 @@
           <div class="team-body">
             <h4 class="team-name">Sonal S Kulkarni</h4>
             <p class="team-role">Co-Founder</p>
-            <p class="team-bio">Bachelors in Architecture and Masters in Urban Planning from USC. 10+ years working in government on infrastructure for sustainable mobility. Led DULT team in Smart Cities Mission's Cycles for Change where Bengaluru won recognition for cycling infrastructure.</p>
+            <p class="team-bio">Bachelors in Architecture and Masters in Urban Planning from the School of Policy, Planning and Development at the University of Southern California. Over the past 10+ years she has worked extensively in the government on infrastructure for sustainable mobility.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'sonal-details')">
               <i class="fas fa-chevron-down"></i> Know more
             </button>
             <div class="team-details" id="sonal-details">
-              <p>Strategized first dockless bicycle sharing in Bengaluru. Anchored Cycle Day and Open Streets campaigns. Key role in UMI award-winning Church Street First pedestrianization. Chief Research and Innovation Officer at DULT heading Centre for Research & Innovation (CERI). Director of Strategic Partnerships at BYCS India Foundation.</p>
+              <p>She led the team from the <a href="https://dult.karnataka.gov.in/en" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Directorate of Urban Land Transport</a>, Government of Karnataka in the <a href="https://smartnet.niua.org/indiacyclechallenge/cities/bengaluru/" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Smart Cities Mission's Cycles for Change</a> initiative where Bengaluru was chosen as one of the winners for planning and executing cycling infrastructure during the COVID times. She was part of strategizing and designing the first dockless bicycle sharing system in Bengaluru through the permit system. She started her career in the government by anchoring community outreach activities like the longest running Open streets campaign in the country, <a href="https://www.facebook.com/blrcycleday" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Cycle Day</a> and Open Streets and assisted in designing the unique Sustainable Mobility Accords which empowers communities through innovative funding towards taking action to make their neighbourhoods move towards sustainable mobility. She has played a key role in bringing to the city UMI award winning <a href="https://www.facebook.com/churchstreetfirst" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Church Street First</a>, a fully pedestrianised street piloted in the CBD of Bengaluru. She currently serves as the Chief Research and Innovation Officer at the Directorate of Urban Land Transport, Government of Karnataka heading the Centre for Research & Innovation (CERI) to provide the necessary impetus to support research initiatives and accelerate innovation in sustainable urban mobility in the State of Karnataka. She is also the Director of Strategic Partnerships, Marketing and External Communications at the <a href="https://bycs.org/" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">BYCS India Foundation</a>.</p>
             </div>
           </div>
         </div>
@@ -1768,12 +1774,12 @@
           <div class="team-body">
             <h4 class="team-name">Subbaiah TS</h4>
             <p class="team-role">Co-Founder/Director</p>
-            <p class="team-bio">Bachelors in Architecture and Masters in Design from IISc. Running successful Architecture, Design and Waste management businesses bringing positive change. 10 years working on civic change and public participation.</p>
+            <p class="team-bio">Bachelors in Architecture and Masters in Design from IISc, Bangalore. He has been running successful Architecture, Design and Waste management businesses which have brought positive change in the lives of many people.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'subbaiah-details')">
               <i class="fas fa-chevron-down"></i> Know more
             </button>
             <div class="team-details" id="subbaiah-details">
-              <p>Trustee of Citizens for Sustainability, transforming neighbourhoods. Coordinated 3 km street transformation in Sanjaynagar. Former Secretary at Indian Institute of Architects. Co-Founder of Bioman waste management company, championing Zero Waste to Landfill program and transforming wet waste processing through R&D.</p>
+              <p>Over the past 10 years he has been working on civic change and public participation. As a trustee of <a href="https://www.cifos.org/" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Citizens for Sustainability</a> he worked on multiple initiatives that have transformed neighbourhoods in the city. He coordinated the transformation of a 3 km street in Sanjaynagar and a Hebbal improvement challenge. He has held the post of Secretary at Indian Institute of Architects for many years. In his current stint as Co-Founder of waste management company <a href="https://bioman.tech/" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Bioman</a>, he has been championing the Zero waste to landfill program aiming to transform the impact waste management will have on the city. Bioman has transformed the way wet waste is processed and is constantly spending on R&D to get the best out of waste.</p>
             </div>
           </div>
         </div>
@@ -1797,12 +1803,12 @@
           <div class="team-body">
             <h4 class="team-name">Knerav Kodolikar</h4>
             <p class="team-role">Product Manager</p>
-            <p class="team-bio">Bachelors in Economics from Christ University. Expertise in multiple open source tech stacks, driving product strategy and development for AltMo platform. Avid cyclist who has switched to bicycle and bus for daily commute.</p>
+            <p class="team-bio">Bachelors in Economics from Christ University, Bengaluru. With expertise around multiple open source tech stacks, he drives product strategy and development for <a href="https://altmo.app" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">AltMo</a> platform. An avid cyclist, he has completely switched to riding a bicycle or using the bus for commute.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'knerav-details')">
               <i class="fas fa-chevron-down"></i> Know more
             </button>
             <div class="team-details" id="knerav-details">
-              <p>Driving Altmo to be a game changer for transforming mobility in cities. Raced bicycle for Equipe Goa amateur racing team and at Indian National Championships.</p>
+              <p>Apart from driving Altmo to be a game changer for transforming mobility in cities, he has raced his bicycle for the Equipe Goa amateur racing team and at the Indian National Championships.</p>
             </div>
           </div>
         </div>
@@ -1823,7 +1829,7 @@
           <div class="team-body">
             <h4 class="team-name">Renuka Kulkarni</h4>
             <p class="team-role">Marcomm Lead</p>
-            <p class="team-bio">Bachelors in Public Relations, Advertising and Applied Communications. Led branding and design solutions at agencies like Dentsu Webchutney, DDB Mudra, Schbang, and Rio. Leads Marcomm and design for AltMo. Runs design agency Studio Ikigai.</p>
+            <p class="team-bio">Bachelors in Public Relations, Advertising and Applied Communications. Led branding and design solutions at agencies like Dentsu Webchutney, DDB Mudra, Schbang, and Rio. Leads Marcomm and design for <a href="https://www.altmo.app" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">AltMo</a> and other projects at Urban Morph. She also runs a design agency called Studio Ikigai.</p>
           </div>
         </div>
       </div>
@@ -1843,12 +1849,12 @@
           <div class="team-body">
             <h4 class="team-name">Susheel Nair</h4>
             <p class="team-role">Creative Director</p>
-            <p class="team-bio">Dedicated to public impact storytelling for over a decade. Creative work visible across Bengaluru including cycle stands and marquee programs like Church Street First which pedestrianized an entire street for 6 months.</p>
+            <p class="team-bio">Susheel quit the consumer goods industry and dedicated himself to public impact story telling. For more than a decade he has been pushing the creative canvas for public change making. You can see his work scattered across the city of Bengaluru, whether it is the cycle stands on Church street, Malleshwaram, HSR or marquee programs like the Church Street First.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'susheel-details')">
               <i class="fas fa-chevron-down"></i> Know more
             </button>
             <div class="team-details" id="susheel-details">
-              <p>Creative Director for campaigns and programs like Pedaluru. Engages colleges in changemaking. Runs creative agency Artand.</p>
+              <p>The Church Street First pedestrianised an entire street in the city for over 6 months on weekends. At Urban Morph he is the Creative Director for campaigns & programs, like <a href="https://www.pedaluru.in" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Pedaluru</a> and engaging colleges in changemaking. He also runs a creative agency called <a href="https://www.artand.in" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">Artand</a>.</p>
             </div>
           </div>
         </div>
@@ -1971,7 +1977,13 @@
           <h6><strong>Urban Morph Consultants Pvt Ltd</strong></h6>
           <p class="mb-1">41, Vishnu Nivas</p>
           <p class="mb-1">NGEF Colony, Sanjaynagar</p>
-          <p>Bengaluru, Karnataka, India</p>
+          <p class="mb-3">Bengaluru, Karnataka, India</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=13.036863182101207,77.57569743033378" 
+             target="_blank" 
+             class="btn-primary-custom"
+             style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <i class="fas fa-directions"></i> Get Directions
+          </a>
         </div>
       </div>
     </div>
@@ -2123,13 +2135,7 @@ let map = null;
 let mapInitialized = false;
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM loaded, checking for Leaflet and modal...');
-  
-  // Check if Leaflet is loaded
-  if (typeof L === 'undefined') {
-    console.error('Leaflet is not loaded!');
-    return;
-  }
+  console.log('DOM loaded, setting up map modal...');
   
   const modalElement = document.getElementById('locationModal');
   console.log('Modal element:', modalElement);
@@ -2151,6 +2157,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (!mapContainer) {
               console.error('Map container not found!');
+              return;
+            }
+            
+            // Check if Leaflet is available
+            if (typeof L === 'undefined') {
+              console.error('Leaflet library not loaded yet. Please refresh the page.');
               return;
             }
             
@@ -2238,5 +2250,14 @@ document.getElementById('careersForm').addEventListener('submit', function(e) {
   
   window.location.href = mailtoLink;
   
-  setTimeout(function() {
-    const modal = bootstrap.Modal
+    setTimeout(function() {
+    const modal = bootstrap.Modal.getInstance(document.getElementById('careersModal'));
+    modal.hide();
+    document.getElementById('careersForm').reset();
+  }, 500);
+});
+</script>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+</html>
