@@ -1165,6 +1165,62 @@
       transform: translateY(0);
     }
   </style>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Urban Morph",
+    "alternateName": "Urban Morph Consultants Pvt Ltd",
+    "url": "https://www.urbanmorph.com",
+    "logo": "https://www.urbanmorph.com/img/UM-thumbnail.png",
+    "description": "Full-stack Urban Tech venture studio shaping the future of cities through mobility, infrastructure, and citizen engagement solutions",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "41, Vishnu Nivas, NGEF Colony, Sanjaynagar",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560094",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "13.036863",
+      "longitude": "77.575697"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@urbanmorph.com",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://in.linkedin.com/company/urbanmorph"
+    ],
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Sathya Sankaran",
+        "jobTitle": "Co-Founder & CEO"
+      },
+      {
+        "@type": "Person",
+        "name": "Sonal S Kulkarni",
+        "jobTitle": "Co-Founder"
+      },
+      {
+        "@type": "Person",
+        "name": "Subbaiah TS",
+        "jobTitle": "Co-Founder & Director"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "48"
+    }
+  }
+  </script>
 </head>
 
 <body>
