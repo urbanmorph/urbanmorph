@@ -13,36 +13,10 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-  <!-- Primary Meta Tags -->
-  <title>Media Coverage | Urban Morph - 48 News Articles on Sustainable Mobility</title>
-  <meta name="title" content="Media Coverage | Urban Morph - 48 News Articles on Sustainable Mobility">
-  <meta name="description" content="48 media mentions covering Urban Morph's sustainable mobility initiatives including Relief Riders UN Award, Church Street First pedestrianization, Active Mobility Center of Excellence with IISc, Pedaluru bicycle sharing, and climate action work in Bengaluru.">
+  <meta name="description" content="Media coverage of Urban Morph's sustainable mobility initiatives including Relief Riders, Church Street First, and Centre of Excellence for Active Mobility in Bengaluru.">
   <meta name="author" content="Urban Morph">
-  <meta name="keywords" content="Urban Morph news, sustainable mobility media coverage, Relief Riders award, Church Street First, bicycle mayor Bengaluru, Altmo press, cycling infrastructure media, urban tech news India">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.urbanmorph.com/news_articles.html">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.urbanmorph.com/news_articles.html">
-  <meta property="og:title" content="Media Coverage | Urban Morph - 48 News Articles">
-  <meta property="og:description" content="48 media mentions covering sustainable mobility initiatives, awards, and urban innovation projects.">
-  <meta property="og:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
-  <meta property="og:site_name" content="Urban Morph">
-  <meta property="og:locale" content="en_IN">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.urbanmorph.com/news_articles.html">
-  <meta property="twitter:title" content="Media Coverage | Urban Morph">
-  <meta property="twitter:description" content="48 media mentions covering sustainable mobility initiatives and urban innovation.">
-  <meta property="twitter:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
-  
-  <!-- Additional SEO Tags -->
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
+
+  <title>Media Coverage - Urban Morph</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
@@ -429,21 +403,6 @@
       }
     }
   </style>
-
-  <!-- Structured Data (JSON-LD) for News Coverage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Urban Morph Media Coverage",
-    "description": "News articles and media mentions about Urban Morph's sustainable mobility work",
-    "numberOfItems": 48,
-    "about": {
-      "@type": "Organization",
-      "name": "Urban Morph"
-    }
-  }
-  </script>
 </head>
 
 <body>
