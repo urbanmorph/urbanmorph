@@ -1,1 +1,34 @@
+# Site Settings
+title: Urban Morph
+description: Full-stack Urban Tech venture studio shaping the future of cities
+url: "https://www.urbanmorph.com"
+baseurl: ""
+
+# Force HTTPS and WWW
+enforce_ssl: www.urbanmorph.com
+
+# Permalink structure (prevents /index.html duplicates)
+permalink: pretty
+
+# Jekyll Theme
 theme: jekyll-theme-cayman
+
+# SEO Plugin (optional but recommended)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from Jekyll processing
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - README.md
+  - LICENSE
+  - vendor
+  - .DS_Store
+  - index-old.html
+
+# Site verification (if you have Google Search Console)
+google_site_verification: "k4X5XjLvu5ZXStl2LZOsk-tBAjAfm4UKFLwAWWRgdGI"
