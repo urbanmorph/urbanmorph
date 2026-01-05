@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y58FVNHZF7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y58FVNHZF7');
+  </script>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Primary Meta Tags -->
+  <title>Media Coverage | Urban Morph - 48 News Articles on Sustainable Mobility</title>
+  <meta name="title" content="Media Coverage | Urban Morph - 48 News Articles on Sustainable Mobility">
+  <meta name="description" content="48 media mentions covering Urban Morph's sustainable mobility initiatives including Relief Riders UN Award, Church Street First pedestrianization, Active Mobility Center of Excellence with IISc, Pedaluru bicycle sharing, and climate action work in Bengaluru.">
+  <meta name="author" content="Urban Morph">
+  <meta name="keywords" content="Urban Morph news, sustainable mobility media coverage, Relief Riders award, Church Street First, bicycle mayor Bengaluru, Altmo press, cycling infrastructure media, urban tech news India">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.urbanmorph.com/news_articles.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.urbanmorph.com/news_articles.html">
+  <meta property="og:title" content="Media Coverage | Urban Morph - 48 News Articles">
+  <meta property="og:description" content="48 media mentions covering sustainable mobility initiatives, awards, and urban innovation projects.">
+  <meta property="og:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
+  <meta property="og:site_name" content="Urban Morph">
+  <meta property="og:locale" content="en_IN">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.urbanmorph.com/news_articles.html">
+  <meta property="twitter:title" content="Media Coverage | Urban Morph">
+  <meta property="twitter:description" content="48 media mentions covering sustainable mobility initiatives and urban innovation.">
+  <meta property="twitter:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
+  
+  <!-- Additional SEO Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="vendor/fontawesome-free-6.7.2-web/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Merriweather:wght@300;400;700&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --um-yellow: #FBC831;
+      --um-pink: #F7A782;
+      --um-teal: #23A2A5;
+      --um-green: #0D7576;
+      --um-dark: #1a1a1a;
+      --um-gray: #4a4a4a;
+      --um-light: #FAF9F6;
+      --newspaper-border: #2C2C2C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'PT Serif', 'Georgia', 'Times New Roman', serif;
+      color: var(--um-dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+      background: var(--um-light);
+    }
+
+    /* Navigation */
+    .navbar {
+      background: var(--newspaper-border) !important;
+      padding: 1rem 0;
+      border-bottom: 4px double #000;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar-brand img {
+      border-radius: 4px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 1rem !important;
+      font-family: 'PT Serif', serif;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--um-yellow);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 60%;
+    }
+
+    /* Newspaper Masthead */
+    .newspaper-masthead {
+      background: white;
+      border-top: 3px double #000;
+      border-bottom: 3px double #000;
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .masthead-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 900;
+      color: var(--newspaper-border);
+      margin-bottom: 0.5rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .masthead-subtitle {
+      font-size: 0.85rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 400;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 0.5rem 0;
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    .edition-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 1rem;
+      padding: 0.5rem 0;
+      border-top: 1px solid #ddd;
+      font-family: 'Space Mono', monospace;
+    }
+
+    /* Content Section */
+    .media-content {
+      background: white;
+      padding: 3rem 0 4rem;
+      border-bottom: 3px double #000;
+    }
+
+    /* Section Headers - Newspaper Style */
+    .section-header {
+      border-top: 3px solid #000;
+      border-bottom: 1px solid #000;
+      padding: 0.75rem 0;
+      margin: 3rem 0 2rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .section-header:first-child {
+      margin-top: 0;
+    }
+
+    .section-count {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #666;
+      letter-spacing: 1px;
+      font-family: 'Space Mono', monospace;
+    }
+
+    /* Newspaper Column Layout */
+    .newspaper-columns {
+      column-count: 2;
+      column-gap: 4rem;
+      column-rule: 1px solid #ddd;
+    }
+
+    @media (max-width: 992px) {
+      .newspaper-columns {
+        column-count: 1;
+        column-rule: none;
+      }
+    }
+
+    /* Article Cards - Newspaper Style */
+    .article {
+      break-inside: avoid;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 2px solid #e5e5e5;
+    }
+
+    .article:last-child {
+      border-bottom: none;
+    }
+
+    /* Category badges - Newspaper kickers */
+    .award-badge {
+      display: inline-block;
+      padding: 0.3rem 0.85rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      font-family: 'Space Mono', monospace;
+      border: 2px solid;
+    }
+
+    .badge-milestone {
+      background: white;
+      color: var(--um-pink);
+      border-color: var(--um-pink);
+    }
+
+    .badge-award {
+      background: white;
+      color: var(--um-green);
+      border-color: var(--um-green);
+    }
+
+    .badge-product {
+      background: white;
+      color: #D4AF37;
+      border-color: #D4AF37;
+    }
+
+    .badge-program {
+      background: white;
+      color: var(--um-teal);
+      border-color: var(--um-teal);
+    }
+
+    /* Newspaper Headlines */
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--newspaper-border);
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
+    }
+
+    .article-title a {
+      color: var(--newspaper-border);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .article-title a:hover {
+      color: var(--um-teal);
+    }
+
+    /* Article body text */
+    .article-summary {
+      color: #333;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      font-size: 0.95rem;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* First paragraph drop cap for featured articles */
+    .article.featured .article-summary::first-letter {
+      float: left;
+      font-size: 3.5rem;
+      line-height: 0.9;
+      margin: 0.1rem 0.15rem 0 0;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      color: var(--um-teal);
+    }
+
+    /* Newspaper byline/metadata */
+    .article-meta {
+      font-size: 0.8rem;
+      color: #666;
+      padding-top: 0.75rem;
+      border-top: 1px solid #e9ecef;
+      font-family: 'Space Mono', monospace;
+    }
+
+    .source {
+      display: inline-block;
+      font-weight: 700;
+      color: var(--newspaper-border);
+      font-style: italic;
+      margin-right: 0.5rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    .article-meta small {
+      line-height: 1.7;
+      display: block;
+      margin-top: 0.35rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    .article-meta small a {
+      color: var(--um-teal);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .article-meta small a:hover {
+      text-decoration: underline;
+    }
+
+    /* Ornamental dividers */
+    .ornamental-divider {
+      text-align: center;
+      margin: 3rem 0;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    .ornamental-divider::before {
+      content: "❖ ❖ ❖";
+      letter-spacing: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--newspaper-border);
+      color: white;
+      padding: 3rem 0 1.5rem;
+      border-top: 3px double #000;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h5 {
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--um-yellow);
+      font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .footer-section a:hover {
+      color: var(--um-yellow);
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .social-links a {
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .social-links a:hover {
+      background: var(--um-yellow);
+      color: var(--newspaper-border);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.85rem;
+    }
+
+    /* Scroll Animation */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .scroll-animate.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .masthead-title {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+      }
+
+      .masthead-subtitle {
+        font-size: 0.75rem;
+      }
+
+      .newspaper-columns {
+        column-gap: 2rem;
+      }
+
+      .article {
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .article-title {
+        font-size: 1.3rem;
+      }
+
+      .section-header {
+        font-size: 1.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+      }
+
+      .navbar,
+      footer,
+      .scroll-animate {
+        display: none;
+      }
+
+      .article {
+        page-break-inside: avoid;
+      }
+
+      .newspaper-columns {
+        column-count: 3;
+      }
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD) for News Coverage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Urban Morph Media Coverage",
+    "description": "News articles and media mentions about Urban Morph's sustainable mobility work",
+    "numberOfItems": 48,
+    "about": {
+      "@type": "Organization",
+      "name": "Urban Morph"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/UM-thumbnail.png" width="35" height="35" class="d-inline-block align-top" alt="Urban Morph">
+      Urban Morph
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="news_articles.html">Media</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Newspaper Masthead -->
+<section class="newspaper-masthead">
+  <div class="container">
+    <h1 class="masthead-title">Media Chronicle</h1>
+    <p class="masthead-subtitle">Urban Morph in the Press</p>
+    <div class="edition-info">
+      <span>BENGALURU, KARNATAKA</span>
+      <span>48 ARTICLES</span>
+      <span>2018 - 2025</span>
+    </div>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="media-content">
+  <div class="container">
+    
+    <!-- Featured Stories -->
+    <div class="section-header">
+      <span>Featured Stories</span>
+      <span class="section-count">MAJOR INITIATIVES</span>
+    </div>
+
+    <div class="newspaper-columns">
+      
+      <div class="article featured scroll-animate">
+        <div class="award-badge badge-product">💡 PRODUCT</div>
+        <div class="article-title">
+          Altmo: Mobility intelligence platform quantifying sustainable transport for climate action
+        </div>
+        <div class="article-summary">
+          Evolved from CycleTo.Work in January 2023, Altmo is an employee engagement and mobility intelligence platform that helps organizations quantify and promote sustainable transport choices to achieve climate change goals. Integrated with Strava, the platform uses gamification and real-time tracking to enable employees to log bicycle trips, public transit usage, and other eco-friendly commute options, providing instant insights on CO2 offset and fuel saved while contributing to corporate ESG targets and Scope 3 emissions reduction.
+        </div>
+        <div class="article-meta">
+          <span class="source">Multiple Sources</span>
+          January 2023 - October 2025
+          <br/>
+          <small>
+            Coverage: 
+            <a href="https://sathya-sankaran.medium.com/cycleto-work-is-now-altmo-app-1794d8bdc493" target="_blank">Medium</a> | 
+            <a href="https://www-deccanherald-com.translate.goog/india/karnataka/bengaluru/towards-connecting-the-last-mile-in-bengaluru-2644944?_x_tr_sl=en&_x_tr_tl=kn&_x_tr_hl=kn&_x_tr_pto=tc" target="_blank">Deccan Herald</a> | 
+            <a href="https://bangaloremirror.indiatimes.com/bangalore/others/foldable-cycles-in-metro-what-was-the-rule-again/articleshow/103587243.cms" target="_blank">Bangalore Mirror</a>
+          </small>
+        </div>
+      </div>
+
+      <div class="article featured scroll-animate">
+        <div class="award-badge badge-milestone">⭐ MILESTONE</div>
+        <div class="article-title">
+          India's first Centre of Excellence for Active Mobility to be established in Bengaluru
+        </div>
+        <div class="article-summary">
+          IISc Sustainable Transportation Lab and Urban Morph signed an MoU to establish India's first Centre of Excellence for Active Mobility, focusing on research, planning, and evaluation of non-motorised transport systems like cycling and walking to solve first and last-mile transportation challenges.
+        </div>
+        <div class="article-meta">
+          <span class="source">Multiple Sources</span>
+          September 5, 2024
+          <br/>
+          <small>
+            Coverage: 
+            <a href="https://www.deccanherald.com/india/karnataka/bengaluru/iisc-urban-morph-to-set-up-first-of-its-kind-coe-for-active-mobility-in-bengaluru-3178885" target="_blank">Deccan Herald</a> | 
+            <a href="https://www.moneycontrol.com/news/india/iisc-urban-morph-to-establish-indias-first-coe-for-active-mobility-in-bengaluru-12813761.html" target="_blank">Moneycontrol</a> | 
+            <a href="https://www.thehindu.com/news/cities/bangalore/first-of-its-kind-active-mobility-centre-of-excellence-to-be-set-up-in-bengaluru/article68602090.ece" target="_blank">The Hindu</a>
+          </small>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ornamental-divider"></div>
+
+    <!-- Award-Winning Initiatives -->
+    <div class="section-header">
+      <span>Award-Winning Initiatives</span>
+      <span class="section-count">INTERNATIONAL RECOGNITION</span>
+    </div>
+
+    <div class="newspaper-columns">
+      
+      <div class="article scroll-animate">
+        <div class="award-badge badge-award">🏆 AWARD WINNING</div>
+        <div class="article-title">
+          Relief Riders: Volunteer cyclists deliver essential supplies during COVID-19 pandemic
+        </div>
+        <div class="article-summary">
+          Relief Riders, initiated by Bicycle Mayor Sathya Sankaran and CycleToWork ambassadors under Urban Morph in March 2020, mobilized volunteer cyclists to deliver groceries, medicines, and essentials to elderly and vulnerable populations during COVID-19 lockdowns. The movement was nominated for the 2022 Nobel Peace Prize and won the 2021 UN World Bicycle Day Special Award.
+        </div>
+        <div class="article-meta">
+          <span class="source">Multiple Sources</span>
+          March 2020 - December 2021
+          <br/>
+          <small>
+            Coverage: 
+            <a href="https://www.residentswatch.in/coronavirus-cyclists-deliver-groceries-to-senior-citizens-in-bangalore/" target="_blank">Residents Watch</a> | 
+            <a href="https://indianexpress.com/article/india/bengalurus-bicycle-mayor-wants-govt-to-encourage-employees-to-use-bicycles-during-lockdown-6371164/" target="_blank">Indian Express</a> | 
+            <a href="https://citizenmatters.in/bengaluru-relief-riders-cyclists-home-delivery-essentials-medicines-to-senior-citizens/" target="_blank">Citizen Matters</a>
+          </small>
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="award-badge badge-award">🏆 AWARD WINNING</div>
+        <div class="article-title">
+          Church Street First: India's pioneering pedestrianisation initiative transforms Bengaluru's urban landscape
+        </div>
+        <div class="article-summary">
+          Led by DULT in partnership with IISc, Catapult UK, and Urban Morph, Church Street First transformed a 750-meter CBD stretch into a weekend pedestrian-only zone from November 2020 to May 2021. The initiative won the Ministry of Housing and Urban Affairs Urban Mobility India 2021 Commendation Award and Volvo Innovation Awards 2021.
+        </div>
+        <div class="article-meta">
+          <span class="source">Multiple Sources</span>
+          November 2020 - October 2021
+          <br/>
+          <small>
+            Coverage: 
+            <a href="https://www.thenewsminute.com/article/bengalurus-church-street-bans-vehicles-weekends-kicks-clean-air-initiative-137156" target="_blank">The News Minute</a> | 
+            <a href="https://www.deccanherald.com/india/karnataka/bengaluru/church-st-style-weekends-planned-across-bengaluru-923056.html" target="_blank">Deccan Herald</a> | 
+            <a href="https://bengaluru.citizenmatters.in/church-street-pedestrianisation-impact-study-quality-of-life-68445" target="_blank">Citizen Matters</a>
+          </small>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ornamental-divider"></div>
+
+    <!-- Community Programs -->
+    <div class="section-header">
+      <span>Community Programs</span>
+      <span class="section-count">GRASSROOTS ENGAGEMENT</span>
+    </div>
+
+    <div class="newspaper-columns">
+      
+      <div class="article scroll-animate">
+        <div class="award-badge badge-program">📋 PROGRAM</div>
+        <div class="article-title">
+          Pedaluru: Five-year citizen campaign to transform Bengaluru into India's cycling capital
+        </div>
+        <div class="article-summary">
+          Launched by Bicycle Mayor Sathya Sankaran, Pedaluru is a comprehensive five-year citizen-led campaign aimed at transforming Bengaluru into India's cycling capital through infrastructure development, policy advocacy, and community engagement. Pedaluru 2024 saw over 550 cyclists gather at Kanteerava Stadium with support from CFAM, GIZ, Bengaluru Traffic Police, and Ministry of Housing and Urban Affairs.
+        </div>
+        <div class="article-meta">
+          <span class="source">Multiple Sources</span>
+          June 2024 - May 2025
+          <br/>
+          <small>
+            Coverage: 
+            <a href="https://bangaloremirror.indiatimes.com/bangalore/others/bengaluru-pedals-forward-with-cycling-vision/articleshow/121386441.cms" target="_blank">Bangalore Mirror</a> | 
+            <a href="https://www.deccanherald.com/india/karnataka/bengaluru/pedaluru-2025-annual-cycling-event-gives-a-glimpse-into-sustainable-mobility-3366646" target="_blank">Deccan Herald</a>
+          </small>
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://www.deccanherald.com/india/karnataka/bengaluru/cycling-in-the-city-whats-the-way-forward-3067843" target="_blank">Cycling in Bengaluru: What's the way forward?</a>
+        </div>
+        <div class="article-summary">
+          Communities celebrate Cycle Day events, but questions remain about whether this movement has prompted meaningful change in attitudes towards cyclists in Bengaluru.
+        </div>
+        <div class="article-meta">
+          <span class="source">Deccan Herald</span>
+          June 14, 2024
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://bangaloremirror.indiatimes.com/bangalore/cover-story/the-bikers-guide-to-the-galaxy/articleshow/103790684.cms" target="_blank">The biker's guide to the galaxy</a>
+        </div>
+        <div class="article-summary">
+          CFAM and volunteers created a comprehensive map of bicycle-friendly routes in Bengaluru with data from 150-200 regular cyclists, marking less congested secondary routes to help cyclists reach metro stations safely.
+        </div>
+        <div class="article-meta">
+          <span class="source">Bangalore Mirror</span>
+          September 20, 2023
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://www.thenewsminute.com/karnataka/bengaluru-city-sees-more-recreational-cycling-calls-made-better-infrastructure-153917" target="_blank">More people in Bengaluru are turning to recreational cycling</a>
+        </div>
+        <div class="article-summary">
+          Recreational cycling in Bengaluru increased four times during the pandemic with the number of cyclists rising from 21,673 in July 2019 to 51,685 in July 2021.
+        </div>
+        <div class="article-meta">
+          <span class="source">The News Minute</span>
+          August 14, 2021
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ornamental-divider"></div>
+
+    <!-- Bicycle Mayor Series -->
+    <div class="section-header">
+      <span>Bicycle Mayor Bengaluru</span>
+      <span class="section-count">LEADERSHIP & VISION</span>
+    </div>
+
+    <div class="newspaper-columns">
+      
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://www.thenationalnews.com/world/asia/bicycle-mayor-faces-an-uphill-task-in-bengaluru-1.734197" target="_blank">'Bicycle mayor' faces an uphill task in Bengaluru</a>
+        </div>
+        <div class="article-summary">
+          Sathya Sankaran faces significant challenges as Bengaluru's Bicycle Mayor in a city of 8 million motor vehicles with choked roads and limited safe cycling infrastructure.
+        </div>
+        <div class="article-meta">
+          <span class="source">The National</span>
+          July 6, 2021
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://www.thenewsminute.com/article/pedalling-his-way-change-sathya-sankaran-becomes-bengaluru-s-first-bicycle-mayor-81739" target="_blank">Pedalling his way to change: Sathya Sankaran becomes Bengaluru's first bicycle mayor</a>
+        </div>
+        <div class="article-summary">
+          Sathya Sankaran was selected as Bengaluru's first Bicycle Mayor and plans to start education programmes in schools teaching the science of cycling and promoting sustainable mobility.
+        </div>
+        <div class="article-meta">
+          <span class="source">The News Minute</span>
+          May 28, 2021
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://citizenmatters.in/bangalore-bicycle-mayor-sathya-sankaran-plans/" target="_blank">Bengaluru's first Bicycle Mayor to set up a 'Council' to boost cycling in city</a>
+        </div>
+        <div class="article-summary">
+          Sathya Sankaran plans to bring together nominees and cycling advocates to form a Council for Change to actively improve the cycling culture in Bengaluru.
+        </div>
+        <div class="article-meta">
+          <span class="source">Citizen Matters</span>
+          May 22, 2018
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://www.thehindu.com/news/cities/bangalore/bengaluru-gets-its-first-bicycle-mayor/article23952757.ece" target="_blank">Bengaluru gets its first 'Bicycle Mayor'</a>
+        </div>
+        <div class="article-summary">
+          42-year-old civic activist Satya Shankaran was announced as Bengaluru's first Bicycle Mayor, making it the third city in India to have one after Vadodara and Guwahati.
+        </div>
+        <div class="article-meta">
+          <span class="source">The Hindu</span>
+          May 22, 2018
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://bangaloremirror.indiatimes.com/bangalore/others/first-bicycle-mayor-of-bengaluru/articleshow/64264020.cms" target="_blank">Meet Sathya Shankaran, first bicycle Mayor of Bengaluru</a>
+        </div>
+        <div class="article-summary">
+          Sathya Shankaran will work with the state government and NGOs to achieve the goal of 50% bicycle use in the city by 2030.
+        </div>
+        <div class="article-meta">
+          <span class="source">Bangalore Mirror</span>
+          May 21, 2018
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://bangaloremirror.indiatimes.com/bangalore/others/wholl-be-bicycle-mayor/articleshow/64086225.cms" target="_blank">Who'll be bicycle mayor?</a>
+        </div>
+        <div class="article-summary">
+          Six finalists were shortlisted for Bengaluru's first Bicycle Mayor position, including Sathya Sakaran, an urbanist with 10 years of civic activism experience.
+        </div>
+        <div class="article-meta">
+          <span class="source">Bangalore Mirror</span>
+          May 8, 2018
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://www.thehindu.com/news/cities/bangalore/now-bengalurus-very-own-bicycle-mayor/article23722545.ece" target="_blank">Now Bengaluru's very own Bicycle Mayor</a>
+        </div>
+        <div class="article-summary">
+          Bengaluru will have its first 'Bicycle Mayor' in May with 19 cycling enthusiasts vying for the honorary two-year position to promote cycling and advocacy with the government.
+        </div>
+        <div class="article-meta">
+          <span class="source">The Hindu</span>
+          April 30, 2018
+        </div>
+      </div>
+
+      <div class="article scroll-animate">
+        <div class="article-title">
+          <a href="https://www.intertraffic.com/news/cycling-the-globe-bicycle-mayors-amsterdam-bangalore-mexico-city" target="_blank">Cycling around the globe: Bicycle Mayors</a>
+        </div>
+        <div class="article-summary">
+          Sathya Sankaran, Bengaluru's Bicycle Mayor, discusses challenges of promoting cycling in a city of 12 million inhabitants and 8 million motor vehicles.
+        </div>
+        <div class="article-meta">
+          <span class="source">Intertraffic</span>
+          Published online
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h5>Urban Morph</h5>
+        <p>Shaping the future of cities through innovation, collaboration, and execution in sustainable urban mobility and infrastructure.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/morphurbanspace/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/urbanmorph/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="news_articles.html">Media Coverage</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Our Solutions</h5>
+        <ul>
+          <li><a href="https://www.altmo.app" target="_blank">Altmo</a></li>
+          <li><a href="https://www.wattsnext.in" target="_blank">WattsNext Energy</a></li>
+          <li>SyntheSYS</li>
+          <li><a href="https://podcast.oorulabs.com" target="_blank">OoruLabs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Contact Info</h5>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:hello@urbanmorph.com">hello@urbanmorph.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Urban Morph Consultants Pvt Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Scroll Animation
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.scroll-animate').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
