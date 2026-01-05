@@ -56,7 +56,7 @@
   <link href="vendor/fontawesome-free-6.7.2-web/css/all.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Leaflet CSS for Map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
@@ -71,7 +71,8 @@
       --um-green: #0D7576;
       --um-dark: #1a1a1a;
       --um-gray: #4a4a4a;
-      --um-light: #f8f9fa;
+      --um-light: #FAF9F6;
+      --newspaper-border: #2C2C2C;
     }
 
     * {
@@ -81,18 +82,17 @@
     }
 
     body {
-      font-family: 'Work Sans', sans-serif;
+      font-family: 'PT Serif', 'Georgia', serif;
       color: var(--um-dark);
-      line-height: 1.6;
+      line-height: 1.7;
       overflow-x: hidden;
     }
 
     /* Navigation */
     .navbar {
-      background: rgba(26, 26, 26, 0.95) !important;
-      backdrop-filter: blur(10px);
+      background: var(--newspaper-border) !important;
       padding: 1rem 0;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      border-bottom: 4px double #000;
       transition: all 0.3s ease;
     }
 
@@ -100,6 +100,7 @@
       font-weight: 700;
       font-size: 1.3rem;
       letter-spacing: -0.5px;
+      font-family: 'Playfair Display', serif;
     }
 
     .navbar-brand img {
@@ -111,6 +112,10 @@
       transition: all 0.3s ease;
       position: relative;
       padding: 0.5rem 1rem !important;
+      font-family: 'PT Serif', serif;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
     }
 
     .nav-link::after {
@@ -178,22 +183,26 @@
     }
 
     .hero h1 {
+      font-family: 'Playfair Display', serif;
       font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 700;
+      font-weight: 900;
       color: white;
       margin-bottom: 1.5rem;
       line-height: 1.1;
-      letter-spacing: -2px;
+      letter-spacing: 2px;
       text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
+      text-transform: uppercase;
     }
 
     .hero-subtitle {
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-family: 'PT Serif', serif;
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
       color: rgba(255, 255, 255, 0.98);
       margin-bottom: 2rem;
       max-width: 700px;
       font-weight: 400;
       text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+      line-height: 1.8;
     }
 
     .hero-stats {
@@ -221,10 +230,11 @@
     }
 
     .stat-label {
-      font-size: 0.9rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
       color: rgba(255, 255, 255, 0.95);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     }
 
@@ -236,11 +246,12 @@
     }
 
     .btn-primary-custom {
+      font-family: 'PT Serif', serif;
       background: var(--um-yellow);
       color: var(--um-dark);
       padding: 1rem 2.5rem;
       border: none;
-      border-radius: 50px;
+      border-radius: 4px;
       font-weight: 600;
       text-decoration: none;
       display: inline-flex;
@@ -248,6 +259,9 @@
       gap: 0.5rem;
       transition: all 0.3s ease;
       box-shadow: 0 4px 15px rgba(251, 200, 49, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
     }
 
     .btn-primary-custom:hover {
@@ -258,17 +272,21 @@
     }
 
     .btn-secondary-custom {
+      font-family: 'PT Serif', serif;
       background: transparent;
       color: white;
       padding: 1rem 2.5rem;
       border: 2px solid white;
-      border-radius: 50px;
+      border-radius: 4px;
       font-weight: 600;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
     }
 
     .btn-secondary-custom:hover {
@@ -284,15 +302,18 @@
     }
 
     .section-title {
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 700;
       margin-bottom: 1rem;
-      color: var(--um-dark);
-      letter-spacing: -1px;
+      color: var(--newspaper-border);
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .section-subtitle {
-      font-size: 1.2rem;
+      font-family: 'PT Serif', serif;
+      font-size: 1.1rem;
       color: var(--um-gray);
       margin-bottom: 3rem;
       max-width: 700px;
@@ -394,10 +415,11 @@
     }
 
     .service-card h3 {
-      font-size: 1.8rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
-      color: var(--um-dark);
+      color: var(--newspaper-border);
     }
 
     .service-intro {
@@ -422,9 +444,11 @@
     }
 
     .detail-item h5 {
+      font-family: 'Playfair Display', serif;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: var(--um-dark);
+      color: var(--newspaper-border);
+      font-size: 1.1rem;
     }
 
     .detail-item p {
@@ -446,11 +470,12 @@
     }
 
     .expand-toggle {
-      background: var(--um-teal);
+      font-family: 'Space Mono', monospace;
+      background: var(--newspaper-border);
       color: white;
-      border: none;
-      padding: 0.75rem 2rem;
-      border-radius: 50px;
+      border: 2px solid var(--newspaper-border);
+      padding: 0.75rem 1.75rem;
+      border-radius: 4px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -458,10 +483,14 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
     }
 
     .expand-toggle:hover {
-      background: var(--um-green);
+      background: var(--um-teal);
+      border-color: var(--um-teal);
       transform: translateY(-2px);
     }
 
@@ -498,13 +527,16 @@
     }
 
     .partner-category-title {
-      font-size: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
       font-weight: 700;
-      color: var(--um-dark);
+      color: var(--newspaper-border);
       text-align: center;
       margin-bottom: 2rem;
       position: relative;
       padding-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .partner-category-title::after {

@@ -51,7 +51,7 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Leaflet CSS for Map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
@@ -64,7 +64,8 @@
       --um-green: #0D7576;
       --um-dark: #1a1a1a;
       --um-gray: #4a4a4a;
-      --um-light: #f8f9fa;
+      --um-light: #FAF9F6;
+      --newspaper-border: #2C2C2C;
     }
 
     * {
@@ -74,25 +75,25 @@
     }
 
     body {
-      font-family: 'Work Sans', sans-serif;
+      font-family: 'PT Serif', 'Georgia', serif;
       color: var(--um-dark);
-      line-height: 1.6;
+      line-height: 1.7;
       overflow-x: hidden;
       background: var(--um-light);
     }
 
     /* Navigation */
     .navbar {
-      background: rgba(26, 26, 26, 0.95) !important;
-      backdrop-filter: blur(10px);
+      background: var(--newspaper-border) !important;
       padding: 1rem 0;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+      border-bottom: 4px double #000;
     }
 
     .navbar-brand {
       font-weight: 700;
       font-size: 1.3rem;
       letter-spacing: -0.5px;
+      font-family: 'Playfair Display', serif;
     }
 
     .navbar-brand img {
@@ -104,6 +105,10 @@
       transition: all 0.3s ease;
       position: relative;
       padding: 0.5rem 1rem !important;
+      font-family: 'PT Serif', serif;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
     }
 
     .nav-link::after {
@@ -148,38 +153,45 @@
     }
 
     .page-title {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
       color: white;
       margin-bottom: 1rem;
-      letter-spacing: -2px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .page-subtitle {
-      font-size: 1.2rem;
-      color: rgba(255, 255, 255, 0.9);
+      font-family: 'PT Serif', serif;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.95);
       max-width: 700px;
       margin: 0 auto 2rem;
+      line-height: 1.8;
     }
 
     .project-count {
       display: inline-block;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px);
       color: white;
-      padding: 1rem 2rem;
-      border-radius: 50px;
+      padding: 0.85rem 1.75rem;
+      border-radius: 4px;
       font-family: 'Space Mono', monospace;
       font-weight: 700;
-      font-size: 1.1rem;
-      border: 2px solid rgba(255, 255, 255, 0.3);
+      font-size: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     /* Filter Tabs */
     .filter-section {
       background: white;
       padding: 2rem 0;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border-bottom: 1px solid #e5e5e5;
       position: sticky;
       top: 70px;
       z-index: 100;
@@ -193,26 +205,32 @@
     }
 
     .filter-tab {
+      font-family: 'Space Mono', monospace;
       background: var(--um-light);
-      border: 2px solid transparent;
-      padding: 0.75rem 2rem;
-      border-radius: 50px;
+      border: 2px solid var(--newspaper-border);
+      padding: 0.75rem 1.75rem;
+      border-radius: 4px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
-      color: var(--um-gray);
+      color: var(--newspaper-border);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
     }
 
     .filter-tab:hover {
       background: white;
       border-color: var(--um-teal);
       color: var(--um-teal);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .filter-tab.active {
-      background: var(--um-teal);
+      background: var(--newspaper-border);
       color: white;
-      border-color: var(--um-teal);
+      border-color: var(--newspaper-border);
     }
 
     /* Content Section */
@@ -229,29 +247,34 @@
     }
 
     .category-title {
-      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
       font-weight: 700;
-      color: var(--um-dark);
+      color: var(--newspaper-border);
       margin-bottom: 0.5rem;
-      letter-spacing: -1px;
+      letter-spacing: 1px;
       display: inline-block;
-      padding-bottom: 1rem;
-      border-bottom: 4px solid var(--um-yellow);
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--um-yellow);
+      text-transform: uppercase;
     }
 
     .category-description {
-      font-size: 1.1rem;
+      font-family: 'PT Serif', serif;
+      font-size: 1rem;
       color: var(--um-gray);
       margin-top: 1rem;
       max-width: 800px;
+      line-height: 1.8;
     }
 
     /* Project Cards */
     .project-card {
       background: white;
-      border-radius: 16px;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
       transition: all 0.3s ease;
       height: 100%;
       display: flex;
@@ -259,8 +282,9 @@
     }
 
     .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      border-color: var(--um-teal);
     }
 
     .project-image {
@@ -278,28 +302,32 @@
     }
 
     .project-title {
-      font-size: 1.4rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
       font-weight: 700;
-      color: var(--um-dark);
+      color: var(--newspaper-border);
       margin-bottom: 1rem;
       line-height: 1.3;
     }
 
     .project-description {
-      color: var(--um-gray);
-      line-height: 1.7;
+      font-family: 'PT Serif', serif;
+      color: #333;
+      line-height: 1.8;
       flex: 1;
       margin-bottom: 1rem;
+      font-size: 0.95rem;
     }
 
     .project-meta {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.9rem;
-      color: var(--um-gray);
+      font-size: 0.85rem;
+      color: #666;
       padding-top: 1rem;
       border-top: 1px solid #e9ecef;
+      font-family: 'Space Mono', monospace;
     }
 
     .project-link {
@@ -342,24 +370,28 @@
 
     /* Footer */
     footer {
-      background: var(--um-dark);
+      background: var(--newspaper-border);
       color: white;
-      padding: 4rem 0 2rem;
+      padding: 3rem 0 1.5rem;
       margin-top: 4rem;
+      border-top: 3px double #000;
     }
 
     .footer-content {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
-      margin-bottom: 3rem;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .footer-section h5 {
+      font-family: 'Playfair Display', serif;
       font-weight: 700;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       color: var(--um-yellow);
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .footer-section ul {
@@ -368,13 +400,14 @@
     }
 
     .footer-section ul li {
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.6rem;
     }
 
     .footer-section a {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
       transition: color 0.3s ease;
+      font-size: 0.9rem;
     }
 
     .footer-section a:hover {
@@ -382,21 +415,23 @@
     }
 
     .footer-section p {
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      font-size: 0.9rem;
     }
 
     .social-links {
       display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
     }
 
     .social-links a {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -405,15 +440,16 @@
 
     .social-links a:hover {
       background: var(--um-yellow);
-      color: var(--um-dark);
-      transform: translateY(-3px);
+      color: var(--newspaper-border);
+      transform: translateY(-2px);
     }
 
     .footer-bottom {
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
       text-align: center;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.85rem;
     }
 
     /* Modal Styles */
