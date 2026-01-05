@@ -1057,4 +1057,16 @@ document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el))
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const href = this.getAttribute('href');
-    if (href !== '#' && href !== '#!') 
+    if (href !== '#' && href !== '#!') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html> 
