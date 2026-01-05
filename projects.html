@@ -272,6 +272,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
     .project-card:hover {
@@ -280,11 +281,21 @@
       border-color: var(--um-teal);
     }
 
+    .project-card img {
+      flex-shrink: 0;
+    }
+
     .project-image {
       width: 100%;
+      max-width: 100%;
       height: 250px;
+      min-height: 250px;
+      max-height: 250px;
       object-fit: cover;
+      object-position: center;
       border-bottom: 4px solid var(--um-teal);
+      display: block;
+      overflow: hidden;
     }
 
     .project-body {
@@ -506,6 +517,10 @@
 
       .project-image {
         height: 200px;
+        min-height: 200px;
+        max-height: 200px;
+        object-fit: cover;
+        object-position: center;
       }
 
       .project-body {
