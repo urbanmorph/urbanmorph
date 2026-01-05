@@ -24,6 +24,18 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.urbanmorph.com/">
   
+  <!-- Prevent index.html duplicate - JavaScript redirect -->
+  <script>
+    if (window.location.pathname === '/index.html') {
+      window.location.replace('https://www.urbanmorph.com/');
+    }
+  </script>
+  
+  <!-- Fallback: Meta refresh for non-JS users -->
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://www.urbanmorph.com/">
+  </noscript>
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.urbanmorph.com/">
