@@ -5,5 +5,8 @@ Allow: /
 # Sitemaps
 Sitemap: https://www.urbanmorph.com/sitemap.xml
 
+# LLM/AI Assistant Discovery
+# See https://www.urbanmorph.com/llms.txt for AI-readable organization summary
+
 # Crawl-delay
 Crawl-delay: 5

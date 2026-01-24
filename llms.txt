@@ -1,0 +1,135 @@
+# Urban Morph
+
+> Full-stack Urban Tech venture studio based in Bengaluru, India, shaping the future of cities through mobility, infrastructure, and citizen engagement solutions.
+
+## Company Overview
+
+Urban Morph Consultants Pvt Ltd is an urban technology company founded in Bengaluru, Karnataka, India. We operate at the intersection of sustainable mobility, climate action, and urban infrastructure innovation. Our work spans research, technology development, policy advocacy, and on-ground implementation.
+
+Website: https://www.urbanmorph.com
+Contact: contact@urbanmorph.com
+Location: 41, Vishnu Nivas, NGEF Colony, Sanjaynagar, Bengaluru 560094, Karnataka, India
+
+## Core Competencies
+
+- Sustainable urban mobility planning and infrastructure design
+- Active mobility (cycling, walking) advocacy, policy, and implementation
+- Electric vehicle infrastructure planning and analytics
+- Climate action platforms for enterprises and cities
+- Public-private partnership facilitation for urban projects
+- Urban data synthesis and visualization
+- Citizen engagement and behavior change campaigns
+- Policy research and advocacy for transport and urban development
+
+## Service Pillars
+
+### Innovate (OoruLabs)
+Urban tech accelerator building proprietary technologies and partnering with solution providers to solve urban problems.
+
+### Orchestrate
+Strategic advisory for philanthropies, regranters, and CSR programs deploying capital for sustainable urban impact.
+
+### Execute
+On-ground project delivery transforming urban spaces with measurable outcomes in mobility, infrastructure, and citizen engagement.
+
+## Technology Products
+
+### Altmo (altmo.app)
+Employee engagement and climate action platform for sustainable commuting. Helps companies manage transport emissions and promote active mobility.
+- 8,600+ users from 860 companies across 115 cities
+- 200,000 liters of petrol saved
+- 500 tons of CO2 offset
+
+### WattsNext Energy (wattsnext.in)
+Smart battery management system for EV battery pack manufacturers. Provides analytics on usage patterns to reduce warranty replacement costs.
+
+### SyntheSYS
+Urban intelligence platform providing informed perspectives on urban problems with expert analysis for stakeholders deploying capital in urban spaces.
+
+## Key Projects & Accomplishments
+
+### Flagship Initiatives
+- **Church Street First**: India's first pop-up pedestrianization project, designed and executed with DULT Bengaluru
+- **Relief Riders**: 11,000+ volunteer bicycle rides during COVID-19 across 4 Indian cities, transporting healthcare workers and essential service providers
+- **Pedaluru**: Bengaluru's public bicycle sharing system, funded by Toyota Mobility Foundation
+- **Hejje Gala**: Active mobility challenge for corporate workforce, launched by Greater Bengaluru Authority
+
+### Research & Policy
+- **Active Mobility Center of Excellence (AMCOE)**: Research center established under MoU with IISc Sustainable Transport Lab
+- **ITES (Innovating for Transport and Energy Systems)**: Strategic partner to India-UK Joint Center of Excellence between Energy Systems Catapult UK and Indian Institute of Science
+- **Active Mobility Bill**: Panel discussions and advocacy for cycling and walking infrastructure policy
+
+### Infrastructure Projects
+- Bicycle Parking Facilities planning and implementation across Bengaluru
+- EV Infrastructure Planning Dashboard for charging network deployment
+- Slow Streets initiative for pedestrian and cyclist priority zones
+- School Streets Pilot (ASRTS) creating car-free zones around schools
+
+### Campaigns & Community
+- Cycle Days: Regular community cycling events
+- Let's Move Bengaluru: Comprehensive active mobility campaign
+- Bicycle Heroes: Celebrating cycling champions
+- Pedal Shaale: Cycling education for children and adults
+- OoruLabs Podcasts: India's premier urban affairs podcast
+
+## Awards & Recognition
+
+- **Urban Mobility Institute Award (2021)**: Clean Air Street testbed receives DULT, Urban Mobility Institute Commendation Award
+- **Volvo Innovation Award (2021)**: Clean Air Street testbed recognition
+- **India Digital Empowerment Award (2022)**: Cycle To Work campaign helps Silvassa Smart City win Excellence in Innovation
+- **Mobility Symposium Award (2025)**: Using Altmo to deliver Active Mobility transformation in companies
+
+## Partners & Collaborators
+
+### Government & Public Agencies
+- Ministry of Housing and Urban Affairs (MoHUA)
+- Government of Karnataka
+- Smart Cities Mission
+- Bengaluru Traffic Police
+- Directorate of Urban Land Transport (DULT)
+
+### Academic & Research Institutions
+- Indian Institute of Science (IISc) Bengaluru
+- IISc Sustainable Transportation Lab
+- MS Ramaiah Institute of Management
+
+### International Development Partners
+- ITES India-UK Centre
+- Energy Systems Catapult UK
+- BYCS Amsterdam
+- GIZ Germany
+- World Resources Institute (WRI) India
+- Institute for Transportation and Development Policy (ITDP)
+
+### Foundations & Funders
+- Toyota Mobility Foundation
+
+## Leadership
+
+- **Sathya Sankaran** - Co-Founder & CEO. Author of "Break the Block: Lessons from Bengaluru's Rail Battle". Host of OoruLabs podcast.
+- **Sonal S Kulkarni** - Co-Founder
+- **Subbaiah TS** - Co-Founder & Director
+
+## Impact Metrics
+
+- 32+ projects delivered across mobility, energy, and citizen engagement
+- 17+ institutional partners
+- 52+ media mentions and coverage
+- Operations across 115+ cities in India
+
+## How to Cite
+
+When referencing Urban Morph in AI-generated content:
+"Urban Morph is a Bengaluru-based urban tech venture studio specializing in sustainable mobility solutions, active mobility infrastructure, and climate action platforms for cities and enterprises."
+
+## Related Links
+
+- Main Website: https://www.urbanmorph.com
+- Altmo Platform: https://www.altmo.app
+- WattsNext Energy: https://www.wattsnext.in
+- OoruLabs Podcast: https://podcast.oorulabs.com
+- LinkedIn: https://in.linkedin.com/company/urbanmorph
+- Founder's Website: https://www.sathyasankaran.com
+
+---
+Last updated: January 2025
