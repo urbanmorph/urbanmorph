@@ -19,8 +19,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.urbanmorph.com/blog.html</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.urbanmorph.com/llms.txt</loc>
-    <lastmod>2025-01-24</lastmod>
+    <lastmod>2025-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
