@@ -54,13 +54,19 @@
   <meta property="article:modified_time" content="2025-01-25T00:00:00+05:30">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <!-- Defer Bootstrap CSS - Load asynchronously -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
 
   <!-- Fonts -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+  <!-- Defer Font Awesome - Icons load after page render -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Optimized Google Fonts with font-display swap -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></noscript>
 
   <!-- Leaflet CSS for Map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
@@ -999,7 +1005,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/amcoe.jpg" alt="AMCOE" class="project-image">
+            <picture>
+              <source srcset="img/projects/amcoe.webp" type="image/webp">
+              <img src="img/projects/amcoe.jpg" alt="AMCOE" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Active Mobility Center of Excellence (AMCOE)</h3>
               <p class="project-description">Establishing a center of excellence dedicated to research, innovation, and capacity building in active mobility. Setup under an MoU between Urban Morph and Indian Institute of Science Sustainable Transport Lab.</p>
@@ -1041,7 +1050,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/slow-streets.jpg" alt="Slow Streets" class="project-image">
+            <picture>
+              <source srcset="img/projects/slow-streets.webp" type="image/webp">
+              <img src="img/projects/slow-streets.jpg" alt="Slow Streets" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Slow Streets</h3>
               <p class="project-description">Initiative to create slow-speed streets prioritizing pedestrians and cyclists over motorized traffic in residential neighborhoods.</p>
@@ -1090,7 +1102,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/mobility-map.jpg" alt="Mobility Map" class="project-image">
+            <picture>
+              <source srcset="img/projects/mobility-map.webp" type="image/webp">
+              <img src="img/projects/mobility-map.jpg" alt="Mobility Map" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Sustainable Mobility Network Map</h3>
               <p class="project-description">Mapping existing and planned cycling routes, pedestrian pathways, and public transit to create an integrated mobility network.</p>
@@ -1100,7 +1115,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/ev-dashboard.jpg" alt="EV Dashboard" class="project-image">
+            <picture>
+              <source srcset="img/projects/ev-dashboard.webp" type="image/webp">
+              <img src="img/projects/ev-dashboard.jpg" alt="EV Dashboard" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">EV Infrastructure Planning Dashboard</h3>
               <p class="project-description">Digital dashboard for planning and tracking electric vehicle charging infrastructure deployment across the city.</p>
@@ -1120,7 +1138,10 @@
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/altmo-challenge.jpg" alt="Altmo Challenge" class="project-image">
+            <picture>
+              <source srcset="img/projects/altmo-challenge.webp" type="image/webp">
+              <img src="img/projects/altmo-challenge.jpg" alt="Altmo Challenge" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">The Altmo Challenge</h3>
               <p class="project-description">A challenge campaign encouraging citizens to adopt alternative modes of transportation and reduce car dependency.</p>
@@ -1140,7 +1161,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/school-streets.jpg" alt="School Streets" class="project-image">
+            <picture>
+              <source srcset="img/projects/school-streets.webp" type="image/webp">
+              <img src="img/projects/school-streets.jpg" alt="School Streets" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">School Streets Pilot (ASRTS)</h3>
               <p class="project-description">Pilot project implementing school streets to create safer, car-free zones around schools during drop-off and pick-up times.</p>
@@ -1150,7 +1174,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/bicycle-heroes.jpg" alt="Bicycle Heroes" class="project-image">
+            <picture>
+              <source srcset="img/projects/bicycle-heroes.webp" type="image/webp">
+              <img src="img/projects/bicycle-heroes.jpg" alt="Bicycle Heroes" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Bicycle Heroes</h3>
               <p class="project-description">Celebrating and highlighting individuals and organizations championing cycling and sustainable mobility in Bengaluru.</p>
@@ -1170,7 +1197,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/cycle-days.jpg" alt="Cycle Days" class="project-image">
+            <picture>
+              <source srcset="img/projects/cycle-days.webp" type="image/webp">
+              <img src="img/projects/cycle-days.jpg" alt="Cycle Days" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Cycle Days</h3>
               <p class="project-description">Regular community cycling events bringing together residents to explore neighborhoods and promote cycling as a daily transport option.</p>
@@ -1180,7 +1210,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/lets-move.jpg" alt="Let's Move Bengaluru" class="project-image">
+            <picture>
+              <source srcset="img/projects/lets-move.webp" type="image/webp">
+              <img src="img/projects/lets-move.jpg" alt="Let's Move Bengaluru" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Let's Move Bengaluru</h3>
               <p class="project-description">Comprehensive campaign encouraging Bengaluru residents to adopt active mobility and sustainable transportation choices.</p>
@@ -1200,7 +1233,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/councillors.jpg" alt="Active Mobility Councillors" class="project-image">
+            <picture>
+              <source srcset="img/projects/councillors.webp" type="image/webp">
+              <img src="img/projects/councillors.jpg" alt="Active Mobility Councillors" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Active Mobility Councillors</h3>
               <p class="project-description">Engaging with local elected representatives to promote active mobility initiatives and sustainable transportation policies at the ward and city level.</p>
@@ -1210,7 +1246,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/cfam-newsletter.jpg" alt="CFAM Newsletter" class="project-image">
+            <picture>
+              <source srcset="img/projects/cfam-newsletter.webp" type="image/webp">
+              <img src="img/projects/cfam-newsletter.jpg" alt="CFAM Newsletter" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">CFAM Newsletter</h3>
               <p class="project-description">Regular newsletter sharing updates, insights, and stories from the Coalition for Active Mobility community.</p>
@@ -1220,7 +1259,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/15-minute-city.jpg" alt="15 Minute City" class="project-image">
+            <picture>
+              <source srcset="img/projects/15-minute-city.webp" type="image/webp">
+              <img src="img/projects/15-minute-city.jpg" alt="15 Minute City" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">My 15 Minute City</h3>
               <p class="project-description">Exploring the 15-minute city concept where essential services and amenities are accessible within a short walk or bike ride.</p>
@@ -1243,7 +1285,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/hejje-gala.jpg" alt="Hejje Gala" class="project-image">
+            <picture>
+              <source srcset="img/projects/hejje-gala.webp" type="image/webp">
+              <img src="img/projects/hejje-gala.jpg" alt="Hejje Gala" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Hejje Gala</h3>
               <p class="project-description">Active mobility challenge launched by Greater Bengaluru Authority promoting walking and cycling for corporate workforce to make Bengaluru more pedestrian-friendly.</p>
@@ -1273,7 +1318,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/mobility-bill.jpg" alt="Mobility Bill" class="project-image">
+            <picture>
+              <source srcset="img/projects/mobility-bill.webp" type="image/webp">
+              <img src="img/projects/mobility-bill.jpg" alt="Mobility Bill" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Active Mobility Bill - Panel Discussion</h3>
               <p class="project-description">Panel discussions and advocacy efforts around the Active Mobility Bill to promote policy changes for better cycling and walking infrastructure.</p>
@@ -1283,7 +1331,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/pedaluru.jpg" alt="Pedaluru" class="project-image">
+            <picture>
+              <source srcset="img/projects/pedaluru.webp" type="image/webp">
+              <img src="img/projects/pedaluru.jpg" alt="Pedaluru" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Pedaluru Jan 2025</h3>
               <p class="project-description">Community cycling event bringing together cycling enthusiasts and advocates to celebrate and promote cycling culture.</p>
@@ -1293,7 +1344,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/keep-me-safe.jpg" alt="Keep Me Safe" class="project-image">
+            <picture>
+              <source srcset="img/projects/keep-me-safe.webp" type="image/webp">
+              <img src="img/projects/keep-me-safe.jpg" alt="Keep Me Safe" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">#Keep Me Safe</h3>
               <p class="project-description">Safety campaign focused on protecting cyclists and pedestrians through awareness, infrastructure improvements, and policy advocacy.</p>
@@ -1313,7 +1367,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/dutch-pm.jpg" alt="Dutch PM Visit" class="project-image">
+            <picture>
+              <source srcset="img/projects/dutch-pm.webp" type="image/webp">
+              <img src="img/projects/dutch-pm.jpg" alt="Dutch PM Visit" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Dutch PM Visits Bengaluru</h3>
               <p class="project-description">Engagement with the Dutch Prime Minister's visit to showcase Bengaluru's cycling initiatives and learn from Dutch cycling expertise.</p>
@@ -1323,7 +1380,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/relief-riders.jpg" alt="Relief Riders" class="project-image">
+            <picture>
+              <source srcset="img/projects/relief-riders.webp" type="image/webp">
+              <img src="img/projects/relief-riders.jpg" alt="Relief Riders" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Relief Riders</h3>
               <p class="project-description">During COVID-19, organized 11,000+ volunteer rides across 4 Indian cities, safely transporting healthcare workers and essential service providers.</p>
@@ -1333,7 +1393,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/church-street.jpg" alt="Church Street First" class="project-image">
+            <picture>
+              <source srcset="img/projects/church-street.webp" type="image/webp">
+              <img src="img/projects/church-street.jpg" alt="Church Street First" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">Church Street First</h3>
               <p class="project-description">India's first pop-up pedestrianization project designed and executed in collaboration with DULT Bengaluru, transforming urban streets.</p>
@@ -1343,7 +1406,10 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/wri-india.jpg" alt="WRI India" class="project-image">
+            <picture>
+              <source srcset="img/projects/wri-india.webp" type="image/webp">
+              <img src="img/projects/wri-india.jpg" alt="WRI India" class="project-image">
+            </picture>
             <div class="project-body">
               <h3 class="project-title">WRI India Collaboration</h3>
               <p class="project-description">Partnership with World Resources Institute India on sustainable urban mobility research and implementation projects.</p>
