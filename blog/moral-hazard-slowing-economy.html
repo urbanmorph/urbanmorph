@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y58FVNHZF7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y58FVNHZF7');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Primary Meta Tags -->
+  <title>Moral Hazard + Slowing Economy = Lost Money - NPA Crisis Analysis | Urban Morph</title>
+  <meta name="title" content="Moral Hazard + Slowing Economy = Lost Money - NPA Crisis Analysis | Urban Morph">
+  <meta name="description" content="Non Performing Assets in India exceed 10 lakh crore, with 90% on PSB books. An analysis of the causes - from moral hazard and fraud to economic slowdown - and potential solutions beyond bad banks and asset reconstruction.">
+  <meta name="author" content="Sathya Sankaran, Urban Morph">
+  <meta name="keywords" content="NPA crisis, non-performing assets, bad loans, moral hazard, Indian banking, PSB, asset reconstruction, economic slowdown">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.urbanmorph.com/blog/moral-hazard-slowing-economy.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
+  <link rel="apple-touch-icon" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.urbanmorph.com/blog/moral-hazard-slowing-economy.html">
+  <meta property="og:title" content="Moral Hazard + Slowing Economy = Lost Money">
+  <meta property="og:description" content="Analyzing India's NPA crisis: causes, challenges, and solutions beyond bad banks.">
+  <meta property="og:image" content="https://cdn-images-1.medium.com/max/1200/1*i08oK9D6mdM4m9GTYC-ATw.jpeg">
+  <meta property="og:site_name" content="Urban Morph">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.urbanmorph.com/blog/moral-hazard-slowing-economy.html">
+  <meta property="twitter:title" content="Moral Hazard + Slowing Economy = Lost Money">
+  <meta property="twitter:description" content="Analyzing India's NPA crisis: causes, challenges, and solutions beyond bad banks.">
+  <meta property="twitter:image" content="https://cdn-images-1.medium.com/max/1200/1*i08oK9D6mdM4m9GTYC-ATw.jpeg">
+
+  <!-- Article Meta Tags -->
+  <meta property="article:published_time" content="2018-09-01T14:04:24+05:30">
+  <meta property="article:author" content="Sathya Sankaran">
+  <meta property="article:section" content="Economics">
+  <meta name="robots" content="index, follow">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Merriweather:wght@300;400;700&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --um-yellow: #FBC831;
+      --um-pink: #F7A782;
+      --um-teal: #23A2A5;
+      --um-green: #0D7576;
+      --um-dark: #1a1a1a;
+      --um-gray: #4a4a4a;
+      --um-light: #FAF9F6;
+      --newspaper-border: #2C2C2C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'PT Serif', 'Georgia', 'Times New Roman', serif;
+      color: var(--um-dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+      background: var(--um-light);
+    }
+
+    .navbar {
+      background: var(--newspaper-border) !important;
+      padding: 1rem 0;
+      border-bottom: 4px double #000;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar-brand img {
+      border-radius: 4px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 1rem !important;
+      font-family: 'PT Serif', serif;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--um-yellow);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 60%;
+    }
+
+    .article-header {
+      background: white;
+      border-bottom: 3px double #000;
+      padding: 3rem 0 2rem;
+    }
+
+    .article-category {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      font-family: 'Space Mono', monospace;
+      border: 2px solid var(--um-pink);
+      background: white;
+      color: var(--um-pink);
+    }
+
+    .article-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      color: var(--newspaper-border);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .article-subheadline {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: #555;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .article-byline {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-top: 2px solid #e5e5e5;
+      border-bottom: 2px solid #e5e5e5;
+    }
+
+    .article-byline img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid var(--um-teal);
+    }
+
+    .byline-info {
+      flex: 1;
+    }
+
+    .byline-author {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--newspaper-border);
+      margin-bottom: 0.25rem;
+    }
+
+    .byline-meta {
+      font-size: 0.85rem;
+      color: #666;
+      font-family: 'Space Mono', monospace;
+    }
+
+    .byline-date {
+      font-style: italic;
+      font-family: 'PT Serif', serif;
+    }
+
+    .article-hero {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border: 3px solid var(--newspaper-border);
+      margin: 2rem 0;
+    }
+
+    .hero-caption {
+      font-size: 0.85rem;
+      color: #666;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.5rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    .article-content {
+      background: white;
+      padding: 3rem 0 4rem;
+      border-bottom: 3px double #000;
+    }
+
+    .article-body {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .article-body p:first-of-type::first-letter {
+      float: left;
+      font-size: 4.5rem;
+      line-height: 0.85;
+      margin: 0.1rem 0.2rem 0 0;
+      font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      color: var(--um-teal);
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .article-body figure {
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+
+    .article-body figure img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #e5e5e5;
+    }
+
+    .article-body figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.75rem;
+    }
+
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--newspaper-border);
+      margin: 3rem 0 1.5rem;
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 0.5rem;
+    }
+
+    .article-body blockquote {
+      border-left: 4px solid var(--um-yellow);
+      padding-left: 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #555;
+      font-size: 1.15rem;
+    }
+
+    .article-body a {
+      color: var(--um-teal);
+      text-decoration: underline;
+      text-decoration-color: rgba(35, 162, 165, 0.3);
+      text-decoration-thickness: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .article-body a:hover {
+      color: var(--um-green);
+      text-decoration-color: var(--um-green);
+    }
+
+    .article-body strong {
+      font-weight: 700;
+      color: var(--um-dark);
+    }
+
+    .share-section {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      padding: 2rem 0;
+      border-top: 2px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .share-section h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--newspaper-border);
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--newspaper-border);
+      background: white;
+      color: var(--newspaper-border);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .share-btn:hover {
+      background: var(--newspaper-border);
+      color: white;
+    }
+
+    .share-btn.twitter:hover {
+      background: #1DA1F2;
+      border-color: #1DA1F2;
+    }
+
+    .share-btn.linkedin:hover {
+      background: #0077B5;
+      border-color: #0077B5;
+    }
+
+    .back-to-blog {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--um-teal);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--um-green);
+      gap: 0.75rem;
+    }
+
+    footer {
+      background: var(--newspaper-border);
+      color: white;
+      padding: 3rem 0 1.5rem;
+      border-top: 3px double #000;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h5 {
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--um-yellow);
+      font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .footer-section a:hover {
+      color: var(--um-yellow);
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .social-links a {
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .social-links a:hover {
+      background: var(--um-yellow);
+      color: var(--newspaper-border);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .article-headline {
+        font-size: 2rem;
+      }
+
+      .article-subheadline {
+        font-size: 1rem;
+      }
+
+      .article-byline {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .article-body {
+        padding: 0 1rem;
+      }
+
+      .share-buttons {
+        flex-direction: column;
+      }
+
+      .share-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD) for Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Moral Hazard + Slowing Economy = Lost Money",
+    "description": "Non Performing Assets in India exceed 10 lakh crore, with 90% on PSB books. An analysis of the causes and potential solutions.",
+    "image": "https://cdn-images-1.medium.com/max/1200/1*i08oK9D6mdM4m9GTYC-ATw.jpeg",
+    "datePublished": "2018-09-01T14:04:24+05:30",
+    "dateModified": "2018-09-01T14:04:24+05:30",
+    "author": {
+      "@type": "Person",
+      "name": "Sathya Sankaran",
+      "url": "https://www.sathyasankaran.com",
+      "jobTitle": "Co-Founder & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Urban Morph"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Urban Morph",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.urbanmorph.com/img/UM-thumbnail.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.urbanmorph.com/blog/moral-hazard-slowing-economy.html"
+    },
+    "articleSection": "Economics",
+    "keywords": ["NPA crisis", "non-performing assets", "moral hazard", "Indian banking"],
+    "inLanguage": "en-IN"
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.urbanmorph.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.urbanmorph.com/blog.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Moral Hazard + Slowing Economy = Lost Money",
+        "item": "https://www.urbanmorph.com/blog/moral-hazard-slowing-economy.html"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../img/UM-thumbnail.png" width="35" height="35" class="d-inline-block align-top" alt="Urban Morph">
+      Urban Morph
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../news_articles.html">Media</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="article-header">
+  <div class="container">
+    <div class="article-category">Economics</div>
+    <h1 class="article-headline">Moral Hazard + Slowing Economy = Lost Money</h1>
+    <p class="article-subheadline">Non Performing Assets happen when banks are unable to recover loans disbursed. With stressed assets exceeding 10 lakh crore in India, understanding the causes and finding solutions beyond bad banks is critical for economic growth.</p>
+
+    <div class="article-byline">
+      <img src="https://miro.medium.com/v2/resize:fill:176:176/1*HvKqMwQfE-3RcWr3rFvzjg.jpeg" alt="Sathya Sankaran" onerror="this.src='../img/UM-thumbnail.png'">
+      <div class="byline-info">
+        <div class="byline-author">Sathya Sankaran</div>
+        <div class="byline-meta">
+          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">September 1, 2018</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="article-content">
+  <div class="container">
+
+    <div class="text-center">
+      <img src="https://cdn-images-1.medium.com/max/1200/1*i08oK9D6mdM4m9GTYC-ATw.jpeg" alt="Banking crisis illustration" class="article-hero">
+      <p class="hero-caption">Image: Taxrebate.org.uk</p>
+    </div>
+
+    <div class="article-body">
+
+      <p>Non Performing Assets happen when the banks are unable to recover the loans disbursed. This happens for 3 reasons.</p>
+
+      <p>1. The sector and the economy changed along the way which altered the demand for the product or service.</p>
+
+      <p>2. The idea was bad in the first place and the decision to lend to this business was a bad appraisal.</p>
+
+      <p>3. Wilful defaulting and fraud by promoters causing a moral hazard.</p>
+
+      <p>Today, in India, stressed assets or bad loans are more than <a href="https://www.firstpost.com/business/banks-bad-loans-pile-crosses-rs-10-lakh-crore-up-rs-1-39-lakh-crore-in-march-quarter-the-npa-mess-explained-in-7-charts-4496431.html" target="_blank">10 lakh crore</a> of which 90% are on the books of public sector banks. While the stressed assets were 8.5% of the total lending in March 2015, it rose to 9.5% by December 2016 and is 11.8% as of December 2017. It's a growing problem.</p>
+
+      <p>Some experts believe that the bad loans always existed and surfaced because of Raghuram Rajan's Asset Quality Review (AQR). Some others blame the slowdown in the economy in 2008 as the reason for the growing NPA's. Nevertheless, such high NPA's can put the lending system out of whack. With investigative agencies putting pressure on the banks, the lending by banks has now come to a 60 year low because banks are afraid to lend. Large project financing is taking a hit and they have moved to lend to the retail sector where ticket sizes are smaller. This can have an impact on capital investments and basic infrastructure sector services like construction, power, steel & cement. The impact of less liquidity in the economy is slower growth.</p>
+
+      <p>There have been many suggestions to reduce these NPA's. Asset Reconstruction Companies (ARC) have been set up in the private sector. These companies buy out the bad loans of specific companies from the banks for a fixed fee. There are 19 ARC's in the country but their capital base isn't large enough for the kind of NPA's with the banks currently. They have limited success in cleaning up large accounts.</p>
+
+      <p>One suggestion is to create a bad bank to take over the bad loans, at least the big ones. This is just kicking the bucket to another agency and cleaning up the books. If its just another bank what will it do differently? There is an incentive mismatch, while an ARC wants to buy low, banks want to sell high. The ARC has the luxury of cherry-picking the assets they want to buy, the problem with a bad bank for large borrowers, is to find someone to capitalise it. Haircut of big assets which will be sold at a discount is large. Who will take the loss and where will it come from? The standard answer is to dip into the consolidated fund. But this can only be done if there is a strategic interest for the country like Defence or Power. Even then every time we have the state stepping in, the moral hazard only increases.</p>
+
+      <p>12 large borrowers account for 25% of the bad loans in the country. 200 of them owe more than 500 crores each to the banks. Take the top 3 debtors for example. They span Steel, Power, Construction and Automotive. If the basic infrastructure sectors are running bad there is something wrong with the economy. Its hard to believe these sectors are not having demand in a growing economy.</p>
+
+      <figure>
+        <img src="https://cdn-images-1.medium.com/max/800/1*vaZk36L1h_BTFrHQJp2lKw.png" alt="Top NPA borrowers data">
+        <figcaption>Source: Financial Express (Apr, 2016)</figcaption>
+      </figure>
+
+      <p>Bhushan steel has been acquired by Tata Steel and is showing results churning out operating profits under new management. So management change has worked here. Bhushan power & steel owes 45K crore but the highest bidder is only around 19k crore. This is a big haircut for the banks if it goes through. The provisioning for this can only be done over time. The National Company Law Tribunal (NCLT) and the Committee of Creditors are working through Lanco to seek resolution plans. It's a going concern with 8000MW of power being generated. Any unviable business needs to be shut down but what happens to the shortfall in the power due to the shutdown and the jobs it has generated?</p>
+
+      <p>These examples show that treating the NPA recovery as purely a financial restructuring exercise is missing the forest for the trees. The business needs to be looked at sectorally and specifically for bad actors or practices. The turnaround or liquidation depends on the situation and buyers for the business. There have been suggestions to tackle companies based on the ticket size of the bad loans. The ARC's are already tackling the middle & bottom end. Banks are doing write-downs gradually. But the NPA's are growing not reducing. Continuing the write downs, looking for suitors and restructuring where possible on a case by case basis is the answer. But this will work on the stock only if we stop the flow in NPA's.</p>
+
+      <p>We need to stop making mistakes going forward. In a country like India, moral hazard is a real issue. With informal lending systems and lack of integrated technological data on companies, due diligence is tedious. Cases like Nirav Modi just makes it that much harder to solve the problem. Not to mention political interference and influence peddling for loans. Most large loans happen by weight of connections and less on merit. This is the primary reason for the PSB's having more NPA's. Even private banks have NPA's so privatisation of the PSB's is not a silver bullet. Consolidation is already taking place to remove the number of touchpoints for bad decisions. But reducing bad decisions by better due diligence and timely monitoring and reactions to downtrends is the only answer.</p>
+
+      <p>An E&Y forensic survey states, 87% of the respondents believe that the NPA/Stressed asset numbers are due to a diversion of funds to unrelated business or fraud. The banks don't have the right skills to evaluate the sector and the background of the promoters. Today small lenders engage Fintech companies which use CIBIL and Bank Account access using Aadhar and other tools to effectively get maximum information on the borrower. For large borrowers, the banks need to engage a neutral appraiser who will provide a neutral creditworthiness assessment. This should be mandatory. This will include valuing the collateral better so the haircut becomes less when it comes to writedowns.</p>
+
+      <p>There is also a need to reduce the borrowers' incentive to cheat by having a strong legal system which will process financial frauds on priority. Time taken to close cases and recover the debt can take up to 15 years. This is more than twice the time taken in other countries like China and the US.</p>
+
+      <p>In case of investments going bad due to an economic downturn, there needs to be continuous tracking of the performance of the company by the banks. This requires banks to engage services of not just financial monitoring of large borrowers but also business forensics to ensure they catch the business tanking or out of turn payouts happening which puts their recovery in danger.</p>
+
+      <p>Ultimately, economic growth can increase the denominator. With a low growth economy, you are bound to have sluggish demand for most goods. Performance of many large industries is bound to suffer without growth, leading to more NPA's.</p>
+
+      <div class="share-section">
+        <h4>Share This Article</h4>
+        <div class="share-buttons">
+          <a href="https://twitter.com/intent/tweet?text=Moral Hazard + Slowing Economy = Lost Money&url=https://www.urbanmorph.com/blog/moral-hazard-slowing-economy.html&via=morphurbanspace" target="_blank" class="share-btn twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.urbanmorph.com/blog/moral-hazard-slowing-economy.html" target="_blank" class="share-btn linkedin">
+            <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div class="back-to-blog">
+        <a href="../blog.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to all articles
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h5>Urban Morph</h5>
+        <p>Shaping the future of cities through innovation, collaboration, and execution in sustainable urban mobility and infrastructure.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/morphurbanspace/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/urbanmorph/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../news_articles.html">Media Coverage</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Our Solutions</h5>
+        <ul>
+          <li><a href="https://www.altmo.app" target="_blank">Altmo</a></li>
+          <li><a href="https://www.wattsnext.in" target="_blank">WattsNext Energy</a></li>
+          <li>SyntheSYS</li>
+          <li><a href="https://podcast.oorulabs.com" target="_blank">OoruLabs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Contact Info</h5>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:hello@urbanmorph.com">hello@urbanmorph.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Urban Morph Consultants Pvt Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
