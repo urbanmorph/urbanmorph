@@ -246,176 +246,447 @@
       border-bottom: 3px double #000;
     }
 
-    /* Section Headers - Newspaper Style */
-    .section-header {
-      border-top: 3px solid #000;
-      border-bottom: 1px solid #000;
-      padding: 0.75rem 0;
-      margin: 3rem 0 2rem;
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    /* SPOTLIGHT HERO SECTION */
+    .spotlight-section {
+      margin-bottom: 4rem;
     }
 
-    .section-header:first-child {
-      margin-top: 0;
+    .hero-featured {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .section-count {
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: #666;
-      letter-spacing: 1px;
-      font-family: 'Space Mono', monospace;
+    .hero-featured:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     }
 
-    /* Newspaper Column Layout */
-    .newspaper-columns {
-      column-count: 2;
-      column-gap: 4rem;
-      column-rule: 1px solid #ddd;
+    .hero-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
     }
 
-    @media (max-width: 992px) {
-      .newspaper-columns {
-        column-count: 1;
-        column-rule: none;
-      }
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
+      padding: 3rem 2.5rem;
+      color: white;
     }
 
-    /* Article Cards - Newspaper Style */
-    .article {
-      break-inside: avoid;
-      margin-bottom: 2.5rem;
-      padding-bottom: 2rem;
-      border-bottom: 2px solid #e5e5e5;
-    }
-
-    .article:last-child {
-      border-bottom: none;
-    }
-
-    /* Category badges - Newspaper kickers */
-    .topic-badge {
+    .hero-badge {
       display: inline-block;
+      padding: 0.4rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-family: 'Space Mono', monospace;
+      background: var(--um-yellow);
+      color: var(--um-dark);
+      border-radius: 3px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      color: white;
+    }
+
+    .hero-excerpt {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--um-teal);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-family: 'Space Mono', monospace;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-cta:hover {
+      background: var(--um-green);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    /* Editor's Picks Grid */
+    .editors-picks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Magazine Card Styles */
+    .magazine-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .magazine-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .card-image-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+      background: linear-gradient(135deg, var(--um-teal), var(--um-green));
+    }
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .magazine-card:hover .card-image {
+      transform: scale(1.1);
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
       padding: 0.3rem 0.85rem;
       font-size: 0.65rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 0.75rem;
       font-family: 'Space Mono', monospace;
-      border: 2px solid;
-    }
-
-    .badge-climate {
       background: white;
-      color: var(--um-green);
-      border-color: var(--um-green);
+      color: var(--um-dark);
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
-    .badge-mobility {
-      background: white;
-      color: var(--um-teal);
-      border-color: var(--um-teal);
+    .card-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
-    .badge-policy {
-      background: white;
-      color: var(--um-pink);
-      border-color: var(--um-pink);
-    }
-
-    .badge-product {
-      background: white;
-      color: #D4AF37;
-      border-color: #D4AF37;
-    }
-
-    /* Newspaper Headlines */
-    .article-title {
+    .card-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       font-weight: 700;
       color: var(--newspaper-border);
       margin-bottom: 0.75rem;
-      line-height: 1.25;
+      line-height: 1.3;
     }
 
-    .article-title a {
+    .card-title a {
       color: var(--newspaper-border);
       text-decoration: none;
       transition: color 0.3s ease;
     }
 
-    .article-title a:hover {
+    .card-title a:hover {
       color: var(--um-teal);
     }
 
-    /* Article body text */
-    .article-summary {
-      color: #333;
-      margin-bottom: 1rem;
-      line-height: 1.8;
+    .card-excerpt {
+      color: #555;
       font-size: 0.95rem;
-      text-align: justify;
-      hyphens: auto;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      flex-grow: 1;
     }
 
-    /* First paragraph drop cap for featured articles */
-    .article.featured .article-summary::first-letter {
-      float: left;
-      font-size: 3.5rem;
-      line-height: 0.9;
-      margin: 0.1rem 0.15rem 0 0;
-      font-weight: 700;
-      font-family: 'Playfair Display', serif;
-      color: var(--um-teal);
-    }
-
-    /* Newspaper byline/metadata */
-    .article-meta {
-      font-size: 0.8rem;
-      color: #666;
-      padding-top: 0.75rem;
-      border-top: 1px solid #e9ecef;
-      font-family: 'Space Mono', monospace;
+    .card-meta {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid #e9ecef;
+      font-size: 0.8rem;
+      color: #666;
+      font-family: 'Space Mono', monospace;
     }
 
-    .article-date {
+    .card-date {
       font-style: italic;
       font-family: 'PT Serif', serif;
     }
 
-    .read-more {
+    .card-read-more {
       color: var(--um-teal);
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
       display: inline-flex;
       align-items: center;
       gap: 0.25rem;
       transition: all 0.3s ease;
     }
 
-    .read-more:hover {
+    .card-read-more:hover {
       color: var(--um-green);
       gap: 0.5rem;
+    }
+
+    /* Section Headers - Magazine Style */
+    .section-header-magazine {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 4rem 0 2.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid var(--newspaper-border);
+    }
+
+    .section-header-magazine.first {
+      margin-top: 0;
+    }
+
+    .section-icon {
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    .section-title-wrapper {
+      flex-grow: 1;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--newspaper-border);
+      margin: 0;
+    }
+
+    .section-subtitle {
+      font-size: 0.75rem;
+      color: #666;
+      letter-spacing: 1px;
+      font-family: 'Space Mono', monospace;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+
+    .section-count {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #999;
+      letter-spacing: 1px;
+      font-family: 'Space Mono', monospace;
+      padding: 0.5rem 1rem;
+      background: var(--um-light);
+      border-radius: 20px;
+    }
+
+    /* Article Grid Layouts */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .articles-grid-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Category Badges */
+    .badge-climate {
+      background: var(--um-green) !important;
+      color: white !important;
+    }
+
+    .badge-mobility {
+      background: var(--um-teal) !important;
+      color: white !important;
+    }
+
+    .badge-policy {
+      background: var(--um-pink) !important;
+      color: white !important;
+    }
+
+    .badge-product {
+      background: var(--um-yellow) !important;
+      color: var(--um-dark) !important;
+    }
+
+    /* View All Link */
+    .view-all-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--um-teal);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      font-family: 'Space Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .view-all-link:hover {
+      color: var(--um-green);
+      gap: 0.75rem;
+    }
+
+    /* Archives Accordion */
+    .archives-section {
+      margin-top: 4rem;
+    }
+
+    .archive-year {
+      margin-bottom: 1rem;
+      border: 2px solid #e5e5e5;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .archive-year:hover {
+      border-color: var(--um-teal);
+    }
+
+    .archive-header {
+      background: var(--um-light);
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .archive-header:hover {
+      background: #f0f0f0;
+    }
+
+    .archive-header.active {
+      background: var(--newspaper-border);
+      color: white;
+    }
+
+    .archive-year-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    .archive-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+    }
+
+    .archive-toggle {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .archive-header.active .archive-toggle {
+      transform: rotate(180deg);
+    }
+
+    .archive-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .archive-content.expanded {
+      max-height: 5000px;
+    }
+
+    .archive-list {
+      padding: 1.5rem;
+      background: white;
+    }
+
+    .archive-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e9ecef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .archive-item:last-child {
+      border-bottom: none;
+    }
+
+    .archive-item-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      flex-grow: 1;
+    }
+
+    .archive-item-title a {
+      color: var(--newspaper-border);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .archive-item-title a:hover {
+      color: var(--um-teal);
+    }
+
+    .archive-item-date {
+      font-size: 0.8rem;
+      color: #666;
+      font-family: 'Space Mono', monospace;
+      white-space: nowrap;
     }
 
     /* Ornamental dividers */
     .ornamental-divider {
       text-align: center;
-      margin: 3rem 0;
+      margin: 4rem 0;
       color: #999;
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
     .ornamental-divider::before {
@@ -427,22 +698,23 @@
     .subscribe-box {
       background: var(--um-light);
       border: 2px solid var(--newspaper-border);
-      padding: 2rem;
+      padding: 2.5rem;
       text-align: center;
-      margin-top: 3rem;
+      margin-top: 4rem;
+      border-radius: 8px;
     }
 
     .subscribe-box h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
     }
 
     .subscribe-box p {
       color: #666;
-      margin-bottom: 1.25rem;
-      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
     }
 
     .subscribe-btn {
@@ -452,7 +724,7 @@
       background: var(--newspaper-border);
       color: white;
       padding: 0.75rem 1.5rem;
-      border-radius: 0;
+      border-radius: 50px;
       font-size: 0.85rem;
       font-family: 'Space Mono', monospace;
       text-transform: uppercase;
@@ -465,6 +737,19 @@
     .subscribe-btn:hover {
       background: white;
       color: var(--newspaper-border);
+      transform: translateY(-2px);
+    }
+
+    .subscribe-btn.alt {
+      background: var(--um-teal);
+      border-color: var(--um-teal);
+      margin-left: 1rem;
+    }
+
+    .subscribe-btn.alt:hover {
+      background: white;
+      color: var(--um-teal);
+      border-color: var(--um-teal);
     }
 
     /* Footer */
@@ -563,6 +848,31 @@
     }
 
     /* Responsive */
+    @media (max-width: 992px) {
+      .hero-image {
+        height: 400px;
+      }
+
+      .hero-overlay {
+        padding: 2rem 1.5rem;
+      }
+
+      .articles-grid,
+      .articles-grid-2col {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .editors-picks-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header-magazine {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
     @media (max-width: 768px) {
       .masthead-title {
         font-size: 2.2rem;
@@ -573,24 +883,25 @@
         font-size: 0.75rem;
       }
 
-      .newspaper-columns {
-        column-gap: 2rem;
+      .hero-image {
+        height: 300px;
       }
 
-      .article {
-        padding-bottom: 1.5rem;
-        margin-bottom: 2rem;
+      .hero-title {
+        font-size: 1.8rem;
       }
 
-      .article-title {
-        font-size: 1.3rem;
+      .hero-excerpt {
+        font-size: 1rem;
       }
 
-      .section-header {
-        font-size: 1.2rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .articles-grid,
+      .articles-grid-2col {
+        grid-template-columns: 1fr;
       }
 
       .author-byline {
@@ -602,10 +913,15 @@
         text-align: center;
       }
 
-      .article-meta {
+      .archive-header {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.75rem;
         align-items: flex-start;
+      }
+
+      .subscribe-btn.alt {
+        margin-left: 0;
+        margin-top: 1rem;
       }
     }
 
@@ -618,16 +934,13 @@
       .navbar,
       footer,
       .scroll-animate,
-      .subscribe-box {
+      .subscribe-box,
+      .archive-toggle {
         display: none;
       }
 
-      .article {
+      .magazine-card {
         page-break-inside: avoid;
-      }
-
-      .newspaper-columns {
-        column-count: 2;
       }
     }
   </style>
@@ -683,438 +996,6 @@
         "datePublished": "2025-01-15",
         "author": {"@type": "Person", "name": "Sathya Sankaran"},
         "keywords": ["Climate Action", "Entrepreneurship", "Public Goods", "Environmental Policy"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Exergy and Symbiosis",
-        "description": "Examines energy efficiency in human systems and discusses the need for more efficient AI and industrial practices.",
-        "url": "https://sathya-sankaran.medium.com/exergy-and-symbiosis-4a954337afe1",
-        "datePublished": "2024-09-25",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Energy Efficiency", "Sustainability", "Industrial Systems", "AI"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "#NoMoreYellowBoards",
-        "description": "Argues against vehicle registration color restrictions for carpooling services, advocating decoupling vehicle regulations from driver requirements.",
-        "url": "https://sathya-sankaran.medium.com/nomoreyellowboards-123d00d75c00",
-        "datePublished": "2023-10-03",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Transport Policy", "Carpooling", "Vehicle Regulations", "Urban Mobility"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Branding cities — Mobility",
-        "description": "Proposes positioning cities through sustainable transportation priorities rather than personal vehicle ownership aspirations.",
-        "url": "https://sathya-sankaran.medium.com/branding-cities-mobility-fd5bac535ad6",
-        "datePublished": "2023-08-09",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["City Branding", "Urban Planning", "Sustainable Transport", "Mobility"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "State of Scope 3 emissions",
-        "description": "Analyzes corporate employee commute emissions reporting trends and introduces measurement principles for sustainable mobility tracking.",
-        "url": "https://sathya-sankaran.medium.com/state-of-scope-3-emissions-7b86644b66cb",
-        "datePublished": "2023-04-28",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Scope 3 Emissions", "ESG", "Corporate Sustainability", "Employee Commute"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Are we not rich enough for efficient transportation infrastructure?",
-        "description": "Challenges the notion that developing nations must delay sustainable infrastructure investments, emphasizing government's role in addressing market failures.",
-        "url": "https://sathya-sankaran.medium.com/are-we-are-not-rich-enough-for-efficient-transportation-infrastructure-3c40e1362c1f",
-        "datePublished": "2023-03-03",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Infrastructure Investment", "Developing Nations", "Public Policy", "Transportation"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Society is ready. The Politicians?",
-        "description": "Documents grassroots active mobility initiatives in Karnataka and urges political action on cycling and pedestrian infrastructure.",
-        "url": "https://sathya-sankaran.medium.com/society-is-ready-the-politicians-b85df8e33028",
-        "datePublished": "2023-02-16",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Active Mobility", "Political Advocacy", "Cycling Infrastructure", "Karnataka"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "CycleTo.Work is now AltMo.app",
-        "description": "Announces platform evolution to track multiple sustainable commute modes beyond cycling.",
-        "url": "https://sathya-sankaran.medium.com/cycleto-work-is-now-altmo-app-1794d8bdc493",
-        "datePublished": "2023-01-10",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Altmo", "Product Launch", "Sustainable Commuting", "Climate Tech"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Active and Resilient",
-        "description": "Discusses Karnataka's Active Mobility Bill as a framework for climate resilience and city liveability.",
-        "url": "https://sathya-sankaran.medium.com/active-and-resilient-9e7369daf944",
-        "datePublished": "2022-12-11",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Active Mobility Bill", "Karnataka", "Climate Resilience", "Policy"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Bus for whom?",
-        "description": "Presents data visualization tools for analyzing public transit accessibility in Bengaluru.",
-        "url": "https://sathya-sankaran.medium.com/there-is-an-increasing-acknowledgement-of-the-limits-of-personal-vehicle-usage-in-populated-cities-7df58c4c2c32",
-        "datePublished": "2022-10-22",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Public Transit", "Data Visualization", "Bengaluru", "Urban Mobility"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Digital & Climate Friendly",
-        "description": "How Silvassa and New Town Kolkata are using Cycle To Work platform for digital-first transformation toward climate-friendly mobility.",
-        "url": "https://www.urbanmorph.com/blog/digital-climate-friendly.html",
-        "datePublished": "2022-07-25",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Silvassa Smart City", "Cycle To Work", "ESG", "Digital Transformation", "Climate Action"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "A New Meaning to Women's Day",
-        "description": "A powerful essay challenging societal judgments on young women and advocating for authentic self-expression.",
-        "url": "https://www.urbanmorph.com/blog/new-meaning-womens-day.html",
-        "datePublished": "2022-03-08",
-        "author": {"@type": "Person", "name": "Anonymous CFAM Volunteer"},
-        "keywords": ["Women's Empowerment", "Gender Equality", "Social Issues", "Youth Voices"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "ಮರುವಿನ್ಯಾಸ — Redesign",
-        "description": "A Republic Day vision calling for redesign of Karnataka's infrastructure and governance systems with focus on walking and cycling.",
-        "url": "https://www.urbanmorph.com/blog/redesign-karnataka-infrastructure.html",
-        "datePublished": "2022-01-26",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Karnataka Infrastructure", "BMLTA", "Active Mobility Bill", "TOD Policy", "Urban Planning"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Pandemic Blessing",
-        "description": "How the pandemic created an opportunity for cycling to surge in Bengaluru through Relief Riders and Reset With Cycling campaigns.",
-        "url": "https://www.urbanmorph.com/blog/pandemic-blessing.html",
-        "datePublished": "2020-10-07",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["COVID-19", "Cycling", "Bengaluru", "Relief Riders", "Reset With Cycling", "Bicycle Infrastructure"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Cities, Climate and Behaviour Change",
-        "description": "Cycling is the future. Cities influence our direction as a country through everyday consumption and usage choices.",
-        "url": "https://www.urbanmorph.com/blog/cities-climate-behaviour-change.html",
-        "datePublished": "2020-05-03",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Cycling", "Climate Change", "Cities", "Behaviour Change", "COVID-19", "Reset With Cycling"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Relief Riders",
-        "description": "How cyclists in Bengaluru delivered essential supplies to the elderly during COVID-19 lockdown, proving the bicycle as an emergency response tool.",
-        "url": "https://www.urbanmorph.com/blog/relief-riders.html",
-        "datePublished": "2020-04-11",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Relief Riders", "COVID-19", "Community Action", "Bicycle Mayor", "Bengaluru", "Emergency Response"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "The Future of Urban Living",
-        "description": "Innovation hubs like OoruLabs provide ecosystems for creating sustainable urban futures amid climate change and economic transformation.",
-        "url": "https://www.urbanmorph.com/blog/future-urban-living.html",
-        "datePublished": "2020-01-20",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Urban Innovation", "OoruLabs", "Climate Change", "Bengaluru", "Sustainable Development", "Urban Morph"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "The Coasian Ombudsman",
-        "description": "How negotiation can solve market failures and collective action problems, from resolving urban conflicts to addressing traffic congestion.",
-        "url": "https://www.urbanmorph.com/blog/coasian-ombudsman.html",
-        "datePublished": "2020-01-13",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Coasian Negotiation", "Urban Policy", "Market Failures", "CycleToWork", "Bengaluru"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Peanuts will only get you monkeys",
-        "description": "A critical analysis of Bengaluru's Comprehensive Mobility Plan showing inadequate investment in cycling infrastructure - only 4% of required cycle tracks and 2-4% of needed bike sharing hubs.",
-        "url": "https://www.urbanmorph.com/blog/peanuts-will-only-get-you-monkeys.html",
-        "datePublished": "2019-12-26",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Bengaluru Mobility Plan", "Cycling Infrastructure", "CMP 2019", "Bicycle Tracks", "Urban Planning"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Cranking it up",
-        "description": "The launch of #CycleToWork Fridays - a critical mass event for bicycle commuters demanding safe cycling facilities along Outer Ring Road. BCOS 2.0 brings together Bicycle Councillors, school champions, and work ambassadors.",
-        "url": "https://www.urbanmorph.com/blog/cranking-it-up.html",
-        "datePublished": "2019-10-25",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Cycle To Work", "Bicycle Commuting", "BCOS", "Active Mobility", "Bengaluru"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Have we measured enough?",
-        "description": "Analysis of air quality monitoring in Bengaluru and the need to move from measurement to action on pollution control.",
-        "url": "https://www.urbanmorph.com/blog/have-we-measured-enough.html",
-        "datePublished": "2019-07-31",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Air Quality Monitoring", "Pollution Control", "Bengaluru Pollution", "KSPCB", "Environmental Health"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "The drive to nowhere",
-        "description": "Vehicle additions in Bengaluru grow at 10% annually. Bold measures needed to disincentivize motor vehicles and promote sustainable transport.",
-        "url": "https://www.urbanmorph.com/blog/drive-to-nowhere.html",
-        "datePublished": "2019-05-30",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Bengaluru Traffic", "Vehicle Growth", "Sustainable Transport", "Public Transport", "Cycling Infrastructure"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "The clear and present danger",
-        "description": "Air pollution is the single largest environmental health risk globally. Analysis of vehicular pollution and its impact on Bengaluru.",
-        "url": "https://www.urbanmorph.com/blog/clear-and-present-danger.html",
-        "datePublished": "2019-04-04",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Air Pollution", "Vehicular Emissions", "Environmental Health", "Bengaluru Pollution", "Sustainable Mobility"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Doing it right!",
-        "description": "Amsterdam's Zuidas development shows how to integrate transit-oriented development with mobility as a service. Lessons for Bengaluru.",
-        "url": "https://www.urbanmorph.com/blog/doing-it-right.html",
-        "datePublished": "2019-03-17",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Transit-Oriented Development", "Amsterdam Zuidas", "Mobility as a Service", "Urban Planning", "Bengaluru Development"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "A Quarter of Pedalling to work",
-        "description": "CycleToWork platform launches with 115 companies across 6 cities, using leaderboards to incentivize sustainable commuting.",
-        "url": "https://www.urbanmorph.com/blog/quarter-pedalling-to-work.html",
-        "datePublished": "2019-01-27",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Cycle To Work", "Bicycle Commuting", "Sustainable Commute", "Bengaluru Cycling", "Workplace Mobility"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Future of delivery is not drones",
-        "description": "Cargo bikes can handle 42% of urban goods trips under 500kg, offering a sustainable alternative to trucks for last-mile delivery.",
-        "url": "https://www.urbanmorph.com/blog/future-delivery-not-drones.html",
-        "datePublished": "2019-01-20",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Cargo Bikes", "Urban Logistics", "Last-Mile Delivery", "Sustainable Delivery", "Bicycle Freight"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Pedalling across the gender gap",
-        "description": "Only 8.4% of CycleToWork riders are women. Examining barriers to women cycling in India and solutions for greater gender equity.",
-        "url": "https://www.urbanmorph.com/blog/pedalling-gender-gap.html",
-        "datePublished": "2019-01-18",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Women Cycling", "Gender Gap", "Bicycle Safety", "Women Empowerment", "Cycling Barriers"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Rethinking road safety",
-        "description": "Road safety campaigns focus on helmets and seatbelts for motor vehicle passengers, but ignore pedestrians and cyclists. A MoRTH report showed a 34% increase in pedestrian and cyclist fatalities while car and motorbike deaths decreased by 4%.",
-        "url": "https://www.urbanmorph.com/blog/rethinking-road-safety.html",
-        "datePublished": "2018-12-04",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Road Safety", "Pedestrian Safety", "Cyclist Safety", "Vulnerable Road Users", "Autonomous Vehicles"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "People at the forefront of clean air",
-        "description": "With 12 years to prevent the worst effects of climate change, communities are taking action through cycling initiatives like Cycle Day and CycleToWork campaign to combat air pollution and create change from the ground up.",
-        "url": "https://www.urbanmorph.com/blog/people-forefront-clean-air.html",
-        "datePublished": "2018-10-27",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Air Pollution", "Clean Air", "Cycling", "Cycle Day", "CycleToWork", "Climate Change", "Urban Mobility"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Communities and collective action",
-        "description": "Peter Block describes citizenship as not just our act of voting but our ability to come together as a community to discuss possibilities and act collectively. Exploring community-led solutions through Cycle Day, Walk to School, and Chaat Street initiatives.",
-        "url": "https://www.urbanmorph.com/blog/communities-collective-action.html",
-        "datePublished": "2018-09-24",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Community Action", "Collective Action", "Citizenship", "Polycentrism", "Elinor Ostrom", "Cycle Day"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "State of the mind",
-        "description": "As we head into another car-free day on September 22, 2018, exploring the gap between perceived and actual cycling safety. The real issue is not safety but a collective action problem that needs social change through initiatives like Cycle Day and CycleToWork.",
-        "url": "https://www.urbanmorph.com/blog/state-of-mind.html",
-        "datePublished": "2018-09-20",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Cycling Safety", "Car-Free Day", "Netherlands Cycling", "Peltzman Effect", "Collective Action", "Social Change"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Moral Hazard + Slowing Economy = Lost Money",
-        "description": "Non Performing Assets in India exceed 10 lakh crore, with 90% on PSB books. An analysis of the causes - from moral hazard and fraud to economic slowdown - and potential solutions beyond bad banks and asset reconstruction.",
-        "url": "https://www.urbanmorph.com/blog/moral-hazard-slowing-economy.html",
-        "datePublished": "2018-09-01",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["NPA Crisis", "Non-Performing Assets", "Bad Loans", "Moral Hazard", "Indian Banking", "PSB"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Derailed",
-        "description": "CAG report reveals Indian Railways station inefficiencies discovered by Praja RAAG in 2010. Bengaluru stations show worst efficiency ratios. Solutions include multi-decking, underground expansion, and integrated traffic planning for commuter rail.",
-        "url": "https://www.urbanmorph.com/blog/derailed.html",
-        "datePublished": "2018-08-10",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Indian Railways", "CAG Report", "Station Efficiency", "Bengaluru Commuter Rail", "Railway Infrastructure"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Deeper learning for a better nation",
-        "description": "Before formal schooling, humankind learned by passing on knowledge from generation to generation. Today's vocational education in India needs reform. Rather than centralized government schemes, industry participation and online learning platforms should drive skill development.",
-        "url": "https://www.urbanmorph.com/blog/deeper-learning-better-nation.html",
-        "datePublished": "2018-08-04",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Vocational Education", "Skill Development", "NSQF", "PMKVY", "Education Reform", "Online Learning"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "The real slim shady",
-        "description": "We have been told growth is about investing in large infrastructure projects. But the real story of growth is strong human capital and administrative institutions. India loses $1 trillion annually to corruption, which reduces growth rate by 0.72% for every 1% increase in corruption.",
-        "url": "https://www.urbanmorph.com/blog/real-slim-shady.html",
-        "datePublished": "2018-07-30",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Corruption", "Economic Growth", "Governance", "Ethics", "Transparency International", "India Economy"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "The gravy train",
-        "description": "Analysis of Indian Railways' dependency on coal freight revenues and how the shift to renewables could impact passenger fares. Exploring the potential of suburban rail for cargo transport in Bengaluru.",
-        "url": "https://www.urbanmorph.com/blog/gravy-train.html",
-        "datePublished": "2018-07-29",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Indian Railways", "Freight Transportation", "Coal Transport", "Bengaluru Suburban Rail", "Cargo Hub"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Eye of the tiger",
-        "description": "Analysis of India's geopolitical position vis-a-vis China and the US. Exploring power asymmetry, regional alliances, and the shift towards a multipolar Asia.",
-        "url": "https://www.urbanmorph.com/blog/eye-of-tiger.html",
-        "datePublished": "2018-07-25",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["India Geopolitics", "China Belt and Road", "Asian Power Dynamics", "Multipolar World Order", "Regional Alliances"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Capital and its People",
-        "description": "Exploring how Kempegowda International Airport could become a multi-modal transportation hub integrating rail, bus, and air to transform Bengaluru's economy and reduce urban congestion.",
-        "url": "https://www.urbanmorph.com/blog/capital-and-people.html",
-        "datePublished": "2018-07-21",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Bengaluru Airport", "Suburban Rail", "KIA Cargo Hub", "Transportation Infrastructure", "Multimodal Transport"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Broken Foundations",
-        "description": "Analysis of structural issues in Bengaluru's metropolitan governance, exploring the Metropolitan Planning Committee, BMRDA, and the need for devolution of powers and proper funding mechanisms.",
-        "url": "https://www.urbanmorph.com/blog/broken-foundations.html",
-        "datePublished": "2018-07-18",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Bengaluru Governance", "Metropolitan Planning Committee", "BMRDA", "Urban Local Bodies", "Devolution"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Spoon-fed",
-        "description": "Exploring behavioral nudges and choice architecture to reduce plastic cutlery waste in India's booming online food delivery industry. 120 billion pieces of plastic cutlery are disposed annually.",
-        "url": "https://www.urbanmorph.com/blog/spoon-fed.html",
-        "datePublished": "2018-07-12",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Plastic Waste", "Food Delivery", "Behavioral Economics", "Choice Architecture", "Sustainability"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "The state of politics",
-        "description": "Analysis of India's institutional decay from post-independence socialism to modern corruption cycles. Examining power asymmetry, rigid uniformity, and the need to strengthen federal institutions.",
-        "url": "https://www.urbanmorph.com/blog/state-of-politics.html",
-        "datePublished": "2018-06-24",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["India Politics", "Institutional Reform", "Federalism", "Corruption", "Democracy", "License Raj"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Federalism & the Fifteenth",
-        "description": "Critical analysis of the 15th Finance Commission's Terms of Reference. Examining population data usage, revenue deficit grants, fiscal federalism, and the balance between central control and state autonomy.",
-        "url": "https://www.urbanmorph.com/blog/federalism-fifteenth.html",
-        "datePublished": "2018-06-24",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Finance Commission", "Fiscal Federalism", "India Governance", "Revenue Deficit", "Population Policy"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Urbs Economicus",
-        "description": "Examining how Bengaluru's Revised Masterplan fails to create economically viable neighborhoods by reducing commercial zones by 53% while increasing residential areas, forcing longer commutes and urban decay.",
-        "url": "https://www.urbanmorph.com/blog/urbs-economicus.html",
-        "datePublished": "2018-04-12",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Urban Economics", "Bengaluru Masterplan", "Urban Planning", "Mixed-Use Development", "Economic Vitality"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Data Locke",
-        "description": "Examining the Cambridge Analytica scandal and the need for stronger personal data protection laws, drawing parallels to John Locke's principles of liberty and individual rights.",
-        "url": "https://www.urbanmorph.com/blog/data-locke.html",
-        "datePublished": "2018-03-23",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Data Privacy", "Cambridge Analytica", "Personal Data", "Data Protection", "Facebook", "Data Rights"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Allison Wonderland",
-        "description": "Examining the US Second Amendment and gun control debate through Allison's organizational models, exploring whether armed citizens can truly defend against federal power in modern times.",
-        "url": "https://www.urbanmorph.com/blog/allison-wonderland.html",
-        "datePublished": "2018-03-19",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Second Amendment", "Gun Control", "Allison Model", "US Constitution", "Organizational Process"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Hairy Potter & the Half Blade Prince",
-        "description": "Analyzing Gillette's market dominance in the razor blade industry with 65% global market share, examining pricing power, environmental impact of 28 billion plastic blades annually, and emerging competition.",
-        "url": "https://www.urbanmorph.com/blog/hairy-potter-half-blade.html",
-        "datePublished": "2018-03-07",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Gillette", "Razor Market", "Market Concentration", "HHI Index", "Plastic Waste", "Consumer Goods"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "People Power",
-        "description": "Exploring the role of cultural and ideological connections in geopolitical relationships, examining India's stance on power balance in the Maldives and the importance of cultural factors in strategic alliances.",
-        "url": "https://www.urbanmorph.com/blog/people-power.html",
-        "datePublished": "2018-02-23",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Geopolitics", "Cultural Ideology", "Maldives", "India", "China", "Strategic Alliances"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Model 4 & the Right to Bear Arms",
-        "description": "Applying the cultural ideology model to the US gun control debate, revealing how 71% of Americans oppose banning gun ownership despite mass shootings, demonstrating how cultural values prevent policy changes.",
-        "url": "https://www.urbanmorph.com/blog/model-4-right-bear-arms.html",
-        "datePublished": "2018-02-22",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Gun Control", "Second Amendment", "Cultural Ideology Model", "US Politics", "Gun Ownership"]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "The Cultural Ideology Model",
-        "description": "Introducing Model 4, the Cultural Ideology model, extending Graham Allison's three models of state action analysis by examining how cultural and ideological factors influence government decisions and international relations.",
-        "url": "https://www.urbanmorph.com/blog/cultural-ideology-model.html",
-        "datePublished": "2018-02-20",
-        "author": {"@type": "Person", "name": "Sathya Sankaran"},
-        "keywords": ["Cultural Ideology Model", "Graham Allison", "State Action Analysis", "Geopolitics", "Policy Analysis"]
       }
     ]
   }
@@ -1204,81 +1085,218 @@
 <section class="blog-content">
   <div class="container">
 
-    <!-- Latest Posts -->
-    <div class="section-header">
-      <span>Latest Insights</span>
-      <span class="section-count">CLIMATE & MOBILITY</span>
+    <!-- SPOTLIGHT: Hero Featured Article + Editor's Picks -->
+    <div class="spotlight-section scroll-animate">
+
+      <!-- Hero Featured: SyntheSYS -->
+      <div class="hero-featured">
+        <img src="img/blog/synthesys-header.jpg" alt="SyntheSYS: Orchestrating Progress in the Age of AI" class="hero-image" loading="eager">
+        <div class="hero-overlay">
+          <span class="hero-badge">AI & Progress</span>
+          <h2 class="hero-title">SyntheSYS: Orchestrating Progress in the Age of AI</h2>
+          <p class="hero-excerpt">
+            Introducing SyntheSYS - Urban Morph's AI-powered platform for understanding and actioning progress at scale. From neighborhood dashboards to the India Progress Monitor, we're synthesising knowledge to channel resources where they create the most impact.
+          </p>
+          <a href="blog/synthesys-orchestrating-progress.html" class="hero-cta">
+            Read Article <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Editor's Picks -->
+      <div class="section-header-magazine">
+        <div class="section-title-wrapper">
+          <h3 class="section-title">Editor's Picks</h3>
+          <p class="section-subtitle">Must-Read Articles</p>
+        </div>
+      </div>
+
+      <div class="editors-picks-grid">
+
+        <div class="magazine-card scroll-animate">
+          <div class="card-image-wrapper">
+            <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+            <span class="card-badge badge-climate">Climate Action</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="blog/climate-entrepreneurship-public-goods.html">Climate entrepreneurship and public goods</a>
+            </h3>
+            <p class="card-excerpt">
+              Explores how entrepreneurs can create economic value around environmental resource scarcity by establishing measurable correlations between pollution and health impacts.
+            </p>
+            <div class="card-meta">
+              <span class="card-date">January 15, 2025</span>
+              <a href="blog/climate-entrepreneurship-public-goods.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="magazine-card scroll-animate">
+          <div class="card-image-wrapper">
+            <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+            <span class="card-badge badge-climate">Energy Systems</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="blog/exergy-and-symbiosis.html">Exergy and Symbiosis</a>
+            </h3>
+            <p class="card-excerpt">
+              Examines energy efficiency in human systems and discusses the need for more efficient AI systems and industrial practices that mimic natural symbiotic relationships.
+            </p>
+            <div class="card-meta">
+              <span class="card-date">September 25, 2024</span>
+              <a href="blog/exergy-and-symbiosis.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="magazine-card scroll-animate">
+          <div class="card-image-wrapper">
+            <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+            <span class="card-badge badge-policy">Transport Policy</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">
+              <a href="blog/no-more-yellow-boards.html">#NoMoreYellowBoards</a>
+            </h3>
+            <p class="card-excerpt">
+              A compelling argument against vehicle registration color restrictions for carpooling services. Advocates for decoupling vehicle regulations from driver requirements.
+            </p>
+            <div class="card-meta">
+              <span class="card-date">October 3, 2023</span>
+              <a href="blog/no-more-yellow-boards.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <div class="newspaper-columns">
+    <div class="ornamental-divider"></div>
 
-      <div class="article featured scroll-animate">
-        <div class="topic-badge badge-product">AI & Progress</div>
-        <div class="article-title">
-          <a href="blog/synthesys-orchestrating-progress.html">SyntheSYS: Orchestrating Progress in the Age of AI</a>
+    <!-- LATEST INSIGHTS (2023-2026) -->
+    <div class="section-header-magazine first">
+      <div class="section-title-wrapper">
+        <h3 class="section-title">Latest Insights</h3>
+        <p class="section-subtitle">Recent articles from 2023-2026</p>
+      </div>
+      <span class="section-count">8 ARTICLES</span>
+    </div>
+
+    <div class="articles-grid">
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Urban Branding</span>
         </div>
-        <div class="article-summary">
-          Introducing SyntheSYS - Urban Morph's AI-powered platform for understanding and actioning progress at scale. From neighborhood dashboards to the India Progress Monitor, we're synthesising knowledge to channel resources where they create the most impact. On Republic Day 2026, we offer a new way forward: progress in service of people, planet, and the age of AI.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">January 26, 2026</span>
-          <a href="blog/synthesys-orchestrating-progress.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/branding-cities-mobility.html">Branding cities — Mobility</a>
+          </h3>
+          <p class="card-excerpt">
+            Proposes positioning cities through sustainable transportation priorities rather than personal vehicle ownership aspirations.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">August 9, 2023</span>
+            <a href="blog/branding-cities-mobility.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-climate">Climate Action</div>
-        <div class="article-title">
-          <a href="blog/climate-entrepreneurship-public-goods.html">Climate entrepreneurship and public goods</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-climate">ESG Reporting</span>
         </div>
-        <div class="article-summary">
-          Explores how entrepreneurs can create economic value around environmental resource scarcity by establishing measurable correlations between pollution and health impacts. A framework for building sustainable businesses that address collective action problems in climate and urban systems.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">January 15, 2025</span>
-          <a href="blog/climate-entrepreneurship-public-goods.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-climate">Energy Systems</div>
-        <div class="article-title">
-          <a href="blog/exergy-and-symbiosis.html">Exergy and Symbiosis</a>
-        </div>
-        <div class="article-summary">
-          Examines energy efficiency in human systems, noting that only 11% of energy consumed becomes usable output while the rest is lost in conversion. Discusses the need for more efficient AI systems and industrial practices that mimic natural symbiotic relationships.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">September 25, 2024</span>
-          <a href="blog/exergy-and-symbiosis.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/state-of-scope-3-emissions.html">State of Scope 3 emissions</a>
+          </h3>
+          <p class="card-excerpt">
+            Analyzes corporate employee commute emissions reporting trends and introduces measurement principles for sustainable mobility tracking.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">April 28, 2023</span>
+            <a href="blog/state-of-scope-3-emissions.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Transport Policy</div>
-        <div class="article-title">
-          <a href="blog/no-more-yellow-boards.html">#NoMoreYellowBoards</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Infrastructure</span>
         </div>
-        <div class="article-summary">
-          A compelling argument against vehicle registration color restrictions for carpooling services. Advocates for decoupling vehicle regulations from driver requirements to enable more flexible shared mobility options in Indian cities.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">October 3, 2023</span>
-          <a href="blog/no-more-yellow-boards.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/efficient-transportation-infrastructure.html">Are we not rich enough for efficient transportation infrastructure?</a>
+          </h3>
+          <p class="card-excerpt">
+            Challenges the notion that developing nations must delay sustainable infrastructure investments until they "develop."
+          </p>
+          <div class="card-meta">
+            <span class="card-date">March 3, 2023</span>
+            <a href="blog/efficient-transportation-infrastructure.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Urban Branding</div>
-        <div class="article-title">
-          <a href="blog/branding-cities-mobility.html">Branding cities — Mobility</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Active Mobility</span>
         </div>
-        <div class="article-summary">
-          Proposes a paradigm shift in how cities position themselves—through sustainable transportation priorities rather than personal vehicle ownership aspirations. What if cities competed on walkability scores instead of highway capacity?
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/society-is-ready.html">Society is ready. The Politicians?</a>
+          </h3>
+          <p class="card-excerpt">
+            Documents grassroots active mobility initiatives in Karnataka and urges political action on cycling and pedestrian infrastructure.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">February 16, 2023</span>
+            <a href="blog/society-is-ready.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-        <div class="article-meta">
-          <span class="article-date">August 9, 2023</span>
-          <a href="blog/branding-cities-mobility.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #FBC831, #e0b32a);"></div>
+          <span class="card-badge badge-product">Product Update</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/cycleto-work-now-altmo.html">CycleTo.Work is now AltMo.app</a>
+          </h3>
+          <p class="card-excerpt">
+            Announces platform evolution to track multiple sustainable commute modes beyond cycling.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">January 10, 2023</span>
+            <a href="blog/cycleto-work-now-altmo.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Legislation</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/active-and-resilient.html">Active and Resilient</a>
+          </h3>
+          <p class="card-excerpt">
+            Discusses Karnataka's Active Mobility Bill as a framework for climate resilience and city liveability.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">December 11, 2022</span>
+            <a href="blog/active-and-resilient.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
@@ -1286,273 +1304,243 @@
 
     <div class="ornamental-divider"></div>
 
-    <!-- ESG & Corporate Sustainability -->
-    <div class="section-header">
-      <span>Corporate Sustainability</span>
-      <span class="section-count">ESG & SCOPE 3</span>
+    <!-- POPULAR TOPICS: Active Mobility -->
+    <div class="section-header-magazine">
+      <span class="section-icon">🚴</span>
+      <div class="section-title-wrapper">
+        <h3 class="section-title">Active Mobility</h3>
+        <p class="section-subtitle">Cycling, walking, and human-powered transportation</p>
+      </div>
+      <span class="section-count">12 ARTICLES</span>
     </div>
 
-    <div class="newspaper-columns">
+    <div class="articles-grid">
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-climate">ESG Reporting</div>
-        <div class="article-title">
-          <a href="blog/state-of-scope-3-emissions.html">State of Scope 3 emissions</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Active Mobility</span>
         </div>
-        <div class="article-summary">
-          A deep dive into corporate employee commute emissions reporting trends. Introduces measurement principles for sustainable mobility tracking and why Scope 3 emissions from employee commute remain the blind spot in corporate sustainability reporting.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">April 28, 2023</span>
-          <a href="blog/state-of-scope-3-emissions.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/society-is-ready.html">Society is ready. The Politicians?</a>
+          </h3>
+          <p class="card-excerpt">
+            Documents the surge of grassroots active mobility initiatives in Karnataka and the growing citizen demand for infrastructure.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">February 16, 2023</span>
+            <a href="blog/society-is-ready.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-product">Product Update</div>
-        <div class="article-title">
-          <a href="blog/cycleto-work-now-altmo.html">CycleTo.Work is now AltMo.app</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-policy">Legislation</span>
         </div>
-        <div class="article-summary">
-          The evolution of our sustainable commuting platform from CycleTo.Work to Altmo—now tracking multiple sustainable commute modes beyond cycling. A platform designed to help companies measure and reduce their Scope 3 emissions from employee transport.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">January 10, 2023</span>
-          <a href="blog/cycleto-work-now-altmo.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="ornamental-divider"></div>
-
-    <!-- Policy & Infrastructure -->
-    <div class="section-header">
-      <span>Policy & Infrastructure</span>
-      <span class="section-count">ADVOCACY & ANALYSIS</span>
-    </div>
-
-    <div class="newspaper-columns">
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Infrastructure</div>
-        <div class="article-title">
-          <a href="blog/efficient-transportation-infrastructure.html">Are we not rich enough for efficient transportation infrastructure?</a>
-        </div>
-        <div class="article-summary">
-          Challenges the pervasive notion that developing nations must delay sustainable infrastructure investments until they "develop." Emphasizes the government's critical role in addressing market failures and why waiting costs more in the long run.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">March 3, 2023</span>
-          <a href="blog/efficient-transportation-infrastructure.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/active-and-resilient.html">Active and Resilient</a>
+          </h3>
+          <p class="card-excerpt">
+            An analysis of Karnataka's proposed Active Mobility Bill as a framework for climate resilience.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">December 11, 2022</span>
+            <a href="blog/active-and-resilient.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Active Mobility</div>
-        <div class="article-title">
-          <a href="blog/society-is-ready.html">Society is ready. The Politicians?</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Urban Planning</span>
         </div>
-        <div class="article-summary">
-          Documents the surge of grassroots active mobility initiatives in Karnataka and the growing citizen demand for cycling and pedestrian infrastructure. A call for political action to match the momentum of society's shift toward sustainable mobility.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">February 16, 2023</span>
-          <a href="blog/society-is-ready.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Legislation</div>
-        <div class="article-title">
-          <a href="blog/active-and-resilient.html">Active and Resilient</a>
-        </div>
-        <div class="article-summary">
-          An analysis of Karnataka's proposed Active Mobility Bill as a framework for climate resilience and city liveability. Why codifying walking and cycling rights into law matters for urban futures.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">December 11, 2022</span>
-          <a href="blog/active-and-resilient.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/pedestrianised-streets-church-street.html">Pedestrianised Streets & Urban Wellbeing</a>
+          </h3>
+          <p class="card-excerpt">
+            Impact assessment showing 92% increase in pedestrian footfall and improved air quality on Church Street.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">November 23, 2021</span>
+            <a href="blog/pedestrianised-streets-church-street.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Public Transit</div>
-        <div class="article-title">
-          <a href="blog/bus-for-whom.html">Bus for whom?</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Active Mobility</span>
         </div>
-        <div class="article-summary">
-          A data-driven exploration of public transit accessibility in Bengaluru. Presents visualization tools for analyzing bus route coverage and identifies gaps in the city's public transportation network that leave millions underserved.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">October 22, 2022</span>
-          <a href="blog/bus-for-whom.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-product">Digital Climate</div>
-        <div class="article-title">
-          <a href="blog/digital-climate-friendly.html">Digital & Climate Friendly</a>
-        </div>
-        <div class="article-summary">
-          How Silvassa and New Town Kolkata are using the Cycle To Work platform for digital-first, data-driven transformation toward climate-friendly mobility. A case study in ESG compliance and sustainable urban development with industry leaders like IPCA, Reliance, and HUL.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">July 25, 2022</span>
-          <a href="blog/digital-climate-friendly.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/establishing-virtue-signalling.html">Establishing Virtue Signalling</a>
+          </h3>
+          <p class="card-excerpt">
+            How Bengaluru established cycling as a priority through removing anti-cycling signboards and launching CFAM.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">July 19, 2021</span>
+            <a href="blog/establishing-virtue-signalling.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Social Issues</div>
-        <div class="article-title">
-          <a href="blog/new-meaning-womens-day.html">A New Meaning to Women's Day</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Community</span>
         </div>
-        <div class="article-summary">
-          A powerful essay from a 17-year-old CFAM volunteer challenging societal judgments on young women. This Women's Day piece advocates for celebrating different forms of womanhood and fighting for the independence to be authentic without conforming to restrictive gender norms.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">March 8, 2022</span>
-          <a href="blog/new-meaning-womens-day.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Infrastructure</div>
-        <div class="article-title">
-          <a href="blog/redesign-karnataka-infrastructure.html">ಮರುವಿನ್ಯಾಸ — Redesign</a>
-        </div>
-        <div class="article-summary">
-          A Republic Day vision for Karnataka calling for a fundamental redesign of infrastructure and governance systems. Proposes investing Rs. 1,800 crores annually for climate-friendly walking and cycling infrastructure, alongside passing revolutionary transport bills including BMLTA, Active Mobility, and TOD policies.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">January 26, 2022</span>
-          <a href="blog/redesign-karnataka-infrastructure.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/pedal-for-life-world-bicycle-day.html">#PedalForLife on #WorldBicycleDay</a>
+          </h3>
+          <p class="card-excerpt">
+            Celebrating World Bicycle Day 2021 with virtual town hall bringing together cyclists from 12 cities.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">June 7, 2021</span>
+            <a href="blog/pedal-for-life-world-bicycle-day.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-    </div>
-
-    <div class="ornamental-divider"></div>
-
-    <!-- 2021 Archives -->
-    <div class="section-header">
-      <span>2021 Archives</span>
-      <span class="section-count">BUILDING THE FOUNDATION</span>
-    </div>
-
-    <div class="newspaper-columns">
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Policy</div>
-        <div class="article-title">
-          <a href="blog/rewards-of-collaboration.html">Rewards of Collaboration</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-policy">Urban Policy</span>
         </div>
-        <div class="article-summary">
-          Examining the path to creating Bengaluru's Metropolitan Land Transport Authority (BMLTA). How collaboration between transport agencies can deliver integrated mobility for citizens through proper oversight and coordination.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">December 8, 2021</span>
-          <a href="blog/rewards-of-collaboration.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/invert-mobility-pyramid.html">How do you invert the mobility pyramid?</a>
+          </h3>
+          <p class="card-excerpt">
+            Making the case for legislative action on active mobility as affirmative action to prioritize pedestrians and cyclists.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">February 22, 2021</span>
+            <a href="blog/invert-mobility-pyramid.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Urban Planning</div>
-        <div class="article-title">
-          <a href="blog/pedestrianised-streets-church-street.html">Pedestrianised Streets & Urban Wellbeing</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Active Mobility</span>
         </div>
-        <div class="article-summary">
-          Impact assessment of Church Street First initiative showing 92% increase in pedestrian footfall, improved air quality, and thriving local businesses. A model for transforming city streets into people-centric spaces.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">November 23, 2021</span>
-          <a href="blog/pedestrianised-streets-church-street.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Active Mobility</div>
-        <div class="article-title">
-          <a href="blog/establishing-virtue-signalling.html">Establishing Virtue Signalling</a>
-        </div>
-        <div class="article-summary">
-          How Bengaluru established cycling as a priority through quick action on removing anti-cycling signboards and launching the Council For Active Mobility (CFAM) with Bicycle Councillors from 30 wards.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">July 19, 2021</span>
-          <a href="blog/establishing-virtue-signalling.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/active-mobility-goals.html">Active Mobility Goals</a>
+          </h3>
+          <p class="card-excerpt">
+            Defining what an Active Mobility Act should contain - ensuring outcomes for walkability and cycle-ability.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">March 1, 2021</span>
+            <a href="blog/active-mobility-goals.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Community</div>
-        <div class="article-title">
-          <a href="blog/pedal-for-life-world-bicycle-day.html">#PedalForLife on #WorldBicycleDay</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Cycling & Mobility</span>
         </div>
-        <div class="article-summary">
-          Celebrating World Bicycle Day 2021 with the Relief Riders campaign launch. A virtual town hall bringing together cyclists from 12 cities to share stories of how cycling creates positive impact during challenging times.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">June 7, 2021</span>
-          <a href="blog/pedal-for-life-world-bicycle-day.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Public Health</div>
-        <div class="article-title">
-          <a href="blog/deja-vu.html">Deja Vu</a>
-        </div>
-        <div class="article-summary">
-          Ground-level observations on India's COVID vaccination rollout bottlenecks. At current rates, vaccinating Bengaluru would take 2 years - a call for urgent scale-up of vaccination infrastructure and manpower.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">April 24, 2021</span>
-          <a href="blog/deja-vu.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/pandemic-blessing.html">Pandemic Blessing</a>
+          </h3>
+          <p class="card-excerpt">
+            How the pandemic created an opportunity for cycling to surge in Bengaluru through Relief Riders and Reset With Cycling.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">October 7, 2020</span>
+            <a href="blog/pandemic-blessing.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-climate">Climate Action</div>
-        <div class="article-title">
-          <a href="blog/who-is-to-blame.html">Who is to blame?</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Cycling</span>
         </div>
-        <div class="article-summary">
-          Examining responsibility for climate-friendly infrastructure progress. While individuals, businesses, and technocrats all play roles, the buck ultimately stops with political leadership to formalize climate principles in decision-making.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">April 15, 2021</span>
-          <a href="blog/who-is-to-blame.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Active Mobility</div>
-        <div class="article-title">
-          <a href="blog/active-mobility-goals.html">Active Mobility Goals</a>
-        </div>
-        <div class="article-summary">
-          Defining what an Active Mobility Act should contain - ensuring outcomes for walkability and cycle-ability through audits, graded speed limits, time-bound action plans, and enshrining rights of vulnerable road users.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">March 1, 2021</span>
-          <a href="blog/active-mobility-goals.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/quarter-pedalling-to-work.html">A Quarter of Pedalling to work</a>
+          </h3>
+          <p class="card-excerpt">
+            CycleToWork platform launches with 115 companies across 6 cities, using leaderboards to incentivize sustainable commuting.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">January 27, 2019</span>
+            <a href="blog/quarter-pedalling-to-work.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Policy</div>
-        <div class="article-title">
-          <a href="blog/invert-mobility-pyramid.html">How do you invert the mobility pyramid?</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Cycling</span>
         </div>
-        <div class="article-summary">
-          Making the case for legislative action on active mobility as affirmative action. Why states need to enact laws prioritizing pedestrian and cycling infrastructure to restore equity on streets and correct market failures.
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/pedalling-gender-gap.html">Pedalling across the gender gap</a>
+          </h3>
+          <p class="card-excerpt">
+            Only 8.4% of CycleToWork riders are women. Examining barriers to women cycling in India and solutions for greater equity.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">January 18, 2019</span>
+            <a href="blog/pedalling-gender-gap.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-        <div class="article-meta">
-          <span class="article-date">February 22, 2021</span>
-          <a href="blog/invert-mobility-pyramid.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Active Mobility</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/cranking-it-up.html">Cranking it up</a>
+          </h3>
+          <p class="card-excerpt">
+            The launch of #CycleToWork Fridays - a critical mass event for bicycle commuters demanding safe cycling facilities.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">October 25, 2019</span>
+            <a href="blog/cranking-it-up.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Cycling Safety</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/state-of-mind.html">State of the mind</a>
+          </h3>
+          <p class="card-excerpt">
+            Exploring the gap between perceived and actual cycling safety. The real issue is a collective action problem.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">September 20, 2018</span>
+            <a href="blog/state-of-mind.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
@@ -1560,219 +1548,205 @@
 
     <div class="ornamental-divider"></div>
 
-    <!-- 2020 Archives -->
-    <div class="section-header">
-      <span>2020 Archives</span>
-      <span class="section-count">PANDEMIC & TRANSFORMATION</span>
+    <!-- POPULAR TOPICS: Climate Action -->
+    <div class="section-header-magazine">
+      <span class="section-icon">🌱</span>
+      <div class="section-title-wrapper">
+        <h3 class="section-title">Climate Action</h3>
+        <p class="section-subtitle">Environmental impact, emissions, and sustainability</p>
+      </div>
+      <span class="section-count">10 ARTICLES</span>
     </div>
 
-    <div class="newspaper-columns">
+    <div class="articles-grid">
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Cycling & Mobility</div>
-        <div class="article-title">
-          <a href="blog/pandemic-blessing.html">Pandemic Blessing</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-climate">Climate Action</span>
         </div>
-        <div class="article-summary">
-          While the pandemic brought many challenges, it created an opportunity for cycling to surge in Bengaluru. Through Relief Riders and Reset With Cycling campaigns, bicycle sales exploded 200% and Strava data revealed an unprecedented shift to recreational cycling. Infrastructure plans could now capitalize on this momentum.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">October 7, 2020</span>
-          <a href="blog/pandemic-blessing.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/climate-entrepreneurship-public-goods.html">Climate entrepreneurship and public goods</a>
+          </h3>
+          <p class="card-excerpt">
+            Explores how entrepreneurs can create economic value around environmental resource scarcity.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">January 15, 2025</span>
+            <a href="blog/climate-entrepreneurship-public-goods.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-climate">Climate Action</div>
-        <div class="article-title">
-          <a href="blog/cities-climate-behaviour-change.html">Cities, Climate and Behaviour Change</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-climate">Energy Systems</span>
         </div>
-        <div class="article-summary">
-          Cycling is the future. Cities influence our direction as a country through everyday consumption choices. 40% of air pollution comes from tailpipe emissions. Getting people on bicycles is public change making that requires persistence, awareness, and using policy windows like COVID-19 to achieve results.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">May 3, 2020</span>
-          <a href="blog/cities-climate-behaviour-change.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Community Action</div>
-        <div class="article-title">
-          <a href="blog/relief-riders.html">Relief Riders</a>
-        </div>
-        <div class="article-summary">
-          During COVID-19 lockdown, 66 cyclists volunteered to deliver essential supplies to elderly and vulnerable populations in Bengaluru. "We carry supplies, not the virus" - this decentralized network of Relief Riders proved the bicycle as an emergency response tool, covering 27 of 198 wards across the city.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">April 11, 2020</span>
-          <a href="blog/relief-riders.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/exergy-and-symbiosis.html">Exergy and Symbiosis</a>
+          </h3>
+          <p class="card-excerpt">
+            Examines energy efficiency in human systems and discusses the need for more efficient AI and industrial practices.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">September 25, 2024</span>
+            <a href="blog/exergy-and-symbiosis.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-product">Innovation</div>
-        <div class="article-title">
-          <a href="blog/future-urban-living.html">The Future of Urban Living</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-climate">Climate Action</span>
         </div>
-        <div class="article-summary">
-          Climate change and job market upheaval are shaping urban futures. With Bengaluru projected as the world's fastest growing city till 2035, innovation hubs like OoruLabs provide ecosystems for creating sustainable futures. Success lies in society and markets outrunning the state in setting futures we can experience.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">January 20, 2020</span>
-          <a href="blog/future-urban-living.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Policy</div>
-        <div class="article-title">
-          <a href="blog/coasian-ombudsman.html">The Coasian Ombudsman</a>
-        </div>
-        <div class="article-summary">
-          At the heart of market failure is a failure to negotiate. From resolving bar-resident conflicts to addressing traffic congestion, Coasian negotiation should be the first port of call. Platforms like CycleToWork aggregate company-level points for social good, catalyzing productive participation in minimizing negative externalities.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">January 13, 2020</span>
-          <a href="blog/coasian-ombudsman.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/who-is-to-blame.html">Who is to blame?</a>
+          </h3>
+          <p class="card-excerpt">
+            Examining responsibility for climate-friendly infrastructure progress and the role of political leadership.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">April 15, 2021</span>
+            <a href="blog/who-is-to-blame.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-    </div>
-
-    <div class="ornamental-divider"></div>
-
-    <!-- 2019 Archives -->
-    <div class="section-header">
-      <span>2019 Archives</span>
-      <span class="section-count">THE BEGINNING</span>
-    </div>
-
-    <div class="newspaper-columns">
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Policy</div>
-        <div class="article-title">
-          <a href="blog/peanuts-will-only-get-you-monkeys.html">Peanuts will only get you monkeys</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-climate">Climate Action</span>
         </div>
-        <div class="article-summary">
-          A critical analysis of Bengaluru's Comprehensive Mobility Plan showing inadequate investment in cycling infrastructure - only 4% of required cycle tracks and 2-4% of needed bike sharing hubs.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">December 26, 2019</span>
-          <a href="blog/peanuts-will-only-get-you-monkeys.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/cities-climate-behaviour-change.html">Cities, Climate and Behaviour Change</a>
+          </h3>
+          <p class="card-excerpt">
+            Cycling is the future. Cities influence our direction through everyday consumption and usage choices.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">May 3, 2020</span>
+            <a href="blog/cities-climate-behaviour-change.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Active Mobility</div>
-        <div class="article-title">
-          <a href="blog/cranking-it-up.html">Cranking it up</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-climate">Clean Air</span>
         </div>
-        <div class="article-summary">
-          The launch of #CycleToWork Fridays - a critical mass event for bicycle commuters demanding safe cycling facilities along Outer Ring Road. BCOS 2.0 brings together Bicycle Councillors, school champions, and work ambassadors.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">October 25, 2019</span>
-          <a href="blog/cranking-it-up.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Policy</div>
-        <div class="article-title">
-          <a href="blog/have-we-measured-enough.html">Have we measured enough?</a>
-        </div>
-        <div class="article-summary">
-          Analysis of air quality monitoring in Bengaluru and the need to move from measurement to action on pollution control. With more than 100 monitors deployed, the question is: what are we doing with all the data?
-        </div>
-        <div class="article-meta">
-          <span class="article-date">July 31, 2019</span>
-          <a href="blog/have-we-measured-enough.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/people-forefront-clean-air.html">People at the forefront of clean air</a>
+          </h3>
+          <p class="card-excerpt">
+            Communities taking action through cycling initiatives to combat air pollution and create change from the ground up.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">October 27, 2018</span>
+            <a href="blog/people-forefront-clean-air.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Policy</div>
-        <div class="article-title">
-          <a href="blog/drive-to-nowhere.html">The drive to nowhere</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-policy">Air Quality</span>
         </div>
-        <div class="article-summary">
-          Vehicle additions in Bengaluru grow at 10% annually. Bold measures needed to disincentivize motor vehicles and promote sustainable transport. Traffic doubles every 7 years - the adjustment of the belt to suit the growing tummy has to stop.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">May 30, 2019</span>
-          <a href="blog/drive-to-nowhere.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Policy</div>
-        <div class="article-title">
-          <a href="blog/clear-and-present-danger.html">The clear and present danger</a>
-        </div>
-        <div class="article-summary">
-          Air pollution is the single largest environmental health risk globally. Analysis of vehicular pollution and its impact on Bengaluru, where one-fifth of commuters cause close to half the CO2 emissions in the city.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">April 4, 2019</span>
-          <a href="blog/clear-and-present-danger.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/have-we-measured-enough.html">Have we measured enough?</a>
+          </h3>
+          <p class="card-excerpt">
+            Analysis of air quality monitoring in Bengaluru and the need to move from measurement to action.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">July 31, 2019</span>
+            <a href="blog/have-we-measured-enough.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Policy</div>
-        <div class="article-title">
-          <a href="blog/doing-it-right.html">Doing it right!</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-policy">Air Pollution</span>
         </div>
-        <div class="article-summary">
-          Amsterdam's Zuidas development shows how to integrate transit-oriented development with mobility as a service. Lessons for Bengaluru on planning business hubs with transport infrastructure first, not as an afterthought.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">March 17, 2019</span>
-          <a href="blog/doing-it-right.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Cycling</div>
-        <div class="article-title">
-          <a href="blog/quarter-pedalling-to-work.html">A Quarter of Pedalling to work</a>
-        </div>
-        <div class="article-summary">
-          CycleToWork platform launches with 115 companies across 6 cities, using leaderboards to incentivize sustainable commuting. The tech platform that aggregates bicycle commutes and ranks companies by participation.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">January 27, 2019</span>
-          <a href="blog/quarter-pedalling-to-work.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/clear-and-present-danger.html">The clear and present danger</a>
+          </h3>
+          <p class="card-excerpt">
+            Air pollution is the single largest environmental health risk globally. Analysis of vehicular pollution impact.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">April 4, 2019</span>
+            <a href="blog/clear-and-present-danger.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Policy</div>
-        <div class="article-title">
-          <a href="blog/future-delivery-not-drones.html">Future of delivery is not drones</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-climate">Plastic Waste</span>
         </div>
-        <div class="article-summary">
-          Cargo bikes can handle 42% of urban goods trips under 500kg, offering a sustainable alternative to trucks for last-mile delivery. Why the future of urban logistics is human-powered, not drone-powered.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">January 20, 2019</span>
-          <a href="blog/future-delivery-not-drones.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/spoon-fed.html">Spoon-fed</a>
+          </h3>
+          <p class="card-excerpt">
+            Behavioral nudges to reduce plastic cutlery waste in India's online food delivery industry. 120 billion pieces disposed annually.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">July 12, 2018</span>
+            <a href="blog/spoon-fed.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Cycling</div>
-        <div class="article-title">
-          <a href="blog/pedalling-gender-gap.html">Pedalling across the gender gap</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-mobility">Community Action</span>
         </div>
-        <div class="article-summary">
-          Only 8.4% of CycleToWork riders are women. Examining barriers to women cycling in India and solutions for greater gender equity on the roads. Safety, social acceptance, and infrastructure challenges need to be addressed.
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/relief-riders.html">Relief Riders</a>
+          </h3>
+          <p class="card-excerpt">
+            How 66 cyclists delivered essential supplies to elderly populations during COVID-19 lockdown in Bengaluru.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">April 11, 2020</span>
+            <a href="blog/relief-riders.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-        <div class="article-meta">
-          <span class="article-date">January 18, 2019</span>
-          <a href="blog/pedalling-gender-gap.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-policy">Urban Policy</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/drive-to-nowhere.html">The drive to nowhere</a>
+          </h3>
+          <p class="card-excerpt">
+            Vehicle additions in Bengaluru grow at 10% annually. Bold measures needed to promote sustainable transport.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">May 30, 2019</span>
+            <a href="blog/drive-to-nowhere.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
@@ -1780,319 +1754,748 @@
 
     <div class="ornamental-divider"></div>
 
-    <!-- 2018 Archives -->
-    <div class="section-header">
-      <span>2018 Archives - The Early Years</span>
-      <span class="section-count">FOUNDING IDEAS</span>
+    <!-- POPULAR TOPICS: Policy & Advocacy -->
+    <div class="section-header-magazine">
+      <span class="section-icon">🏛️</span>
+      <div class="section-title-wrapper">
+        <h3 class="section-title">Policy & Advocacy</h3>
+        <p class="section-subtitle">Urban governance, infrastructure, and legislative action</p>
+      </div>
+      <span class="section-count">15 ARTICLES</span>
     </div>
 
-    <div class="newspaper-columns">
+    <div class="articles-grid">
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Road Safety</div>
-        <div class="article-title">
-          <a href="blog/rethinking-road-safety.html">Rethinking road safety</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Transport Policy</span>
         </div>
-        <div class="article-summary">
-          Road safety campaigns focus on helmets and seatbelts for motor vehicle passengers, but ignore pedestrians and cyclists. A MoRTH report showed a 34% increase in pedestrian and cyclist fatalities while car and motorbike deaths decreased by 4%.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">December 4, 2018</span>
-          <a href="blog/rethinking-road-safety.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/no-more-yellow-boards.html">#NoMoreYellowBoards</a>
+          </h3>
+          <p class="card-excerpt">
+            Argues against vehicle registration color restrictions for carpooling services.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">October 3, 2023</span>
+            <a href="blog/no-more-yellow-boards.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-climate">Clean Air</div>
-        <div class="article-title">
-          <a href="blog/people-forefront-clean-air.html">People at the forefront of clean air</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Infrastructure</span>
         </div>
-        <div class="article-summary">
-          With 12 years to prevent the worst effects of climate change, communities are taking action through cycling initiatives like Cycle Day and CycleToWork campaign to combat air pollution and create change from the ground up.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">October 27, 2018</span>
-          <a href="blog/people-forefront-clean-air.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Community Action</div>
-        <div class="article-title">
-          <a href="blog/communities-collective-action.html">Communities and collective action</a>
-        </div>
-        <div class="article-summary">
-          Peter Block describes citizenship as not just our act of voting but our ability to come together as a community to discuss possibilities and act collectively. Exploring community-led solutions through Cycle Day, Walk to School, and Chaat Street initiatives.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">September 24, 2018</span>
-          <a href="blog/communities-collective-action.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/efficient-transportation-infrastructure.html">Are we not rich enough for efficient transportation infrastructure?</a>
+          </h3>
+          <p class="card-excerpt">
+            Challenges the notion that developing nations must delay sustainable infrastructure investments.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">March 3, 2023</span>
+            <a href="blog/efficient-transportation-infrastructure.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-mobility">Cycling Safety</div>
-        <div class="article-title">
-          <a href="blog/state-of-mind.html">State of the mind</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-mobility">Public Transit</span>
         </div>
-        <div class="article-summary">
-          As we head into another car-free day on September 22, 2018, exploring the gap between perceived and actual cycling safety. The real issue is not safety but a collective action problem that needs social change through initiatives like Cycle Day and CycleToWork.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">September 20, 2018</span>
-          <a href="blog/state-of-mind.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Economics</div>
-        <div class="article-title">
-          <a href="blog/moral-hazard-slowing-economy.html">Moral Hazard + Slowing Economy = Lost Money</a>
-        </div>
-        <div class="article-summary">
-          Non Performing Assets in India exceed 10 lakh crore, with 90% on PSB books. An analysis of the causes - from moral hazard and fraud to economic slowdown - and potential solutions beyond bad banks and asset reconstruction.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">September 1, 2018</span>
-          <a href="blog/moral-hazard-slowing-economy.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/bus-for-whom.html">Bus for whom?</a>
+          </h3>
+          <p class="card-excerpt">
+            Data-driven exploration of public transit accessibility in Bengaluru with visualization tools.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">October 22, 2022</span>
+            <a href="blog/bus-for-whom.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Infrastructure</div>
-        <div class="article-title">
-          <a href="blog/derailed.html">Derailed</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Social Issues</span>
         </div>
-        <div class="article-summary">
-          CAG report reveals Indian Railways station inefficiencies discovered by Praja RAAG in 2010. Bengaluru stations show worst efficiency ratios. Solutions include multi-decking, underground expansion, and integrated traffic planning for commuter rail.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">August 10, 2018</span>
-          <a href="blog/derailed.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Education</div>
-        <div class="article-title">
-          <a href="blog/deeper-learning-better-nation.html">Deeper learning for a better nation</a>
-        </div>
-        <div class="article-summary">
-          Before formal schooling, humankind learned by passing on knowledge from generation to generation. Today's vocational education in India needs reform. Rather than centralized government schemes, industry participation and online learning platforms should drive skill development.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">August 4, 2018</span>
-          <a href="blog/deeper-learning-better-nation.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/new-meaning-womens-day.html">A New Meaning to Women's Day</a>
+          </h3>
+          <p class="card-excerpt">
+            A powerful essay challenging societal judgments on young women and advocating for authentic self-expression.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">March 8, 2022</span>
+            <a href="blog/new-meaning-womens-day.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Governance</div>
-        <div class="article-title">
-          <a href="blog/real-slim-shady.html">The real slim shady</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Infrastructure</span>
         </div>
-        <div class="article-summary">
-          We have been told growth is about investing in large infrastructure projects. But the real story of growth is strong human capital and administrative institutions. India loses $1 trillion annually to corruption, which reduces growth rate by 0.72% for every 1% increase in corruption.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">July 30, 2018</span>
-          <a href="blog/real-slim-shady.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Railways & Freight</div>
-        <div class="article-title">
-          <a href="blog/gravy-train.html">The gravy train</a>
-        </div>
-        <div class="article-summary">
-          Analysis of Indian Railways' dependency on coal freight revenues and how the shift to renewables could impact passenger fares. Exploring the potential of suburban rail for cargo transport in Bengaluru.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">July 29, 2018</span>
-          <a href="blog/gravy-train.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/redesign-karnataka-infrastructure.html">ಮರುವಿನ್ಯಾಸ — Redesign</a>
+          </h3>
+          <p class="card-excerpt">
+            A Republic Day vision calling for redesign of Karnataka's infrastructure with focus on walking and cycling.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">January 26, 2022</span>
+            <a href="blog/redesign-karnataka-infrastructure.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Geopolitics</div>
-        <div class="article-title">
-          <a href="blog/eye-of-tiger.html">Eye of the tiger</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Urban Policy</span>
         </div>
-        <div class="article-summary">
-          Analysis of India's geopolitical position vis-a-vis China and the US. Exploring power asymmetry, regional alliances, and the shift towards a multipolar Asia dominated by regional powers.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">July 25, 2018</span>
-          <a href="blog/eye-of-tiger.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Transportation Hub</div>
-        <div class="article-title">
-          <a href="blog/capital-and-people.html">Capital and its People</a>
-        </div>
-        <div class="article-summary">
-          Exploring how Kempegowda International Airport could become a multi-modal transportation hub integrating rail, bus, and air to transform Bengaluru's economy and reduce urban congestion.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">July 21, 2018</span>
-          <a href="blog/capital-and-people.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/rewards-of-collaboration.html">Rewards of Collaboration</a>
+          </h3>
+          <p class="card-excerpt">
+            Examining the path to creating Bengaluru's Metropolitan Land Transport Authority (BMLTA).
+          </p>
+          <div class="card-meta">
+            <span class="card-date">December 8, 2021</span>
+            <a href="blog/rewards-of-collaboration.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Metro Governance</div>
-        <div class="article-title">
-          <a href="blog/broken-foundations.html">Broken Foundations</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Urban Policy</span>
         </div>
-        <div class="article-summary">
-          22 years after the 74th Constitutional Amendment, Bengaluru's Metropolitan Planning Committee finally emerged. But structural fragmentation persists. Real devolution requires synchronizing MPC with BMRDA, empowering local bodies, and ensuring proper fiscal federalism.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">July 18, 2018</span>
-          <a href="blog/broken-foundations.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-climate">Plastic Waste</div>
-        <div class="article-title">
-          <a href="blog/spoon-fed.html">Spoon-fed</a>
-        </div>
-        <div class="article-summary">
-          Exploring behavioral nudges and choice architecture to reduce plastic cutlery waste in India's booming online food delivery industry. 120 billion pieces of plastic cutlery are disposed annually.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">July 12, 2018</span>
-          <a href="blog/spoon-fed.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/peanuts-will-only-get-you-monkeys.html">Peanuts will only get you monkeys</a>
+          </h3>
+          <p class="card-excerpt">
+            Critical analysis of Bengaluru's Comprehensive Mobility Plan showing inadequate cycling infrastructure investment.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">December 26, 2019</span>
+            <a href="blog/peanuts-will-only-get-you-monkeys.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Institutional Reform</div>
-        <div class="article-title">
-          <a href="blog/state-of-politics.html">The state of politics</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Urban Policy</span>
         </div>
-        <div class="article-summary">
-          Analysis of India's institutional decay from post-independence socialism to modern corruption cycles. Examining power asymmetry, rigid uniformity, and the need to strengthen federal institutions.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">June 24, 2018</span>
-          <a href="blog/state-of-politics.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Fiscal Federalism</div>
-        <div class="article-title">
-          <a href="blog/federalism-fifteenth.html">Federalism & the Fifteenth</a>
-        </div>
-        <div class="article-summary">
-          Critical analysis of the 15th Finance Commission's Terms of Reference. Examining population data usage, revenue deficit grants, fiscal federalism, and the balance between central control and state autonomy.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">June 24, 2018</span>
-          <a href="blog/federalism-fifteenth.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/doing-it-right.html">Doing it right!</a>
+          </h3>
+          <p class="card-excerpt">
+            Amsterdam's Zuidas development shows how to integrate transit-oriented development with mobility as a service.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">March 17, 2019</span>
+            <a href="blog/doing-it-right.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Urban Economics</div>
-        <div class="article-title">
-          <a href="blog/urbs-economicus.html">Urbs Economicus</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Urban Policy</span>
         </div>
-        <div class="article-summary">
-          Examining how Bengaluru's Revised Masterplan fails to create economically viable neighborhoods by reducing commercial zones by 53% while increasing residential areas, forcing longer commutes and urban decay.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">April 12, 2018</span>
-          <a href="blog/urbs-economicus.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Data Privacy</div>
-        <div class="article-title">
-          <a href="blog/data-locke.html">Data Locke</a>
-        </div>
-        <div class="article-summary">
-          Examining the Cambridge Analytica scandal and the need for stronger personal data protection laws, drawing parallels to John Locke's principles of liberty and individual rights.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">March 23, 2018</span>
-          <a href="blog/data-locke.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/future-delivery-not-drones.html">Future of delivery is not drones</a>
+          </h3>
+          <p class="card-excerpt">
+            Cargo bikes can handle 42% of urban goods trips under 500kg, offering sustainable last-mile delivery.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">January 20, 2019</span>
+            <a href="blog/future-delivery-not-drones.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Constitutional Analysis</div>
-        <div class="article-title">
-          <a href="blog/allison-wonderland.html">Allison Wonderland</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Road Safety</span>
         </div>
-        <div class="article-summary">
-          Examining the US Second Amendment and gun control debate through Allison's organizational models, exploring whether armed citizens can truly defend against federal power in modern times.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">March 19, 2018</span>
-          <a href="blog/allison-wonderland.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Market Analysis</div>
-        <div class="article-title">
-          <a href="blog/hairy-potter-half-blade.html">Hairy Potter & the Half Blade Prince</a>
-        </div>
-        <div class="article-summary">
-          Analyzing Gillette's market dominance in the razor blade industry with 65% global market share, examining pricing power, environmental impact of 28 billion plastic blades annually, and emerging competition.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">March 7, 2018</span>
-          <a href="blog/hairy-potter-half-blade.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/rethinking-road-safety.html">Rethinking road safety</a>
+          </h3>
+          <p class="card-excerpt">
+            Road safety campaigns ignore pedestrians and cyclists. A 34% increase in pedestrian/cyclist fatalities revealed.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">December 4, 2018</span>
+            <a href="blog/rethinking-road-safety.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Geopolitics</div>
-        <div class="article-title">
-          <a href="blog/people-power.html">People Power</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Community Action</span>
         </div>
-        <div class="article-summary">
-          Exploring the role of cultural and ideological connections in geopolitical relationships, examining India's stance on power balance in the Maldives and the importance of cultural factors in strategic alliances.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">February 23, 2018</span>
-          <a href="blog/people-power.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Gun Control</div>
-        <div class="article-title">
-          <a href="blog/model-4-right-bear-arms.html">Model 4 & the Right to Bear Arms</a>
-        </div>
-        <div class="article-summary">
-          Applying the cultural ideology model to the US gun control debate, revealing how 71% of Americans oppose banning gun ownership despite mass shootings, demonstrating how cultural values prevent policy changes.
-        </div>
-        <div class="article-meta">
-          <span class="article-date">February 22, 2018</span>
-          <a href="blog/model-4-right-bear-arms.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/communities-collective-action.html">Communities and collective action</a>
+          </h3>
+          <p class="card-excerpt">
+            Exploring community-led solutions through Cycle Day, Walk to School, and Chaat Street initiatives.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">September 24, 2018</span>
+            <a href="blog/communities-collective-action.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
 
-      <div class="article scroll-animate">
-        <div class="topic-badge badge-policy">Political Theory</div>
-        <div class="article-title">
-          <a href="blog/cultural-ideology-model.html">The Cultural Ideology Model</a>
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Metro Governance</span>
         </div>
-        <div class="article-summary">
-          Introducing Model 4, the Cultural Ideology model, extending Graham Allison's three models of state action analysis by examining how cultural and ideological factors influence government decisions and international relations.
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/broken-foundations.html">Broken Foundations</a>
+          </h3>
+          <p class="card-excerpt">
+            Analysis of structural issues in Bengaluru's metropolitan governance and the need for devolution of powers.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">July 18, 2018</span>
+            <a href="blog/broken-foundations.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-        <div class="article-meta">
-          <span class="article-date">February 20, 2018</span>
-          <a href="blog/cultural-ideology-model.html" class="read-more">Read full article <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Institutional Reform</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/state-of-politics.html">The state of politics</a>
+          </h3>
+          <p class="card-excerpt">
+            Analysis of India's institutional decay and the need to strengthen federal institutions.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">June 24, 2018</span>
+            <a href="blog/state-of-politics.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Fiscal Federalism</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/federalism-fifteenth.html">Federalism & the Fifteenth</a>
+          </h3>
+          <p class="card-excerpt">
+            Critical analysis of the 15th Finance Commission's Terms of Reference and fiscal federalism.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">June 24, 2018</span>
+            <a href="blog/federalism-fifteenth.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #F7A782, #e89770);"></div>
+          <span class="card-badge badge-policy">Urban Economics</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/urbs-economicus.html">Urbs Economicus</a>
+          </h3>
+          <p class="card-excerpt">
+            How Bengaluru's Revised Masterplan fails to create economically viable neighborhoods.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">April 12, 2018</span>
+            <a href="blog/urbs-economicus.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ornamental-divider"></div>
+
+    <!-- POPULAR TOPICS: Corporate ESG -->
+    <div class="section-header-magazine">
+      <span class="section-icon">💼</span>
+      <div class="section-title-wrapper">
+        <h3 class="section-title">Corporate ESG</h3>
+        <p class="section-subtitle">Scope 3 emissions, sustainable commuting, and climate action</p>
+      </div>
+      <span class="section-count">5 ARTICLES</span>
+    </div>
+
+    <div class="articles-grid-2col">
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #0D7576, #1a5f5f);"></div>
+          <span class="card-badge badge-climate">ESG Reporting</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/state-of-scope-3-emissions.html">State of Scope 3 emissions</a>
+          </h3>
+          <p class="card-excerpt">
+            A deep dive into corporate employee commute emissions reporting trends. Introduces measurement principles for sustainable mobility tracking and why Scope 3 emissions from employee commute remain the blind spot in corporate sustainability reporting.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">April 28, 2023</span>
+            <a href="blog/state-of-scope-3-emissions.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #FBC831, #e0b32a);"></div>
+          <span class="card-badge badge-product">Product Update</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/cycleto-work-now-altmo.html">CycleTo.Work is now AltMo.app</a>
+          </h3>
+          <p class="card-excerpt">
+            The evolution of our sustainable commuting platform from CycleTo.Work to Altmo—now tracking multiple sustainable commute modes beyond cycling. A platform designed to help companies measure and reduce their Scope 3 emissions from employee transport.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">January 10, 2023</span>
+            <a href="blog/cycleto-work-now-altmo.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-product">Digital Climate</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/digital-climate-friendly.html">Digital & Climate Friendly</a>
+          </h3>
+          <p class="card-excerpt">
+            How Silvassa and New Town Kolkata are using the Cycle To Work platform for digital-first transformation toward climate-friendly mobility. A case study in ESG compliance with IPCA, Reliance, and HUL.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">July 25, 2022</span>
+            <a href="blog/digital-climate-friendly.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-mobility">Cycling</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/quarter-pedalling-to-work.html">A Quarter of Pedalling to work</a>
+          </h3>
+          <p class="card-excerpt">
+            CycleToWork platform launches with 115 companies across 6 cities, using leaderboards to incentivize sustainable commuting. The tech platform that aggregates bicycle commutes and ranks companies by participation.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">January 27, 2019</span>
+            <a href="blog/quarter-pedalling-to-work.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="magazine-card scroll-animate">
+        <div class="card-image-wrapper">
+          <div class="card-image" style="background: linear-gradient(135deg, #23A2A5, #1a8285);"></div>
+          <span class="card-badge badge-policy">Urban Policy</span>
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">
+            <a href="blog/coasian-ombudsman.html">The Coasian Ombudsman</a>
+          </h3>
+          <p class="card-excerpt">
+            How negotiation can solve market failures. Platforms like CycleToWork aggregate company-level points for social good, catalyzing productive participation in minimizing negative externalities.
+          </p>
+          <div class="card-meta">
+            <span class="card-date">January 13, 2020</span>
+            <a href="blog/coasian-ombudsman.html" class="card-read-more">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ornamental-divider"></div>
+
+    <!-- ARCHIVES (Collapsible by Year) -->
+    <div class="archives-section">
+      <div class="section-header-magazine">
+        <div class="section-title-wrapper">
+          <h3 class="section-title">Archives</h3>
+          <p class="section-subtitle">Explore our complete collection by year</p>
+        </div>
+      </div>
+
+      <!-- 2021 Archive -->
+      <div class="archive-year scroll-animate">
+        <div class="archive-header" onclick="toggleArchive('archive-2021')">
+          <h4 class="archive-year-title">2021</h4>
+          <div class="archive-meta">
+            <span>8 Articles</span>
+            <span class="archive-toggle">▼</span>
+          </div>
+        </div>
+        <div class="archive-content" id="archive-2021">
+          <div class="archive-list">
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/rewards-of-collaboration.html">Rewards of Collaboration</a>
+              </div>
+              <span class="archive-item-date">Dec 8, 2021</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/pedestrianised-streets-church-street.html">Pedestrianised Streets & Urban Wellbeing</a>
+              </div>
+              <span class="archive-item-date">Nov 23, 2021</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/establishing-virtue-signalling.html">Establishing Virtue Signalling</a>
+              </div>
+              <span class="archive-item-date">Jul 19, 2021</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/pedal-for-life-world-bicycle-day.html">#PedalForLife on #WorldBicycleDay</a>
+              </div>
+              <span class="archive-item-date">Jun 7, 2021</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/deja-vu.html">Deja Vu</a>
+              </div>
+              <span class="archive-item-date">Apr 24, 2021</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/who-is-to-blame.html">Who is to blame?</a>
+              </div>
+              <span class="archive-item-date">Apr 15, 2021</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/active-mobility-goals.html">Active Mobility Goals</a>
+              </div>
+              <span class="archive-item-date">Mar 1, 2021</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/invert-mobility-pyramid.html">How do you invert the mobility pyramid?</a>
+              </div>
+              <span class="archive-item-date">Feb 22, 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2020 Archive -->
+      <div class="archive-year scroll-animate">
+        <div class="archive-header" onclick="toggleArchive('archive-2020')">
+          <h4 class="archive-year-title">2020</h4>
+          <div class="archive-meta">
+            <span>5 Articles</span>
+            <span class="archive-toggle">▼</span>
+          </div>
+        </div>
+        <div class="archive-content" id="archive-2020">
+          <div class="archive-list">
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/pandemic-blessing.html">Pandemic Blessing</a>
+              </div>
+              <span class="archive-item-date">Oct 7, 2020</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/cities-climate-behaviour-change.html">Cities, Climate and Behaviour Change</a>
+              </div>
+              <span class="archive-item-date">May 3, 2020</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/relief-riders.html">Relief Riders</a>
+              </div>
+              <span class="archive-item-date">Apr 11, 2020</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/future-urban-living.html">The Future of Urban Living</a>
+              </div>
+              <span class="archive-item-date">Jan 20, 2020</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/coasian-ombudsman.html">The Coasian Ombudsman</a>
+              </div>
+              <span class="archive-item-date">Jan 13, 2020</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2019 Archive -->
+      <div class="archive-year scroll-animate">
+        <div class="archive-header" onclick="toggleArchive('archive-2019')">
+          <h4 class="archive-year-title">2019</h4>
+          <div class="archive-meta">
+            <span>9 Articles</span>
+            <span class="archive-toggle">▼</span>
+          </div>
+        </div>
+        <div class="archive-content" id="archive-2019">
+          <div class="archive-list">
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/peanuts-will-only-get-you-monkeys.html">Peanuts will only get you monkeys</a>
+              </div>
+              <span class="archive-item-date">Dec 26, 2019</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/cranking-it-up.html">Cranking it up</a>
+              </div>
+              <span class="archive-item-date">Oct 25, 2019</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/have-we-measured-enough.html">Have we measured enough?</a>
+              </div>
+              <span class="archive-item-date">Jul 31, 2019</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/drive-to-nowhere.html">The drive to nowhere</a>
+              </div>
+              <span class="archive-item-date">May 30, 2019</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/clear-and-present-danger.html">The clear and present danger</a>
+              </div>
+              <span class="archive-item-date">Apr 4, 2019</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/doing-it-right.html">Doing it right!</a>
+              </div>
+              <span class="archive-item-date">Mar 17, 2019</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/quarter-pedalling-to-work.html">A Quarter of Pedalling to work</a>
+              </div>
+              <span class="archive-item-date">Jan 27, 2019</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/future-delivery-not-drones.html">Future of delivery is not drones</a>
+              </div>
+              <span class="archive-item-date">Jan 20, 2019</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/pedalling-gender-gap.html">Pedalling across the gender gap</a>
+              </div>
+              <span class="archive-item-date">Jan 18, 2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2018 Archive -->
+      <div class="archive-year scroll-animate">
+        <div class="archive-header" onclick="toggleArchive('archive-2018')">
+          <h4 class="archive-year-title">2018</h4>
+          <div class="archive-meta">
+            <span>23 Articles</span>
+            <span class="archive-toggle">▼</span>
+          </div>
+        </div>
+        <div class="archive-content" id="archive-2018">
+          <div class="archive-list">
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/rethinking-road-safety.html">Rethinking road safety</a>
+              </div>
+              <span class="archive-item-date">Dec 4, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/people-forefront-clean-air.html">People at the forefront of clean air</a>
+              </div>
+              <span class="archive-item-date">Oct 27, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/communities-collective-action.html">Communities and collective action</a>
+              </div>
+              <span class="archive-item-date">Sep 24, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/state-of-mind.html">State of the mind</a>
+              </div>
+              <span class="archive-item-date">Sep 20, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/moral-hazard-slowing-economy.html">Moral Hazard + Slowing Economy = Lost Money</a>
+              </div>
+              <span class="archive-item-date">Sep 1, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/derailed.html">Derailed</a>
+              </div>
+              <span class="archive-item-date">Aug 10, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/deeper-learning-better-nation.html">Deeper learning for a better nation</a>
+              </div>
+              <span class="archive-item-date">Aug 4, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/real-slim-shady.html">The real slim shady</a>
+              </div>
+              <span class="archive-item-date">Jul 30, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/gravy-train.html">The gravy train</a>
+              </div>
+              <span class="archive-item-date">Jul 29, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/eye-of-tiger.html">Eye of the tiger</a>
+              </div>
+              <span class="archive-item-date">Jul 25, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/capital-and-people.html">Capital and its People</a>
+              </div>
+              <span class="archive-item-date">Jul 21, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/broken-foundations.html">Broken Foundations</a>
+              </div>
+              <span class="archive-item-date">Jul 18, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/spoon-fed.html">Spoon-fed</a>
+              </div>
+              <span class="archive-item-date">Jul 12, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/state-of-politics.html">The state of politics</a>
+              </div>
+              <span class="archive-item-date">Jun 24, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/federalism-fifteenth.html">Federalism & the Fifteenth</a>
+              </div>
+              <span class="archive-item-date">Jun 24, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/urbs-economicus.html">Urbs Economicus</a>
+              </div>
+              <span class="archive-item-date">Apr 12, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/data-locke.html">Data Locke</a>
+              </div>
+              <span class="archive-item-date">Mar 23, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/allison-wonderland.html">Allison Wonderland</a>
+              </div>
+              <span class="archive-item-date">Mar 19, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/hairy-potter-half-blade.html">Hairy Potter & the Half Blade Prince</a>
+              </div>
+              <span class="archive-item-date">Mar 7, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/people-power.html">People Power</a>
+              </div>
+              <span class="archive-item-date">Feb 23, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/model-4-right-bear-arms.html">Model 4 & the Right to Bear Arms</a>
+              </div>
+              <span class="archive-item-date">Feb 22, 2018</span>
+            </div>
+            <div class="archive-item">
+              <div class="archive-item-title">
+                <a href="blog/cultural-ideology-model.html">The Cultural Ideology Model</a>
+              </div>
+              <span class="archive-item-date">Feb 20, 2018</span>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2105,7 +2508,7 @@
       <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank" class="subscribe-btn">
         <i class="fab fa-linkedin"></i> Follow Urban Morph
       </a>
-      <a href="https://www.linkedin.com/in/sathyasankaran/" target="_blank" class="subscribe-btn" style="margin-left: 1rem; background: var(--um-teal); border-color: var(--um-teal);">
+      <a href="https://www.linkedin.com/in/sathyasankaran/" target="_blank" class="subscribe-btn alt">
         <i class="fab fa-linkedin"></i> Follow Sathya
       </a>
     </div>
@@ -2183,6 +2586,20 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.scroll-animate').forEach(el => {
   observer.observe(el);
 });
+
+// Archive Toggle Function
+function toggleArchive(archiveId) {
+  const content = document.getElementById(archiveId);
+  const header = content.previousElementSibling;
+
+  if (content.classList.contains('expanded')) {
+    content.classList.remove('expanded');
+    header.classList.remove('active');
+  } else {
+    content.classList.add('expanded');
+    header.classList.add('active');
+  }
+}
 </script>
 
 </body>
