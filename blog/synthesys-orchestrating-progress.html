@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y58FVNHZF7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y58FVNHZF7');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Primary Meta Tags -->
+  <title>SyntheSYS: Orchestrating Progress in the Age of AI | Urban Morph</title>
+  <meta name="title" content="SyntheSYS: Orchestrating Progress in the Age of AI | Urban Morph">
+  <meta name="description" content="Introducing SyntheSYS - Urban Morph's AI-powered platform for understanding and actioning progress at scale, from neighborhoods to nations.">
+  <meta name="author" content="Sathya Sankaran, Urban Morph">
+  <meta name="keywords" content="SyntheSYS, AI for social good, Urban Morph, India Progress Monitor, NOTF platform, Kalaburagi dashboard, sustainable development, AI automation">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.urbanmorph.com/blog/synthesys-orchestrating-progress.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
+  <link rel="apple-touch-icon" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.urbanmorph.com/blog/synthesys-orchestrating-progress.html">
+  <meta property="og:title" content="SyntheSYS: Orchestrating Progress in the Age of AI">
+  <meta property="og:description" content="Introducing SyntheSYS - Urban Morph's AI-powered platform for understanding and actioning progress at scale.">
+  <meta property="og:image" content="https://www.urbanmorph.com/img/blog/synthesys-header.jpg">
+  <meta property="og:site_name" content="Urban Morph">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.urbanmorph.com/blog/synthesys-orchestrating-progress.html">
+  <meta property="twitter:title" content="SyntheSYS: Orchestrating Progress in the Age of AI">
+  <meta property="twitter:description" content="Introducing SyntheSYS - Urban Morph's AI-powered platform for understanding and actioning progress at scale.">
+  <meta property="twitter:image" content="https://www.urbanmorph.com/img/blog/synthesys-header.jpg">
+
+  <!-- Article Meta Tags -->
+  <meta property="article:published_time" content="2026-01-26T00:00:00+05:30">
+  <meta property="article:author" content="Sathya Sankaran">
+  <meta property="article:section" content="AI & Progress">
+  <meta name="robots" content="index, follow">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Merriweather:wght@300;400;700&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --um-yellow: #FBC831;
+      --um-pink: #F7A782;
+      --um-teal: #23A2A5;
+      --um-green: #0D7576;
+      --um-dark: #1a1a1a;
+      --um-gray: #4a4a4a;
+      --um-light: #FAF9F6;
+      --newspaper-border: #2C2C2C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'PT Serif', 'Georgia', 'Times New Roman', serif;
+      color: var(--um-dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+      background: var(--um-light);
+    }
+
+    /* Navigation */
+    .navbar {
+      background: var(--newspaper-border) !important;
+      padding: 1rem 0;
+      border-bottom: 4px double #000;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar-brand img {
+      border-radius: 4px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 1rem !important;
+      font-family: 'PT Serif', serif;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--um-yellow);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 60%;
+    }
+
+    /* Article Header */
+    .article-header {
+      background: white;
+      border-bottom: 3px double #000;
+      padding: 3rem 0 2rem;
+    }
+
+    .article-category {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      font-family: 'Space Mono', monospace;
+      border: 2px solid var(--um-teal);
+      background: white;
+      color: var(--um-teal);
+    }
+
+    .article-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      color: var(--newspaper-border);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .article-subheadline {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: #555;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .article-byline {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-top: 2px solid #e5e5e5;
+      border-bottom: 2px solid #e5e5e5;
+    }
+
+    .article-byline img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid var(--um-teal);
+    }
+
+    .byline-info {
+      flex: 1;
+    }
+
+    .byline-author {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--newspaper-border);
+      margin-bottom: 0.25rem;
+    }
+
+    .byline-meta {
+      font-size: 0.85rem;
+      color: #666;
+      font-family: 'Space Mono', monospace;
+    }
+
+    .byline-date {
+      font-style: italic;
+      font-family: 'PT Serif', serif;
+    }
+
+    /* Header Image */
+    .article-hero {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border: 3px solid var(--newspaper-border);
+      margin: 2rem 0;
+    }
+
+    .hero-caption {
+      font-size: 0.85rem;
+      color: #666;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.5rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    /* Article Content */
+    .article-content {
+      background: white;
+      padding: 3rem 0 4rem;
+      border-bottom: 3px double #000;
+    }
+
+    .article-body {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Drop cap for first paragraph */
+    .article-body p:first-of-type::first-letter {
+      float: left;
+      font-size: 4.5rem;
+      line-height: 0.85;
+      margin: 0.1rem 0.2rem 0 0;
+      font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      color: var(--um-teal);
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--newspaper-border);
+      margin: 3rem 0 1.5rem;
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 0.5rem;
+    }
+
+    .article-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--um-gray);
+      margin: 2.5rem 0 1rem;
+    }
+
+    .article-body em.definition {
+      display: block;
+      font-family: 'Merriweather', serif;
+      font-size: 1.1rem;
+      color: #555;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      border-left: 4px solid var(--um-teal);
+      background: #f8f9fa;
+      font-style: italic;
+    }
+
+    .article-body blockquote {
+      border-left: 4px solid var(--um-yellow);
+      padding-left: 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #555;
+      font-size: 1.15rem;
+    }
+
+    /* Ornamental divider */
+    .ornamental-divider {
+      text-align: center;
+      margin: 3rem 0;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    .ornamental-divider::before {
+      content: "* * *";
+      letter-spacing: 1.5rem;
+    }
+
+    /* Share buttons */
+    .share-section {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      padding: 2rem 0;
+      border-top: 2px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .share-section h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--newspaper-border);
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--newspaper-border);
+      background: white;
+      color: var(--newspaper-border);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .share-btn:hover {
+      background: var(--newspaper-border);
+      color: white;
+    }
+
+    .share-btn.twitter:hover {
+      background: #1DA1F2;
+      border-color: #1DA1F2;
+    }
+
+    .share-btn.linkedin:hover {
+      background: #0077B5;
+      border-color: #0077B5;
+    }
+
+    /* Back to blog */
+    .back-to-blog {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--um-teal);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--um-green);
+      gap: 0.75rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--newspaper-border);
+      color: white;
+      padding: 3rem 0 1.5rem;
+      border-top: 3px double #000;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h5 {
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--um-yellow);
+      font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .footer-section a:hover {
+      color: var(--um-yellow);
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .social-links a {
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .social-links a:hover {
+      background: var(--um-yellow);
+      color: var(--newspaper-border);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .article-headline {
+        font-size: 2rem;
+      }
+
+      .article-subheadline {
+        font-size: 1rem;
+      }
+
+      .article-byline {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .article-body {
+        padding: 0 1rem;
+      }
+
+      .share-buttons {
+        flex-direction: column;
+      }
+
+      .share-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD) for Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "SyntheSYS: Orchestrating Progress in the Age of AI",
+    "description": "Introducing SyntheSYS - Urban Morph's AI-powered platform for understanding and actioning progress at scale, from neighborhoods to nations.",
+    "image": "https://www.urbanmorph.com/img/blog/synthesys-header.jpg",
+    "datePublished": "2026-01-26T00:00:00+05:30",
+    "dateModified": "2026-01-26T00:00:00+05:30",
+    "author": {
+      "@type": "Person",
+      "name": "Sathya Sankaran",
+      "url": "https://www.sathyasankaran.com",
+      "jobTitle": "Co-Founder & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Urban Morph"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Urban Morph",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.urbanmorph.com/img/UM-thumbnail.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.urbanmorph.com/blog/synthesys-orchestrating-progress.html"
+    },
+    "articleSection": "AI & Progress",
+    "keywords": ["SyntheSYS", "AI for social good", "Urban Morph", "India Progress Monitor", "sustainable development"],
+    "inLanguage": "en-IN"
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.urbanmorph.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.urbanmorph.com/blog.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SyntheSYS: Orchestrating Progress in the Age of AI",
+        "item": "https://www.urbanmorph.com/blog/synthesys-orchestrating-progress.html"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../img/UM-thumbnail.png" width="35" height="35" class="d-inline-block align-top" alt="Urban Morph">
+      Urban Morph
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../news_articles.html">Media</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Article Header -->
+<section class="article-header">
+  <div class="container">
+    <div class="article-category">AI & Progress</div>
+    <h1 class="article-headline">SyntheSYS: Orchestrating Progress in the Age of AI</h1>
+    <p class="article-subheadline">syn·the·sis — the combining of often diverse conceptions into a coherent whole; the dialectic combination of thesis and antithesis into a higher stage of truth.</p>
+
+    <div class="article-byline">
+      <img src="https://miro.medium.com/v2/resize:fill:176:176/1*HvKqMwQfE-3RcWr3rFvzjg.jpeg" alt="Sathya Sankaran" onerror="this.src='../img/UM-thumbnail.png'">
+      <div class="byline-info">
+        <div class="byline-author">Sathya Sankaran</div>
+        <div class="byline-meta">
+          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">January 26, 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Article Content -->
+<section class="article-content">
+  <div class="container">
+
+    <!-- Hero Image - Placeholder for user to add their image -->
+    <div class="text-center">
+      <img src="../img/blog/synthesys-header.jpg" alt="SyntheSYS - Orchestrating Progress" class="article-hero" onerror="this.style.display='none'">
+      <p class="hero-caption">Place your header image at: img/blog/synthesys-header.jpg</p>
+    </div>
+
+    <div class="article-body">
+
+      <p>At Urban Morph, a few of us have been working across mobility, built form, energy, and waste through a singular lens: increasing the number of problem-solving people.</p>
+
+      <p>This philosophy has led us to become orchestrators for these sectors, bringing together concepts and solutions to shift the trajectory of change-making.</p>
+
+      <p>Along the way, we put our skin in the game. We began developing solutions around energy and mobility with WattsNext and Altmo. While we continue to orchestrate and build out the next generation of solutions from our venture studio, last year we started exploring how we could accelerate the development story, keeping in mind it cannot come at the cost of planetary resources.</p>
+
+      <h2>The Year Knowledge Became Synthesisable</h2>
+
+      <p>2025 was the year Large Language Models began to retain context and combine it with automation, fundamentally changing how technology and intelligence are consumed. We started collating information using AI and synthesising knowledge at multiple scales.</p>
+
+      <p>The Kalaburagi dashboard allowed us to visualise the state of affairs of a district lagging behind others. Our synthesis used the current reality while accounting for the region's strengths. It showed us something important: real progress happens when you make change at the margins of where people are today and build out the future; not helicopter in something that has no context for the people.</p>
+
+      <p>We dove deeper into cities and neighbourhoods with the NOTF platform, which surfaces the state of affairs at granular levels. Our AI-enabled municipal complaint management system consolidates retail complaints into aggregate projects that can be actioned, while intelligently routing them without constantly altering rules.</p>
+
+      <p>Another thing we realised from working the streets for many years: people do not know what's happening elsewhere in their neighbourhood, let alone on the other side of town. Newspapers have moved away from hyperlocal information towards sensationalist national and international stories. The NOTF Neighbourhoods platform allows citizen-based organisations to collaborate, reducing information asymmetry, tracking goals at the neighbourhood level, and telling their hyperlocal stories to everyone else.</p>
+
+      <p>Now we're building the thesis for the India Progress Monitor, a tool to help India achieve social foundations for all while respecting planetary boundaries. The goal isn't to throw good money after bad, but to utilise resources for greater effectiveness.</p>
+
+      <h2>Human Intelligence Still Matters</h2>
+
+      <p>What we've learnt in this journey is that while coding may be the first capability to be commoditised by AI, human intelligence still has the ability to steward automatons toward better outcomes for all. The sooner we embrace this role, the better off we'll be.</p>
+
+      <p>We haven't given up on the old-world charm of presenting stories that make us better human beings, more capable of taking care of this pale blue dot. The book <em>Break the Block</em>, documenting lessons from our change-making journey, was the first step. The second, on how AI can reduce our wastefulness and drive the next round of progress, is up next.</p>
+
+      <h2>Introducing SyntheSYS</h2>
+
+      <p>On the 77th day of the republic that is Bharat, Urban Morph is ready to offer SyntheSYS: an offering to own our issues, understand them better, and channel action in a direction that gives us more bang for the buck.</p>
+
+      <blockquote>
+        SyntheSYS is in service of people, planet, and progress in the age of AI.
+      </blockquote>
+
+      <div class="ornamental-divider"></div>
+
+      <!-- Share Section -->
+      <div class="share-section">
+        <h4>Share This Article</h4>
+        <div class="share-buttons">
+          <a href="https://twitter.com/intent/tweet?text=SyntheSYS: Orchestrating Progress in the Age of AI&url=https://www.urbanmorph.com/blog/synthesys-orchestrating-progress.html&via=morphurbanspace" target="_blank" class="share-btn twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.urbanmorph.com/blog/synthesys-orchestrating-progress.html" target="_blank" class="share-btn linkedin">
+            <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Back to Blog -->
+      <div class="back-to-blog">
+        <a href="../blog.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to all articles
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h5>Urban Morph</h5>
+        <p>Shaping the future of cities through innovation, collaboration, and execution in sustainable urban mobility and infrastructure.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/morphurbanspace/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/urbanmorph/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../news_articles.html">Media Coverage</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Our Solutions</h5>
+        <ul>
+          <li><a href="https://www.altmo.app" target="_blank">Altmo</a></li>
+          <li><a href="https://www.wattsnext.in" target="_blank">WattsNext Energy</a></li>
+          <li>SyntheSYS</li>
+          <li><a href="https://podcast.oorulabs.com" target="_blank">OoruLabs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Contact Info</h5>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:hello@urbanmorph.com">hello@urbanmorph.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Urban Morph Consultants Pvt Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
