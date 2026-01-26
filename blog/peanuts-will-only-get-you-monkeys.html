@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y58FVNHZF7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y58FVNHZF7');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Primary Meta Tags -->
+  <title>Peanuts will only get you monkeys - Bengaluru Mobility Plan Analysis | Urban Morph</title>
+  <meta name="title" content="Peanuts will only get you monkeys - Bengaluru Mobility Plan Analysis | Urban Morph">
+  <meta name="description" content="A critical analysis of Bengaluru's Comprehensive Mobility Plan showing inadequate investment in cycling infrastructure - only 4% of required cycle tracks and 2-4% of needed bike sharing hubs.">
+  <meta name="author" content="Sathya Sankaran, Urban Morph">
+  <meta name="keywords" content="Bengaluru mobility plan, cycling infrastructure, CMP 2019, bicycle tracks, BMRCL, urban planning, sustainable transport">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.urbanmorph.com/blog/peanuts-will-only-get-you-monkeys.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
+  <link rel="apple-touch-icon" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.urbanmorph.com/blog/peanuts-will-only-get-you-monkeys.html">
+  <meta property="og:title" content="Peanuts will only get you monkeys - Bengaluru Mobility Plan Analysis">
+  <meta property="og:description" content="A critical analysis of Bengaluru's Comprehensive Mobility Plan showing inadequate investment in cycling infrastructure.">
+  <meta property="og:image" content="https://cdn-images-1.medium.com/max/800/1*ibpLc6EYpxfjCiYn-tvvGg.png">
+  <meta property="og:site_name" content="Urban Morph">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.urbanmorph.com/blog/peanuts-will-only-get-you-monkeys.html">
+  <meta property="twitter:title" content="Peanuts will only get you monkeys">
+  <meta property="twitter:description" content="A critical analysis of Bengaluru's Comprehensive Mobility Plan showing inadequate investment in cycling infrastructure.">
+  <meta property="twitter:image" content="https://cdn-images-1.medium.com/max/800/1*ibpLc6EYpxfjCiYn-tvvGg.png">
+
+  <!-- Article Meta Tags -->
+  <meta property="article:published_time" content="2019-12-26T08:14:00+05:30">
+  <meta property="article:author" content="Sathya Sankaran">
+  <meta property="article:section" content="Urban Policy">
+  <meta name="robots" content="index, follow">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Merriweather:wght@300;400;700&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --um-yellow: #FBC831;
+      --um-pink: #F7A782;
+      --um-teal: #23A2A5;
+      --um-green: #0D7576;
+      --um-dark: #1a1a1a;
+      --um-gray: #4a4a4a;
+      --um-light: #FAF9F6;
+      --newspaper-border: #2C2C2C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'PT Serif', 'Georgia', 'Times New Roman', serif;
+      color: var(--um-dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+      background: var(--um-light);
+    }
+
+    /* Navigation */
+    .navbar {
+      background: var(--newspaper-border) !important;
+      padding: 1rem 0;
+      border-bottom: 4px double #000;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar-brand img {
+      border-radius: 4px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 1rem !important;
+      font-family: 'PT Serif', serif;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--um-yellow);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 60%;
+    }
+
+    /* Article Header */
+    .article-header {
+      background: white;
+      border-bottom: 3px double #000;
+      padding: 3rem 0 2rem;
+    }
+
+    .article-category {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      font-family: 'Space Mono', monospace;
+      border: 2px solid var(--um-pink);
+      background: white;
+      color: var(--um-pink);
+    }
+
+    .article-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      color: var(--newspaper-border);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .article-subheadline {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: #555;
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .article-byline {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-top: 2px solid #e5e5e5;
+      border-bottom: 2px solid #e5e5e5;
+    }
+
+    .article-byline img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid var(--um-teal);
+    }
+
+    .byline-info {
+      flex: 1;
+    }
+
+    .byline-author {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--newspaper-border);
+      margin-bottom: 0.25rem;
+    }
+
+    .byline-meta {
+      font-size: 0.85rem;
+      color: #666;
+      font-family: 'Space Mono', monospace;
+    }
+
+    .byline-date {
+      font-style: italic;
+      font-family: 'PT Serif', serif;
+    }
+
+    /* Header Image */
+    .article-hero {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border: 3px solid var(--newspaper-border);
+      margin: 2rem 0;
+    }
+
+    .hero-caption {
+      font-size: 0.85rem;
+      color: #666;
+      font-style: italic;
+      text-align: center;
+      margin-top: 0.5rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    /* Article Content */
+    .article-content {
+      background: white;
+      padding: 3rem 0 4rem;
+      border-bottom: 3px double #000;
+    }
+
+    .article-body {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Drop cap for first paragraph */
+    .article-body p:first-of-type::first-letter {
+      float: left;
+      font-size: 4.5rem;
+      line-height: 0.85;
+      margin: 0.1rem 0.2rem 0 0;
+      font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      color: var(--um-teal);
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .article-body figure {
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+
+    .article-body figure img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #e5e5e5;
+    }
+
+    .article-body figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.75rem;
+    }
+
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--newspaper-border);
+      margin: 3rem 0 1.5rem;
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 0.5rem;
+    }
+
+    .article-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--um-gray);
+      margin: 2.5rem 0 1rem;
+    }
+
+    .article-body blockquote {
+      border-left: 4px solid var(--um-yellow);
+      padding-left: 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #555;
+      font-size: 1.15rem;
+    }
+
+    .article-body a {
+      color: var(--um-teal);
+      text-decoration: underline;
+      text-decoration-color: rgba(35, 162, 165, 0.3);
+      text-decoration-thickness: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .article-body a:hover {
+      color: var(--um-green);
+      text-decoration-color: var(--um-green);
+    }
+
+    .article-body strong {
+      font-weight: 700;
+      color: var(--um-dark);
+    }
+
+    /* Share buttons */
+    .share-section {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      padding: 2rem 0;
+      border-top: 2px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .share-section h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--newspaper-border);
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--newspaper-border);
+      background: white;
+      color: var(--newspaper-border);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .share-btn:hover {
+      background: var(--newspaper-border);
+      color: white;
+    }
+
+    .share-btn.twitter:hover {
+      background: #1DA1F2;
+      border-color: #1DA1F2;
+    }
+
+    .share-btn.linkedin:hover {
+      background: #0077B5;
+      border-color: #0077B5;
+    }
+
+    /* Back to blog */
+    .back-to-blog {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding-top: 2rem;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--um-teal);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--um-green);
+      gap: 0.75rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--newspaper-border);
+      color: white;
+      padding: 3rem 0 1.5rem;
+      border-top: 3px double #000;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h5 {
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--um-yellow);
+      font-size: 1.1rem;
+      font-family: 'Playfair Display', serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .footer-section a:hover {
+      color: var(--um-yellow);
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .social-links a {
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .social-links a:hover {
+      background: var(--um-yellow);
+      color: var(--newspaper-border);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .article-headline {
+        font-size: 2rem;
+      }
+
+      .article-subheadline {
+        font-size: 1rem;
+      }
+
+      .article-byline {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .article-body {
+        padding: 0 1rem;
+      }
+
+      .share-buttons {
+        flex-direction: column;
+      }
+
+      .share-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD) for Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Peanuts will only get you monkeys",
+    "description": "A critical analysis of Bengaluru's Comprehensive Mobility Plan showing inadequate investment in cycling infrastructure - only 4% of required cycle tracks and 2-4% of needed bike sharing hubs.",
+    "image": "https://cdn-images-1.medium.com/max/800/1*ibpLc6EYpxfjCiYn-tvvGg.png",
+    "datePublished": "2019-12-26T08:14:00+05:30",
+    "dateModified": "2019-12-26T08:14:00+05:30",
+    "author": {
+      "@type": "Person",
+      "name": "Sathya Sankaran",
+      "url": "https://www.sathyasankaran.com",
+      "jobTitle": "Co-Founder & CEO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Urban Morph"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Urban Morph",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.urbanmorph.com/img/UM-thumbnail.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.urbanmorph.com/blog/peanuts-will-only-get-you-monkeys.html"
+    },
+    "articleSection": "Urban Policy",
+    "keywords": ["Bengaluru mobility plan", "cycling infrastructure", "CMP 2019", "bicycle tracks", "urban planning"],
+    "inLanguage": "en-IN"
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.urbanmorph.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.urbanmorph.com/blog.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Peanuts will only get you monkeys",
+        "item": "https://www.urbanmorph.com/blog/peanuts-will-only-get-you-monkeys.html"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../img/UM-thumbnail.png" width="35" height="35" class="d-inline-block align-top" alt="Urban Morph">
+      Urban Morph
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../news_articles.html">Media</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="../blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Article Header -->
+<section class="article-header">
+  <div class="container">
+    <div class="article-category">Urban Policy</div>
+    <h1 class="article-headline">Peanuts will only get you monkeys</h1>
+    <p class="article-subheadline">The draft Comprehensive Mobility Plan for Bengaluru dated October 2019 was unveiled and open for inputs from the public. This plan was prepared by the consultant iDECK for submission to BMRCL. A critical analysis reveals woefully inadequate planning for cycling infrastructure.</p>
+
+    <div class="article-byline">
+      <img src="https://miro.medium.com/v2/resize:fill:176:176/1*HvKqMwQfE-3RcWr3rFvzjg.jpeg" alt="Sathya Sankaran" onerror="this.src='../img/UM-thumbnail.png'">
+      <div class="byline-info">
+        <div class="byline-author">Sathya Sankaran</div>
+        <div class="byline-meta">
+          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">December 26, 2019</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Article Content -->
+<section class="article-content">
+  <div class="container">
+
+    <!-- Hero Image -->
+    <div class="text-center">
+      <img src="https://cdn-images-1.medium.com/max/800/1*ibpLc6EYpxfjCiYn-tvvGg.png" alt="CycleToWork statistics" class="article-hero">
+      <p class="hero-caption">Statistics from <a href="https://cycleto.work/leaderboard" target="_blank">https://cycleto.work/leaderboard</a></p>
+    </div>
+
+    <div class="article-body">
+
+      <p>The draft <a href="http://urbantransport.kar.gov.in/CMP%20Report%2005%2012%202019.pdf" target="_blank">Comprehensive Mobility Plan</a> for Bengaluru dated October 2019 was unveiled and open for inputs from the public. This plan was prepared by the consultant iDECK for submission to Bengaluru Metro Rail Corporation Limited (BMRCL) who is an operator of the Metro train services in the city. Why did the Urban Development Department choose an operator to be the nodal agency for the plan instead of the Directorate of Urban Land Transport (DULT) who is responsible for mobility plans in the state? This is one of the pitfalls of not having a Unified Metropolitan Transport Authority (UMTA) for the Greater Bengaluru region, an authority with legislative backing that can plan mobility in conjunction with other stakeholders for the city.</p>
+
+      <p>One glance and you can tell this is Akrama Sakrama for Mobility. The document doesn't hide this fact with several places mentioning that the section is organised to fit projects already identified. The tail is wagging this dog.</p>
+
+      <p>Nevertheless, I took a specific look at focus on cycling in the document. Among the 10 strategies articulated there was only one mention of the word NMT in strategy 3 on multimodality. The 3 scenarios that was modelled for future mode share, NMT was completely missing with <strong>ZERO</strong> mode split in the strategy. While the strategic intent is lacking, Theme 4 provides some numbers on NMT infrastructure:</p>
+
+      <blockquote>"548 kms of footpath are proposed to be constructed with 174 kms of cycle track and 103 kms of Tender Sure Roads."</blockquote>
+
+      <p>To put this in perspective, we should know there are more than 12 thousand kms of roads in the Bruhat Bengaluru Mahanagara Palike (BBMP) area. Incidentally the BBMP area is ~740 sq. km which is just 45% of the 1600 Sq. km of the CMP planning area. BBMP lists 2000 kms as Arterial and Sub-arterial which are defined as roads 15m or wider. This works out to 16% of the road length. The CMP mentions 13% of the roads are between 10m and 30m which translates to 1560 kms of roads. So the total kms of cycle tracks required to cover 13% to 16% of just 45% of the CMP zone is anywhere between 1500 kms and 2000 kms, not 174 kms. Doubling it approximately for the CMP planning area will mean 4000 kms of arterial and sub arterial roads having cycle tracks. So 174 kms gives us just <strong>4%</strong> of the cycle tracks in the possible roads.</p>
+
+      <p>Per the project implementation time line, Phase 1 from 2020 to 2022 has ZERO kms of cycle tracks. Phase 2 from 2022 to 2027 has 100 kms and Phase 3 from 2028 to 2035 has 74 kms. So instead of building cycle tracks at the rate of <strong>260 kms per year</strong>, we have 174 kms in 15 years.</p>
+
+      <p>In the CMP there is focus on Transit Oriented Development (TOD) for adoption of mass public transportation. We know that shared bicycling will play a major role as last mile within these TOD zones. The ideal number of hubs per sq km is 10 to 16. Each hub holds a minimum of 10 shared bicycles. This means for 1600 sq. km we are looking at anywhere between 16,000 to 25,600 hubs translating to 1.6 lakh to 2.5 lakh shared bicycles. The CMP has planned a total of 750 hubs over the 15 year period translating to just 7,500 shared bicycles. This is just <strong>2% to 4%</strong> of the ideal number. Caveat, in the current model of Public Bicycle Sharing (PBS) which is private operator led, the number of bicycle permits being issued will determine the supply of parking hubs. Currently there aren't more than 6000 permits issued and the operators have dwindled to two. Nevertheless, provisioning for the expansion is important in a legal document like CMP.</p>
+
+      <p>Financially, for 4000 kms of bicycle tracks we should be looking at 6000 cr. over 15 years at the rate of <strong>400 cr. per year</strong>. Instead, we have a total allocation of 261 cr. over the whole plan period. For approximately 20,000 PBS hubs the investment should be 10,000 cr. while the budget is only 375 cr. Clearly this is not a city that's planned for the future.</p>
+
+      <p>There is a national commitment by the NDC to 35% of reduction in emissions from the 2005 levels. With the economic growth rate of the state increasing at 10% per year the emissions are only going to go up. One of the ways to achieve this is to move at least <strong>20% mode share</strong> in large urban centers like Bengaluru to Zero emission modes like bicycling. By failing to even include an NMT mode split in the strategy, the consultants preparing the CMP have totally lost the plot. The consultants have just taken an initial allocation and spread it around the tables, instead of determining the nature of mobility needs and the prioritisation it entails.</p>
+
+      <blockquote>From the strategy downwards this is a complete failure in vision, planning and allocation. The time to fix it is now!</blockquote>
+
+      <!-- Share Section -->
+      <div class="share-section">
+        <h4>Share This Article</h4>
+        <div class="share-buttons">
+          <a href="https://twitter.com/intent/tweet?text=Peanuts will only get you monkeys&url=https://www.urbanmorph.com/blog/peanuts-will-only-get-you-monkeys.html&via=morphurbanspace" target="_blank" class="share-btn twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.urbanmorph.com/blog/peanuts-will-only-get-you-monkeys.html" target="_blank" class="share-btn linkedin">
+            <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Back to Blog -->
+      <div class="back-to-blog">
+        <a href="../blog.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to all articles
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h5>Urban Morph</h5>
+        <p>Shaping the future of cities through innovation, collaboration, and execution in sustainable urban mobility and infrastructure.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/morphurbanspace/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/urbanmorph/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../projects.html">Projects</a></li>
+          <li><a href="../news_articles.html">Media Coverage</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Our Solutions</h5>
+        <ul>
+          <li><a href="https://www.altmo.app" target="_blank">Altmo</a></li>
+          <li><a href="https://www.wattsnext.in" target="_blank">WattsNext Energy</a></li>
+          <li>SyntheSYS</li>
+          <li><a href="https://podcast.oorulabs.com" target="_blank">OoruLabs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Contact Info</h5>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:hello@urbanmorph.com">hello@urbanmorph.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Urban Morph Consultants Pvt Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
