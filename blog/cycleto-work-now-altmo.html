@@ -15,11 +15,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Primary Meta Tags -->
-  <title>CycleTo Work is now Altmo | Urban Morph</title>
-  <meta name="title" content="CycleTo Work is now Altmo | Urban Morph">
-  <meta name="description" content="[Description to be added]">
+  <title>CycleTo.Work is now AltMo.app | Urban Morph</title>
+  <meta name="title" content="CycleTo.Work is now AltMo.app | Urban Morph">
+  <meta name="description" content="AltMo is a mobility intelligence platform for quantifying end to end sustainable transport modes towards achieving climate change goals, evolved from the successful CycleTo.Work platform.">
   <meta name="author" content="Sathya Sankaran, Urban Morph">
-  <meta name="keywords" content="Altmo, CycleTo, Urban Mobility, Sustainability">
+  <meta name="keywords" content="Altmo, CycleTo, Urban Mobility, Sustainability, Mobility Intelligence, Climate Change">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.urbanmorph.com/blog/cycleto-work-now-altmo.html">
@@ -31,8 +31,8 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.urbanmorph.com/blog/cycleto-work-now-altmo.html">
-  <meta property="og:title" content="CycleTo Work is now Altmo">
-  <meta property="og:description" content="[Description to be added]">
+  <meta property="og:title" content="CycleTo.Work is now AltMo.app">
+  <meta property="og:description" content="AltMo is a mobility intelligence platform for quantifying end to end sustainable transport modes towards achieving climate change goals, evolved from the successful CycleTo.Work platform.">
   <meta property="og:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
   <meta property="og:site_name" content="Urban Morph">
   <meta property="og:locale" content="en_IN">
@@ -40,12 +40,12 @@
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.urbanmorph.com/blog/cycleto-work-now-altmo.html">
-  <meta property="twitter:title" content="CycleTo Work is now Altmo">
-  <meta property="twitter:description" content="[Description to be added]">
+  <meta property="twitter:title" content="CycleTo.Work is now AltMo.app">
+  <meta property="twitter:description" content="AltMo is a mobility intelligence platform for quantifying end to end sustainable transport modes towards achieving climate change goals, evolved from the successful CycleTo.Work platform.">
   <meta property="twitter:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
 
   <!-- Article Meta Tags -->
-  <meta property="article:published_time" content="2025-01-26T00:00:00+05:30">
+  <meta property="article:published_time" content="2023-01-10T00:00:00+05:30">
   <meta property="article:author" content="Sathya Sankaran">
   <meta property="article:section" content="Urban Mobility">
   <meta name="robots" content="index, follow">
@@ -223,11 +223,137 @@
       margin: 0 auto;
     }
 
+    /* Drop cap for first paragraph */
+    .article-body p:first-of-type::first-letter {
+      float: left;
+      font-size: 4.5rem;
+      line-height: 0.85;
+      margin: 0.1rem 0.2rem 0 0;
+      font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      color: var(--um-green);
+    }
+
     .article-body p {
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
       text-align: justify;
       hyphens: auto;
+    }
+
+    .article-body h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--um-gray);
+      margin: 2rem 0 1rem;
+    }
+
+    .article-body blockquote {
+      border-left: 4px solid var(--um-yellow);
+      padding-left: 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #555;
+      font-size: 1.15rem;
+    }
+
+    .article-body figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .article-body figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e5e5e5;
+    }
+
+    .article-body figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.5rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    .article-body a {
+      color: var(--um-teal);
+      text-decoration: underline;
+      text-decoration-color: rgba(35, 162, 165, 0.3);
+      text-decoration-thickness: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .article-body a:hover {
+      color: var(--um-green);
+      text-decoration-color: var(--um-green);
+    }
+
+    /* Ornamental divider */
+    .ornamental-divider {
+      text-align: center;
+      margin: 3rem 0;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    .ornamental-divider::before {
+      content: "* * *";
+      letter-spacing: 1.5rem;
+    }
+
+    /* Share buttons */
+    .share-section {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      padding: 2rem 0;
+      border-top: 2px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .share-section h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--newspaper-border);
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--newspaper-border);
+      background: white;
+      color: var(--newspaper-border);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .share-btn:hover {
+      background: var(--newspaper-border);
+      color: white;
+    }
+
+    .share-btn.twitter:hover {
+      background: #1DA1F2;
+      border-color: #1DA1F2;
+    }
+
+    .share-btn.linkedin:hover {
+      background: #0077B5;
+      border-color: #0077B5;
     }
 
     /* Back to blog */
@@ -398,16 +524,16 @@
 <!-- Article Header -->
 <section class="article-header">
   <div class="container">
-    <div class="article-category">Urban Mobility</div>
-    <h1 class="article-headline">CycleTo Work is now Altmo</h1>
-    <p class="article-subheadline">[Content to be added]</p>
+    <div class="article-category">Product Launch</div>
+    <h1 class="article-headline">CycleTo.Work is now AltMo.app</h1>
+    <p class="article-subheadline">AltMo is a mobility intelligence platform for quantifying end to end sustainable transport modes towards achieving climate change goals.</p>
 
     <div class="article-byline">
       <img src="https://miro.medium.com/v2/resize:fill:176:176/1*HvKqMwQfE-3RcWr3rFvzjg.jpeg" alt="Sathya Sankaran" onerror="this.src='../img/UM-thumbnail.png'">
       <div class="byline-info">
         <div class="byline-author">Sathya Sankaran</div>
         <div class="byline-meta">
-          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">January 26, 2025</span>
+          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">January 10, 2023</span>
         </div>
       </div>
     </div>
@@ -419,7 +545,45 @@
   <div class="container">
     <div class="article-body">
 
-      <p>[Content to be added]</p>
+      <figure>
+        <img src="https://cdn-images-1.medium.com/max/800/1*zbgi1_c7Z9Ja0fKm_nVrqA.jpeg" alt="AltMo mobility platform">
+        <figcaption>Image by Moondance from Pixabay</figcaption>
+      </figure>
+
+      <h4>What happened to Cycle To Work?</h4>
+
+      <p>It just became a critical cog in the evolution of the platform into something bigger. Cycle To Work was launched on the International Car Free day of 2018 as a tool to measure bicycle rides at a company level. In addition to serving as a motivational tool, it provided valuable insights for city planners and administrators. It also rewarded riders for doing the right thing towards getting the cities and the country achieve climate change goals.</p>
+
+      <p>Silvassa Smart City under the Smart Cities Mission & ITDP's Cycle for Change challenge officially made this their platform of choice in 2022 and won an award as the best digital transformation for their initiative. Directorate of Urban Land Transport, Government of Karnataka, used this platform to measure ridership for the implementation of 17km Pop-up cycle lanes during the pandemic.</p>
+
+      <p>A few months ago the platform began to track cycle rides to Public Transport stations like metro. This allowed us to extend emission credits to people who couldn't do complete rides to their workplace. There is now a potential to include other sustainable modes like walk to transit. So Cycle To Work was now Transit to Work as well. Since the goal is to shift end to end foot print to sustainable modes, provide people a choice to switch their mobility to an alternative to personal motor vehicles, we made the simplest alternate name <strong>AltMo.</strong></p>
+
+      <blockquote>AltMo is a mobility intelligence platform for quantifying end to end sustainable transport modes towards achieving climate change goals.</blockquote>
+
+      <h4>How will this affect you as a user?</h4>
+
+      <p>If you have been clocking bicycle rides to work it will not affect you one bit. You will continue to be on the leaderboard with your colleagues and hundreds of other companies. But what will change for you, is a choice of clocking commute in many other modes like walk etc with its own calculations for carbon offsets and other metrics.</p>
+
+      <h4>What should you look forward to?</h4>
+
+      <p>AltMo is constantly evolving. There seems to be an endless amount of features in the pipeline. We want to prioritise the ones that serve the community first. We will go back to enriching challenges that can enable periodic rewards for the performers on the leaderboard. Work with planners and public transport agencies across multiple cities to provide benefits both infrastructural and in kind to those using sustainable commute end to end. More connections to different types of activity trackers. A better visual experience with deeper insights. All without having to download an app.</p>
+
+      <p><em>So, watch this space for updates, sign up at </em><a href="https://AltMo.app" target="_blank"><em>https://AltMo.app</em></a><em> and follow updates on twitter </em><a href="https://twitter.com/AltMoApp" target="_blank"><em>@AltMoApp</em></a><em>.</em></p>
+
+      <div class="ornamental-divider"></div>
+
+      <!-- Share Section -->
+      <div class="share-section">
+        <h4>Share This Article</h4>
+        <div class="share-buttons">
+          <a href="https://twitter.com/intent/tweet?text=CycleTo.Work is now AltMo.app&url=https://www.urbanmorph.com/blog/cycleto-work-now-altmo.html&via=morphurbanspace" target="_blank" class="share-btn twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.urbanmorph.com/blog/cycleto-work-now-altmo.html" target="_blank" class="share-btn linkedin">
+            <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+          </a>
+        </div>
+      </div>
 
       <!-- Back to Blog -->
       <div class="back-to-blog">

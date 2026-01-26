@@ -15,11 +15,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Primary Meta Tags -->
-  <title>Bus For Whom | Urban Morph</title>
-  <meta name="title" content="Bus For Whom | Urban Morph">
-  <meta name="description" content="[Description to be added]">
+  <title>Bus For Whom? | Urban Morph</title>
+  <meta name="title" content="Bus For Whom? | Urban Morph">
+  <meta name="description" content="Using electoral roll data to understand bus stop accessibility in Bengaluru. This interactive map helps identify coverage gaps and supports better public transport planning for the city.">
   <meta name="author" content="Sathya Sankaran, Urban Morph">
-  <meta name="keywords" content="Public Transit, Bus Systems, Urban Mobility, Transportation">
+  <meta name="keywords" content="Public Transit, Bus Systems, Urban Mobility, Transportation, BMTC, Bengaluru, Bus Stop Accessibility, Data Visualization">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.urbanmorph.com/blog/bus-for-whom.html">
@@ -32,7 +32,7 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.urbanmorph.com/blog/bus-for-whom.html">
   <meta property="og:title" content="Bus For Whom">
-  <meta property="og:description" content="[Description to be added]">
+  <meta property="og:description" content="Using electoral roll data to understand bus stop accessibility in Bengaluru. This interactive map helps identify coverage gaps and supports better public transport planning for the city.">
   <meta property="og:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
   <meta property="og:site_name" content="Urban Morph">
   <meta property="og:locale" content="en_IN">
@@ -41,11 +41,11 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.urbanmorph.com/blog/bus-for-whom.html">
   <meta property="twitter:title" content="Bus For Whom">
-  <meta property="twitter:description" content="[Description to be added]">
+  <meta property="twitter:description" content="Using electoral roll data to understand bus stop accessibility in Bengaluru. This interactive map helps identify coverage gaps and supports better public transport planning for the city.">
   <meta property="twitter:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
 
   <!-- Article Meta Tags -->
-  <meta property="article:published_time" content="2025-01-26T00:00:00+05:30">
+  <meta property="article:published_time" content="2022-10-22T00:00:00+05:30">
   <meta property="article:author" content="Sathya Sankaran">
   <meta property="article:section" content="Urban Mobility">
   <meta name="robots" content="index, follow">
@@ -223,11 +223,137 @@
       margin: 0 auto;
     }
 
+    /* Drop cap for first paragraph */
+    .article-body p:first-of-type::first-letter {
+      float: left;
+      font-size: 4.5rem;
+      line-height: 0.85;
+      margin: 0.1rem 0.2rem 0 0;
+      font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      color: var(--um-green);
+    }
+
     .article-body p {
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
       text-align: justify;
       hyphens: auto;
+    }
+
+    .article-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--um-gray);
+      margin: 2.5rem 0 1rem;
+    }
+
+    .article-body blockquote {
+      border-left: 4px solid var(--um-yellow);
+      padding-left: 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #555;
+      font-size: 1.15rem;
+    }
+
+    .article-body figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .article-body figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e5e5e5;
+    }
+
+    .article-body figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.5rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    .article-body a {
+      color: var(--um-teal);
+      text-decoration: underline;
+      text-decoration-color: rgba(35, 162, 165, 0.3);
+      text-decoration-thickness: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .article-body a:hover {
+      color: var(--um-green);
+      text-decoration-color: var(--um-green);
+    }
+
+    /* Ornamental divider */
+    .ornamental-divider {
+      text-align: center;
+      margin: 3rem 0;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    .ornamental-divider::before {
+      content: "* * *";
+      letter-spacing: 1.5rem;
+    }
+
+    /* Share buttons */
+    .share-section {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      padding: 2rem 0;
+      border-top: 2px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .share-section h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--newspaper-border);
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--newspaper-border);
+      background: white;
+      color: var(--newspaper-border);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .share-btn:hover {
+      background: var(--newspaper-border);
+      color: white;
+    }
+
+    .share-btn.twitter:hover {
+      background: #1DA1F2;
+      border-color: #1DA1F2;
+    }
+
+    .share-btn.linkedin:hover {
+      background: #0077B5;
+      border-color: #0077B5;
     }
 
     /* Back to blog */
@@ -398,16 +524,16 @@
 <!-- Article Header -->
 <section class="article-header">
   <div class="container">
-    <div class="article-category">Urban Mobility</div>
-    <h1 class="article-headline">Bus For Whom</h1>
-    <p class="article-subheadline">[Content to be added]</p>
+    <div class="article-category">Public Transport</div>
+    <h1 class="article-headline">Bus For Whom?</h1>
+    <p class="article-subheadline">Using electoral roll data and bus stop locations to understand accessibility. This interactive map reveals coverage gaps and helps identify where public transport needs improvement in Bengaluru.</p>
 
     <div class="article-byline">
       <img src="https://miro.medium.com/v2/resize:fill:176:176/1*HvKqMwQfE-3RcWr3rFvzjg.jpeg" alt="Sathya Sankaran" onerror="this.src='../img/UM-thumbnail.png'">
       <div class="byline-info">
         <div class="byline-author">Sathya Sankaran</div>
         <div class="byline-meta">
-          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">January 26, 2025</span>
+          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">October 22, 2022</span>
         </div>
       </div>
     </div>
@@ -419,7 +545,45 @@
   <div class="container">
     <div class="article-body">
 
-      <p>[Content to be added]</p>
+      <figure>
+        <img src="https://cdn-images-1.medium.com/max/800/1*dlBKduHZrRCmVlpm-AY8Bw.jpeg" alt="Bus4Us campaign">
+        <figcaption>Picture courtesy Bus4Us, a public campaign for increasing bus usage.</figcaption>
+      </figure>
+
+      <h3>Bus for whom?</h3>
+
+      <p>There is an increasing acknowledgement of the limits of personal vehicle usage in populated cities. All freedoms and comfort of personal choice come with attached collective problems it causes. In case of personal vehicles its the pollution, congestion and accidents to people who walk and cycle on the roads. This is not something an individual considers before buying a personal vehicle and this collective failure is something the government steps in to solve. Solutions involve enabling wider adoption of mass transport vehicles like buses and trains. Adoption of these modes which are not door to door requires people to have more information about the availability, accessibility, reliability and safety of these modes so they can switch at the cost and comfort of a personal vehicle.</p>
+
+      <p>A few enthusiasts on the sidelines of the <a href="https://twitter.com/Bus4us_BLR" target="_blank" rel="noopener">Bus4Us</a> campaign got together to address these issues using technology. A discord server called RAS-PT which stood for Reliable, Accessible and Safe — Public Transport was started on June 15th, 2022 to brainstorm some ways we can help public make the switch to public transport easier. Due to a lack of open data policy in transportation, dynamic schedule information was hard to come by from the authorities. So we began to look at static information like neighbourhood bus stops and bus route information.</p>
+
+      <p>A commuters journey begins at a bus stop thats close to him/her. Most people know there are bus stops in their neighbourhood but are probably unaware of how far they are, which one to go to or what buses come there. It is also common knowledge that the further away a bus stop is, the likelihood is higher that the commuter will choose other modes to a bus. Many countries try to provision a bus stop or train station within 250 meters of a commuter, we however assumed a 500 meter radius to evaluate the coverage of bus services in Bengaluru.</p>
+
+      <p>We used electoral roll data to understand living density. Electoral rolls have information at a booth level. Booths are designed to have around a 1000 people on an average. This allows us to understand at a fairly granular level the accessibility of bus stops to people. We tried to plot people who live within and outside this 500 meter radius.</p>
+
+      <blockquote>This interactive map put together by Vivek, Chaitanya Deep and Sathya Sankaran with advise from Satya Arikutharam is available for the public at <a href="https://bmtc.vonter.top/bus_stops_accessibility/" target="_blank" rel="noopener">https://bmtc.vonter.top/bus_stops_accessibility/</a>. If you can code and wish to participate in visualisations do ping @tweetenator on twitter.</blockquote>
+
+      <p>How might this be useful? While we continue to work on enriching this data set our goal is to make bus stops attractive with information that will help a commuter go to one. Over time if we do get access to schedule information we may be able to add it on. But we do not want lack of data get in the way of using what's available. While this data set is of people who are registered to vote, it will not cover those who are not registered to vote and destinations like offices and schools which don't figure in voter rolls. We are looking to extract commercial/institutional data sets as well to identify destinations and coverage for a last mile radius of similar dimensions.</p>
+
+      <p>How can the BMTC benefit? I have always maintained that ticket data only tells you who has already boarded the bus. There are many who have either come to the bus stand and not got a bus on time, or others who haven't even made it to the bus stop. This is where the information asymmetry hurts in getting more people into the bus.</p>
+
+      <blockquote>BMTC have larger issues of maintaining current schedules due to lack of priority lanes and staffing.</blockquote>
+
+      <p>Additional demand will be a luxury if operational demands are not met. What this type of data might end up doing is allow modes like taxis and autos to pick up the slack. In the end Public Transport needs to step in urgently, failing which the city will be at a loss.</p>
+
+      <div class="ornamental-divider"></div>
+
+      <!-- Share Section -->
+      <div class="share-section">
+        <h4>Share This Article</h4>
+        <div class="share-buttons">
+          <a href="https://twitter.com/intent/tweet?text=Bus For Whom?&url=https://www.urbanmorph.com/blog/bus-for-whom.html&via=morphurbanspace" target="_blank" class="share-btn twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.urbanmorph.com/blog/bus-for-whom.html" target="_blank" class="share-btn linkedin">
+            <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+          </a>
+        </div>
+      </div>
 
       <!-- Back to Blog -->
       <div class="back-to-blog">

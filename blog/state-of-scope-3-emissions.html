@@ -17,9 +17,9 @@
   <!-- Primary Meta Tags -->
   <title>State of Scope 3 Emissions | Urban Morph</title>
   <meta name="title" content="State of Scope 3 Emissions | Urban Morph">
-  <meta name="description" content="[Description to be added]">
+  <meta name="description" content="The BRSR framework requires India's top 1000 companies to disclose Scope 3 emissions, yet only 20% report employee commute data, revealing wildly varying results and highlighting the need for better measurement.">
   <meta name="author" content="Sathya Sankaran, Urban Morph">
-  <meta name="keywords" content="Scope 3 Emissions, Climate Action, Sustainability">
+  <meta name="keywords" content="Scope 3 Emissions, BRSR, Climate Action, Sustainability, Employee Commute, ESG">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.urbanmorph.com/blog/state-of-scope-3-emissions.html">
@@ -32,7 +32,7 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.urbanmorph.com/blog/state-of-scope-3-emissions.html">
   <meta property="og:title" content="State of Scope 3 Emissions">
-  <meta property="og:description" content="[Description to be added]">
+  <meta property="og:description" content="The BRSR framework requires India's top 1000 companies to disclose Scope 3 emissions, yet only 20% report employee commute data, revealing wildly varying results and highlighting the need for better measurement.">
   <meta property="og:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
   <meta property="og:site_name" content="Urban Morph">
   <meta property="og:locale" content="en_IN">
@@ -41,11 +41,11 @@
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.urbanmorph.com/blog/state-of-scope-3-emissions.html">
   <meta property="twitter:title" content="State of Scope 3 Emissions">
-  <meta property="twitter:description" content="[Description to be added]">
+  <meta property="twitter:description" content="The BRSR framework requires India's top 1000 companies to disclose Scope 3 emissions, yet only 20% report employee commute data, revealing wildly varying results and highlighting the need for better measurement.">
   <meta property="twitter:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
 
   <!-- Article Meta Tags -->
-  <meta property="article:published_time" content="2025-01-26T00:00:00+05:30">
+  <meta property="article:published_time" content="2023-04-28T00:00:00+05:30">
   <meta property="article:author" content="Sathya Sankaran">
   <meta property="article:section" content="Climate Action">
   <meta name="robots" content="index, follow">
@@ -223,11 +223,155 @@
       margin: 0 auto;
     }
 
+    /* Drop cap for first paragraph */
+    .article-body p:first-of-type::first-letter {
+      float: left;
+      font-size: 4.5rem;
+      line-height: 0.85;
+      margin: 0.1rem 0.2rem 0 0;
+      font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      color: var(--um-green);
+    }
+
     .article-body p {
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
       text-align: justify;
       hyphens: auto;
+    }
+
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--newspaper-border);
+      margin: 3rem 0 1.5rem;
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 0.5rem;
+    }
+
+    .article-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--um-gray);
+      margin: 2.5rem 0 1rem;
+    }
+
+    .article-body h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--um-gray);
+      margin: 2rem 0 1rem;
+    }
+
+    .article-body blockquote {
+      border-left: 4px solid var(--um-yellow);
+      padding-left: 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #555;
+      font-size: 1.15rem;
+    }
+
+    .article-body figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .article-body figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e5e5e5;
+    }
+
+    .article-body figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.5rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    .article-body a {
+      color: var(--um-teal);
+      text-decoration: underline;
+      text-decoration-color: rgba(35, 162, 165, 0.3);
+      text-decoration-thickness: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .article-body a:hover {
+      color: var(--um-green);
+      text-decoration-color: var(--um-green);
+    }
+
+    /* Ornamental divider */
+    .ornamental-divider {
+      text-align: center;
+      margin: 3rem 0;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    .ornamental-divider::before {
+      content: "* * *";
+      letter-spacing: 1.5rem;
+    }
+
+    /* Share buttons */
+    .share-section {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      padding: 2rem 0;
+      border-top: 2px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .share-section h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--newspaper-border);
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--newspaper-border);
+      background: white;
+      color: var(--newspaper-border);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .share-btn:hover {
+      background: var(--newspaper-border);
+      color: white;
+    }
+
+    .share-btn.twitter:hover {
+      background: #1DA1F2;
+      border-color: #1DA1F2;
+    }
+
+    .share-btn.linkedin:hover {
+      background: #0077B5;
+      border-color: #0077B5;
     }
 
     /* Back to blog */
@@ -400,14 +544,14 @@
   <div class="container">
     <div class="article-category">Climate Action</div>
     <h1 class="article-headline">State of Scope 3 Emissions</h1>
-    <p class="article-subheadline">[Content to be added]</p>
+    <p class="article-subheadline">The BRSR framework requires India's top 1000 companies to disclose Scope 3 emissions, yet only 20% report employee commute data, revealing wildly varying results and highlighting the need for better measurement.</p>
 
     <div class="article-byline">
       <img src="https://miro.medium.com/v2/resize:fill:176:176/1*HvKqMwQfE-3RcWr3rFvzjg.jpeg" alt="Sathya Sankaran" onerror="this.src='../img/UM-thumbnail.png'">
       <div class="byline-info">
         <div class="byline-author">Sathya Sankaran</div>
         <div class="byline-meta">
-          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">January 26, 2025</span>
+          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">April 28, 2023</span>
         </div>
       </div>
     </div>
@@ -419,7 +563,59 @@
   <div class="container">
     <div class="article-body">
 
-      <p>[Content to be added]</p>
+      <figure>
+        <img src="https://cdn-images-1.medium.com/max/800/1*t70o0VhVKE1WZV1HygYALw.jpeg" alt="Scope 3 emissions visualization">
+      </figure>
+
+      <p>The Business Responsibility and Sustainability Report (BRSR) is a reporting framework for companies in India to disclose their sustainability performance. It replaced the earlier Environmental, Social & Governance (ESG) reporting framework called Business Responsibility Report (BRR) and BRSR is applicable to the top 1000 listed companies by market capital. While it was voluntary during FY 2022, Securities and Exchange Board of India (SEBI) has made it mandatory from FY 2023. One can foretell that once it is successful it will be rolled to all listed companies in the future. It is also useful to note that beyond SEBI compliance for listed entities, International contracts in many countries require even unlisted entities to be ESG compliant in their business along with reporting progress towards United Nations, Sustainable Development Goals (UN SDG's).</p>
+
+      <p>The BRSR has a section on environmental performance, which includes a disclosure on Scope 3 emissions. According to the GreenHouse Gas (GHG) Protocol, Scope 3 emissions are indirect emissions that occur in a company's value chain, including emissions from employee commuting. These emissions are often overlooked by companies, but can account for almost 80% of their overall emissions in certain sectors.</p>
+
+      <p>Employee commute includes emissions that arise from the transportation of employees between their homes and worksites. This includes automobile travel, bus travel, rail travel, air travel and other sustainable modes of transportation like cycling, walking, public transport, alternate fuels etc.</p>
+
+      <p>The BRSR also asks companies to disclose their emissions reduction targets and progress towards these targets. Specifically, it asks companies to disclose the percentage of employees who use sustainable transportation options, such as public transportation, cycling, or walking, and any initiatives to promote these options.</p>
+
+      <p>Reducing Scope 3 emissions from employee commute is critical for companies to achieve their net-zero targets. For companies that have set ambitious net-zero targets, reducing Scope 3 emissions from employee commute is essential. Without addressing these emissions, companies may find it difficult or impossible to achieve their targets. In addition, reducing emissions from employee commuting can have multiple benefits beyond reducing greenhouse gas emissions, including cost savings, improved employee health and well-being, and enhanced corporate reputation.</p>
+
+      <p>To understand the trends for Scope 3 emissions of the listed companies, we looked at the Integrated Annual Reports and Sustainability Reports of about 50 listed companies from the top 100 by market capitalization in India. Out of these 50% companies reported their total Scope 3 emissions and only around 20% reported the emissions from employee commute. Here are their numbers.</p>
+
+      <figure>
+        <img src="https://cdn-images-1.medium.com/max/800/1*BE8CMAp7MAwzmRCy-A2H9A.jpeg" alt="Scope 3 Emissions from Employee Commuting per capita">
+        <figcaption>Scope 3 Emissions from Employee Commuting per capita (CO2 — kg)</figcaption>
+      </figure>
+
+      <p>The average amount of CO2 emitted per person from employee commuting in these companies is around 86.5kg per year. Some companies emit well over 226 kg of CO2 per person per year. You can tell the reporting is not accurate. The methods being used by each of them is producing wildly varying results even within a sector with typical size and working conditions.</p>
+
+      <p>With so many new metrics to measure and no defined way of measuring it, an ESG dashboard alone only puts the onus back on the company for data collection. This introduces more friction and overheads that doesn't solve standardisation or accuracy. Also, simply reporting metrics wont provide scope for changing the patterns and showing improvements. Action is required. Here are a few principles from <a href="http://www.AltMo.app" target="_blank">AltMo</a> that companies can use to reducing their Scope 3 emissions from employee commute. Lets begin with the most famous Principle.</p>
+
+      <blockquote>Principle 1: You cannot manage what you cannot measure</blockquote>
+
+      <p><strong>Measure emissions continuously</strong>: Year end or quarter end scrambling for data only introduces more work and errors. Measuring more frequently using automation helps track progress effortlessly. Tools like <a href="http://www.AltMo.app" target="_blank">AltMo</a> help in measuring sustainable commute. Live tracking and reporting by employees using personal and public vehicles is not as straight forward as putting GPS devices on company owned vehicles. <a href="http://www.AltMo.app" target="_blank">AltMo</a> has put mechanisms in place to allow tracking by employees. We have built gamification features that helps companies incentivise sustainable behaviour using quantitive measures and increase self reporting. This brings us to Principle 2</p>
+
+      <blockquote>Principle 2: You should not have to collect data. It should be given to you.</blockquote>
+
+      <p><strong>Set reduction targets</strong>: Measurement allows companies to set targets dynamically and caliberate targets to different usage patterns and behaviours. Challenge features in <a href="http://www.altmo.app" target="_blank">AltMo</a> promote climate action by allowing you to set time bound targets and steering behaviour of employees towards those targets. This can help to motivate employees and identify areas for improvement and engagement. This brings us to Principle 3</p>
+
+      <blockquote>Principle 3: Metrics will not change if you do not engage in the act of making the underlying behaviour change.</blockquote>
+
+      <p>In conclusion, engaging in Scope 3 emissions not only benefits corporates but helps the city in general. Reduce handwringing about productivity loss, high pollution linked health costs, reduced liveability in the cities by acting now on employee commute. HR & ESG teams should be trying out tools like <a href="http://www.AltMo.app" target="_blank">AltMo</a>.</p>
+
+      <p><em>With research inputs from Manaswini B</em></p>
+
+      <div class="ornamental-divider"></div>
+
+      <!-- Share Section -->
+      <div class="share-section">
+        <h4>Share This Article</h4>
+        <div class="share-buttons">
+          <a href="https://twitter.com/intent/tweet?text=State of Scope 3 Emissions&url=https://www.urbanmorph.com/blog/state-of-scope-3-emissions.html&via=morphurbanspace" target="_blank" class="share-btn twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.urbanmorph.com/blog/state-of-scope-3-emissions.html" target="_blank" class="share-btn linkedin">
+            <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+          </a>
+        </div>
+      </div>
 
       <!-- Back to Blog -->
       <div class="back-to-blog">

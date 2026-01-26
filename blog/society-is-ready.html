@@ -15,11 +15,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Primary Meta Tags -->
-  <title>Society Is Ready | Urban Morph</title>
-  <meta name="title" content="Society Is Ready | Urban Morph">
-  <meta name="description" content="[Description to be added]">
-  <meta name="author" content="Sathya Sankaran, Urban Morph">
-  <meta name="keywords" content="Urban Planning, Society, Sustainability">
+  <title>Society Is Ready. The Politicians? | Urban Morph</title>
+  <meta name="title" content="Society Is Ready. The Politicians? | Urban Morph">
+  <meta name="description" content="With Bengaluru being counted among the top 10 innovation hubs of the world, it is time the elected representatives pass the active mobility bill and allocate significant budget towards walking and cycling infrastructure.">
+  <meta name="author" content="Ajay Nandakumar, Sathya Sankaran, Urban Morph">
+  <meta name="keywords" content="Active Mobility, Urban Planning, Society, Sustainability, Bengaluru, Karnataka, Cycling Infrastructure, Pedestrian Safety">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.urbanmorph.com/blog/society-is-ready.html">
@@ -31,8 +31,8 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.urbanmorph.com/blog/society-is-ready.html">
-  <meta property="og:title" content="Society Is Ready">
-  <meta property="og:description" content="[Description to be added]">
+  <meta property="og:title" content="Society Is Ready. The Politicians?">
+  <meta property="og:description" content="With Bengaluru being counted among the top 10 innovation hubs of the world, it is time the elected representatives pass the active mobility bill and allocate significant budget towards walking and cycling infrastructure.">
   <meta property="og:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
   <meta property="og:site_name" content="Urban Morph">
   <meta property="og:locale" content="en_IN">
@@ -40,12 +40,12 @@
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.urbanmorph.com/blog/society-is-ready.html">
-  <meta property="twitter:title" content="Society Is Ready">
-  <meta property="twitter:description" content="[Description to be added]">
+  <meta property="twitter:title" content="Society Is Ready. The Politicians?">
+  <meta property="twitter:description" content="With Bengaluru being counted among the top 10 innovation hubs of the world, it is time the elected representatives pass the active mobility bill and allocate significant budget towards walking and cycling infrastructure.">
   <meta property="twitter:image" content="https://www.urbanmorph.com/img/UM-thumbnail.png">
 
   <!-- Article Meta Tags -->
-  <meta property="article:published_time" content="2025-01-26T00:00:00+05:30">
+  <meta property="article:published_time" content="2023-02-16T00:00:00+05:30">
   <meta property="article:author" content="Sathya Sankaran">
   <meta property="article:section" content="Urban Planning">
   <meta name="robots" content="index, follow">
@@ -223,11 +223,129 @@
       margin: 0 auto;
     }
 
+    /* Drop cap for first paragraph */
+    .article-body p:first-of-type::first-letter {
+      float: left;
+      font-size: 4.5rem;
+      line-height: 0.85;
+      margin: 0.1rem 0.2rem 0 0;
+      font-weight: 900;
+      font-family: 'Playfair Display', serif;
+      color: var(--um-green);
+    }
+
     .article-body p {
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
       text-align: justify;
       hyphens: auto;
+    }
+
+    .article-body blockquote {
+      border-left: 4px solid var(--um-yellow);
+      padding-left: 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #555;
+      font-size: 1.15rem;
+    }
+
+    .article-body figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .article-body figure img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #e5e5e5;
+    }
+
+    .article-body figcaption {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin-top: 0.5rem;
+      font-family: 'PT Serif', serif;
+    }
+
+    .article-body a {
+      color: var(--um-teal);
+      text-decoration: underline;
+      text-decoration-color: rgba(35, 162, 165, 0.3);
+      text-decoration-thickness: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .article-body a:hover {
+      color: var(--um-green);
+      text-decoration-color: var(--um-green);
+    }
+
+    /* Ornamental divider */
+    .ornamental-divider {
+      text-align: center;
+      margin: 3rem 0;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    .ornamental-divider::before {
+      content: "* * *";
+      letter-spacing: 1.5rem;
+    }
+
+    /* Share buttons */
+    .share-section {
+      max-width: 800px;
+      margin: 3rem auto 0;
+      padding: 2rem 0;
+      border-top: 2px solid #e5e5e5;
+      text-align: center;
+    }
+
+    .share-section h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--newspaper-border);
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--newspaper-border);
+      background: white;
+      color: var(--newspaper-border);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .share-btn:hover {
+      background: var(--newspaper-border);
+      color: white;
+    }
+
+    .share-btn.twitter:hover {
+      background: #1DA1F2;
+      border-color: #1DA1F2;
+    }
+
+    .share-btn.linkedin:hover {
+      background: #0077B5;
+      border-color: #0077B5;
     }
 
     /* Back to blog */
@@ -398,16 +516,16 @@
 <!-- Article Header -->
 <section class="article-header">
   <div class="container">
-    <div class="article-category">Urban Planning</div>
-    <h1 class="article-headline">Society Is Ready</h1>
-    <p class="article-subheadline">[Content to be added]</p>
+    <div class="article-category">Active Mobility</div>
+    <h1 class="article-headline">Society Is Ready. The Politicians?</h1>
+    <p class="article-subheadline">With Bengaluru being counted among the top 10 innovation hubs of the world and attracting an international crowd, it is time the elected representatives pass the active mobility bill and allocate significant budget towards walking and cycling infrastructure.</p>
 
     <div class="article-byline">
       <img src="https://miro.medium.com/v2/resize:fill:176:176/1*HvKqMwQfE-3RcWr3rFvzjg.jpeg" alt="Sathya Sankaran" onerror="this.src='../img/UM-thumbnail.png'">
       <div class="byline-info">
-        <div class="byline-author">Sathya Sankaran</div>
+        <div class="byline-author">Ajay Nandakumar, edited by Sathya Sankaran</div>
         <div class="byline-meta">
-          Co-Founder & CEO, Urban Morph  •  <span class="byline-date">January 26, 2025</span>
+          YLAC Mobility Champion, Urban Morph  •  <span class="byline-date">February 16, 2023</span>
         </div>
       </div>
     </div>
@@ -419,7 +537,60 @@
   <div class="container">
     <div class="article-body">
 
-      <p>[Content to be added]</p>
+      <figure>
+        <img src="https://cdn-images-1.medium.com/max/800/1*nVsd7HhvmjSteoXH0hYkUw.jpeg" alt="Active mobility in Bengaluru">
+      </figure>
+
+      <p>Karnataka has recorded the highest number of deaths in road accidents in India in 2020. According to the data released by National Crime Records Bureau (NCRB) 13% of pedestrian deaths in India were reported from Karnataka in 2020. Further, as per the World Resources Institute, as many as 907 pedestrians were killed in Bengaluru from 2017–2020. Moreover, in the last three years, more than 110 cyclists were injured and as many as 28 killed in road accidents in Bengaluru alone.</p>
+
+      <p>With the aspiration of enhancing liveability in the cities across Karnataka and improve Air Quality Index towards achieving the Prime Minister's vision of <strong>"Mission Life"</strong> that focuses on an environmentally conscious lifestyle by individual and community behavioural change and <strong>"Green Growth"</strong> that focuses on a holistic effort to the achievement of <strong>net zero carbon emission by 2070</strong>, a sustainable urban mobility mode is the need of the hour.</p>
+
+      <p>The Government of Karnataka had taken a milestone step by accepting the Transit-Oriented Development (ToD) policy drafted by Directorate of Urban land Transport (DULT) that envisages the vision of Bengaluru becoming a public transport-oriented city that is people and environment friendly and a city that supports economic growth while offering a good quality of life.</p>
+
+      <p>Further, the Ministry of Housing and Urban Affairs had launched multiple programs like '<strong><em>Cycles4Change</em></strong>' and '<strong><em>Streets for People</em></strong>' under the Smart City Mission in association with the co-host and coordinator ITDP, primarily to inspire the cities like Bengaluru to create permanent walking and cycling friendly infrastructure and to build momentum for the same. As per ITDP, investments in cycling infrastructure have economic benefits of up to 5.5 times the initial investment and cycling for short distances can result in an annual benefit of INR 1.8 trillion to the Indian economy.</p>
+
+      <p>The effort put up by social development motivated organisations and like-minded citizens have catalysed up to a certain extent by making the concept of active mobility and its sustainability intentions more popular among the public. <strong><em>#My15MinCity</em></strong> pledge campaign coordinated by Council For Active Mobility (CFAM), based on a residential urban concept, urges people to shun the motor vehicle for trips in the neighbourhood of their home. Out of the total people who pledged in the campaign, around 40% volunteered to help the same. It draws the conclusion that people are willing to instil an attitudinal change within their community and participate in the process.</p>
+
+      <p>For the first time in the country, <strong><em>'Pedal Shaale'</em></strong> has been started by DULT in association with Citizens for Sustainability (CiFoS) Karnataka Bicycle Dealers Association (KBDA) and Decathlon, to mould confident cyclists who can handle city traffics, which includes certified training for both participants and trainers. Around 15 trainers have completed their sessions and are equipped to impart necessary training to the participants and empower them.</p>
+
+      <p>CFAM had launched a campaign advocating for the '<strong><em>Active Mobility Bill</em></strong>' to be passed in the Karnataka Legislative Assembly and had successfully collected 4423 signatures on the Jhatkaa platform supporting the bill. The bill was drafted by DULT on 30 December 2021, which aims to protect the rights of pedestrians and cyclists across Karnataka's cities while granting safe spaces for sustainable urban mobility. RTI filings, social media campaigns and consultations with subject experts like doctors on the health issues of transport led emissions and EV private players on greener modes, were constantly carried out.</p>
+
+      <p>The concept of '<strong><em>Slow Street</em></strong>', an aspirational point within the Active Mobility Bill pioneered by DULT, restructures the streets by traffic calming and remodels it to be safer urban space for the pedestrians and cyclists. Following the efforts, Alexandra Street has been designated as Bengaluru's first slow street with the necessary signage to ensure the sensitivity towards pedestrians, cyclists and NMT users and is expected to reach out for greater community engagement and sensitisation. The DULT Slow Streets movement is being popularised by CFAM via Cycle Days and getting more residential organisations to take it up.</p>
+
+      <p>The '<strong><em>Cycle Day'</em></strong> events are conducted by the Bengaluru Coalition for Open Streets (BCOS) and anchored by DULT, organized in an "open streets" format where a long stretch of the road is blocked to traffic for 4 hours on a Sunday to create a safe space for public to enjoy street activities and games. This is the longest continuously running open streets event in the country with more than 500 cycle days so far in Bengaluru and participation of more than 50 community partners.</p>
+
+      <p>Since Cycle Day served as a catalyst to generate required momentum for sustainable mobility in the city, there was a need to extend the community engagement of the government, which conceptualized <strong><em>Sustainable Mobility Accords</em></strong> (SuMA). The program focused on spreading awareness among the public on the benefits of sustainable mobility modes and to help the community to set specific goals by providing necessary support in the form of capacity building and assistance in showing measurable impact on ground. Karnataka Non-motorised Transport Agency (KNMTA) and DULT jointly coordinated the works that involved three broad phases viz. Data Collection and Analysis, Proposal preparation and Implementation. This has led to transformatory intervention in areas like Malleshwaram, Doddenakundi, Sanjaynagar etc.</p>
+
+      <p>In December 2015 Citizens For Sustainability (CiFoS) along with ESAF, BPAC and the schools of Sanjaynagar, a campaign, '<strong><em>Walk To School'</em></strong>, was organised in order to encourage students to commute to school by walk. The campaign acquired overwhelming response from the student community, wherein nearly 1500 students walked to their schools. The program was targeting the younger generations by setting a new normal and inculcating the necessity of choosing a greener mode of transit to schools. A survey after a year of this program found an increase of 32% in walking and 23% in cycling to schools.</p>
+
+      <p>Realising the dire need of footpath for the safe and smooth movement of people, with increasing urbanisation, skyrocketing consumption of private vehicles and increasing traffic congestions in Bengaluru, CiFoS had launched an advocacy program in 2017, '<strong><em>Adjust Beda, Footpath Beku'</em></strong> ('Don't adjust, we want footpaths'). With the participation of more than 500 residents of Sanjay Nagar, the campaign aspired to replicate this model of community engagement and awareness for the city to be a liveable place. It led to the creation of 3 kms of walkable footpaths in Sanjaynagar.</p>
+
+      <p><strong><em>Church Street First</em></strong> was an initiative led by the DULT in association with IISC (Bengaluru), Catapult (UK) and Urban Morph that focused on pedestrianisation under the <strong><em>Clean Air Street</em></strong> Initiative. Within 3 months the pedestrian footfall in Church Street increased by 92% with more than 98% of the visitors and 70% of shop owners surveyed having an inclination towards the pedestrianisation of the street. The willingness of different stakeholders in the market paves the way for a permanent establishment of a street that prioritises pedestrians over vehicles.</p>
+
+      <p>Further, Bengaluru Political Action Committee (BPAC) had conducted a <strong><em>livelihood Cyclist's Survey</em></strong>, in the form of questionnaire, to understand the challenges faced by the livelihood cyclists in Bengaluru along with their travel patterns and the important motivators for use of cycling as the primary mode of transport. With 604 respondents, primarily from low-income groups, around 62.13 % cited the absence of proper infrastructure and dedicated cycling lanes as the major concern while 13% feel upset at the unruly behaviour of other drivers. Around 70% feel that better lighting and 48% feel that designated cycle lanes are the encouraging factors to have a behavioural shift towards cycling.</p>
+
+      <p>Moreover, a mobility intelligence platform, '<strong><em>AltMo</em></strong>', was created by <em>Urbanmorph</em> for quantifying end to end sustainable transport modes towards achieving climate change goals. According to the data furnished by '<em>AltMo</em>', CO2 offset of 15885 Kgs were quantified in 2022 along with 6907 litres of fuel saved. It creates a leaderboard which lists out the employees and their companies (or workplace) that have driven the highest on cycle along with the data on the subsequent CO2 offset and fuel saved. This primarily targets the behavioural change on people and motivates them to replace the carbon-intensive transit mode with a greener, safer and healthier one.</p>
+
+      <p>In conclusion, there is significant community movement and initiatives that establish the enthusiasm and acceptance of Sustainable Mobility as a popular practice and not a flight of fancy of an underdeveloped country.</p>
+
+      <blockquote>With Bengaluru being counted among the top 10 innovation hubs of the world and attracting an international crowd it is time the elected representatives made it look like one by passing the active mobility bill and allocating a significant budget amount of Rs. 1000 Cr yearly towards walking & cycling infrastructure.</blockquote>
+
+      <p><em>Written by Ajay Nandakumar, YLAC Mobility Champion. Edited by Sathya Sankaran.</em></p>
+
+      <div class="ornamental-divider"></div>
+
+      <!-- Share Section -->
+      <div class="share-section">
+        <h4>Share This Article</h4>
+        <div class="share-buttons">
+          <a href="https://twitter.com/intent/tweet?text=Society Is Ready. The Politicians?&url=https://www.urbanmorph.com/blog/society-is-ready.html&via=morphurbanspace" target="_blank" class="share-btn twitter">
+            <i class="fab fa-twitter"></i> Share on Twitter
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.urbanmorph.com/blog/society-is-ready.html" target="_blank" class="share-btn linkedin">
+            <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+          </a>
+        </div>
+      </div>
 
       <!-- Back to Blog -->
       <div class="back-to-blog">
