@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y58FVNHZF7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y58FVNHZF7');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Primary Meta Tags -->
+  <title>SyntheSYS | AI-Powered Urban Intelligence Platform | Urban Morph</title>
+  <meta name="title" content="SyntheSYS | AI-Powered Urban Intelligence Platform | Urban Morph">
+  <meta name="description" content="SyntheSYS is Urban Morph's AI-powered platform for understanding and actioning progress at scale. From ward-level climate baselines to national development tracking across 780 districts.">
+  <meta name="author" content="Urban Morph">
+  <meta name="keywords" content="SyntheSYS, AI urban intelligence, Urban Morph, KDEM, NOTF, India district dashboard, GreensBrowns, CFAM, AI for social good, sustainable development, progress monitoring">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.urbanmorph.com/synthesys.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
+  <link rel="apple-touch-icon" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.urbanmorph.com/synthesys.html">
+  <meta property="og:title" content="SyntheSYS | AI-Powered Urban Intelligence Platform">
+  <meta property="og:description" content="Understanding and actioning progress at scale -- from neighbourhoods to nations. 5 live platforms, 780+ districts, 596 wards.">
+  <meta property="og:image" content="https://www.urbanmorph.com/img/blog/synthesys-header.jpg">
+  <meta property="og:site_name" content="Urban Morph">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.urbanmorph.com/synthesys.html">
+  <meta property="twitter:title" content="SyntheSYS | AI-Powered Urban Intelligence Platform">
+  <meta property="twitter:description" content="Understanding and actioning progress at scale -- from neighbourhoods to nations.">
+  <meta property="twitter:image" content="https://www.urbanmorph.com/img/blog/synthesys-header.jpg">
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Bootstrap CSS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
+
+  <!-- Fonts -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></noscript>
+
+  <style>
+    :root {
+      --um-yellow: #FBC831;
+      --um-pink: #F7A782;
+      --um-teal: #23A2A5;
+      --um-green: #0D7576;
+      --um-dark: #1a1a1a;
+      --um-gray: #4a4a4a;
+      --um-light: #FAF9F6;
+      --newspaper-border: #2C2C2C;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'PT Serif', 'Georgia', serif;
+      color: var(--um-dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+      background: var(--um-light);
+    }
+
+    /* Navigation */
+    .navbar {
+      background: var(--newspaper-border) !important;
+      padding: 1rem 0;
+      border-bottom: 4px double #000;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar-brand img {
+      border-radius: 4px;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 0.5rem 1rem !important;
+      font-family: 'PT Serif', serif;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--um-yellow);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 60%;
+    }
+
+    /* ========================================
+       HERO / MASTHEAD
+       ======================================== */
+    .synthesys-hero {
+      position: relative;
+      background: white;
+      border-top: 3px double #000;
+      border-bottom: 3px double #000;
+      padding: 5rem 0 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .synthesys-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(35, 162, 165, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--um-teal);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      font-weight: 900;
+      color: var(--newspaper-border);
+      line-height: 0.95;
+      letter-spacing: -2px;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .hero-title span {
+      color: var(--um-teal);
+    }
+
+    .hero-tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(0.65rem, 1.2vw, 0.8rem);
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--um-gray);
+      margin-bottom: 2rem;
+      padding: 0.75rem 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      display: inline-block;
+    }
+
+    .hero-description {
+      font-family: 'PT Serif', serif;
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: #555;
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-primary-custom {
+      font-family: 'Space Mono', monospace;
+      background: var(--newspaper-border);
+      color: white;
+      padding: 1rem 2.5rem;
+      border: 2px solid var(--newspaper-border);
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.8rem;
+    }
+
+    .btn-primary-custom:hover {
+      background: var(--um-teal);
+      border-color: var(--um-teal);
+      transform: translateY(-2px);
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .btn-secondary-custom {
+      font-family: 'Space Mono', monospace;
+      background: white;
+      color: var(--newspaper-border);
+      padding: 1rem 2.5rem;
+      border: 2px solid var(--newspaper-border);
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.8rem;
+    }
+
+    .btn-secondary-custom:hover {
+      background: var(--newspaper-border);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 2rem;
+      border-top: 2px solid #e5e5e5;
+    }
+
+    .stat-item {
+      text-align: center;
+      min-width: 100px;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--newspaper-border);
+      display: block;
+      font-family: 'Playfair Display', serif;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: block;
+    }
+
+    /* ========================================
+       VISION SECTION
+       ======================================== */
+    .vision-section {
+      padding: 5rem 0;
+      background: white;
+      border-bottom: 3px double #000;
+    }
+
+    .vision-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--um-teal);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 900;
+      color: var(--newspaper-border);
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    .vision-text {
+      font-size: 1.05rem;
+      color: var(--um-gray);
+      line-height: 1.9;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .vision-text + .vision-text {
+      margin-top: 1.5rem;
+    }
+
+    .vision-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--um-teal);
+      margin: 2.5rem auto;
+    }
+
+    /* ========================================
+       CAPABILITIES SECTION
+       ======================================== */
+    .capabilities-section {
+      padding: 5rem 0;
+      background: var(--um-light);
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .capability-card {
+      background: white;
+      padding: 3rem 2rem;
+      border: 1px solid #e5e5e5;
+      border-top: 4px solid var(--um-teal);
+      text-align: center;
+      transition: all 0.4s ease;
+      height: 100%;
+    }
+
+    .capability-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      border-top-color: var(--um-yellow);
+    }
+
+    .capability-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--um-teal), var(--um-green));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .capability-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--newspaper-border);
+      margin-bottom: 1rem;
+    }
+
+    .capability-card p {
+      font-size: 0.95rem;
+      color: var(--um-gray);
+      line-height: 1.7;
+    }
+
+    /* ========================================
+       PLATFORM SHOWCASE
+       ======================================== */
+    .platforms-section {
+      padding: 5rem 0;
+      background: white;
+    }
+
+    .platforms-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .platform-card {
+      margin-bottom: 5rem;
+      padding-bottom: 5rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .platform-card:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .platform-image-wrapper {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+      border: 2px solid #e5e5e5;
+    }
+
+    .platform-placeholder {
+      width: 100%;
+      height: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .platform-placeholder::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 1px,
+        rgba(255,255,255,0.03) 1px,
+        rgba(255,255,255,0.03) 2px
+      );
+      pointer-events: none;
+    }
+
+    .platform-placeholder-icon {
+      font-size: 3rem;
+      opacity: 0.4;
+      margin-bottom: 0.75rem;
+    }
+
+    .platform-placeholder-text {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    .platform-gradient-1 { background: linear-gradient(135deg, #23A2A5 0%, #0D7576 100%); }
+    .platform-gradient-2 { background: linear-gradient(135deg, #FBC831 0%, #F7A782 100%); }
+    .platform-gradient-3 { background: linear-gradient(135deg, #0D7576 0%, #23A2A5 100%); }
+    .platform-gradient-4 { background: linear-gradient(135deg, #5a7247 0%, #8B6914 100%); }
+    .platform-gradient-5 { background: linear-gradient(135deg, #2980b9 0%, #23A2A5 100%); }
+
+    .ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--um-teal);
+      color: white;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .platform-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 900;
+      color: var(--newspaper-border);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .platform-description {
+      font-size: 1.05rem;
+      color: var(--um-gray);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .platform-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+    }
+
+    .platform-features li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+      color: var(--um-dark);
+    }
+
+    .platform-features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.6rem;
+      width: 8px;
+      height: 8px;
+      background: var(--um-teal);
+      border-radius: 50%;
+    }
+
+    .platform-cta {
+      font-family: 'Space Mono', monospace;
+      background: transparent;
+      color: var(--newspaper-border);
+      padding: 0.8rem 2rem;
+      border: 2px solid var(--newspaper-border);
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.75rem;
+    }
+
+    .platform-cta:hover {
+      background: var(--newspaper-border);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* ========================================
+       SCALE VISION SECTION
+       ======================================== */
+    .scale-section {
+      padding: 6rem 0;
+      background: var(--newspaper-border);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scale-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(35, 162, 165, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .scale-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 900;
+      line-height: 1;
+      color: rgba(255,255,255,0.08);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      letter-spacing: -5px;
+    }
+
+    .scale-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .scale-content .section-label {
+      color: var(--um-yellow);
+    }
+
+    .scale-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .scale-content p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+    }
+
+    .scale-cta {
+      font-family: 'Space Mono', monospace;
+      background: var(--um-yellow);
+      color: var(--um-dark);
+      padding: 1rem 2.5rem;
+      border: 2px solid var(--um-yellow);
+      border-radius: 4px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 0.8rem;
+    }
+
+    .scale-cta:hover {
+      background: white;
+      border-color: white;
+      color: var(--um-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    /* ========================================
+       CTA / CONTACT SECTION
+       ======================================== */
+    .cta-section {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, var(--um-pink) 0%, var(--um-yellow) 100%);
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .cta-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 900;
+      color: var(--um-dark);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .cta-inner p {
+      font-size: 1.05rem;
+      color: var(--um-dark);
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+
+    .cta-inner .cta-buttons {
+      margin-bottom: 0;
+    }
+
+    /* ========================================
+       FOOTER
+       ======================================== */
+    footer {
+      background: var(--um-dark);
+      color: white;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-section h5 {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--um-yellow);
+      font-size: 1.2rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-section a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--um-yellow);
+    }
+
+    .footer-section p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--um-yellow);
+      color: var(--um-dark);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ========================================
+       SCROLL REVEAL
+       ======================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger children */
+    .reveal-stagger > .reveal:nth-child(1) { transition-delay: 0s; }
+    .reveal-stagger > .reveal:nth-child(2) { transition-delay: 0.12s; }
+    .reveal-stagger > .reveal:nth-child(3) { transition-delay: 0.24s; }
+    .reveal-stagger > .reveal:nth-child(4) { transition-delay: 0.36s; }
+
+    /* ========================================
+       ANIMATIONS
+       ======================================== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-animate {
+      animation: fadeInUp 0.8s ease-out backwards;
+    }
+
+    .hero-animate:nth-child(1) { animation-delay: 0.1s; }
+    .hero-animate:nth-child(2) { animation-delay: 0.2s; }
+    .hero-animate:nth-child(3) { animation-delay: 0.3s; }
+    .hero-animate:nth-child(4) { animation-delay: 0.4s; }
+    .hero-animate:nth-child(5) { animation-delay: 0.5s; }
+    .hero-animate:nth-child(6) { animation-delay: 0.6s; }
+    .hero-animate:nth-child(7) { animation-delay: 0.7s; }
+
+    /* ========================================
+       RESPONSIVE
+       ======================================== */
+    @media (max-width: 991px) {
+      .platform-card .row {
+        flex-direction: column !important;
+      }
+
+      .platform-image-wrapper {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .synthesys-hero {
+        padding: 3rem 0 2.5rem;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+        letter-spacing: -1px;
+      }
+
+      .hero-tagline {
+        letter-spacing: 3px;
+        font-size: 0.6rem;
+      }
+
+      .hero-stats {
+        gap: 2rem;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-primary-custom,
+      .btn-secondary-custom {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+
+      .vision-section,
+      .capabilities-section,
+      .platforms-section,
+      .cta-section {
+        padding: 3rem 0;
+      }
+
+      .platform-card {
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+      }
+
+      .platform-placeholder {
+        height: 220px;
+      }
+
+      .capability-card {
+        margin-bottom: 1.5rem;
+      }
+
+      .scale-section {
+        padding: 4rem 0;
+      }
+
+      .vision-text {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-stats {
+        gap: 1.5rem;
+      }
+
+      .stat-item {
+        min-width: 80px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SyntheSYS",
+    "applicationCategory": "BusinessApplication",
+    "description": "AI-powered urban intelligence platform for understanding and actioning progress at scale, from neighbourhoods to nations.",
+    "url": "https://www.urbanmorph.com/synthesys.html",
+    "image": "https://www.urbanmorph.com/img/blog/synthesys-header.jpg",
+    "author": {
+      "@type": "Organization",
+      "name": "Urban Morph",
+      "url": "https://www.urbanmorph.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.urbanmorph.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "SyntheSYS",
+        "item": "https://www.urbanmorph.com/synthesys.html"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/UM-thumbnail.png" width="35" height="35" class="d-inline-block align-top" alt="Urban Morph">
+      Urban Morph
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="synthesys.html">SyntheSYS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="news_articles.html">Media</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero / Masthead -->
+<section class="synthesys-hero">
+  <div class="container">
+    <p class="hero-label hero-animate">Urban Morph Presents</p>
+    <h1 class="hero-title hero-animate">Synthe<span>SYS</span></h1>
+    <p class="hero-tagline hero-animate">AI-Powered Urban Intelligence</p>
+    <p class="hero-description hero-animate">Understanding and actioning progress at scale &mdash; from neighbourhoods to nations.</p>
+    <div class="cta-buttons hero-animate">
+      <a href="#platforms" class="btn-primary-custom">Explore Platforms <i class="fas fa-arrow-down"></i></a>
+      <a href="blog/synthesys-orchestrating-progress.html" class="btn-secondary-custom">Read the Origin Story <i class="fas fa-book-open"></i></a>
+    </div>
+    <div class="hero-stats hero-animate">
+      <div class="stat-item">
+        <span class="stat-number">5</span>
+        <span class="stat-label">Live Platforms</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">780+</span>
+        <span class="stat-label">Districts</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">596</span>
+        <span class="stat-label">Wards Covered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">9</span>
+        <span class="stat-label">Languages</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision -->
+<section class="vision-section">
+  <div class="container">
+    <div class="vision-inner reveal">
+      <p class="section-label">The Vision</p>
+      <h2 class="section-title">Synthesis of Data, Systems Thinking, and AI</h2>
+      <p class="vision-text">SyntheSYS combines the rigour of synthesis &mdash; the combining of diverse conceptions into a coherent whole &mdash; with systems thinking to help governments, philanthropies, and citizens understand progress and take action. It is an offering in service of people, planet, and progress in the age of AI.</p>
+      <p class="vision-text">By harnessing Large Language Models to process open government data, field research, and community intelligence, SyntheSYS creates actionable baselines and development roadmaps at every scale: from individual wards and neighbourhoods to districts, states, and the nation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AI Capabilities -->
+<section class="capabilities-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <p class="section-label">Core Capabilities</p>
+      <h2 class="section-title">How AI Powers SyntheSYS</h2>
+    </div>
+    <div class="row g-4 reveal-stagger">
+      <div class="col-md-4 reveal">
+        <div class="capability-card">
+          <div class="capability-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Knowledge Synthesis</h3>
+          <p>LLMs process government open data, economic surveys, and field research into actionable baselines and development roadmaps at district, state, and national scale.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="capability-card">
+          <div class="capability-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Intelligent Automation</h3>
+          <p>AI classifies, routes, and prioritises civic inputs &mdash; from municipal complaints to waste management logistics &mdash; without constantly altering rules.</p>
+        </div>
+      </div>
+      <div class="col-md-4 reveal">
+        <div class="capability-card">
+          <div class="capability-icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3>Multi-Scale Monitoring</h3>
+          <p>Ward-level to nation-level progress tracking with role-based views for district collectors, ministers, urban planners, and citizens alike.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Platform Showcase -->
+<section class="platforms-section" id="platforms">
+  <div class="container">
+    <div class="platforms-header reveal">
+      <p class="section-label">The Platforms</p>
+      <h2 class="section-title">Built for Impact at Every Scale</h2>
+    </div>
+
+    <!-- Platform 1: KDEM -->
+    <div class="platform-card reveal">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="platform-image-wrapper">
+            <img src="img/synthesys/kdem-screenshot.png" alt="KDEM - Karnataka Digital Economy Mission Dashboard" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="ai-badge"><i class="fas fa-brain"></i> Claude AI-Powered</span>
+          <h3 class="platform-title">KDEM &mdash; Karnataka Digital Economy Mission</h3>
+          <p class="platform-description">Strategic dashboard tracking Karnataka's $400B digital economy vision by 2030. Real-time monitoring of 248 verified targets across 5 verticals and 13 geographies over an 8-year horizon.</p>
+          <ul class="platform-features">
+            <li>13 interactive analytical tabs</li>
+            <li>248 verified development targets</li>
+            <li>AI-powered admin with Anthropic Claude</li>
+          </ul>
+          <a href="https://kdem.vercel.app" target="_blank" class="platform-cta">View Dashboard <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Platform 2: India District Dashboard -->
+    <div class="platform-card reveal">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
+        <div class="col-lg-6">
+          <div class="platform-image-wrapper">
+            <img src="img/synthesys/district-screenshot.png" alt="India District Development Dashboard" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="ai-badge"><i class="fas fa-brain"></i> AI-Synthesized Analysis</span>
+          <h3 class="platform-title">India District Dashboard</h3>
+          <p class="platform-description">Pan-India development dashboard scaling AI-synthesized district analysis to all 780 districts across 28 states. Interactive maps, per capita income rankings, and GDDP composition at every level.</p>
+          <ul class="platform-features">
+            <li>780 district profiles across India</li>
+            <li>State and district drill-down navigation</li>
+            <li>AI-generated development baselines</li>
+          </ul>
+          <a href="https://district-mocha.vercel.app" target="_blank" class="platform-cta">View Dashboard <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Platform 3: NOTF -->
+    <div class="platform-card reveal">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="platform-image-wrapper">
+            <img src="img/synthesys/notf-screenshot.png" alt="NOTF - Neighbourhoods of the Future" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="ai-badge"><i class="fas fa-brain"></i> AI Climate Baselines</span>
+          <h3 class="platform-title">NOTF &mdash; Neighbourhoods of the Future</h3>
+          <p class="platform-description">Ward-level climate intelligence platform covering 596 wards across Bengaluru and Mumbai. Includes AI-synthesized climate baselines across 7 sectors, community discovery, and an integrated civic grievance system with intelligent complaint routing.</p>
+          <ul class="platform-features">
+            <li>596 wards with climate data across 7 sectors</li>
+            <li>Intelligent civic complaint classification and routing</li>
+            <li>Community discovery in 9+ Indian languages</li>
+          </ul>
+          <a href="https://notf-one.vercel.app" target="_blank" class="platform-cta">View Platform <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Platform 4: GreensBrowns -->
+    <div class="platform-card reveal">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
+        <div class="col-lg-6">
+          <div class="platform-image-wrapper">
+            <img src="img/synthesys/greensbrowns-screenshot.png" alt="GreensBrowns Circular Waste Marketplace" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="ai-badge"><i class="fas fa-brain"></i> AI-Powered OCR</span>
+          <h3 class="platform-title">GreensBrowns</h3>
+          <p class="platform-description">Digital circular marketplace connecting bulk waste generators with certified processors in Bengaluru. End-to-end waste lifecycle tracking with AI-powered document processing for vehicle and driver onboarding.</p>
+          <ul class="platform-features">
+            <li>Multi-role dashboards for generators, collectors, and processors</li>
+            <li>Complete traceability with QR codes and geo-location</li>
+            <li>AI-powered OCR for credential verification</li>
+          </ul>
+          <a href="https://greensbrowns.vercel.app" target="_blank" class="platform-cta">View Platform <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Platform 5: CFAM -->
+    <div class="platform-card reveal">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="platform-image-wrapper">
+            <img src="img/synthesys/cfam-screenshot.png" alt="CFAM - Council for Active Mobility" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="ai-badge"><i class="fas fa-chart-bar"></i> Data-Driven Advocacy</span>
+          <h3 class="platform-title">CFAM &mdash; Council for Active Mobility</h3>
+          <p class="platform-description">India's advocacy platform supporting the National Active Mobility Bill. Coordinates 9,000+ corporate challenge participants, tracks cycling infrastructure investment across Indian cities, and automates community engagement at scale.</p>
+          <ul class="platform-features">
+            <li>882 companies and 9,156+ challenge participants</li>
+            <li>City infrastructure investment tracking and analysis</li>
+            <li>Automated Discord community with 50+ channels</li>
+          </ul>
+          <a href="https://cfam.in" target="_blank" class="platform-cta">View Platform <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Scale Vision -->
+<section class="scale-section">
+  <div class="scale-number">780</div>
+  <div class="container">
+    <div class="scale-content reveal">
+      <p class="section-label">The Horizon</p>
+      <h2>Scaling Intelligence to Every District in India</h2>
+      <p>From one district dashboard in Kalaburagi to a comprehensive platform covering all 780 districts across 28 states and 8 union territories. AI-synthesized development baselines, role-based administrative views, and progress monitoring &mdash; available for every district in India.</p>
+      <a href="https://district-mocha.vercel.app" target="_blank" class="scale-cta">Explore the Prototype <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / Contact -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Ready to understand your district, city, or state better?</h2>
+      <p>SyntheSYS is in service of people, planet, and progress. Let's build intelligence for your region.</p>
+      <div class="cta-buttons">
+        <a href="mailto:contact@urbanmorph.com" class="btn-primary-custom">Get in Touch <i class="fas fa-envelope"></i></a>
+        <a href="projects.html" class="btn-secondary-custom">See Our Projects <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h5>Urban Morph</h5>
+        <p>Shaping the future of cities through innovation, collaboration, and execution in sustainable urban mobility and infrastructure.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/morphurbanspace/" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/urbanmorph/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="news_articles.html">Media Coverage</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Our Solutions</h5>
+        <ul>
+          <li><a href="https://www.altmo.app" target="_blank">Altmo</a></li>
+          <li><a href="synthesys.html">SyntheSYS</a></li>
+          <li><a href="https://podcast.oorulabs.com" target="_blank">OoruLabs</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h5>Contact Info</h5>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:contact@urbanmorph.com">contact@urbanmorph.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Urban Morph Consultants Pvt Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Scroll reveal with IntersectionObserver
+  document.addEventListener('DOMContentLoaded', function() {
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(function(el) { observer.observe(el); });
+    } else {
+      revealEls.forEach(function(el) { el.classList.add('revealed'); });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
