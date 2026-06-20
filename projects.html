@@ -55,8 +55,7 @@
 
   <!-- Bootstrap CSS -->
   <!-- Defer Bootstrap CSS - Load asynchronously -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
-  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" crossorigin="anonymous">
 
   <!-- Fonts -->
   <!-- Defer Font Awesome - Icons load after page render -->
@@ -75,7 +74,7 @@
     :root {
       --um-yellow: #FBC831;
       --um-pink: #F7A782;
-      --um-teal: #23A2A5;
+      --um-teal: #157E80;
       --um-green: #0D7576;
       --um-dark: #1a1a1a;
       --um-gray: #4a4a4a;
@@ -186,7 +185,7 @@
       display: inline-block;
       font-family: 'Space Mono', monospace;
       font-size: 0.75rem;
-      color: #999;
+      color: #595959;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-top: 1rem;
@@ -403,7 +402,7 @@
       margin-bottom: 2rem;
     }
 
-    .footer-section h5 {
+    .footer-section h2 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
       margin-bottom: 1.25rem;
@@ -906,6 +905,9 @@
     ]
   }
   </script>
+
+  <!-- CLS fix: keep mobile navbar menu collapsed at first paint, before Bootstrap CSS loads -->
+  <style>@media (max-width: 991.98px){.navbar-collapse:not(.show){display:none}}</style>
 </head>
 
 <body>
@@ -914,7 +916,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img src="img/UM-thumbnail.png" width="35" height="35" class="d-inline-block align-top" alt="Urban Morph">
+      <img decoding="async" src="img/UM-thumbnail.webp" width="31" height="35" class="d-inline-block align-top" alt="Urban Morph">
       Urban Morph
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -944,6 +946,8 @@
     </div>
   </div>
 </nav>
+
+<main>
 
 <!-- Page Header -->
 <section class="page-header">
@@ -985,7 +989,7 @@
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/bicycle-parking.jpg" alt="Bicycle parking facilities" class="project-image">
+            <img loading="eager" fetchpriority="high" decoding="async" width="1200" height="675" src="img/projects/bicycle-parking.webp" alt="Bicycle parking facilities" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Bicycle Parking Facilities</h3>
               <p class="project-description">Planning and implementing secure bicycle parking infrastructure across the city to support cycling as a viable mode of transportation.</p>
@@ -995,7 +999,7 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/ITES.png" alt="ITES" class="project-image">
+            <img loading="lazy" decoding="async" width="643" height="643" src="img/projects/ITES.webp" alt="ITES" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Innovating for Transport and Energy Systems (ITES)</h3>
               <p class="project-description">Strategic partner to India-UK Joint Center of Excellence between Energy Systems Catapult, UK and Indian Institute of Science. Research and innovation initiative focused on developing sustainable transport and energy solutions for urban environments.</p>
@@ -1010,7 +1014,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/amcoe.webp" type="image/webp">
-              <img src="img/projects/amcoe.jpg" alt="AMCOE" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/amcoe.webp" alt="AMCOE" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Active Mobility Center of Excellence (AMCOE)</h3>
@@ -1021,7 +1025,7 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/Sustainable Practices.png" alt="Sustainable Museums" class="project-image">
+            <img loading="lazy" decoding="async" width="1600" height="2270" src="img/projects/Sustainable Practices.webp" alt="Sustainable Museums" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Sustainable Practices - Handbook for Museums in India</h3>
               <p class="project-description">Developing guidelines for sustainable practices in cultural institutions, including mobility and accessibility recommendations.</p>
@@ -1037,7 +1041,7 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/AltMo-digest.png" alt="Altmo Digest" class="project-image">
+            <img loading="lazy" decoding="async" width="1600" height="2270" src="img/projects/AltMo-digest.webp" alt="Altmo Digest" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Altmo Digest</h3>
               <p class="project-description">Released on June 3rd World Bicycle Day 2023, with a foreword from the Commissioner of Directorate of Urban Land Transport, Government of Karnataka, takes you through the journey of all the cycling related progress Bengaluru has made.</p>
@@ -1055,7 +1059,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/slow-streets.webp" type="image/webp">
-              <img src="img/projects/slow-streets.jpg" alt="Slow Streets" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/slow-streets.webp" alt="Slow Streets" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Slow Streets</h3>
@@ -1066,7 +1070,7 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/OoruLabs.png" alt="OoruLabs Podcasts" class="project-image">
+            <img loading="lazy" decoding="async" width="1600" height="900" src="img/projects/OoruLabs.webp" alt="OoruLabs Podcasts" class="project-image">
             <div class="project-body">
               <h3 class="project-title">OoruLabs Podcasts</h3>
               <p class="project-description">India's premier Urban affairs podcast hosted by Sathya Sankaran. A series of conversations exploring urban issues, mobility challenges, and innovative solutions for building better cities.</p>
@@ -1092,7 +1096,7 @@
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/AltMo.png" alt="Altmo" class="project-image">
+            <img loading="lazy" decoding="async" width="790" height="196" src="img/projects/AltMo.webp" alt="Altmo" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Altmo</h3>
               <p class="project-description">Alternative Mobility initiative promoting sustainable transportation solutions and active mobility across Bengaluru. Employee engagement and climate action platform helping companies manage transport emissions.</p>
@@ -1107,7 +1111,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/mobility-map.webp" type="image/webp">
-              <img src="img/projects/mobility-map.jpg" alt="Mobility Map" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/mobility-map.webp" alt="Mobility Map" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Sustainable Mobility Network Map</h3>
@@ -1120,7 +1124,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/ev-dashboard.webp" type="image/webp">
-              <img src="img/projects/ev-dashboard.jpg" alt="EV Dashboard" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/ev-dashboard.webp" alt="EV Dashboard" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">EV Infrastructure Planning Dashboard</h3>
@@ -1143,7 +1147,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/altmo-challenge.webp" type="image/webp">
-              <img src="img/projects/altmo-challenge.jpg" alt="Altmo Challenge" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/altmo-challenge.webp" alt="Altmo Challenge" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">The Altmo Challenge</h3>
@@ -1154,7 +1158,7 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/p2p.png" alt="Personal2Public" class="project-image">
+            <img loading="lazy" decoding="async" width="1600" height="657" src="img/projects/p2p.webp" alt="Personal2Public" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Personal2Public via Cycles</h3>
               <p class="project-description">Exploring the transition from personal to public spaces through cycling initiatives and infrastructure development.</p>
@@ -1166,7 +1170,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/school-streets.webp" type="image/webp">
-              <img src="img/projects/school-streets.jpg" alt="School Streets" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/school-streets.webp" alt="School Streets" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">School Streets Pilot (ASRTS)</h3>
@@ -1179,7 +1183,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/bicycle-heroes.webp" type="image/webp">
-              <img src="img/projects/bicycle-heroes.jpg" alt="Bicycle Heroes" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/bicycle-heroes.webp" alt="Bicycle Heroes" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Bicycle Heroes</h3>
@@ -1190,7 +1194,7 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/pedal-shaale.png" alt="Pedal Shaale" class="project-image">
+            <img loading="lazy" decoding="async" width="1600" height="982" src="img/projects/pedal-shaale.webp" alt="Pedal Shaale" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Pedal Shaale</h3>
               <p class="project-description">Educational program teaching cycling skills and road safety to children and adults, promoting cycling as a safe mode of transport.</p>
@@ -1202,7 +1206,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/cycle-days.webp" type="image/webp">
-              <img src="img/projects/cycle-days.jpg" alt="Cycle Days" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/cycle-days.webp" alt="Cycle Days" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Cycle Days</h3>
@@ -1215,7 +1219,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/lets-move.webp" type="image/webp">
-              <img src="img/projects/lets-move.jpg" alt="Let's Move Bengaluru" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/lets-move.webp" alt="Let's Move Bengaluru" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Let's Move Bengaluru</h3>
@@ -1226,7 +1230,7 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/Altmo-rideschool.jpeg" alt="Altmo Rideschool" class="project-image">
+            <img loading="lazy" decoding="async" width="838" height="482" src="img/projects/Altmo-rideschool.webp" alt="Altmo Rideschool" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Altmo Rideschool</h3>
               <p class="project-description">Training program providing cycling education, safety skills, and confidence building for new and returning cyclists.</p>
@@ -1238,7 +1242,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/councillors.webp" type="image/webp">
-              <img src="img/projects/councillors.jpg" alt="Active Mobility Councillors" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/councillors.webp" alt="Active Mobility Councillors" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Active Mobility Councillors</h3>
@@ -1251,7 +1255,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/cfam-newsletter.webp" type="image/webp">
-              <img src="img/projects/cfam-newsletter.jpg" alt="CFAM Newsletter" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/cfam-newsletter.webp" alt="CFAM Newsletter" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">CFAM Newsletter</h3>
@@ -1264,7 +1268,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/15-minute-city.webp" type="image/webp">
-              <img src="img/projects/15-minute-city.jpg" alt="15 Minute City" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/15-minute-city.webp" alt="15 Minute City" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">My 15 Minute City</h3>
@@ -1275,7 +1279,7 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/cleanair_street.jpg" alt="Clean Air" class="project-image">
+            <img loading="lazy" decoding="async" width="1219" height="865" src="img/projects/cleanair_street.webp" alt="Clean Air" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Innovating for Clean Air</h3>
               <p class="project-description">Initiative focused on reducing air pollution through promoting active mobility and sustainable transportation alternatives.</p>
@@ -1290,7 +1294,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/hejje-gala.webp" type="image/webp">
-              <img src="img/projects/hejje-gala.jpg" alt="Hejje Gala" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/hejje-gala.webp" alt="Hejje Gala" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Hejje Gala</h3>
@@ -1311,7 +1315,7 @@
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/IEW.png" alt="India Energy Week" class="project-image">
+            <img loading="lazy" decoding="async" width="512" height="512" src="img/projects/IEW.webp" alt="India Energy Week" class="project-image">
             <div class="project-body">
               <h3 class="project-title">India Energy Week 2025</h3>
               <p class="project-description">Participation and engagement in India Energy Week 2025, showcasing sustainable mobility and energy solutions.</p>
@@ -1323,7 +1327,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/mobility-bill.webp" type="image/webp">
-              <img src="img/projects/mobility-bill.jpg" alt="Mobility Bill" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/mobility-bill.webp" alt="Mobility Bill" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Active Mobility Bill - Panel Discussion</h3>
@@ -1336,7 +1340,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/pedaluru.webp" type="image/webp">
-              <img src="img/projects/pedaluru.jpg" alt="Pedaluru" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/pedaluru.webp" alt="Pedaluru" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Pedaluru Jan 2025</h3>
@@ -1349,7 +1353,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/keep-me-safe.webp" type="image/webp">
-              <img src="img/projects/keep-me-safe.jpg" alt="Keep Me Safe" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/keep-me-safe.webp" alt="Keep Me Safe" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">#Keep Me Safe</h3>
@@ -1360,7 +1364,7 @@
 
         <div class="col-lg-4 col-md-6">
           <div class="project-card">
-            <img src="img/projects/namma-raste.jpeg" alt="Namma Raste" class="project-image">
+            <img loading="lazy" decoding="async" width="640" height="360" src="img/projects/namma-raste.webp" alt="Namma Raste" class="project-image">
             <div class="project-body">
               <h3 class="project-title">Namma Raste</h3>
               <p class="project-description">Community-driven initiative to reclaim and improve neighborhood streets for walking, cycling, and social interaction.</p>
@@ -1372,7 +1376,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/dutch-pm.webp" type="image/webp">
-              <img src="img/projects/dutch-pm.jpg" alt="Dutch PM Visit" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/dutch-pm.webp" alt="Dutch PM Visit" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Dutch PM Visits Bengaluru</h3>
@@ -1385,7 +1389,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/relief-riders.webp" type="image/webp">
-              <img src="img/projects/relief-riders.jpg" alt="Relief Riders" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/relief-riders.webp" alt="Relief Riders" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Relief Riders</h3>
@@ -1398,7 +1402,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/church-street.webp" type="image/webp">
-              <img src="img/projects/church-street.jpg" alt="Church Street First" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/church-street.webp" alt="Church Street First" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">Church Street First</h3>
@@ -1411,7 +1415,7 @@
           <div class="project-card">
             <picture>
               <source srcset="img/projects/wri-india.webp" type="image/webp">
-              <img src="img/projects/wri-india.jpg" alt="WRI India" class="project-image">
+              <img loading="lazy" decoding="async" width="1024" height="1024" src="img/projects/wri-india.webp" alt="WRI India" class="project-image">
             </picture>
             <div class="project-body">
               <h3 class="project-title">WRI India Collaboration</h3>
@@ -1426,21 +1430,23 @@
 </section>
 
 <!-- Footer -->
+</main>
+
 <footer>
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h5>Urban Morph</h5>
+        <h2>Urban Morph</h2>
         <p>Shaping the future of cities through innovation, collaboration, and execution in sustainable urban mobility and infrastructure.</p>
         <div class="social-links">
-          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://twitter.com/morphurbanspace/" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/urbanmorph/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/morphurbanspace/" target="_blank" aria-label="X (formerly Twitter)"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/urbanmorph/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
         </div>
       </div>
 
       <div class="footer-section">
-        <h5>Quick Links</h5>
+        <h2>Quick Links</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -1451,7 +1457,7 @@
       </div>
 
       <div class="footer-section">
-        <h5>Our Solutions</h5>
+        <h2>Our Solutions</h2>
         <ul>
           <li><a href="https://www.altmo.app" target="_blank">Altmo</a></li>
           <li><a href="synthesys.html">SyntheSYS</a></li>
@@ -1460,7 +1466,7 @@
       </div>
 
       <div class="footer-section">
-        <h5>Contact Info</h5>
+        <h2>Contact Info</h2>
         <ul>
           <li><i class="fas fa-envelope"></i> <a href="mailto:contact@urbanmorph.com">contact@urbanmorph.com</a></li>
           <li><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</li>

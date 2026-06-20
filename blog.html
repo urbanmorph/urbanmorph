@@ -24,6 +24,9 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.urbanmorph.com/blog.html">
 
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="img/blog/synthesys-header.webp" fetchpriority="high">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
   <link rel="apple-touch-icon" href="https://www.urbanmorph.com/img/UM-thumbnail.png">
@@ -57,8 +60,7 @@
 
   <!-- Bootstrap CSS -->
   <!-- Defer Bootstrap CSS - Load asynchronously -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
-  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" crossorigin="anonymous">
 
   <!-- Fonts -->
   <!-- Defer Font Awesome - Icons load after page render -->
@@ -72,7 +74,7 @@
     :root {
       --um-yellow: #FBC831;
       --um-pink: #F7A782;
-      --um-teal: #23A2A5;
+      --um-teal: #157E80;
       --um-green: #0D7576;
       --um-dark: #1a1a1a;
       --um-gray: #4a4a4a;
@@ -178,7 +180,7 @@
       display: flex;
       justify-content: space-between;
       font-size: 0.7rem;
-      color: #999;
+      color: #595959;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-top: 1rem;
@@ -507,7 +509,7 @@
     .section-count {
       font-size: 0.75rem;
       font-weight: 400;
-      color: #999;
+      color: #595959;
       letter-spacing: 1px;
       font-family: 'Space Mono', monospace;
       padding: 0.5rem 1rem;
@@ -689,7 +691,7 @@
     .ornamental-divider {
       text-align: center;
       margin: 4rem 0;
-      color: #999;
+      color: #595959;
       font-size: 1rem;
     }
 
@@ -771,7 +773,7 @@
       margin-bottom: 2rem;
     }
 
-    .footer-section h5 {
+    .footer-section h2 {
       font-weight: 700;
       margin-bottom: 1.25rem;
       color: var(--um-yellow);
@@ -1026,6 +1028,9 @@
     ]
   }
   </script>
+
+  <!-- CLS fix: keep mobile navbar menu collapsed at first paint, before Bootstrap CSS loads -->
+  <style>@media (max-width: 991.98px){.navbar-collapse:not(.show){display:none}}</style>
 </head>
 
 <body>
@@ -1034,7 +1039,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <img src="img/UM-thumbnail.png" width="35" height="35" class="d-inline-block align-top" alt="Urban Morph">
+      <img decoding="async" src="img/UM-thumbnail.webp" width="31" height="35" class="d-inline-block align-top" alt="Urban Morph">
       Urban Morph
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -1065,6 +1070,8 @@
   </div>
 </nav>
 
+<main>
+
 <!-- Newspaper Masthead -->
 <section class="newspaper-masthead">
   <div class="container">
@@ -1076,7 +1083,7 @@
       <span>2018 - 2026</span>
     </div>
     <div class="author-byline">
-      <img src="https://miro.medium.com/v2/resize:fill:176:176/1*HvKqMwQfE-3RcWr3rFvzjg.jpeg" alt="Sathya Sankaran" onerror="this.src='img/UM-thumbnail.png'">
+      <img decoding="async" src="img/team/sathya.webp" alt="Sathya Sankaran" onerror="this.src='img/UM-thumbnail.png'">
       <div class="author-info">
         <div class="author-name">Sathya Sankaran</div>
         <div class="author-title">Co-Founder & CEO, Bicycle Mayor Bengaluru</div>
@@ -1097,7 +1104,7 @@
 
       <!-- Hero Featured: SyntheSYS -->
       <div class="hero-featured">
-        <img src="img/blog/synthesys-header.jpg" alt="SyntheSYS: Orchestrating Progress in the Age of AI" class="hero-image" loading="eager">
+        <img decoding="async" width="1536" height="1024" src="img/blog/synthesys-header.webp" alt="SyntheSYS: Orchestrating Progress in the Age of AI" class="hero-image" loading="eager" fetchpriority="high">
         <div class="hero-overlay">
           <span class="hero-badge">AI & Progress</span>
           <h2 class="hero-title">SyntheSYS: Orchestrating Progress in the Age of AI</h2>
@@ -1122,7 +1129,7 @@
 
         <div class="magazine-card scroll-animate">
           <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*UGCYz1qc7dBbLglPtD_XVQ.jpeg" alt="Natural resources are public goods" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_UGCYz1qc7dBbLglPtD_XVQ.webp" alt="Natural resources are public goods" class="card-image" loading="lazy">
             <span class="card-badge badge-climate">Climate Action</span>
           </div>
           <div class="card-content">
@@ -1141,7 +1148,7 @@
 
         <div class="magazine-card scroll-animate">
           <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*mxODI4Jjz4axoYkqMYSzuQ.jpeg" alt="Symbiotic relationships in nature" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_mxODI4Jjz4axoYkqMYSzuQ.webp" alt="Symbiotic relationships in nature" class="card-image" loading="lazy">
             <span class="card-badge badge-climate">Energy Systems</span>
           </div>
           <div class="card-content">
@@ -1160,7 +1167,7 @@
 
         <div class="magazine-card scroll-animate">
           <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*ySbRdffRvVippcZIc3mvmA.jpeg" alt="Traffic Jam in Bengaluru" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_ySbRdffRvVippcZIc3mvmA.webp" alt="Traffic Jam in Bengaluru" class="card-image" loading="lazy">
             <span class="card-badge badge-policy">Transport Policy</span>
           </div>
           <div class="card-content">
@@ -1195,7 +1202,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*tQgz1NpBWJTKqsUBv5yQ4w.jpeg" alt="Brand Bengaluru mobility logo" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_tQgz1NpBWJTKqsUBv5yQ4w.webp" alt="Brand Bengaluru mobility logo" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Urban Branding</span>
         </div>
         <div class="card-content">
@@ -1214,7 +1221,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*t70o0VhVKE1WZV1HygYALw.jpeg" alt="Brand Bengaluru mobility logo" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_t70o0VhVKE1WZV1HygYALw.webp" alt="Brand Bengaluru mobility logo" class="card-image" loading="lazy">
           <span class="card-badge badge-climate">ESG Reporting</span>
         </div>
         <div class="card-content">
@@ -1233,7 +1240,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/0*OxZo4OD66HebcLN8" alt="Scope 3 emissions reporting" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/0_OxZo4OD66HebcLN8.webp" alt="Scope 3 emissions reporting" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Infrastructure</span>
         </div>
         <div class="card-content">
@@ -1252,7 +1259,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*nVsd7HhvmjSteoXH0hYkUw.jpeg" alt="Sustainable transportation infrastructure" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_nVsd7HhvmjSteoXH0hYkUw.webp" alt="Sustainable transportation infrastructure" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Active Mobility</span>
         </div>
         <div class="card-content">
@@ -1271,7 +1278,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*zbgi1_c7Z9Ja0fKm_nVrqA.jpeg" alt="Active mobility initiatives in Karnataka" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_zbgi1_c7Z9Ja0fKm_nVrqA.webp" alt="Active mobility initiatives in Karnataka" class="card-image" loading="lazy">
           <span class="card-badge badge-product">Product Update</span>
         </div>
         <div class="card-content">
@@ -1290,7 +1297,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*IcsmospYgcD2dyuQf3coMw.jpeg" alt="Altmo app rebranding" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_IcsmospYgcD2dyuQf3coMw.webp" alt="Altmo app rebranding" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Legislation</span>
         </div>
         <div class="card-content">
@@ -1325,7 +1332,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*nVsd7HhvmjSteoXH0hYkUw.jpeg" alt="Active mobility initiatives in Karnataka" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_nVsd7HhvmjSteoXH0hYkUw.webp" alt="Active mobility initiatives in Karnataka" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Active Mobility</span>
         </div>
         <div class="card-content">
@@ -1344,7 +1351,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*IcsmospYgcD2dyuQf3coMw.jpeg" alt="Active mobility initiatives in Karnataka" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_IcsmospYgcD2dyuQf3coMw.webp" alt="Active mobility initiatives in Karnataka" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Legislation</span>
         </div>
         <div class="card-content">
@@ -1363,7 +1370,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*uQfMKB6zPQkW9YHkWhprKg.jpeg" alt="Active mobility advocacy" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_uQfMKB6zPQkW9YHkWhprKg.webp" alt="Active mobility advocacy" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Urban Planning</span>
         </div>
         <div class="card-content">
@@ -1382,7 +1389,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/2560/1*683bpKWBs5pSEHJdy8uwtQ.jpeg" alt="Church Street pedestrianization" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_683bpKWBs5pSEHJdy8uwtQ.webp" alt="Church Street pedestrianization" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Active Mobility</span>
         </div>
         <div class="card-content">
@@ -1401,7 +1408,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*dMx1GwRR_xTlc0veTwkIdg.jpeg" alt="Cycling infrastructure in Bengaluru" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_dMx1GwRR_xTlc0veTwkIdg.webp" alt="Cycling infrastructure in Bengaluru" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Community</span>
         </div>
         <div class="card-content">
@@ -1420,7 +1427,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*bA-Amb7W4KHqjqCaY0WhFQ.png" alt="World Bicycle Day celebration" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_bA-Amb7W4KHqjqCaY0WhFQ.webp" alt="World Bicycle Day celebration" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Urban Policy</span>
         </div>
         <div class="card-content">
@@ -1439,7 +1446,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/2560/1*nlelJZTBvNLup9hJTHaOig.png" alt="Mobility pyramid inversion" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_nlelJZTBvNLup9hJTHaOig.webp" alt="Mobility pyramid inversion" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Active Mobility</span>
         </div>
         <div class="card-content">
@@ -1458,7 +1465,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*ruQHT1i8PFuzIS1ajZGvvQ.jpeg" alt="Active mobility goals" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_ruQHT1i8PFuzIS1ajZGvvQ.webp" alt="Active mobility goals" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Cycling & Mobility</span>
         </div>
         <div class="card-content">
@@ -1477,7 +1484,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/2560/1*_7jCp57dt9ceSYKakATlwQ.jpeg" alt="Cycling during pandemic" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1__7jCp57dt9ceSYKakATlwQ.webp" alt="Cycling during pandemic" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Cycling</span>
         </div>
         <div class="card-content">
@@ -1496,7 +1503,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*CXnDkZzP2yP2V00DEE7rZg.jpeg" alt="CycleToWork platform launch" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_CXnDkZzP2yP2V00DEE7rZg.webp" alt="CycleToWork platform launch" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Cycling</span>
         </div>
         <div class="card-content">
@@ -1515,7 +1522,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*7H8jA_x26L_ncq8iv5enRA.jpeg" alt="Women cycling in India" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_7H8jA_x26L_ncq8iv5enRA.webp" alt="Women cycling in India" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Active Mobility</span>
         </div>
         <div class="card-content">
@@ -1534,7 +1541,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*PIiTqMeEDXzF4JTTsBeocg.jpeg" alt="CycleToWork Fridays" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_PIiTqMeEDXzF4JTTsBeocg.webp" alt="CycleToWork Fridays" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Cycling Safety</span>
         </div>
         <div class="card-content">
@@ -1569,7 +1576,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*UGCYz1qc7dBbLglPtD_XVQ.jpeg" alt="Natural resources are public goods" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_UGCYz1qc7dBbLglPtD_XVQ.webp" alt="Natural resources are public goods" class="card-image" loading="lazy">
           <span class="card-badge badge-climate">Climate Action</span>
         </div>
         <div class="card-content">
@@ -1588,7 +1595,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*mxODI4Jjz4axoYkqMYSzuQ.jpeg" alt="Natural resources are public goods" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_mxODI4Jjz4axoYkqMYSzuQ.webp" alt="Natural resources are public goods" class="card-image" loading="lazy">
           <span class="card-badge badge-climate">Energy Systems</span>
         </div>
         <div class="card-content">
@@ -1607,7 +1614,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/2560/1*bJj9NO1qW6MInrvz1cC4aw.jpeg" alt="Symbiotic relationships in nature" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_bJj9NO1qW6MInrvz1cC4aw.webp" alt="Symbiotic relationships in nature" class="card-image" loading="lazy">
           <span class="card-badge badge-climate">Climate Action</span>
         </div>
         <div class="card-content">
@@ -1626,7 +1633,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*yib_TRNKIGCi_QneSyC3_A.jpeg" alt="Climate action responsibility" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_yib_TRNKIGCi_QneSyC3_A.webp" alt="Climate action responsibility" class="card-image" loading="lazy">
           <span class="card-badge badge-climate">Climate Action</span>
         </div>
         <div class="card-content">
@@ -1645,7 +1652,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*_rDPleO0gNLEPs2zLMfZew.jpeg" alt="Urban climate behavior change" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1__rDPleO0gNLEPs2zLMfZew.webp" alt="Urban climate behavior change" class="card-image" loading="lazy">
           <span class="card-badge badge-climate">Clean Air</span>
         </div>
         <div class="card-content">
@@ -1664,7 +1671,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*9rkr1kiml0leQeag4XSw0g.jpeg" alt="Community clean air action" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_9rkr1kiml0leQeag4XSw0g.webp" alt="Community clean air action" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Air Quality</span>
         </div>
         <div class="card-content">
@@ -1683,7 +1690,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*gPyL16GjLhkX5srZuAz_0A.jpeg" alt="Air quality monitoring" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_gPyL16GjLhkX5srZuAz_0A.webp" alt="Air quality monitoring" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Air Pollution</span>
         </div>
         <div class="card-content">
@@ -1702,7 +1709,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*IT3Fkw-PLGJ4MQPGt_9MdA.jpeg" alt="Air pollution danger" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_IT3Fkw-PLGJ4MQPGt_9MdA.webp" alt="Air pollution danger" class="card-image" loading="lazy">
           <span class="card-badge badge-climate">Plastic Waste</span>
         </div>
         <div class="card-content">
@@ -1721,7 +1728,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*w1zHhMOKRqEZcQlUOb0Faw.jpeg" alt="Plastic cutlery waste" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_w1zHhMOKRqEZcQlUOb0Faw.webp" alt="Plastic cutlery waste" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Community Action</span>
         </div>
         <div class="card-content">
@@ -1740,7 +1747,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*A0u8DT-ZyYu9c4QQzNDjhQ.jpeg" alt="COVID relief cyclists" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_A0u8DT-ZyYu9c4QQzNDjhQ.webp" alt="COVID relief cyclists" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Urban Policy</span>
         </div>
         <div class="card-content">
@@ -1775,7 +1782,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*ySbRdffRvVippcZIc3mvmA.jpeg" alt="Traffic Jam in Bengaluru" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_ySbRdffRvVippcZIc3mvmA.webp" alt="Traffic Jam in Bengaluru" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Transport Policy</span>
         </div>
         <div class="card-content">
@@ -1794,7 +1801,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/0*OxZo4OD66HebcLN8" alt="Traffic Jam in Bengaluru" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/0_OxZo4OD66HebcLN8.webp" alt="Traffic Jam in Bengaluru" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Infrastructure</span>
         </div>
         <div class="card-content">
@@ -1813,7 +1820,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*dlBKduHZrRCmVlpm-AY8Bw.jpeg" alt="Sustainable transportation infrastructure" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_dlBKduHZrRCmVlpm-AY8Bw.webp" alt="Sustainable transportation infrastructure" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Public Transit</span>
         </div>
         <div class="card-content">
@@ -1832,7 +1839,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*r91X3oVkh_5iUjg2bk_I2g.jpeg" alt="Public transit accessibility" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_r91X3oVkh_5iUjg2bk_I2g.webp" alt="Public transit accessibility" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Social Issues</span>
         </div>
         <div class="card-content">
@@ -1851,7 +1858,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*vOZIy5U2ZnZqOOp2avz98w.jpeg" alt="Women empowerment" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_vOZIy5U2ZnZqOOp2avz98w.webp" alt="Women empowerment" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Infrastructure</span>
         </div>
         <div class="card-content">
@@ -1870,7 +1877,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*A0u8DT-ZyYu9c4QQzNDjhQ.jpeg" alt="Karnataka infrastructure redesign" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_A0u8DT-ZyYu9c4QQzNDjhQ.webp" alt="Karnataka infrastructure redesign" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Urban Policy</span>
         </div>
         <div class="card-content">
@@ -1889,7 +1896,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*ibpLc6EYpxfjCiYn-tvvGg.png" alt="BMLTA collaboration" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_ibpLc6EYpxfjCiYn-tvvGg.webp" alt="BMLTA collaboration" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Urban Policy</span>
         </div>
         <div class="card-content">
@@ -1908,7 +1915,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/2560/1*2yfO4NnyPL7IzchwgV6l_Q.jpeg" alt="Bengaluru mobility plan analysis" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_2yfO4NnyPL7IzchwgV6l_Q.webp" alt="Bengaluru mobility plan analysis" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Urban Policy</span>
         </div>
         <div class="card-content">
@@ -1927,7 +1934,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*p8PIRIgV5ikGQ5VAl_VqKg.png" alt="Amsterdam Zuidas development" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_p8PIRIgV5ikGQ5VAl_VqKg.webp" alt="Amsterdam Zuidas development" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Urban Policy</span>
         </div>
         <div class="card-content">
@@ -1946,7 +1953,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*jDJ29m7P7QDFXUGjen7tFQ.jpeg" alt="Cargo bike delivery" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_jDJ29m7P7QDFXUGjen7tFQ.webp" alt="Cargo bike delivery" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Road Safety</span>
         </div>
         <div class="card-content">
@@ -1965,7 +1972,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*flTIYjjnv7Mw9ucWDXKCNA.jpeg" alt="Road safety for pedestrians" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_flTIYjjnv7Mw9ucWDXKCNA.webp" alt="Road safety for pedestrians" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Community Action</span>
         </div>
         <div class="card-content">
@@ -1984,7 +1991,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/1200/1*RBal78gsexWZtazTCB-BJw.jpeg" alt="Community mobility initiatives" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_RBal78gsexWZtazTCB-BJw.webp" alt="Community mobility initiatives" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Metro Governance</span>
         </div>
         <div class="card-content">
@@ -2003,7 +2010,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="img/blog/state-of-politics.jpeg" alt="Indian Parliament and democratic institutions" class="card-image" loading="lazy">
+            <img decoding="async" width="1024" height="1024" src="img/blog/state-of-politics.webp" alt="Indian Parliament and democratic institutions" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Institutional Reform</span>
         </div>
         <div class="card-content">
@@ -2022,7 +2029,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-          <img src="img/blog/federalism-fifteenth.jpeg" alt="Finance Commission and fiscal federalism" class="card-image" loading="lazy">
+          <img decoding="async" width="1024" height="1024" src="img/blog/federalism-fifteenth.webp" alt="Finance Commission and fiscal federalism" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Fiscal Federalism</span>
         </div>
         <div class="card-content">
@@ -2041,7 +2048,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-          <img src="https://cdn-images-1.medium.com/max/2560/1*ny1Llsuq3mjsg64W46F6dg.jpeg" alt="Urban Economics" class="card-image" loading="lazy">
+          <img decoding="async" src="img/blog/thumbs/1_ny1Llsuq3mjsg64W46F6dg.webp" alt="Urban Economics" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Urban Economics</span>
         </div>
         <div class="card-content">
@@ -2076,7 +2083,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*t70o0VhVKE1WZV1HygYALw.jpeg" alt="Scope 3 emissions reporting" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_t70o0VhVKE1WZV1HygYALw.webp" alt="Scope 3 emissions reporting" class="card-image" loading="lazy">
           <span class="card-badge badge-climate">ESG Reporting</span>
         </div>
         <div class="card-content">
@@ -2095,7 +2102,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*zbgi1_c7Z9Ja0fKm_nVrqA.jpeg" alt="Scope 3 emissions reporting" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_zbgi1_c7Z9Ja0fKm_nVrqA.webp" alt="Scope 3 emissions reporting" class="card-image" loading="lazy">
           <span class="card-badge badge-product">Product Update</span>
         </div>
         <div class="card-content">
@@ -2114,7 +2121,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*JL81FjFuxbLulAIZILwfxQ.jpeg" alt="Altmo app rebranding" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_JL81FjFuxbLulAIZILwfxQ.webp" alt="Altmo app rebranding" class="card-image" loading="lazy">
           <span class="card-badge badge-product">Digital Climate</span>
         </div>
         <div class="card-content">
@@ -2133,7 +2140,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/2560/1*_7jCp57dt9ceSYKakATlwQ.jpeg" alt="Digital climate solutions" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1__7jCp57dt9ceSYKakATlwQ.webp" alt="Digital climate solutions" class="card-image" loading="lazy">
           <span class="card-badge badge-mobility">Cycling</span>
         </div>
         <div class="card-content">
@@ -2152,7 +2159,7 @@
 
       <div class="magazine-card scroll-animate">
         <div class="card-image-wrapper">
-            <img src="https://cdn-images-1.medium.com/max/800/1*jKVKeoF4OBXKxs_XFWWcUg.gif" alt="CycleToWork platform launch" class="card-image" loading="lazy">
+            <img decoding="async" src="img/blog/thumbs/1_jKVKeoF4OBXKxs_XFWWcUg.webp" alt="CycleToWork platform launch" class="card-image" loading="lazy">
           <span class="card-badge badge-policy">Urban Policy</span>
         </div>
         <div class="card-content">
@@ -2524,21 +2531,23 @@
 </section>
 
 <!-- Footer -->
+</main>
+
 <footer>
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h5>Urban Morph</h5>
+        <h2>Urban Morph</h2>
         <p>Shaping the future of cities through innovation, collaboration, and execution in sustainable urban mobility and infrastructure.</p>
         <div class="social-links">
-          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://twitter.com/morphurbanspace/" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/urbanmorph/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/morphurbanspace/" target="_blank" aria-label="X (formerly Twitter)"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/urbanmorph/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
         </div>
       </div>
 
       <div class="footer-section">
-        <h5>Quick Links</h5>
+        <h2>Quick Links</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -2549,7 +2558,7 @@
       </div>
 
       <div class="footer-section">
-        <h5>Our Solutions</h5>
+        <h2>Our Solutions</h2>
         <ul>
           <li><a href="https://www.altmo.app" target="_blank">Altmo</a></li>
           <li><a href="synthesys.html">SyntheSYS</a></li>
@@ -2558,7 +2567,7 @@
       </div>
 
       <div class="footer-section">
-        <h5>Contact Info</h5>
+        <h2>Contact Info</h2>
         <ul>
           <li><i class="fas fa-envelope"></i> <a href="mailto:contact@urbanmorph.com">contact@urbanmorph.com</a></li>
           <li><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</li>

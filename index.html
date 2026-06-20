@@ -72,8 +72,7 @@
 
   <!-- Bootstrap CSS -->
   <!-- Defer Bootstrap CSS - Load asynchronously -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
-  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" crossorigin="anonymous">
 
   <!-- Fonts -->
   <!-- Defer Font Awesome - Icons load after page render -->
@@ -94,7 +93,7 @@
     :root {
       --um-yellow: #FBC831;
       --um-pink: #F7A782;
-      --um-teal: #23A2A5;
+      --um-teal: #157E80;
       --um-green: #0D7576;
       --um-dark: #1a1a1a;
       --um-gray: #4a4a4a;
@@ -248,7 +247,7 @@
     .stat-label {
       font-family: 'Space Mono', monospace;
       font-size: 0.65rem;
-      color: #999;
+      color: #595959;
       text-transform: uppercase;
       letter-spacing: 2px;
       display: block;
@@ -462,7 +461,7 @@
       border-left: 4px solid var(--um-teal);
     }
 
-    .detail-item h5 {
+    .detail-item h4 {
       font-family: 'Playfair Display', serif;
       font-weight: 600;
       margin-bottom: 0.5rem;
@@ -1021,7 +1020,7 @@
       color: var(--um-teal);
     }
 
-    .contact-card h4 {
+    .contact-card h3 {
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
@@ -1047,7 +1046,7 @@
       margin-bottom: 3rem;
     }
 
-    .footer-section h5 {
+    .footer-section h2 {
       font-weight: 700;
       margin-bottom: 1.5rem;
       color: var(--um-yellow);
@@ -1541,6 +1540,9 @@
     ]
   }
   </script>
+
+  <!-- CLS fix: keep mobile navbar menu collapsed at first paint, before Bootstrap CSS loads -->
+  <style>@media (max-width: 991.98px){.navbar-collapse:not(.show){display:none}}</style>
 </head>
 
 <body>
@@ -1549,7 +1551,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="img/UM-thumbnail.png" width="35" height="35" class="d-inline-block align-top" alt="Urban Morph">
+      <img decoding="async" src="img/UM-thumbnail.webp" width="31" height="35" class="d-inline-block align-top" alt="Urban Morph">
       Urban Morph
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -1579,6 +1581,8 @@
     </div>
   </div>
 </nav>
+
+<main>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -1663,16 +1667,16 @@
           <div class="expandable-content" id="innovate-content">
             <div class="service-details">
               <div class="detail-item">
-                <h5>🚴 Altmo</h5>
-                <p>Employee engagement and climate action platform. 8,600+ users from 860 companies across 115 cities have saved 200,000 liters of petrol and offset 500 tons of CO₂. <a href="https://www.altmo.app" target="_blank">Learn more</a></p>
+                <h4>🚴 Altmo</h4>
+                <p>Employee engagement and climate action platform. 8,600+ users from 860 companies across 115 cities have saved 200,000 liters of petrol and offset 500 tons of CO₂. <a href="https://www.altmo.app" target="_blank">Learn more about Altmo</a></p>
               </div>
               <div class="detail-item">
-                <h5>⚡ WattsNext Energy</h5>
+                <h4>⚡ WattsNext Energy</h4>
                 <p>Smart battery management system helping battery pack makers reduce warranty replacement costs by providing analytics of inappropriate usage.</p>
               </div>
               <div class="detail-item">
-                <h5>🎯 SyntheSYS</h5>
-                <p>Bringing informed views of urban problems with expert perspectives for quicker understanding of root causes. Perfect for stakeholders deploying capital in the urban space. <a href="synthesys.html">Learn more</a></p>
+                <h4>🎯 SyntheSYS</h4>
+                <p>Bringing informed views of urban problems with expert perspectives for quicker understanding of root causes. Perfect for stakeholders deploying capital in the urban space. <a href="synthesys.html">Explore SyntheSYS</a></p>
               </div>
             </div>
           </div>
@@ -1701,15 +1705,15 @@
           <div class="expandable-content" id="orchestrate-content">
             <div class="service-details">
               <div class="detail-item">
-                <h5>🤝 ITES Partnership</h5>
-                <p>Strategic partner for India-UK Netzero center, enabling multiple innovators to establish collaborative partnerships. <a href="https://www.ites.org" target="_blank">Learn more</a></p>
+                <h4>🤝 ITES Partnership</h4>
+                <p>Strategic partner for India-UK Netzero center, enabling multiple innovators to establish collaborative partnerships. <a href="https://www.ites.org" target="_blank">About the ITES partnership</a></p>
               </div>
               <div class="detail-item">
-                <h5>🎓 IISc Collaboration</h5>
+                <h4>🎓 IISc Collaboration</h4>
                 <p>MoU with Sustainable Transportation Lab, IISc as orchestrators of the Active Mobility Center of Excellence, taking research to the real world.</p>
               </div>
               <div class="detail-item">
-                <h5>💼 CSR Strategy</h5>
+                <h4>💼 CSR Strategy</h4>
                 <p>Experience delivering thesis, strategy and orchestration for India's leading CSR organizations with grant budgets up to USD 100 million.</p>
               </div>
             </div>
@@ -1739,19 +1743,19 @@
           <div class="expandable-content" id="execute-content">
             <div class="service-details">
               <div class="detail-item">
-                <h5>🚲 Pedaluru</h5>
+                <h4>🚲 Pedaluru</h4>
                 <p>Bengaluru's public bicycle sharing system, funded by Toyota Mobility Foundation, providing accessible transportation options across the city.</p>
               </div>
               <div class="detail-item">
-                <h5>🛣️ Church Street First</h5>
+                <h4>🛣️ Church Street First</h4>
                 <p>Designed and executed India's first pop-up pedestrianization project in collaboration with DULT Bengaluru, transforming urban streets.</p>
               </div>
               <div class="detail-item">
-                <h5>🚗 Relief Riders</h5>
+                <h4>🚗 Relief Riders</h4>
                 <p>During COVID-19, organized 11,000+ volunteer rides across 4 Indian cities, safely transporting healthcare workers and essential service providers.</p>
               </div>
               <div class="detail-item">
-                <h5>📊 CFAM</h5>
+                <h4>📊 CFAM</h4>
                 <p>Data journalism platform bringing rigorous analysis to urban issues, partnering with media houses for evidence-based reporting.</p>
               </div>
             </div>
@@ -1782,10 +1786,10 @@
             <i class="fas fa-quote-left"></i>
           </div>
           <div class="testimonial-logo-new">
-            <img src="img/partners/logo-footer-catapult.png" alt="Energy Systems Catapult">
+            <img loading="lazy" decoding="async" width="268" height="71" src="img/partners/logo-footer-catapult.webp" alt="Energy Systems Catapult">
           </div>
           <p class="testimonial-text-new">"Urban Morph has been a key partner for us on our work in Bengaluru. They have really helped us maximise the impact of our work and develop innovative approaches to the issues we have engaged with."</p>
-          <h5 class="testimonial-author">India-UK ITES Center</h5>
+          <h3 class="testimonial-author">India-UK ITES Center</h3>
         </div>
       </div>
 
@@ -1796,10 +1800,10 @@
             <i class="fas fa-quote-left"></i>
           </div>
           <div class="testimonial-logo-new">
-            <img src="img/partners/mohua.png" alt="Smart Cities Mission">
+            <img loading="lazy" decoding="async" width="275" height="126" src="img/partners/mohua.webp" alt="Smart Cities Mission">
           </div>
           <p class="testimonial-text-new">"The industries were onboarded to the cycleto.work (now altmo.app) platform that gamifies cycling for commute through a leaderboard. We congratulate Silvassa Smart City Ltd. for a successful rollout of the #Cycle2Work campaign and thank Urban Morph for their support."</p>
-          <h5 class="testimonial-author">MoHUA Smart Cities</h5>
+          <h3 class="testimonial-author">MoHUA Smart Cities</h3>
         </div>
       </div>
 
@@ -1810,10 +1814,10 @@
             <i class="fas fa-quote-left"></i>
           </div>
           <div class="testimonial-logo-new">
-            <img src="img/partners/World_Resources_Institute_logo.png" alt="WRI India">
+            <img loading="lazy" decoding="async" width="600" height="216" src="img/partners/World_Resources_Institute_logo.webp" alt="WRI India">
           </div>
           <p class="testimonial-text-new">"Excited to work closely with Urban Morph in 2026! AltMo is a brilliant innovation."</p>
-          <h5 class="testimonial-author">WRI India</h5>
+          <h3 class="testimonial-author">WRI India</h3>
         </div>
       </div>
     </div>
@@ -1836,9 +1840,9 @@
             <i class="fas fa-trophy"></i>
           </div>
           <div class="award-logo">
-            <img src="img/partners/mohua.png" alt="UMI Award">
+            <img loading="lazy" decoding="async" width="275" height="126" src="img/partners/mohua.webp" alt="UMI Award">
           </div>
-          <h5 class="award-title">Urban Mobility Institute Award</h5>
+          <h3 class="award-title">Urban Mobility Institute Award</h3>
           <p class="award-year">2021</p>
           <p class="award-description">Clean Air Street testbed receives DULT, Urban Mobility Institute Commendation Award</p>
         </div>
@@ -1851,9 +1855,9 @@
             <i class="fas fa-trophy"></i>
           </div>
           <div class="award-logo">
-            <img src="img/partners/volvo-logo.png" alt="Volvo Award">
+            <img loading="lazy" decoding="async" width="600" height="600" src="img/partners/volvo-logo.webp" alt="Volvo Award">
           </div>
-          <h5 class="award-title">Volvo Innovation Award</h5>
+          <h3 class="award-title">Volvo Innovation Award</h3>
           <p class="award-year">2021</p>
           <p class="award-description">Clean Air Street testbed receives the Volvo Innovation Awards</p>
         </div>
@@ -1866,9 +1870,9 @@
             <i class="fas fa-trophy"></i>
           </div>
           <div class="award-logo">
-            <img src="img/partners/apac-award.png" alt="APAC Award">
+            <img loading="lazy" decoding="async" width="600" height="269" src="img/partners/apac-award.webp" alt="APAC Award">
           </div>
-          <h5 class="award-title">Excellence in Innovation</h5>
+          <h3 class="award-title">Excellence in Innovation</h3>
           <p class="award-year">2022</p>
           <p class="award-description">Cycle To Work campaign helps Silvassa Smart City win India Digital Empowerment Award</p>
         </div>
@@ -1881,9 +1885,9 @@
             <i class="fas fa-trophy"></i>
           </div>
           <div class="award-logo">
-            <img src="img/partners/movinsync.png" alt="Mobility Symposium">
+            <img loading="lazy" decoding="async" width="600" height="338" src="img/partners/movinsync.webp" alt="Mobility Symposium">
           </div>
-          <h5 class="award-title">Mobility Symposium Award</h5>
+          <h3 class="award-title">Mobility Symposium Award</h3>
           <p class="award-year">2025</p>
           <p class="award-description">Using Altmo to deliver Active Mobility transformation in companies</p>
         </div>
@@ -1916,31 +1920,31 @@
       <div class="row g-4 justify-content-center">
         <div class="col-6 col-md-4 col-lg-2">
           <div class="partner-logo-card">
-            <img src="img/partners/mohua.png" alt="Ministry of Housing and Urban Affairs" class="partner-logo">
+            <img loading="lazy" decoding="async" width="275" height="126" src="img/partners/mohua.webp" alt="Ministry of Housing and Urban Affairs" class="partner-logo">
             <p class="partner-name">MoHUA</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
           <div class="partner-logo-card">
-            <img src="img/partners/Seal_of_Karnataka.png" alt="Government of Karnataka" class="partner-logo">
+            <img loading="lazy" decoding="async" width="600" height="518" src="img/partners/Seal_of_Karnataka.webp" alt="Government of Karnataka" class="partner-logo">
             <p class="partner-name">Govt. of Karnataka</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
           <div class="partner-logo-card">
-            <img src="img/partners/smart_city_logo.png" alt="Smart City Mission" class="partner-logo">
+            <img loading="lazy" decoding="async" width="600" height="596" src="img/partners/smart_city_logo.webp" alt="Smart City Mission" class="partner-logo">
             <p class="partner-name">Smart Cities</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
           <div class="partner-logo-card">
-            <img src="img/partners/BTP_logo.jpg" alt="Bengaluru Traffic Police" class="partner-logo">
+            <img loading="lazy" decoding="async" width="600" height="600" src="img/partners/BTP_logo.webp" alt="Bengaluru Traffic Police" class="partner-logo">
             <p class="partner-name">BTP</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
           <div class="partner-logo-card">
-            <img src="img/partners/kdem_logo.png" alt="Karnataka Digital Economy Mission" class="partner-logo">
+            <img loading="lazy" decoding="async" width="500" height="501" src="img/partners/kdem_logo.webp" alt="Karnataka Digital Economy Mission" class="partner-logo">
             <p class="partner-name">KDEM</p>
           </div>
         </div>
@@ -1953,19 +1957,19 @@
       <div class="row g-4 justify-content-center">
         <div class="col-6 col-md-4 col-lg-3">
           <div class="partner-logo-card">
-            <img src="img/partners/IISc_Master_Seal_Black_Transparent.png" alt="Indian Institute of Science" class="partner-logo">
+            <img loading="lazy" decoding="async" width="600" height="424" src="img/partners/IISc_Master_Seal_Black_Transparent.webp" alt="Indian Institute of Science" class="partner-logo">
             <p class="partner-name">IISc Bengaluru</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
           <div class="partner-logo-card">
-            <img src="img/partners/iisc-ist.png" alt="IISc Sustainable Transportation Lab" class="partner-logo">
+            <img loading="lazy" decoding="async" width="299" height="109" src="img/partners/iisc-ist.webp" alt="IISc Sustainable Transportation Lab" class="partner-logo">
             <p class="partner-name">IISc IST Lab</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
           <div class="partner-logo-card">
-            <img src="img/partners/MSRIM_logo.png" alt="MS Ramaiah Institute of Management" class="partner-logo">
+            <img loading="lazy" decoding="async" width="600" height="170" src="img/partners/MSRIM_logo.webp" alt="MS Ramaiah Institute of Management" class="partner-logo">
             <p class="partner-name">MS Ramaiah</p>
           </div>
         </div>
@@ -1978,25 +1982,25 @@
       <div class="row g-4 justify-content-center">
         <div class="col-6 col-md-4 col-lg-2">
           <div class="partner-logo-card">
-            <img src="img/partners/ITES_Logo_Tag_Color.png" alt="ITES India UK Centre" class="partner-logo">
+            <img loading="lazy" decoding="async" width="600" height="222" src="img/partners/ITES_Logo_Tag_Color.webp" alt="ITES India UK Centre" class="partner-logo">
             <p class="partner-name">ITES Centre</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
           <div class="partner-logo-card">
-            <img src="img/partners/logo-footer-catapult.png" alt="Catapult UK" class="partner-logo">
+            <img loading="lazy" decoding="async" width="268" height="71" src="img/partners/logo-footer-catapult.webp" alt="Catapult UK" class="partner-logo">
             <p class="partner-name">Catapult UK</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
           <div class="partner-logo-card">
-            <img src="img/partners/BYCS-Logo_Black_rgb.png" alt="BYCS Amsterdam" class="partner-logo">
+            <img loading="lazy" decoding="async" width="600" height="333" src="img/partners/BYCS-Logo_Black_rgb.webp" alt="BYCS Amsterdam" class="partner-logo">
             <p class="partner-name">BYCS</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
           <div class="partner-logo-card">
-            <img src="img/partners/giz_logo.png" alt="GIZ Germany" class="partner-logo">
+            <img loading="lazy" decoding="async" width="499" height="237" src="img/partners/giz_logo.webp" alt="GIZ Germany" class="partner-logo">
             <p class="partner-name">GIZ</p>
           </div>
         </div>
@@ -2009,13 +2013,13 @@
       <div class="row g-4 justify-content-center">
         <div class="col-6 col-md-4 col-lg-3">
           <div class="partner-logo-card">
-            <img src="img/partners/World_Resources_Institute_logo.png" alt="WRI India" class="partner-logo">
+            <img loading="lazy" decoding="async" width="600" height="216" src="img/partners/World_Resources_Institute_logo.webp" alt="WRI India" class="partner-logo">
             <p class="partner-name">WRI India</p>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-3">
           <div class="partner-logo-card">
-            <img src="img/partners/ITDP-logo.png" alt="ITDP" class="partner-logo">
+            <img loading="lazy" decoding="async" width="313" height="127" src="img/partners/ITDP-logo.webp" alt="ITDP" class="partner-logo">
             <p class="partner-name">ITDP</p>
           </div>
         </div>
@@ -2038,19 +2042,19 @@
       <div class="col-lg-4">
         <div class="team-card">
           <div class="team-image-wrapper">
-            <img src="img/team/sathya.jpg" alt="Sathya Sankaran" class="team-image">
+            <img loading="lazy" decoding="async" width="800" height="791" src="img/team/sathya.webp" alt="Sathya Sankaran" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
-                <a href="https://www.sathyasankaran.com" target="_blank"><i class="fas fa-globe"></i></a>
-                <a href="https://www.linkedin.com/in/sathyasankaran/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.x.com/bicyclemayorblr/" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                <a href="mailto:sathya@urbanmorph.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.urbanmorph.com/blog.html" target="_blank"><i class="fab fa-rss"></i></a>
+                <a href="https://www.sathyasankaran.com" target="_blank" aria-label="Website"><i class="fas fa-globe" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/sathyasankaran/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.x.com/bicyclemayorblr/" target="_blank" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+                <a href="mailto:sathya@urbanmorph.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://www.urbanmorph.com/blog.html" target="_blank" aria-label="Blog (RSS)"><i class="fab fa-rss" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
-            <h4 class="team-name">Sathya Sankaran</h4>
+            <h3 class="team-name">Sathya Sankaran</h3>
             <p class="team-role">Co-Founder/CEO</p>
             <p class="team-bio">Computer Science graduate with Post graduation in Public Policy. Three decades of experience using technology and data to solve urban issues in mobility and energy. Architect of <a href="https://altmo.app" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">AltMo</a>, a gamified mobility intelligence platform for climate-friendly cities.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'sathya-details')">
@@ -2068,16 +2072,16 @@
       <div class="col-lg-4">
         <div class="team-card">
           <div class="team-image-wrapper">
-            <img src="img/team/sonal.jpg" alt="Sonal S Kulkarni" class="team-image">
+            <img loading="lazy" decoding="async" width="367" height="367" src="img/team/sonal.webp" alt="Sonal S Kulkarni" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
-                <a href="https://www.linkedin.com/in/sonalkulkarni/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:sonal@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/sonalkulkarni/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="mailto:sonal@urbanmorph.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
-            <h4 class="team-name">Sonal S Kulkarni</h4>
+            <h3 class="team-name">Sonal S Kulkarni</h3>
             <p class="team-role">Co-Founder</p>
             <p class="team-bio">Bachelors in Architecture and Masters in Urban Planning from the School of Policy, Planning and Development at the University of Southern California. Over the past 10+ years she has worked extensively in the government on infrastructure for sustainable mobility.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'sonal-details')">
@@ -2094,16 +2098,16 @@
       <div class="col-lg-4">
         <div class="team-card">
           <div class="team-image-wrapper">
-            <img src="img/team/subbaiah.jpg" alt="Subbaiah TS" class="team-image">
+            <img loading="lazy" decoding="async" width="332" height="330" src="img/team/subbaiah.webp" alt="Subbaiah TS" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
-                <a href="https://www.linkedin.com/in/subbaiah-ts-51a42511/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:subbaiah@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/subbaiah-ts-51a42511/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="mailto:subbaiah@urbanmorph.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
-            <h4 class="team-name">Subbaiah TS</h4>
+            <h3 class="team-name">Subbaiah TS</h3>
             <p class="team-role">Co-Founder/Director</p>
             <p class="team-bio">Bachelors in Architecture and Masters in Design from IISc, Bangalore. He has been running successful Architecture, Design and Waste management businesses which have brought positive change in the lives of many people.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'subbaiah-details')">
@@ -2123,16 +2127,16 @@
       <div class="col-lg-4">
         <div class="team-card">
           <div class="team-image-wrapper">
-            <img src="img/team/knerav.jpg" alt="Knerav Kodolikar" class="team-image">
+            <img loading="lazy" decoding="async" width="800" height="789" src="img/team/knerav.webp" alt="Knerav Kodolikar" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
-                <a href="https://www.linkedin.com/in/knerav-kodolikar-2a620517a/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:knerav@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/knerav-kodolikar-2a620517a/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="mailto:knerav@urbanmorph.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
-            <h4 class="team-name">Knerav Kodolikar</h4>
+            <h3 class="team-name">Knerav Kodolikar</h3>
             <p class="team-role">Product Manager</p>
             <p class="team-bio">Bachelors in Economics from Christ University, Bengaluru. With expertise around multiple open source tech stacks, he drives product strategy and development for <a href="https://altmo.app" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">AltMo</a> platform. An avid cyclist, he has completely switched to riding a bicycle or using the bus for commute.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'knerav-details')">
@@ -2149,16 +2153,16 @@
       <div class="col-lg-4">
         <div class="team-card">
           <div class="team-image-wrapper">
-            <img src="img/team/susheel.jpeg" alt="Susheel Nair" class="team-image">
+            <img loading="lazy" decoding="async" width="629" height="629" src="img/team/susheel.webp" alt="Susheel Nair" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
-                <a href="https://www.linkedin.com/in/susheel-nair-30799517/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:susheel@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/susheel-nair-30799517/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="mailto:susheel@urbanmorph.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
-            <h4 class="team-name">Susheel Nair</h4>
+            <h3 class="team-name">Susheel Nair</h3>
             <p class="team-role">Creative Director</p>
             <p class="team-bio">Susheel quit the consumer goods industry and dedicated himself to public impact story telling. For more than a decade he has been pushing the creative canvas for public change making. You can see his work scattered across the city of Bengaluru, whether it is the cycle stands on Church street, Malleshwaram, HSR or marquee programs like the Church Street First.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'susheel-details')">
@@ -2175,16 +2179,16 @@
       <div class="col-lg-4">
         <div class="team-card">
           <div class="team-image-wrapper">
-            <img src="img/team/renuka.jpg" alt="Renuka Kulkarni" class="team-image">
+            <img loading="lazy" decoding="async" width="400" height="400" src="img/team/renuka.webp" alt="Renuka Kulkarni" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
-                <a href="https://www.linkedin.com/in/renuka-kulkarni-3a9408a6/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:renuka@urbanmorph.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/renuka-kulkarni-3a9408a6/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="mailto:renuka@urbanmorph.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
-            <h4 class="team-name">Renuka Kulkarni</h4>
+            <h3 class="team-name">Renuka Kulkarni</h3>
             <p class="team-role">Design Consultant</p>
             <p class="team-bio">Bachelors in Public Relations, Advertising and Applied Communications. Led branding and design solutions at agencies like Dentsu Webchutney, DDB Mudra, Schbang, and Rio. Consults on graphic design for <a href="https://www.altmo.app" style="color: var(--um-teal); text-decoration: none; font-weight: 600;" target="_blank">AltMo</a> and other projects at Urban Morph. She also runs a design agency called Studio Ikigai.</p>
           </div>
@@ -2198,15 +2202,15 @@
       <div class="col-lg-4">
         <div class="team-card">
           <div class="team-image-wrapper">
-            <img src="img/team/ashwin.jpg" alt="Ashwin Mahesh" class="team-image">
+            <img loading="lazy" decoding="async" width="451" height="338" src="img/team/ashwin.webp" alt="Ashwin Mahesh" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
-                <a href="https://en.wikipedia.org/wiki/Ashwin_Mahesh" target="_blank"><i class="fas fa-globe"></i></a>
+                <a href="https://en.wikipedia.org/wiki/Ashwin_Mahesh" target="_blank" aria-label="Website"><i class="fas fa-globe" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
-            <h4 class="team-name">Ashwin Mahesh</h4>
+            <h3 class="team-name">Ashwin Mahesh</h3>
             <p class="team-role">Advisor</p>
             <p class="team-bio">Ashwin advises Urban Morph on urban development and civic technology. An urbanist, social technologist, and Ashoka Fellow, he has founded multiple ventures including Mapunity, Lithium (India's first 100% EV transport service), and LVBL Accelerator.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'ashwin-details')">
@@ -2223,15 +2227,15 @@
       <div class="col-lg-4">
         <div class="team-card">
           <div class="team-image-wrapper">
-            <img src="img/team/rajeev.jpg" alt="Rajeev Kulkarni" class="team-image">
+            <img loading="lazy" decoding="async" width="737" height="880" src="img/team/rajeev.webp" alt="Rajeev Kulkarni" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
-                <a href="https://in.linkedin.com/in/rajeev-kulkarni-0335824" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://in.linkedin.com/in/rajeev-kulkarni-0335824" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
-            <h4 class="team-name">Rajeev Kulkarni</h4>
+            <h3 class="team-name">Rajeev Kulkarni</h3>
             <p class="team-role">Advisor</p>
             <p class="team-bio">Rajeev advises Urban Morph on the direction of the AI offering, SyntheSYS. He is a Data Scientist with more than 20 years of delivering AI & ML models for multinational corporations especially in the area of health.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'rajeev-details')">
@@ -2248,15 +2252,15 @@
       <div class="col-lg-4">
         <div class="team-card">
           <div class="team-image-wrapper">
-            <img src="img/team/manju.jpg" alt="Manju George" class="team-image">
+            <img loading="lazy" decoding="async" width="790" height="790" src="img/team/manju.webp" alt="Manju George" class="team-image">
             <div class="team-overlay">
               <div class="team-social">
-                <a href="https://www.linkedin.com/in/manju-george/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/manju-george/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>
           <div class="team-body">
-            <h4 class="team-name">Manju George</h4>
+            <h3 class="team-name">Manju George</h3>
             <p class="team-role">Advisor</p>
             <p class="team-bio">Manju advises Urban Morph on gender-responsive urban design and inclusive mobility. She is a Senior Program Manager at WRI India leading MobiliseHER, with two decades of experience in sustainable urban mobility and community engagement.</p>
             <button class="team-expand-btn" onclick="toggleTeamMember(event, 'manju-details')">
@@ -2286,7 +2290,7 @@
           <div class="contact-icon">
             <i class="fas fa-briefcase"></i>
           </div>
-          <h4>General Enquiries</h4>
+          <h3>General Enquiries</h3>
           <p>Questions about our services or looking to collaborate?</p>
           <button class="btn-primary-custom" data-bs-toggle="modal" data-bs-target="#enquiriesModal">
             Send Message <i class="fas fa-paper-plane"></i>
@@ -2299,7 +2303,7 @@
           <div class="contact-icon">
             <i class="fas fa-users"></i>
           </div>
-          <h4>Join Our Team</h4>
+          <h3>Join Our Team</h3>
           <p>Passionate about urban innovation? We'd love to hear from you.</p>
           <button class="btn-primary-custom" data-bs-toggle="modal" data-bs-target="#careersModal">
             Apply Now <i class="fas fa-user-plus"></i>
@@ -2312,7 +2316,7 @@
           <div class="contact-icon">
             <i class="fas fa-map-marker-alt"></i>
           </div>
-          <h4>Visit Us</h4>
+          <h3>Visit Us</h3>
           <p>Located in the heart of Bengaluru, India's tech capital.</p>
           <button class="btn-primary-custom" data-bs-toggle="modal" data-bs-target="#locationModal">
             View Location <i class="fas fa-location-arrow"></i>
@@ -2324,21 +2328,23 @@
 </section>
 
 <!-- Footer -->
+</main>
+
 <footer>
   <div class="container">
     <div class="footer-content">
       <div class="footer-section">
-        <h5>Urban Morph</h5>
+        <h2>Urban Morph</h2>
         <p>Shaping the future of cities through innovation, collaboration, and execution in sustainable urban mobility and infrastructure.</p>
         <div class="social-links">
-          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://twitter.com/morphurbanspace/" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.instagram.com/urbanmorph/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/urbanmorph/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/morphurbanspace/" target="_blank" aria-label="X (formerly Twitter)"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/urbanmorph/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
         </div>
       </div>
 
       <div class="footer-section">
-        <h5>Quick Links</h5>
+        <h2>Quick Links</h2>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -2349,7 +2355,7 @@
       </div>
 
       <div class="footer-section">
-        <h5>Our Solutions</h5>
+        <h2>Our Solutions</h2>
         <ul>
           <li><a href="https://www.altmo.app" target="_blank">Altmo</a></li>
           <li><a href="synthesys.html">SyntheSYS</a></li>
@@ -2358,7 +2364,7 @@
       </div>
 
       <div class="footer-section">
-        <h5>Contact Info</h5>
+        <h2>Contact Info</h2>
         <ul>
           <li><i class="fas fa-envelope"></i> <a href="mailto:contact@urbanmorph.com">contact@urbanmorph.com</a></li>
           <li><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</li>
