@@ -66,9 +66,17 @@
   <!-- Defer Font Awesome - Icons load after page render -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
   <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Merriweather:wght@300;400;700&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Self-hosted fonts: Playfair=optional (fast LCP), body=swap -->
+  <link rel="preload" href="/vendor/fonts/playfair-display-900.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/vendor/fonts/pt-serif-400.woff2) format('woff2');}
+    @font-face{font-family:'PT Serif';font-style:normal;font-weight:700;font-display:swap;src:url(/vendor/fonts/pt-serif-700.woff2) format('woff2');}
+    @font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:optional;src:url(/vendor/fonts/playfair-display-400.woff2) format('woff2');}
+    @font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:optional;src:url(/vendor/fonts/playfair-display-700.woff2) format('woff2');}
+    @font-face{font-family:'Playfair Display';font-style:normal;font-weight:900;font-display:optional;src:url(/vendor/fonts/playfair-display-900.woff2) format('woff2');}
+    @font-face{font-family:'Space Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/vendor/fonts/space-mono-400.woff2) format('woff2');}
+    @font-face{font-family:'Space Mono';font-style:normal;font-weight:700;font-display:swap;src:url(/vendor/fonts/space-mono-700.woff2) format('woff2');}
+  </style>
 
   <style>
     :root {

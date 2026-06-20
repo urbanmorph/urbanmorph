@@ -78,17 +78,20 @@
   <!-- Defer Font Awesome - Icons load after page render -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
   <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous"></noscript>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Optimized Google Fonts with font-display swap -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=PT+Serif:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"></noscript>
+  <!-- Self-hosted fonts: Playfair=optional (fast LCP), body=swap -->
+  <link rel="preload" href="/vendor/fonts/playfair-display-900.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face{font-family:'PT Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/vendor/fonts/pt-serif-400.woff2) format('woff2');}
+    @font-face{font-family:'PT Serif';font-style:normal;font-weight:700;font-display:swap;src:url(/vendor/fonts/pt-serif-700.woff2) format('woff2');}
+    @font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:optional;src:url(/vendor/fonts/playfair-display-400.woff2) format('woff2');}
+    @font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:optional;src:url(/vendor/fonts/playfair-display-700.woff2) format('woff2');}
+    @font-face{font-family:'Playfair Display';font-style:normal;font-weight:900;font-display:optional;src:url(/vendor/fonts/playfair-display-900.woff2) format('woff2');}
+    @font-face{font-family:'Space Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/vendor/fonts/space-mono-400.woff2) format('woff2');}
+    @font-face{font-family:'Space Mono';font-style:normal;font-weight:700;font-display:swap;src:url(/vendor/fonts/space-mono-700.woff2) format('woff2');}
+  </style>
 
-  <!-- Leaflet CSS for Map -->
-  <!-- Defer Leaflet CSS - Map is below fold -->
-  <link rel="preload" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""></noscript>
-  
+  <!-- Leaflet CSS/JS are lazy-loaded on demand when the location map modal opens (see loadLeaflet) -->
+
   <style>
     :root {
       --um-yellow: #FBC831;
@@ -2481,9 +2484,6 @@
 
 <!-- Scripts -->
 <script src="/vendor/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
-        crossorigin=""></script>
 
 <script>
 // Toggle Service Details
@@ -2555,10 +2555,33 @@ document.addEventListener('DOMContentLoaded', function() {
   const modalElement = document.getElementById('locationModal');
   console.log('Modal element:', modalElement);
 
+  // Lazy-load Leaflet (CSS+JS) only when the location modal is first opened.
+  function loadLeaflet(cb) {
+    if (typeof L !== 'undefined') { cb(); return; }
+    if (!document.getElementById('leaflet-css')) {
+      var link = document.createElement('link');
+      link.id = 'leaflet-css'; link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+      link.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+      link.crossOrigin = '';
+      document.head.appendChild(link);
+    }
+    var js = document.getElementById('leaflet-js');
+    if (js) { js.addEventListener('load', cb); return; }
+    js = document.createElement('script');
+    js.id = 'leaflet-js';
+    js.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    js.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+    js.crossOrigin = '';
+    js.onload = cb;
+    document.head.appendChild(js);
+  }
+
   if (modalElement) {
     modalElement.addEventListener('shown.bs.modal', function () {
       console.log('Modal opened, initializing map...');
-      
+      // Load Leaflet on demand, then initialize the map
+      loadLeaflet(function() {
       // Add a small delay to ensure modal is fully rendered
       setTimeout(function() {
         // Only initialize map if not already done
@@ -2608,6 +2631,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
       }, 200); // 200ms delay
+      }); // end loadLeaflet
     });
 
     modalElement.addEventListener('hidden.bs.modal', function () {
