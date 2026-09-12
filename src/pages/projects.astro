@@ -19,10 +19,10 @@ const description = `${projects.length} projects across infrastructure, technolo
         <h1>Projects</h1>
         <p class="lede">Infrastructure, technology, campaigns and events, delivered with cities, institutions and communities across India.</p>
       </div>
-      <span class="head__count">{projects.length} projects, {categories.length} kinds</span>
+      <span class="head__count">{projects.length} projects in {categories.length === 4 ? 'four' : categories.length} categories</span>
     </section>
 
-    <nav class="tabs" aria-label="Project kinds">
+    <nav class="tabs" aria-label="Project categories">
       {categories.map((c) => (
         <a class="tab" href={`#${c.key}`}><span class="tab__swatch" style={`background: ${colour[c.key]}`}></span>{c.name} <b>{byCat(c.key).length}</b></a>
       ))}

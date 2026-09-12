@@ -54,7 +54,7 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'SoftwareApplicatio
 
     <section class="panel panel--white tools" id="tools">
       <div class="section__head"><h2>Five open tools</h2><span class="muted">Free, no login, open source</span></div>
-      <p class="tools__intro">Built by Urban Morph co-founder Sathya Sankaran as public goods. Most are queryable from AI assistants via MCP, so the same public data that powers SyntheSYS is available to anyone.</p>
+      <p class="tools__intro">Built by Urban Morph co-founder Sathya Sankaran. Most can also be queried from AI assistants over MCP.</p>
       <div class="tools__grid">
         {data.tools.map((t) => (
           <div class="tool">
@@ -67,7 +67,7 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'SoftwareApplicatio
     </section>
 
     <section class="section" id="stories">
-      <div class="section__head"><h2>Nine data stories</h2><span class="muted">How India actually works, from the official numbers</span></div>
+      <div class="section__head"><h2>Nine data stories</h2><span class="muted">Data-driven investigations into forests, farmers, livelihoods and rights</span></div>
       <div class="grid grid--3">
         {data.stories.map((s) => (
           <a class="panel panel--blue story" href={s.url} target="_blank" rel="noopener">
@@ -81,8 +81,8 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'SoftwareApplicatio
 
     <section class="board on-yellow cta">
       <div>
-        <h2>Ready to understand your district, city or state better?</h2>
-        <p class="cta__text">SyntheSYS is in service of people, planet and progress.</p>
+        <h2>Bring SyntheSYS to your district, city or state.</h2>
+        <p class="cta__text">Write to us about dashboards, platforms, archives and data stories for your region.</p>
       </div>
       <a class="btn btn--dark" href="mailto:contact@urbanmorph.com">Get in touch</a>
     </section>

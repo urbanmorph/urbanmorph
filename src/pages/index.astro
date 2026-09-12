@@ -33,7 +33,7 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: si
         <div class="masthead__aside">
           <span><strong>Urban Morph</strong></span>
           <span>AI-native, full-stack policy and urban-tech venture studio</span>
-          <span>Bengaluru, and 135 cities where the work runs</span>
+          <span>Bengaluru, with work in 135 cities</span>
         </div>
       </div>
       <div class="masthead__lede">
@@ -82,7 +82,7 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: si
     </section>
 
     <section class="section" id="street">
-      <div class="section__head"><h2>From the street</h2><a href="/projects/">All {projects.length} projects</a></div>
+      <div class="section__head"><h2>Selected projects</h2><a href="/projects/">All {projects.length} projects</a></div>
       <div class="grid grid--3">
         {street.map((p) => {
           const image = img(p.image);
@@ -142,7 +142,7 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: si
     </section>
 
     <section class="panel panel--asphalt on-dark crew" id="crew">
-      <div class="section__head"><h2>The crew</h2><a href="/people/">Profiles</a></div>
+      <div class="section__head"><h2>People</h2><a href="/people/">All profiles</a></div>
       <div class="roster">
         {team.map((m) => {
           const photo = img(m.photo);
