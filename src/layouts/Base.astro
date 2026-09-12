@@ -24,7 +24,7 @@ const organization = {
   name: site.name,
   legalName: site.legalName,
   url: site.url,
-  logo: new URL('/UM-thumbnail.png', site.url).href,
+  logo: new URL('/icon-512.png', site.url).href,
   email: site.email,
   address: { '@type': 'PostalAddress', streetAddress: '41, Vishnu Nivas, NGEF Colony, Sanjaynagar', addressLocality: 'Bengaluru', addressRegion: 'Karnataka', postalCode: '560094', addressCountry: 'IN' },
   sameAs: site.social.map((s) => s.url),
@@ -41,8 +41,10 @@ const organization = {
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex" />}
-    <link rel="icon" type="image/png" href="/UM-thumbnail.png" />
-    <link rel="apple-touch-icon" href="/UM-thumbnail.png" />
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="preload" href="/fonts/anek/anek-latin-latin.woff2" as="font" type="font/woff2" crossorigin />
     <meta property="og:type" content={type} />

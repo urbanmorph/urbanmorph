@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
+import mark from '../assets/img/um-mark.png';
 import { site } from '../lib/site';
 const year = new Date().getFullYear();
 const socialIcon: Record<string, string> = { linkedin: 'simple-icons:linkedin', x: 'simple-icons:x', instagram: 'simple-icons:instagram' };
@@ -8,7 +10,7 @@ const socialIcon: Record<string, string> = { linkedin: 'simple-icons:linkedin', 
 <footer class="site-footer on-dark">
   <div class="container footer-grid">
     <div class="footer-col">
-      <span class="footer-brand">Urban Morph</span>
+      <span class="footer-brand"><Image src={mark} alt="" width={64} height={Math.round(64 * mark.height / mark.width)} loading="lazy" /> Urban Morph</span>
       <p>An AI-native, full-stack policy and urban-tech venture studio, Bengaluru.</p>
       <ul class="social">
         {site.social.map((s) => (
@@ -37,7 +39,8 @@ const socialIcon: Record<string, string> = { linkedin: 'simple-icons:linkedin', 
   .site-footer { background: var(--asphalt); color: var(--muted-dark); padding-block: 40px 44px; margin-top: auto; font-size: 0.95rem; line-height: 1.6; }
   .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 32px; }
   .footer-col { display: flex; flex-direction: column; gap: 4px; align-items: flex-start; }
-  .footer-brand { color: var(--paper); font-weight: 700; font-size: 1.3rem; margin-bottom: 4px; }
+  .footer-brand { color: var(--paper); font-weight: 700; font-size: 1.3rem; margin-bottom: 4px; display: inline-flex; align-items: center; gap: 10px; }
+  .footer-brand img { width: 28px; height: auto; }
   .footer-title { color: var(--paper); font-weight: 700; margin-bottom: 4px; }
   .site-footer a { color: var(--muted-dark); text-decoration: none; font-weight: 400; min-height: 32px; display: inline-flex; align-items: center; }
   .site-footer a:hover { color: var(--yellow); }

@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
+import mark from '../assets/img/um-mark.png';
 import { site } from '../lib/site';
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
@@ -13,7 +15,7 @@ const isActive = (href: string) => {
 <header class="site-header on-dark">
   <a class="skip-link" href="#main">Skip to content</a>
   <nav class="nav container" aria-label="Main">
-    <a class="brand" href="/">Urban Morph</a>
+    <a class="brand" href="/"><Image src={mark} alt="" width={64} height={Math.round(64 * mark.height / mark.width)} loading="eager" /><span>Urban Morph</span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
       <Icon name="tabler:menu-2" size={26} />
       <span class="visually-hidden">Menu</span>
@@ -39,7 +41,8 @@ const isActive = (href: string) => {
 <style>
   .site-header { background: var(--asphalt); color: var(--paper); }
   .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 68px; }
-  .brand { color: var(--paper); text-decoration: none; font-weight: 700; font-size: 1.5rem; min-height: var(--tap); display: inline-flex; align-items: center; }
+  .brand { color: var(--paper); text-decoration: none; font-weight: 700; font-size: 1.5rem; min-height: var(--tap); display: inline-flex; align-items: center; gap: 12px; }
+  .brand img { width: 32px; height: auto; display: block; }
   .brand:hover { color: var(--yellow); }
   .nav-toggle { display: none; background: transparent; color: var(--paper); border: 2px solid var(--rule-dark); border-radius: 4px; width: var(--tap); height: var(--tap); align-items: center; justify-content: center; cursor: pointer; }
   .nav-menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 0.25rem; }
