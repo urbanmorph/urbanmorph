@@ -1,17 +1,13 @@
 {
-  "about": "<strong>Urban Morph</strong>  is a full-stack Urban Tech venture studio and service delivery organization working to shape the future of cities. We co-create solutions with public and private partners, incubate innovative technologies, and implement scalable models to solve complex urban challenges. Our work spans mobility, public infrastructure, and citizen engagement, with a strong emphasis on sustainability and real-world impact.",
+  "about": "<strong>Urban Morph</strong> is an AI-native, full-stack policy and urban-tech venture studio and service delivery organisation working to shape the future of cities. We co-create solutions with public and private partners, incubate technologies, and implement scalable models to solve complex urban challenges. Mobility is our mainstay; urban governance and policy support run through all of it, with a strong emphasis on sustainability and real-world impact.",
   "services": [
     {
       "title": "Innovate",
-      "intro": "OoruLabs within Urban Morph is an urban tech accelerator. We either build our own technologies like Altmo, WattsNext & SyntheSYS, or we work with partners whose solutions can help solve urban problems.",
+      "intro": "OoruLabs within Urban Morph is an urban tech accelerator. We either build our own technologies like AltMo and SyntheSYS, or we work with partners whose solutions can help solve urban problems.",
       "items": [
         {
           "title": "🚴 Altmo",
           "html": "Employee engagement and climate action platform. 10,900+ users from 1,000+ organisations across 135+ cities have logged 2.3 lakh+ sustainable activities and avoided 550+ tonnes of CO₂.  <a href=\"https://www.altmo.app\">Learn more about Altmo</a>"
-        },
-        {
-          "title": "⚡ WattsNext Energy",
-          "html": "Energy delivery for electric vehicles and built form: redefining how power reaches vehicles and buildings, from battery intelligence to the last metre of delivery."
         },
         {
           "title": "🎯 SyntheSYS",

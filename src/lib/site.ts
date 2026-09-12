@@ -2,9 +2,9 @@ export const site = {
   name: 'Urban Morph',
   legalName: 'Urban Morph Consultants Pvt Ltd',
   url: 'https://www.urbanmorph.com',
-  tagline: 'Full-stack, AI-native urban-tech venture studio in Bengaluru',
+  tagline: 'AI-native, full-stack policy and urban-tech venture studio · Bengaluru',
   description:
-    'Urban Morph builds the platforms and runs the programmes that make Indian cities walkable, cycleable and climate-ready: AltMo, SyntheSYS, active-mobility policy and on-ground delivery.',
+    'Urban Morph is an AI-native, full-stack policy and urban-tech venture studio in Bengaluru. Mobility is our mainstay; urban governance and policy support are core: AltMo, SyntheSYS, the Council for Active Mobility and on-ground delivery with cities and communities.',
   email: 'contact@urbanmorph.com',
   address: '41, Vishnu Nivas, NGEF Colony, Sanjaynagar, Bengaluru 560094, Karnataka, India',
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=41%2C+Vishnu+Nivas%2C+NGEF+Colony%2C+Sanjaynagar%2C+Bengaluru+560094',
@@ -29,39 +29,53 @@ export const site = {
   ],
 };
 
-/** Outcome figures shown on the home page. Update here, nowhere else. */
+/**
+ * Outcome figures on the home page, one per strand of the studio's work:
+ * policy, institutions, platforms, community. Update here, nowhere else.
+ */
 export const outcomes = [
-  { value: '10,900+', label: 'AltMo users', detail: 'across 1,000+ organisations in 135+ cities' },
-  { value: '550+ t', label: 'CO₂ avoided', detail: 'through logged sustainable commutes' },
-  { value: '342%', label: 'more for cycling & walking', detail: "in Bengaluru's Comprehensive Master Plan" },
-  { value: '20+ km', label: 'of cycle tracks', detail: 'built in Bengaluru with AltMo data' },
+  { value: '342%', label: 'more for cycling & walking', detail: "in Bengaluru's Comprehensive Master Plan, on the back of our data and advocacy" },
+  { value: '1st', label: 'Active Mobility Centre of Excellence in India', detail: 'set up with the IISc Sustainable Transportation Lab in 2024' },
+  { value: '10,900+', label: 'people on AltMo', detail: 'across 1,000+ organisations in 135+ cities, 550+ tonnes of CO₂ avoided' },
+  { value: '725', label: 'Relief Riders volunteers', detail: 'across 12 cities during COVID-19; UN World Bicycle Day Special Award 2021' },
 ];
 
-export const products = [
+/** The three strands of work shown on the home page. */
+export const focus = [
   {
-    name: 'AltMo',
-    kicker: 'Mobility intelligence',
-    description:
-      'GPS-verified employee engagement and climate action platform. Companies quantify Scope 3 commute emissions, run challenges and report CO₂ avoided.',
-    url: 'https://www.altmo.app',
-    cta: 'Explore AltMo',
+    name: 'Mobility',
+    kicker: 'Our mainstay',
     icon: 'tabler:bike',
-  },
-  {
-    name: 'SyntheSYS',
-    kicker: 'AI-native urban services',
     description:
-      'Live platforms, revived civic archives, open tools and data stories that orchestrate urban solutions from ward to nation.',
-    url: '/synthesys/',
-    cta: 'See SyntheSYS',
-    icon: 'tabler:topology-star-3',
+      "Cycling, walking and public transport: from India's first pop-up pedestrian street and a decade of Cycle Days to a GPS-verified platform that lets organisations count and cut commute emissions.",
+    links: [
+      { label: 'AltMo', href: 'https://www.altmo.app' },
+      { label: 'Council for Active Mobility', href: 'https://cfam.in' },
+      { label: 'Mobility projects', href: '/projects/' },
+    ],
   },
   {
-    name: 'WattsNext Energy',
-    kicker: 'Energy delivery',
-    description: 'Redefining how power reaches electric vehicles and built form, from battery intelligence to the last metre of delivery.',
-    url: null,
-    cta: null,
-    icon: 'tabler:bolt',
+    name: 'Urban governance & policy',
+    kicker: 'Core to everything we do',
+    icon: 'tabler:building-bank',
+    description:
+      'Support for governments, legislators and citizens: a model framework and campaign for the Karnataka Active Mobility Bill, strategic dashboards for the Karnataka Digital Economy Mission, revived civic archives, and thesis-led advisory for philanthropies deploying capital in cities.',
+    links: [
+      { label: 'Active Mobility Bill', href: 'https://cfam.in' },
+      { label: 'KDEM dashboard', href: 'https://kdem.vercel.app' },
+      { label: 'Advisory for philanthropies', href: '#offer' },
+    ],
+  },
+  {
+    name: 'AI-native urban services',
+    kicker: 'SyntheSYS',
+    icon: 'tabler:topology-star-3',
+    description:
+      'Live platforms, revived civic archives, open tools and data stories that orchestrate urban solutions from ward to nation: Neighbourhoods of the Future, India Together, Praja, mapunitygroups, bharatlas and more.',
+    links: [
+      { label: 'Explore SyntheSYS', href: '/synthesys/' },
+      { label: 'Open tools', href: '/synthesys/#tools' },
+      { label: 'Data stories', href: '/synthesys/#stories' },
+    ],
   },
 ];
