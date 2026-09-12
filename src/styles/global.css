@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
    Urban Morph, Option C: everything is a sign panel.
    Colours mean what they mean on Indian roads and railways:
-   yellow when the studio speaks, green for movement and places,
+   yellow when the studio speaks, the logo's teal for movement and places,
    blue for information and policy, asphalt for services and the crew,
    white for reading. One type family, Anek, covers Kannada, Hindi and English.
    ------------------------------------------------------------------ */
@@ -9,10 +9,10 @@
   --asphalt: #1B1B1A;
   --paper: #F5F3EC;
   --white: #FFFFFF;
-  --yellow: #F2C400;
+  --yellow: #FBC831; /* the logo's yellow */
   --blue: #1F5FA8;
   --blue-ink: #164579;
-  --green: #1E7A46;
+  --green: #0E7979; /* the logo's teal, used where road signs use green */
   --yellow-ink: #8A6D00;
   --rule: #D9D6CE;
   --rule-dark: #4A4844;
