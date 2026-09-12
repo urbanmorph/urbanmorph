@@ -45,6 +45,7 @@ const description = `Insights on sustainable mobility, climate action and urban 
           <PostCard post={featured} featured />
         </div>
       )}
+      <h2 class="visually-hidden">{isFirst ? 'More articles' : 'Articles'}</h2>
       <div class="grid grid--3">
         {rest.map((p) => <PostCard post={p} />)}
       </div>

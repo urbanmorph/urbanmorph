@@ -34,6 +34,7 @@ const current = slugify(name);
   </nav>
   <section class="section section--paper">
     <div class="container">
+      <h2 class="visually-hidden">Articles in {name}</h2>
       <div class="grid grid--3">{posts.map((p) => <PostCard post={p} />)}</div>
     </div>
   </section>

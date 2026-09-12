@@ -77,7 +77,7 @@ const jsonLd = [{
         return (
           <article class:list={['platform reveal', { 'platform--flip': i % 2 === 1 }]}>
             <div class="platform__media">
-              {image && <Image src={image} alt={p.alt} widths={[480, 800, 1200]} sizes="(max-width: 900px) 100vw, 50vw" loading={i === 0 ? 'eager' : 'lazy'} quality={70} />}
+              {image && <Image src={image} alt={p.alt} widths={[480, 800, 1200]} sizes="(max-width: 900px) 100vw, 50vw" loading={i === 0 ? 'eager' : 'lazy'} fetchpriority={i === 0 ? 'high' : undefined} quality={70} />}
             </div>
             <div class="platform__body">
               <span class="chip"><Icon name={iconMap[p.icon] ?? 'tabler:sparkles'} size={14} /> {p.badge}</span>

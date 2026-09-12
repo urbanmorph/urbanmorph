@@ -28,7 +28,7 @@ const iconFor: Record<string, { icon: string; label: string }> = {
 
 <article class:list={['team-card', { 'team-card--compact': compact }]}>
   <div class="team-card__photo">
-    {photo && <Image src={photo} alt={member.name} widths={compact ? [120, 240] : [320, 480, 640]} sizes={compact ? '96px' : '(max-width: 600px) 100vw, 33vw'} loading="lazy" />}
+    {photo && <Image src={photo} alt="" widths={compact ? [120, 240] : [320, 480, 640]} sizes={compact ? '96px' : '(max-width: 600px) 100vw, 33vw'} loading="lazy" />}
   </div>
   <div class="team-card__body">
     <h3>{member.name}</h3>

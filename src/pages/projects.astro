@@ -40,7 +40,7 @@ const description = `${projects.length} projects across infrastructure, technolo
             return (
               <article class="card reveal">
                 <div class:list={['card__media', { 'card__media--contain': image && image.width / image.height < 1.15 }]}>
-                  {image && <Image src={image} alt={p.alt || p.title} widths={[400, 640, 900]} quality={65} sizes="(max-width: 600px) 100vw, (max-width: 991px) 50vw, 33vw" loading={ci === 0 && i < 3 ? 'eager' : 'lazy'} />}
+                  {image && <Image src={image} alt={p.alt || p.title} widths={[400, 640, 900]} quality={65} sizes="(max-width: 600px) 100vw, (max-width: 991px) 50vw, 33vw" loading={ci === 0 && i < 3 ? 'eager' : 'lazy'} fetchpriority={ci === 0 && i === 0 ? 'high' : undefined} />}
                 </div>
                 <div class="card__body">
                   <h3>{p.title}</h3>
