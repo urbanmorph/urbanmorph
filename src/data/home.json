@@ -3,7 +3,7 @@
   "services": [
     {
       "title": "Innovate",
-      "intro": "OoruLabs within Urban Morph is an urban tech accelerator. We either build our own technologies like AltMo and SyntheSYS, or we work with partners whose solutions can help solve urban problems.",
+      "intro": "OoruLabs within Urban Morph is an urban tech accelerator. We either build our own technologies like AltMo, SyntheSYS and Saralare, or we work with partners whose solutions can help solve urban problems.",
       "items": [
         {
           "title": "🚴 Altmo",
@@ -12,6 +12,10 @@
         {
           "title": "🎯 SyntheSYS",
           "html": "AI-native services for orchestrating and coordinating urban solutions and accelerating progress at scale, ward to nation: live platforms such as CFAM, KDEM and Neighbourhoods of the Future, revived civic archives, open tools and data stories.  <a href=\"synthesys.html\">Explore SyntheSYS</a>"
+        },
+        {
+          "title": "Saralare",
+          "html": "A venture Urban Morph is invested in and building. Launching at saralare.com."
         }
       ],
       "footer": "<a href=\"mailto:contact@urbanmorph.com\">Write to us</a>  if you operate in the urban space and have a problem to be solved."

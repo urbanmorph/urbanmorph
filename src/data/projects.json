@@ -92,6 +92,20 @@
     "category": "technology",
     "categoryName": "Technology",
     "categoryDescription": "Leveraging digital solutions and data-driven platforms to enable smarter, more sustainable urban mobility systems.",
+    "title": "SaralCare",
+    "description": "Elder care coordination for Indian families. Medicines, appointments, health records and emergencies held together in one place, owned by the elder rather than scattered across the people helping. A venture Urban Morph invested in and builds, launched and running with families in Bengaluru.",
+    "image": "img/projects/saralcare.webp",
+    "alt": "SaralCare",
+    "link": {
+      "label": "Visit SaralCare",
+      "url": "https://www.saralcare.com"
+    },
+    "credits": null
+  },
+  {
+    "category": "technology",
+    "categoryName": "Technology",
+    "categoryDescription": "Leveraging digital solutions and data-driven platforms to enable smarter, more sustainable urban mobility systems.",
     "title": "Altmo",
     "description": "Alternative Mobility initiative promoting sustainable transportation solutions and active mobility across Bengaluru. Employee engagement and climate action platform helping companies manage transport emissions.",
     "image": "img/projects/AltMo.webp",
