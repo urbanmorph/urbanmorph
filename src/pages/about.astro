@@ -1,0 +1,125 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, ventures, outcomes } from '../lib/site';
+import home from '../data/home.json';
+import awards from '../data/awards.json';
+import team from '../data/team.json';
+
+const founders = team.filter((m) => m.group === 'founders');
+const faqs = [
+  {
+    q: 'What is Urban Morph?',
+    a: 'Urban Morph is an AI-native, full-stack policy and urban-tech venture studio based in Bengaluru, India, registered as Urban Morph Consultants Pvt Ltd. Mobility is its mainstay and urban governance and policy support are core. It builds and backs AltMo, SyntheSYS and SaralCare, runs the Council for Active Mobility, and delivers projects with cities, institutions and communities in more than 135 cities.',
+  },
+  {
+    q: 'Who founded Urban Morph?',
+    a: 'Sathya Sankaran (Co-Founder and Director, CEO of Rainmatter Foundation and Bicycle Mayor of Bengaluru), Sonal S Kulkarni (Co-Founder) and Subbaiah TS (Co-Founder and Director).',
+  },
+  {
+    q: 'What is AltMo?',
+    a: 'AltMo is a GPS-verified mobility intelligence and climate action platform for organisations. Employees log cycling, walking, public transport and carpooling; the organisation gets Scope 3 commute emissions, CO₂ avoided and challenge leaderboards. More than 10,900 people from 1,000 organisations in 135 cities use it, and 550 tonnes of CO₂ have been avoided.',
+  },
+  {
+    q: 'What is SyntheSYS?',
+    a: 'SyntheSYS is Urban Morph\'s AI-native urban services practice: live platforms such as the Council for Active Mobility (cfam.in), the Karnataka Digital Economy Mission dashboard, Neighbourhoods of the Future and GreensBrowns; revived civic archives India Together, Praja and mapunitygroups; five free open tools; and nine data stories on how India works.',
+  },
+  {
+    q: 'What is SaralCare?',
+    a: 'SaralCare is elder care coordination built in Bengaluru: medicines, appointments, health records and vitals for an ageing parent, held in one place and owned by the elder, for families in India and abroad. Urban Morph is invested in and building it (SaralCare Healthtech Pvt Ltd).',
+  },
+  {
+    q: 'What is the Active Mobility Centre of Excellence?',
+    a: 'India\'s first Centre of Excellence for Active Mobility, established in September 2024 through an MoU between the IISc Sustainable Transportation Lab and Urban Morph, to research, plan and evaluate cycling and walking as first- and last-mile transport.',
+  },
+  {
+    q: 'What awards has Urban Morph received?',
+    a: 'The Urban Mobility India 2021 Commendation Award and the Volvo Innovation Award 2021 for Church Street First, the India Digital Empowerment Award 2022 for the Cycle To Work campaign in Silvassa, the Mobility Symposium Award 2025 for AltMo, the UN World Bicycle Day Special Award 2021 for Relief Riders, and a 2022 Nobel Peace Prize nomination for Relief Riders.',
+  },
+  {
+    q: 'How can a company cut Scope 3 commute emissions?',
+    a: 'By measuring them first. AltMo tracks employee commutes with GPS verification, reports CO₂ avoided and fuel saved, and runs challenges that move people to cycling, walking, buses, metro and carpooling. The data feeds ESG and BRSR reporting.',
+  },
+  {
+    q: 'How do I contact Urban Morph?',
+    a: `Email ${site.email}. The studio is at 41 Vishnu Nivas, NGEF Colony, Sanjaynagar, Bengaluru 560094, Karnataka, India.`,
+  },
+];
+const description = 'Urban Morph is an AI-native, full-stack policy and urban-tech venture studio in Bengaluru: who founded it, what it builds and backs, how it works, its awards, and answers to common questions.';
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+  { '@context': 'https://schema.org', '@type': 'AboutPage', name: 'About Urban Morph', url: `${site.url}/about/`, mainEntity: { '@type': 'Organization', name: site.name, url: site.url } },
+];
+---
+
+<Base title="About Urban Morph" description={description} jsonLd={jsonLd}>
+  <div class="container stack">
+    <section class="section">
+      <h1>About Urban Morph</h1>
+      <p class="lede">Urban Morph is an AI-native, full-stack policy and urban-tech venture studio based in Bengaluru, India. Mobility is the mainstay; urban governance and policy support are core.</p>
+    </section>
+
+    <section class="panel panel--white facts">
+      <dl>
+        <dt>Legal name</dt><dd>{site.legalName}</dd>
+        <dt>Based in</dt><dd>Bengaluru, Karnataka, India, with work running in more than 135 cities</dd>
+        <dt>Founders</dt><dd>{founders.map((f, i) => <><a href={`/people/${f.slug}/`}>{f.name}</a>{i < founders.length - 1 ? ', ' : ''}</>)}</dd>
+        <dt>Ventures</dt><dd>{ventures.map((v) => v.name).join(', ')}</dd>
+        <dt>Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+        <dt>Address</dt><dd>{site.address}</dd>
+      </dl>
+    </section>
+
+    <section class="section">
+      <h2>How we work</h2>
+      <p class="how__intro" set:html={home.about} />
+      <div class="grid grid--3">
+        {home.services.map((s) => (
+          <article class="panel panel--white how">
+            <h3>{s.title}</h3>
+            <p>{s.intro}</p>
+            <ul class="how__items">{s.items.map((it) => <li><strong>{it.title.replace(/^[^\w]+/, '')}.</strong> <span set:html={it.html} /></li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What the work has produced</h2>
+      <ul class="grid grid--4 outcomes">
+        {outcomes.map((o) => (<li class="stat"><b>{o.value.replace('1st', 'First')}</b><span>{o.label}</span><small>{o.detail}</small></li>))}
+      </ul>
+      <ul class="awards">
+        {awards.map((a) => (<li><b>{a.year}</b><span><strong>{a.title}.</strong> {a.description}</span></li>))}
+      </ul>
+    </section>
+
+    <section class="panel panel--white faq" id="faq">
+      <h2>Questions people ask</h2>
+      <dl>
+        {faqs.map((f) => (<><dt>{f.q}</dt><dd>{f.a}</dd></>))}
+      </dl>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .facts { padding: clamp(20px, 3vw, 32px); }
+  .facts dl { margin: 0; display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 10px 20px; }
+  .facts dt { font-weight: 600; color: var(--muted); }
+  .facts dd { margin: 0; }
+  .how__intro { max-width: 70ch; }
+  .how__intro :global(strong) { font-weight: 700; }
+  .how { padding: 24px 26px; display: flex; flex-direction: column; gap: 10px; }
+  .how h3 { font-size: 1.6rem; }
+  .how__items { list-style: none; margin: 6px 0 0; padding: 12px 0 0; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 10px; font-size: 0.98rem; line-height: 1.5; }
+  .how__items :global(a) { font-weight: 600; }
+  .outcomes { list-style: none; margin: 0; padding: 0; }
+  .awards { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .awards li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-top: 1px solid var(--rule); }
+  .awards li:last-child { border-bottom: 1px solid var(--rule); }
+  .faq { padding: clamp(20px, 3vw, 32px); display: flex; flex-direction: column; gap: 16px; }
+  .faq dl { margin: 0; display: flex; flex-direction: column; }
+  .faq dt { font-size: 1.3rem; font-weight: 700; padding-top: 18px; border-top: 1px solid var(--rule); }
+  .faq dd { margin: 8px 0 18px; max-width: 75ch; line-height: 1.55; }
+  @media (max-width: 620px) { .facts dl { grid-template-columns: 1fr; gap: 2px 0; } .facts dd { margin-bottom: 10px; } }
+</style>

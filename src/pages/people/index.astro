@@ -10,9 +10,10 @@ const groups = [
   { key: 'advisors', label: 'Advisors' },
 ];
 const description = `The ${team.length} people behind Urban Morph: founders, team and advisors, with what each of them has built, led and written.`;
+const jsonLd = [{ '@context': 'https://schema.org', '@type': 'ItemList', name: 'Urban Morph people', itemListElement: team.map((m, i) => ({ '@type': 'ListItem', position: i + 1, url: `https://www.urbanmorph.com/people/${m.slug}/`, name: m.name })) }];
 ---
 
-<Base title="People" description={description}>
+<Base title="People" description={description} jsonLd={jsonLd}>
   <div class="container stack">
     <section class="section">
       <h1>The crew</h1>

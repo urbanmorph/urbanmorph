@@ -20,6 +20,7 @@ export const site = {
     { label: 'Media', href: '/media/' },
     { label: 'Blog', href: '/blog/' },
     { label: 'People', href: '/people/' },
+    { label: 'About', href: '/about/' },
     { label: 'Contact', href: '/#contact' },
   ],
   /** Station-board kicker: state language, Hindi, English. */

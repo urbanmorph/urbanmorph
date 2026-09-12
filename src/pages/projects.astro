@@ -8,10 +8,11 @@ const colour: Record<string, string> = { infrastructure: 'var(--green)', technol
 const kindColour: Record<string, string> = { infrastructure: 'var(--green)', technology: 'var(--asphalt)', campaigns: 'var(--yellow-ink)', events: 'var(--blue)' };
 const categories = [...new Map(projects.map((p) => [p.category, { key: p.category, name: p.categoryName, description: p.categoryDescription }])).values()];
 const byCat = (key: string) => projects.filter((p) => p.category === key);
+const jsonLd = [{ '@context': 'https://schema.org', '@type': 'ItemList', name: 'Urban Morph projects', numberOfItems: projects.length, itemListElement: projects.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title, ...(p.link ? { url: p.link.url.startsWith('http') ? p.link.url : `https://www.urbanmorph.com/${p.link.url}` } : {}) })) }];
 const description = `${projects.length} projects across infrastructure, technology, campaigns and events: bicycle parking, AltMo, Church Street First, Relief Riders, Cycle Days and more, delivered with cities, institutions and communities across India.`;
 ---
 
-<Base title="Projects" description={description}>
+<Base title="Projects" description={description} jsonLd={jsonLd}>
   <div class="container stack">
     <section class="panel panel--green head">
       <div>

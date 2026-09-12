@@ -12,7 +12,7 @@ export const getStaticPaths = (async () => {
 
 const { member, prev, next } = Astro.props;
 const photo = img(member.photo);
-const og = photo ? (await getImage({ src: photo, width: 1200, format: 'jpg' })).src : '/UM-thumbnail.png';
+const og = photo ? (await getImage({ src: photo, width: 1200, format: 'jpg' })).src : '/og-default.png';
 const linkLabel: Record<string, string> = { linkedin: 'LinkedIn', x: 'X', email: 'Email', website: 'Website', rss: 'Blog', wikipedia: 'Wikipedia', instagram: 'Instagram', youtube: 'YouTube' };
 const links = member.links.map((l) => ({ ...l, label: l.type === 'website' ? l.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : linkLabel[l.type] ?? 'Link' }));
 const description = `${member.name}, ${member.role} at Urban Morph. ${member.line}`;
