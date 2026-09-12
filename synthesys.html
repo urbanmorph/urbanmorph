@@ -17,7 +17,7 @@
   <!-- Primary Meta Tags -->
   <title>SyntheSYS | AI-Powered Urban Intelligence Platform | Urban Morph</title>
   <meta name="title" content="SyntheSYS | AI-Powered Urban Intelligence Platform | Urban Morph">
-  <meta name="description" content="SyntheSYS is Urban Morph's AI-powered platform for understanding and actioning progress at scale. From ward-level climate baselines to national development tracking across 780 districts.">
+  <meta name="description" content="SyntheSYS is Urban Morph's AI-native urban services: live platforms for active mobility policy, Karnataka's digital economy and neighbourhood climate action, revived civic archives, five open tools and nine data stories, from ward to nation.">
   <meta name="author" content="Urban Morph">
   <meta name="keywords" content="SyntheSYS, AI urban intelligence, Urban Morph, KDEM, NOTF, India district dashboard, GreensBrowns, CFAM, AI for social good, sustainable development, progress monitoring">
 
@@ -32,7 +32,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.urbanmorph.com/synthesys.html">
   <meta property="og:title" content="SyntheSYS | AI-Powered Urban Intelligence Platform">
-  <meta property="og:description" content="Understanding and actioning progress at scale -- from neighbourhoods to nations. 5 live platforms, 780+ districts, 596 wards.">
+  <meta property="og:description" content="Understanding and actioning progress at scale -- from neighbourhoods to nations. 7 live platforms, 5 open tools, 9 data stories and civic archives running since 1998.">
   <meta property="og:image" content="https://www.urbanmorph.com/img/blog/synthesys-header.jpg">
   <meta property="og:site_name" content="Urban Morph">
   <meta property="og:locale" content="en_IN">
@@ -661,6 +661,116 @@
     }
 
     /* ========================================
+       OPEN TOOLS + DATA STORIES
+       ======================================== */
+    .tools-section {
+      padding: 5rem 0;
+      background: var(--um-light);
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin: 1rem auto 0;
+      font-size: 1.05rem;
+      color: var(--um-gray);
+      line-height: 1.8;
+    }
+
+    .tool-card,
+    .story-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 2rem 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.35s ease;
+    }
+
+    .tool-card {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-left: 4px solid var(--um-teal);
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+      border-left-color: var(--um-yellow);
+      color: inherit;
+    }
+
+    .tool-tag,
+    .story-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--um-teal);
+      margin-bottom: 0.75rem;
+    }
+
+    .tool-card h3,
+    .story-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--newspaper-border);
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
+    }
+
+    .tool-card p,
+    .story-card p {
+      font-size: 0.93rem;
+      color: var(--um-gray);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+
+    .tool-link,
+    .story-link {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--newspaper-border);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .stories-section {
+      padding: 5rem 0;
+      background: var(--newspaper-border);
+      color: white;
+    }
+
+    .stories-section .section-label { color: var(--um-yellow); }
+    .stories-section .section-title { color: white; }
+    .stories-section .section-intro { color: rgba(255,255,255,0.7); }
+
+    .story-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .story-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: var(--um-yellow);
+      transform: translateY(-4px);
+      color: inherit;
+    }
+
+    .story-tag { color: var(--um-yellow); }
+    .story-card h3 { color: white; }
+    .story-card p { color: rgba(255,255,255,0.72); }
+    .story-link { color: var(--um-yellow); }
+
+    /* ========================================
        CTA / CONTACT SECTION
        ======================================== */
     .cta-section {
@@ -823,6 +933,7 @@
     @media (max-width: 991px) {
       .platform-card .row {
         flex-direction: column !important;
+        --bs-gutter-x: 1.5rem;
       }
 
       .platform-image-wrapper {
@@ -868,6 +979,8 @@
       .vision-section,
       .capabilities-section,
       .platforms-section,
+      .tools-section,
+      .stories-section,
       .cta-section {
         padding: 3rem 0;
       }
@@ -920,7 +1033,7 @@
     "@type": "SoftwareApplication",
     "name": "SyntheSYS",
     "applicationCategory": "BusinessApplication",
-    "description": "AI-powered urban intelligence platform for understanding and actioning progress at scale, from neighbourhoods to nations.",
+    "description": "AI-native urban services from Urban Morph: live platforms for active mobility policy, Karnataka's digital economy and neighbourhood climate action, revived civic archives, five open tools and nine data stories, from ward to nation.",
     "url": "https://www.urbanmorph.com/synthesys.html",
     "image": "https://www.urbanmorph.com/img/blog/synthesys-header.jpg",
     "author": {
@@ -1006,27 +1119,27 @@
     <p class="hero-label hero-animate">Urban Morph Presents</p>
     <h1 class="hero-title hero-animate">Synthe<span>SYS</span></h1>
     <p class="hero-tagline hero-animate">AI-Powered Urban Intelligence</p>
-    <p class="hero-description hero-animate">Understanding and actioning progress at scale &mdash; from neighbourhoods to nations.</p>
+    <p class="hero-description hero-animate">AI-powered services for orchestrating and coordinating urban solutions, and accelerating progress at scale &mdash; ward to nation.</p>
     <div class="cta-buttons hero-animate">
       <a href="#platforms" class="btn-primary-custom">Explore Platforms <i class="fas fa-arrow-down"></i></a>
       <a href="blog/synthesys-orchestrating-progress.html" class="btn-secondary-custom">Read the Origin Story <i class="fas fa-book-open"></i></a>
     </div>
     <div class="hero-stats hero-animate">
       <div class="stat-item">
-        <span class="stat-number">5</span>
+        <span class="stat-number">7</span>
         <span class="stat-label">Live Platforms</span>
       </div>
       <div class="stat-item">
-        <span class="stat-number">780+</span>
-        <span class="stat-label">Districts</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">596</span>
-        <span class="stat-label">Wards Covered</span>
+        <span class="stat-number">5</span>
+        <span class="stat-label">Open Tools</span>
       </div>
       <div class="stat-item">
         <span class="stat-number">9</span>
-        <span class="stat-label">Languages</span>
+        <span class="stat-label">Data Stories</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">1998</span>
+        <span class="stat-label">Archive Since</span>
       </div>
     </div>
   </div>
@@ -1100,42 +1213,86 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <span class="ai-badge"><i class="fas fa-brain"></i> Claude AI-Powered</span>
+          <span class="ai-badge"><i class="fas fa-chart-line"></i> District &amp; Vertical Dashboards</span>
           <h3 class="platform-title">KDEM &mdash; Karnataka Digital Economy Mission</h3>
-          <p class="platform-description">Strategic dashboard tracking Karnataka's $400B digital economy vision by 2030. Real-time monitoring of 248 verified targets across 5 verticals and 13 geographies over an 8-year horizon.</p>
+          <p class="platform-description">Strategic dashboard for Karnataka's journey from a $198B digital economy today to $414B by 2032, digital economy and biotechnology combined. Every figure is sourced to MoSPI, RBI and state data, and the Beyond Bengaluru view tracks the emerging clusters that have to carry the growth.</p>
           <ul class="platform-features">
-            <li>13 interactive analytical tabs</li>
-            <li>248 verified development targets</li>
-            <li>AI-powered admin with Anthropic Claude</li>
+            <li>Live GSDP, digital-export and target-gap tracking for a $345B state</li>
+            <li>Beyond Bengaluru: district and vertical views for emerging clusters</li>
+            <li>Sources tab linking every number to its public origin</li>
           </ul>
-          <a href="https://kdem.vercel.app" target="_blank" class="platform-cta">View Dashboard <i class="fas fa-external-link-alt"></i></a>
+          <a href="https://kdem.vercel.app" target="_blank" rel="noopener" class="platform-cta">View Dashboard <i class="fas fa-external-link-alt"></i></a>
         </div>
       </div>
     </div>
 
-    <!-- Platform 2: India District Dashboard -->
+    <!-- Platform 2: India Together -->
     <div class="platform-card reveal">
       <div class="row align-items-center g-5 flex-lg-row-reverse">
         <div class="col-lg-6">
           <div class="platform-image-wrapper">
-            <img loading="lazy" decoding="async" width="1440" height="900" src="img/synthesys/district-screenshot.webp" alt="India District Development Dashboard" style="width:100%; height:auto; display:block;">
+            <img loading="lazy" decoding="async" width="1440" height="900" src="img/synthesys/indiatogether-screenshot.webp" alt="India Together - independent journalism since 1998" style="width:100%; height:auto; display:block;">
           </div>
         </div>
         <div class="col-lg-6">
-          <span class="ai-badge"><i class="fas fa-brain"></i> AI-Synthesized Analysis</span>
-          <h3 class="platform-title">India District Dashboard</h3>
-          <p class="platform-description">Pan-India development dashboard scaling AI-synthesized district analysis to all 780 districts across 28 states. Interactive maps, per capita income rankings, and GDDP composition at every level.</p>
+          <span class="ai-badge"><i class="fas fa-newspaper"></i> Revived &middot; Since 1998</span>
+          <h3 class="platform-title">India Together</h3>
+          <p class="platform-description">The news in proportion. India's independent public-interest journalism archive, publishing since 1998 and now revived with technology support from Urban Morph: reports, opinions, interviews and reviews searchable by topic, state and writer, with new reporting on cities, transport, environment and governance.</p>
           <ul class="platform-features">
-            <li>780 district profiles across India</li>
-            <li>State and district drill-down navigation</li>
-            <li>AI-generated development baselines</li>
+            <li>3,790 articles from 1998 to 2026 across 91 subjects and 26 states</li>
+            <li>Reports, opinions, reviews, interviews and editorials by named writers</li>
+            <li>Articles remain the copyright of their authors</li>
           </ul>
-          <a href="https://district-mocha.vercel.app" target="_blank" class="platform-cta">View Dashboard <i class="fas fa-external-link-alt"></i></a>
+          <a href="https://indiatogether.org" target="_blank" rel="noopener" class="platform-cta">Read India Together <i class="fas fa-external-link-alt"></i></a>
         </div>
       </div>
     </div>
 
-    <!-- Platform 3: NOTF -->
+    <!-- Platform 3: mapunitygroups -->
+    <div class="platform-card reveal">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="platform-image-wrapper">
+            <img loading="lazy" decoding="async" width="1440" height="900" src="img/synthesys/mapunitygroups-screenshot.webp" alt="mapunitygroups - community mapping since 2007" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="ai-badge"><i class="fas fa-map-marked-alt"></i> Revived &middot; Since 2007</span>
+          <h3 class="platform-title">mapunitygroups</h3>
+          <p class="platform-description">Nineteen years of what people counted. MapUnity's community mapping platform, revived: a group decides what is worth recording, members map it, and every place keeps its own history so you can see what changed and when. From public works in South Bengaluru to food-safety incidents across the country.</p>
+          <ul class="platform-features">
+            <li>50,622 records across 872 groups from 314 contributors</li>
+            <li>Layers, places and photos, with a change history for every place</li>
+            <li>Open or member-only groups, searchable by category and place</li>
+          </ul>
+          <a href="https://mapunitygroups.com" target="_blank" rel="noopener" class="platform-cta">Explore Groups <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Platform 4: Praja -->
+    <div class="platform-card reveal">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
+        <div class="col-lg-6">
+          <div class="platform-image-wrapper">
+            <img loading="lazy" decoding="async" width="1440" height="900" src="img/synthesys/praja-screenshot.webp" alt="Praja - citizen community since 2007" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="ai-badge"><i class="fas fa-comments"></i> Revived &middot; Since 2007</span>
+          <h3 class="platform-title">Praja</h3>
+          <p class="platform-description">A bridge between those who serve us and those of us who care and want to participate. An internet-driven community for active and concerned citizens working at the local level, running since 2007 and revived with its full history intact. Most of what is here is not the posts; it is what people said back.</p>
+          <ul class="platform-features">
+            <li>36,856 comments across 5,155 posts from 1,265 people</li>
+            <li>Threads organised by sector: transport, energy, governance, planning</li>
+            <li>Nineteen years of civic discussion, still active in 2026</li>
+          </ul>
+          <a href="https://praja.in" target="_blank" rel="noopener" class="platform-cta">Join the Conversation <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Platform 5: NOTF -->
     <div class="platform-card reveal">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
@@ -1144,42 +1301,42 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <span class="ai-badge"><i class="fas fa-brain"></i> AI Climate Baselines</span>
+          <span class="ai-badge"><i class="fas fa-brain"></i> AI Assistant &middot; Multilingual</span>
           <h3 class="platform-title">NOTF &mdash; Neighbourhoods of the Future</h3>
-          <p class="platform-description">Ward-level climate intelligence platform covering 596 wards across Bengaluru and Mumbai. Includes AI-synthesized climate baselines across 7 sectors, community discovery, and an integrated civic grievance system with intelligent complaint routing.</p>
+          <p class="platform-description">A framework for citizens to take charge of the common good at the neighbourhood level: steer infrastructure and behaviour, connect with experts, and build neighbourhoods resilient to climate shock. Now a network across 13 cities, with an AI assistant that finds communities and resources.</p>
           <ul class="platform-features">
-            <li>596 wards with climate data across 7 sectors</li>
-            <li>Intelligent civic complaint classification and routing</li>
-            <li>Community discovery in 9+ Indian languages</li>
+            <li>65+ tonnes of waste diverted, 60,000+ kg of CO&#8322; prevented, 12,000+ trees planted</li>
+            <li>15 climate projects in the catalogue and 10+ city climate action plans</li>
+            <li>NOTF Assistant to find communities and resources, with a language switcher</li>
           </ul>
-          <a href="https://notf-one.vercel.app" target="_blank" class="platform-cta">View Platform <i class="fas fa-external-link-alt"></i></a>
+          <a href="https://www.notf.in" target="_blank" rel="noopener" class="platform-cta">View Platform <i class="fas fa-external-link-alt"></i></a>
         </div>
       </div>
     </div>
 
-    <!-- Platform 4: GreensBrowns -->
+    <!-- Platform 6: GreensBrowns -->
     <div class="platform-card reveal">
       <div class="row align-items-center g-5 flex-lg-row-reverse">
         <div class="col-lg-6">
           <div class="platform-image-wrapper">
-            <img loading="lazy" decoding="async" width="1440" height="900" src="img/synthesys/greensbrowns-screenshot.webp" alt="GreensBrowns Circular Waste Marketplace" style="width:100%; height:auto; display:block;">
+            <img loading="lazy" decoding="async" width="1440" height="900" src="img/synthesys/greensbrowns-screenshot.webp" alt="GreensBrowns - circular marketplace for green waste" style="width:100%; height:auto; display:block;">
           </div>
         </div>
         <div class="col-lg-6">
-          <span class="ai-badge"><i class="fas fa-brain"></i> AI-Powered OCR</span>
+          <span class="ai-badge"><i class="fas fa-recycle"></i> Circular Waste Network</span>
           <h3 class="platform-title">GreensBrowns</h3>
-          <p class="platform-description">Digital circular marketplace connecting bulk waste generators with certified processors in Bengaluru. End-to-end waste lifecycle tracking with AI-powered document processing for vehicle and driver onboarding.</p>
+          <p class="platform-description">Every leaf has a second life. Bengaluru's circular network for green waste connects apartments and tech parks with processors who need organic waste for composting: verified pickups, real-time tracking and complete compliance from the building's garden to the processor's facility. Built by A-Gain, powered by Urban Morph.</p>
           <ul class="platform-features">
-            <li>Multi-role dashboards for generators, collectors, and processors</li>
-            <li>Complete traceability with QR codes and geo-location</li>
-            <li>AI-powered OCR for credential verification</li>
+            <li>22+ partner communities, 14 vehicles in the fleet, 3 active processors</li>
+            <li>100% trackable waste with verified pickups and geo-located handovers</li>
+            <li>Role-based dashboards for generators, transporters and processors</li>
           </ul>
-          <a href="https://greensbrowns.vercel.app" target="_blank" class="platform-cta">View Platform <i class="fas fa-external-link-alt"></i></a>
+          <a href="https://greensbrowns.vercel.app" target="_blank" rel="noopener" class="platform-cta">View Platform <i class="fas fa-external-link-alt"></i></a>
         </div>
       </div>
     </div>
 
-    <!-- Platform 5: CFAM -->
+    <!-- Platform 7: CFAM -->
     <div class="platform-card reveal">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
@@ -1188,15 +1345,15 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <span class="ai-badge"><i class="fas fa-chart-bar"></i> Data-Driven Advocacy</span>
+          <span class="ai-badge"><i class="fas fa-landmark"></i> Policy to Programs</span>
           <h3 class="platform-title">CFAM &mdash; Council for Active Mobility</h3>
-          <p class="platform-description">India's advocacy platform supporting the National Active Mobility Bill. Coordinates 9,000+ corporate challenge participants, tracks cycling infrastructure investment across Indian cities, and automates community engagement at scale.</p>
+          <p class="platform-description">Streets for people, built into law. India's National Active Mobility Framework turns policy into programmes: a model framework for states, a tracker of who has notified rules and who has not, and the campaign to table the Karnataka Active Mobility Bill, the flagship state-level instrument.</p>
           <ul class="platform-features">
-            <li>882 companies and 9,156+ challenge participants</li>
-            <li>City infrastructure investment tracking and analysis</li>
-            <li>Automated Discord community with 50+ channels</li>
+            <li>State tracker: 1 state notified, 35 yet to act</li>
+            <li>Karnataka Bill: 2.5 m minimum footpaths in school zones, 1.5 m cyclist overtaking distance</li>
+            <li>Ecosystem of partner organisations across seven work tracks, with the Altmo app for participation</li>
           </ul>
-          <a href="https://cfam.in" target="_blank" class="platform-cta">View Platform <i class="fas fa-external-link-alt"></i></a>
+          <a href="https://cfam.in" target="_blank" rel="noopener" class="platform-cta">View Platform <i class="fas fa-external-link-alt"></i></a>
         </div>
       </div>
     </div>
@@ -1204,15 +1361,140 @@
   </div>
 </section>
 
-<!-- Scale Vision -->
-<section class="scale-section">
-  <div class="scale-number">780</div>
+<!-- Open Tools -->
+<section class="tools-section" id="tools">
   <div class="container">
-    <div class="scale-content reveal">
-      <p class="section-label">The Horizon</p>
-      <h2>Scaling Intelligence to Every District in India</h2>
-      <p>From one district dashboard in Kalaburagi to a comprehensive platform covering all 780 districts across 28 states and 8 union territories. AI-synthesized development baselines, role-based administrative views, and progress monitoring &mdash; available for every district in India.</p>
-      <a href="https://district-mocha.vercel.app" target="_blank" class="scale-cta">Explore the Prototype <i class="fas fa-arrow-right"></i></a>
+    <div class="text-center mb-5 reveal">
+      <p class="section-label">Built for the Public</p>
+      <h2 class="section-title">Five Open Tools You Can Use Right Now</h2>
+      <p class="section-intro">Free, no login, open source, built by Urban Morph co-founder Sathya Sankaran as public goods. Most are queryable from AI assistants via MCP, so the same public data that powers SyntheSYS is available to anyone.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="tool-card" href="https://mdshare.live" target="_blank" rel="noopener">
+          <span class="tool-tag">Open Source</span>
+          <h3>mdshare</h3>
+          <p>Markdown sharing with the widest surface area: paste in the browser, edit from Obsidian, commit from VS Code, or drive it from AI coding agents via MCP. Four permission tiers, threaded comments anchored to text, real-time sync and instant link revocation.</p>
+          <span class="tool-link">mdshare.live <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="tool-card" href="https://bharatlas.com" target="_blank" rel="noopener">
+          <span class="tool-tag">Open Atlas &middot; No Signup</span>
+          <h3>bharatlas</h3>
+          <p>India's open atlas. 100+ map layers: administrative boundaries from state down to village, wards for 30+ cities, plus rivers, forests, highways, groundwater, floods and seismic zones. Slice any layer and download it as GeoJSON, Shapefile, Parquet or PMTiles, or drop your own geo file and share it by link.</p>
+          <span class="tool-link">bharatlas.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="tool-card" href="https://irrational.pages.dev" target="_blank" rel="noopener">
+          <span class="tool-tag">MIT &middot; No Login</span>
+          <h3>Irrational</h3>
+          <p>A field guide to the mistakes your mind makes. Describe a decision and Irrational writes an adversarial prompt that argues the other side, refracting your choice through 22 cognitive biases: sunk cost, anchoring, overconfidence. Your own AI runs the audit; nothing is stored.</p>
+          <span class="tool-link">irrational.pages.dev <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="tool-card" href="https://mugilu.live" target="_blank" rel="noopener">
+          <span class="tool-tag">Open Sky &middot; No Login</span>
+          <h3>Mugilu</h3>
+          <p>The open sky of India. Name any place and Mugilu reads what the air is doing to you right now: AQI with the full pollutant breakdown and years of life lost, heat and wet-bulb stress, wind, fog, dust, crop-burn smoke, UV, and any live NDMA or IMD warning overhead. Search in Indian languages or use your location.</p>
+          <span class="tool-link">mugilu.live <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="tool-card" href="https://twelveswaras.com" target="_blank" rel="noopener">
+          <span class="tool-tag">CC-BY &middot; No Login</span>
+          <h3>twelveswaras</h3>
+          <p>Shazam for raagas. Hold your phone to Carnatic music and twelveswaras names the raaga: the top three matches with confidence, the tonic pinned from the tanpura drone, and plain-language cues for training your own ear. Audio is read on the spot and never stored.</p>
+          <span class="tool-link">twelveswaras.com <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Data Stories -->
+<section class="stories-section" id="stories">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <p class="section-label">Stories &amp; Investigations</p>
+      <h2 class="section-title">Nine Data Stories on How India Actually Works</h2>
+      <p class="section-intro">Data-driven investigations into forests, farmers, livelihoods and rights: what the official numbers say once you read all of them together.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="story-card" href="https://not-the-bird.surge.sh" target="_blank" rel="noopener">
+          <span class="story-tag">Commons &middot; Emergence</span>
+          <h3>Influence the Rule, Not the Bird</h3>
+          <p>How to use emergence to steer action in the commons. Birds in formation follow a few simple rules, and the formation is what emerges. Money and effort mostly add speed; only the rules change direction.</p>
+          <span class="story-link">Read the story <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="story-card" href="https://made-optional.surge.sh" target="_blank" rel="noopener">
+          <span class="story-tag">Business &middot; Biodiversity</span>
+          <h3>The Question They Made Optional</h3>
+          <p>786 of India's biggest listed companies operate beside a forest, wetland or coast. Just 33 said what they actually do there. The question was optional, so the rest broke no rule.</p>
+          <span class="story-link">Read the story <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="story-card" href="https://dead-reckoning.surge.sh" target="_blank" rel="noopener">
+          <span class="story-tag">Soil &middot; Agriculture</span>
+          <h3>The Best-Measured Soil in the World</h3>
+          <p>India tests its farmland more thoroughly than any country on Earth: over 5 million samples, 12 readings each. More than half comes back low on carbon, and there is no second opinion to check the readings against.</p>
+          <span class="story-link">Read the story <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="story-card" href="https://pbr-story.surge.sh" target="_blank" rel="noopener">
+          <span class="story-tag">Biodiversity &middot; Governance</span>
+          <h3>The Register No One Reads</h3>
+          <p>India built 2.72 lakh People's Biodiversity Registers to put villages in charge of the nature around them. Two have been formally approved.</p>
+          <span class="story-link">Read the story <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="story-card" href="https://canitlast.surge.sh" target="_blank" rel="noopener">
+          <span class="story-tag">Rural India &middot; Sustainability</span>
+          <h3>The Ground Beneath the Report Card</h3>
+          <p>India grades 2.6 lakh villages on how they're doing today, not whether they can last. Its showcase grain belt is also the fastest at draining its own water.</p>
+          <span class="story-link">Read the story <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="story-card" href="https://the-uncounted.surge.sh" target="_blank" rel="noopener">
+          <span class="story-tag">Wildlife &middot; Human Conflict</span>
+          <h3>The Uncounted</h3>
+          <p>India logs over 100,000 human-wildlife conflict incidents a year across 88 species, yet keeps a national death count for just two.</p>
+          <span class="story-link">Read the story <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="story-card" href="https://whose-forest.surge.sh" target="_blank" rel="noopener">
+          <span class="story-tag">Forests &middot; CFR Rights</span>
+          <h3>Whose Forest Is It?</h3>
+          <p>India mapped 3.46 crore hectares of community forest that local communities could govern. Less than 3% has been recognised.</p>
+          <span class="story-link">Read the story <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="story-card" href="https://fpo-story.surge.sh" target="_blank" rel="noopener">
+          <span class="story-tag">Agriculture &middot; FPOs</span>
+          <h3>The Hollow Collective</h3>
+          <p>India helped small farmers form nearly 50,000 companies they own together. Just 4% employ even one paid manager.</p>
+          <span class="story-link">Read the story <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <a class="story-card" href="https://shg-story.surge.sh" target="_blank" rel="noopener">
+          <span class="story-tag">Livelihoods &middot; Women &middot; SHGs</span>
+          <h3>The Ground They Stand On</h3>
+          <p>India's self-help groups are the world's largest financial-inclusion effort: 9 crore women across 8.6 million groups. Yet even the best-served state leaves 71% stuck at saving, never reaching credit.</p>
+          <span class="story-link">Read the story <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
