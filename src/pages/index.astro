@@ -81,6 +81,21 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: si
       </ul>
     </section>
 
+    <section class="section" id="street">
+      <div class="section__head"><h2>From the street</h2><a href="/projects/">All {projects.length} projects</a></div>
+      <div class="grid grid--3">
+        {street.map((p) => {
+          const image = img(p.image);
+          return (
+            <article class="card">
+              <div class="card__media">{image && <Image src={image} alt={p.alt || p.title} widths={[400, 640, 900]} sizes="(max-width: 620px) 100vw, 33vw" quality={65} loading="lazy" />}</div>
+              <div class="card__body"><h3>{p.title}</h3><p>{p.description}</p></div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
     <section class="section" id="partners-say">
       <h2>What partners say</h2>
       <div class="grid grid--3">
@@ -94,21 +109,6 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: si
                 <span>{t.author}</span>
               </figcaption>
             </figure>
-          );
-        })}
-      </div>
-    </section>
-
-    <section class="section" id="street">
-      <div class="section__head"><h2>From the street</h2><a href="/projects/">All {projects.length} projects</a></div>
-      <div class="grid grid--3">
-        {street.map((p) => {
-          const image = img(p.image);
-          return (
-            <article class="card">
-              <div class="card__media">{image && <Image src={image} alt={p.alt || p.title} widths={[400, 640, 900]} sizes="(max-width: 620px) 100vw, 33vw" quality={65} loading="lazy" />}</div>
-              <div class="card__body"><h3>{p.title}</h3><p>{p.description}</p></div>
-            </article>
           );
         })}
       </div>
