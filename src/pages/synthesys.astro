@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
 import { img } from '../lib/images';
@@ -12,13 +12,15 @@ const iconMap: Record<string, string> = {
 const capIcons = ['tabler:brain', 'tabler:sparkles', 'tabler:building-community'];
 const title = 'SyntheSYS';
 const description = "Urban Morph's AI-native urban services: live platforms for active mobility policy, Karnataka's digital economy and neighbourhood climate action, revived civic archives, five open tools and nine data stories, from ward to nation.";
+const ogSrc = img('img/synthesys/kdem-screenshot.webp');
+const ogImage = ogSrc ? (await getImage({ src: ogSrc, width: 1200, format: 'jpg' })).src : '/UM-thumbnail.png';
 const jsonLd = [{
   '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'SyntheSYS', applicationCategory: 'BusinessApplication', operatingSystem: 'Web',
   description, url: 'https://www.urbanmorph.com/synthesys/', author: { '@type': 'Organization', name: 'Urban Morph', url: 'https://www.urbanmorph.com' },
 }];
 ---
 
-<Base title={title} description={description} jsonLd={jsonLd} image="/og/synthesys.png">
+<Base title={title} description={description} jsonLd={jsonLd} image={ogImage}>
   <section class="hero">
     <div class="container hero__inner">
       <p class="eyebrow">Urban Morph presents</p>
