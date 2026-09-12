@@ -40,12 +40,11 @@ Once the zone shows "Active" in Cloudflare, uncomment the `routes` block in `wra
 npm run build && npx wrangler deploy
 ```
 
-That registers `www.urbanmorph.com` and `urbanmorph.com` as custom domains (DNS + certificate handled by Cloudflare).
+That registers `www.urbanmorph.com` as the Worker's custom domain (DNS + certificate handled by Cloudflare). The apex keeps a placeholder proxied A record (192.0.2.1) so the redirect rule in step 5 can answer.
 
 ## 5. Redirect apex to www
 
-Cloudflare dashboard → Rules → Redirect Rules → new rule:
-when hostname equals `urbanmorph.com`, dynamic redirect to `concat("https://www.urbanmorph.com", http.request.uri.path)`, status 301.
+Already configured through the API on 12 Sep 2026: a dynamic redirect rule sends `urbanmorph.com/*` to `https://www.urbanmorph.com/*` with a 301.
 
 ## 6. Afterwards
 
