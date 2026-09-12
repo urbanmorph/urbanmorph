@@ -13,7 +13,9 @@ interface Props {
   jsonLd?: Record<string, unknown>[];
   noindex?: boolean;
 }
-const { title, description, image = '/og-default.png', type = 'website', jsonLd = [], noindex = false } = Astro.props;
+const { title, description: rawDescription, image = '/og-default.png', type = 'website', jsonLd = [], noindex = false } = Astro.props;
+const clamp = (s: string, n: number) => (s.length <= n ? s : s.slice(0, n).replace(/\s+\S*$/, '').replace(/[,;:\s]+$/, '') + '.');
+const description = clamp(rawDescription.trim(), 158);
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const ogImage = new URL(image, site.url).href;
 const fullTitle = title.includes('Urban Morph') ? title : `${title} | Urban Morph`;

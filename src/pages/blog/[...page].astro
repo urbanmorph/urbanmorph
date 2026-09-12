@@ -16,7 +16,7 @@ const isFirst = page.currentPage === 1;
 const featured = isFirst ? page.data[0] : null;
 const rest = isFirst ? page.data.slice(1) : page.data;
 const title = isFirst ? 'Blog' : `Blog, page ${page.currentPage}`;
-const description = `Insights on sustainable mobility, climate action and urban policy from Urban Morph: ${posts.length} articles since 2018.`;
+const description = isFirst ? `Insights on sustainable mobility, climate action and urban policy from Urban Morph: ${posts.length} articles since 2018.` : `The Urban Dispatch, page ${page.currentPage} of ${page.lastPage}: older articles on mobility, climate action and urban policy from Urban Morph.`;
 ---
 
 <Base title={title} description={description}>
