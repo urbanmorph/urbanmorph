@@ -44,7 +44,7 @@ export const outcomes = [
 export const ventures = [
   { name: 'AltMo', status: 'Live', description: 'GPS-verified mobility intelligence for organisations that want to count and cut commute emissions.', url: 'https://www.altmo.app', host: 'altmo.app' },
   { name: 'SyntheSYS', status: 'Live', description: 'AI-native urban services: live platforms, revived civic archives, open tools and data stories.', url: '/synthesys/', host: 'urbanmorph.com/synthesys' },
-  { name: 'Saralare', status: 'Building', description: 'A venture Urban Morph is invested in and building. Launching at saralare.com.', url: null, host: 'saralare.com' },
+  { name: 'SaralCare', status: 'Live', description: 'Elder care coordination for Indian families: medicines, appointments, records and emergencies in one place, owned by the elder.', url: 'https://saralcare.com', host: 'saralcare.com' },
 ];
 
 /** The three strands of work shown on the home page. */
