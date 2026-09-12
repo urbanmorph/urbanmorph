@@ -1,0 +1,76 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
+import Icon from '../../components/Icon.astro';
+import { allPosts, categoriesOf, formatDate, slugify } from '../../lib/blog';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await allPosts();
+  return paginate(posts, { pageSize: 12 });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const posts = await allPosts();
+const categories = categoriesOf(posts);
+const isFirst = page.currentPage === 1;
+const featured = isFirst ? page.data[0] : null;
+const rest = isFirst ? page.data.slice(1) : page.data;
+const title = isFirst ? 'The Urban Dispatch' : `The Urban Dispatch, page ${page.currentPage}`;
+const description = `Insights on sustainable mobility, climate action and urban policy from Urban Morph: ${posts.length} articles by Sathya Sankaran and team since 2018.`;
+---
+
+<Base title={title} description={description} noindex={!isFirst}>
+  <section class="masthead">
+    <div class="container">
+      <p class="eyebrow">The Urban Morph blog</p>
+      <h1>The Urban Dispatch</h1>
+      <p class="lede">Insights on sustainable mobility &amp; climate action</p>
+      <div class="masthead__rule"><span>Bengaluru, Karnataka</span><span>{posts.length} articles</span><span>2018 – {posts[0].data.date.getFullYear()}</span></div>
+    </div>
+  </section>
+
+  <nav class="cats" aria-label="Categories">
+    <div class="container cats__inner">
+      <a href="/blog/" aria-current="page">All <span>{posts.length}</span></a>
+      {categories.slice(0, 8).map((c) => <a href={`/blog/category/${c.slug}/`}>{c.name} <span>{c.count}</span></a>)}
+    </div>
+  </nav>
+
+  <section class="section section--paper">
+    <div class="container">
+      {featured && (
+        <div class="featured">
+          <p class="label">Latest</p>
+          <PostCard post={featured} featured />
+        </div>
+      )}
+      <div class="grid grid--3">
+        {rest.map((p) => <PostCard post={p} />)}
+      </div>
+
+      <nav class="pager" aria-label="Pagination">
+        {page.url.prev ? <a class="btn btn--secondary" href={page.url.prev}><Icon name="tabler:arrow-left" size={15} /> Newer</a> : <span />}
+        <span class="meta">Page {page.currentPage} of {page.lastPage}</span>
+        {page.url.next ? <a class="btn btn--secondary" href={page.url.next}>Older <Icon name="tabler:arrow-right" size={15} /></a> : <span />}
+      </nav>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .masthead { background: var(--white); text-align: center; padding-block: clamp(2.5rem, 6vw, 4.5rem) 0; border-bottom: 3px double var(--ink-2); }
+  .masthead h1 { font-size: clamp(2.6rem, 8vw, 5rem); letter-spacing: 0.02em; text-transform: uppercase; }
+  .masthead .lede { margin: 0.75rem auto 0; text-align: center; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.2em; text-transform: uppercase; }
+  .masthead__rule { display: flex; justify-content: space-between; gap: 1rem; margin-top: 1.5rem; padding-block: 0.75rem; border-top: 1px solid var(--rule); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .cats { background: var(--white); border-bottom: 1px solid var(--rule); }
+  .cats__inner { display: flex; gap: 0.4rem; overflow-x: auto; padding-block: 0.6rem; scrollbar-width: none; }
+  .cats__inner a { flex: none; display: inline-flex; align-items: center; gap: 0.4rem; min-height: 40px; padding: 0 0.9rem; border-radius: 999px; border: 1px solid var(--rule); text-decoration: none; color: var(--ink-2); font-family: var(--font-mono); font-size: var(--text-xs); }
+  .cats__inner a span { color: var(--muted); }
+  .cats__inner a:hover, .cats__inner a[aria-current] { background: var(--ink-2); border-color: var(--ink-2); color: #fff; }
+  .cats__inner a[aria-current] span { color: rgba(255,255,255,0.7); }
+  .featured { margin-bottom: 2.5rem; }
+  .featured .label { margin-bottom: 0.6rem; }
+  .pager { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+  @media (max-width: 600px) { .masthead__rule { flex-direction: column; align-items: center; gap: 0.25rem; } }
+</style>

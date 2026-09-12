@@ -1,0 +1,80 @@
+{
+  "about": "<strong>Urban Morph</strong>  is a full-stack Urban Tech venture studio and service delivery organization working to shape the future of cities. We co-create solutions with public and private partners, incubate innovative technologies, and implement scalable models to solve complex urban challenges. Our work spans mobility, public infrastructure, and citizen engagement, with a strong emphasis on sustainability and real-world impact.",
+  "services": [
+    {
+      "title": "Innovate",
+      "intro": "OoruLabs within Urban Morph is an urban tech accelerator. We either build our own technologies like Altmo, WattsNext & SyntheSYS, or we work with partners whose solutions can help solve urban problems.",
+      "items": [
+        {
+          "title": "🚴 Altmo",
+          "html": "Employee engagement and climate action platform. 10,900+ users from 1,000+ organisations across 135+ cities have logged 2.3 lakh+ sustainable activities and avoided 550+ tonnes of CO₂.  <a href=\"https://www.altmo.app\">Learn more about Altmo</a>"
+        },
+        {
+          "title": "⚡ WattsNext Energy",
+          "html": "Energy delivery for electric vehicles and built form: redefining how power reaches vehicles and buildings, from battery intelligence to the last metre of delivery."
+        },
+        {
+          "title": "🎯 SyntheSYS",
+          "html": "AI-native services for orchestrating and coordinating urban solutions and accelerating progress at scale, ward to nation: live platforms such as CFAM, KDEM and Neighbourhoods of the Future, revived civic archives, open tools and data stories.  <a href=\"synthesys.html\">Explore SyntheSYS</a>"
+        }
+      ],
+      "footer": "<a href=\"mailto:contact@urbanmorph.com\">Write to us</a>  if you operate in the urban space and have a problem to be solved."
+    },
+    {
+      "title": "Orchestrate",
+      "intro": "For philanthropies, regranters and organizations planning to deploy CSR capital for impact, we provide thesis and strategy to deliver long-term sustainable impact in the urban space.",
+      "items": [
+        {
+          "title": "🤝 ITES Partnership",
+          "html": "Strategic partner for India-UK Netzero center, enabling multiple innovators to establish collaborative partnerships.  <a href=\"https://www.ites.org\">About the ITES partnership</a>"
+        },
+        {
+          "title": "🎓 IISc Collaboration",
+          "html": "MoU with Sustainable Transportation Lab, IISc as orchestrators of the Active Mobility Center of Excellence, taking research to the real world."
+        },
+        {
+          "title": "💼 CSR Strategy",
+          "html": "Experience delivering thesis, strategy and orchestration for India's leading CSR organizations with grant budgets up to USD 100 million."
+        }
+      ],
+      "footer": "<a href=\"mailto:contact@urbanmorph.com\">Partner with us</a>  to drive sustainable urban transformation."
+    },
+    {
+      "title": "Execute",
+      "intro": "When it comes to transforming urban spaces, execution matters most. We deliver on-ground projects that create real, measurable change in cities.",
+      "items": [
+        {
+          "title": "🚲 Pedaluru",
+          "html": "Bengaluru's public bicycle sharing system, funded by Toyota Mobility Foundation, providing accessible transportation options across the city."
+        },
+        {
+          "title": "🛣️ Church Street First",
+          "html": "Designed and executed India's first pop-up pedestrianization project in collaboration with DULT Bengaluru, transforming urban streets."
+        },
+        {
+          "title": "🚗 Relief Riders",
+          "html": "During COVID-19, mobilised 725 volunteer cyclists for 11,000+ rides across 12 Indian cities, delivering medicines and essentials and safely transporting healthcare and essential service workers."
+        },
+        {
+          "title": "🚶 CFAM",
+          "html": "Council for Active Mobility: India's National Active Mobility Framework, putting streets for people into law, starting with the Karnataka Active Mobility Bill.  <a href=\"https://www.cfam.in\">Visit cfam.in</a>"
+        }
+      ],
+      "footer": "<a href=\"projects.html\">View all projects</a>  to see our impact in action."
+    }
+  ],
+  "contact": [
+    {
+      "title": "General Enquiries",
+      "text": "Questions about our services or looking to collaborate?"
+    },
+    {
+      "title": "Join Our Team",
+      "text": "Passionate about urban innovation? We'd love to hear from you."
+    },
+    {
+      "title": "Visit Us",
+      "text": "Located in the heart of Bengaluru, India's tech capital."
+    }
+  ]
+}

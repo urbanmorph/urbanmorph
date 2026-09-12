@@ -1,0 +1,50 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../../layouts/Base.astro';
+import PostCard from '../../../components/PostCard.astro';
+import { allPosts, categoriesOf, slugify } from '../../../lib/blog';
+
+export const getStaticPaths = (async () => {
+  const posts = await allPosts();
+  return categoriesOf(posts).map((c) => ({
+    params: { category: c.slug },
+    props: { name: c.name, posts: posts.filter((p) => slugify(p.data.category) === c.slug) },
+  }));
+}) satisfies GetStaticPaths;
+
+const { name, posts } = Astro.props;
+const all = await allPosts();
+const categories = categoriesOf(all);
+const current = slugify(name);
+---
+
+<Base title={`${name} articles`} description={`${posts.length} Urban Morph articles on ${name}.`}>
+  <section class="masthead">
+    <div class="container">
+      <p class="eyebrow">The Urban Dispatch</p>
+      <h1>{name}</h1>
+      <p class="meta">{posts.length} {posts.length === 1 ? 'article' : 'articles'}</p>
+    </div>
+  </section>
+  <nav class="cats" aria-label="Categories">
+    <div class="container cats__inner">
+      <a href="/blog/">All <span>{all.length}</span></a>
+      {categories.map((c) => <a href={`/blog/category/${c.slug}/`} aria-current={c.slug === current ? 'page' : undefined}>{c.name} <span>{c.count}</span></a>)}
+    </div>
+  </nav>
+  <section class="section section--paper">
+    <div class="container">
+      <div class="grid grid--3">{posts.map((p) => <PostCard post={p} />)}</div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .masthead { background: var(--white); text-align: center; padding-block: clamp(2.5rem, 6vw, 4rem) 1.5rem; border-bottom: 3px double var(--ink-2); }
+  .masthead .meta { margin-top: 0.75rem; }
+  .cats { background: var(--white); border-bottom: 1px solid var(--rule); }
+  .cats__inner { display: flex; gap: 0.4rem; overflow-x: auto; padding-block: 0.6rem; scrollbar-width: none; }
+  .cats__inner a { flex: none; display: inline-flex; align-items: center; gap: 0.4rem; min-height: 40px; padding: 0 0.9rem; border-radius: 999px; border: 1px solid var(--rule); text-decoration: none; color: var(--ink-2); font-family: var(--font-mono); font-size: var(--text-xs); }
+  .cats__inner a span { color: var(--muted); }
+  .cats__inner a:hover, .cats__inner a[aria-current] { background: var(--ink-2); border-color: var(--ink-2); color: #fff; }
+</style>

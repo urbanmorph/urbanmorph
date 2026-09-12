@@ -1,0 +1,8 @@
+# Old GitHub Pages URLs -> new clean URLs (Cloudflare static assets honour this file)
+/index.html            /                301
+/synthesys.html        /synthesys/      301
+/projects.html         /projects/       301
+/blog.html             /blog/           301
+/news_articles.html    /media/          301
+/blog/:slug.html       /blog/:slug/     301
+/sitemap.xml           /sitemap-index.xml 301

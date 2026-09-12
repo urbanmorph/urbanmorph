@@ -1,0 +1,92 @@
+[
+  {
+    "category": "Government & Public Agencies",
+    "items": [
+      {
+        "name": "MoHUA",
+        "logo": "img/partners/mohua.webp",
+        "alt": "Ministry of Housing and Urban Affairs"
+      },
+      {
+        "name": "Govt. of Karnataka",
+        "logo": "img/partners/Seal_of_Karnataka.webp",
+        "alt": "Government of Karnataka"
+      },
+      {
+        "name": "Smart Cities",
+        "logo": "img/partners/smart_city_logo.webp",
+        "alt": "Smart City Mission"
+      },
+      {
+        "name": "BTP",
+        "logo": "img/partners/BTP_logo.webp",
+        "alt": "Bengaluru Traffic Police"
+      },
+      {
+        "name": "KDEM",
+        "logo": "img/partners/kdem_logo.webp",
+        "alt": "Karnataka Digital Economy Mission"
+      }
+    ]
+  },
+  {
+    "category": "Academic & Research Institutions",
+    "items": [
+      {
+        "name": "IISc Bengaluru",
+        "logo": "img/partners/IISc_Master_Seal_Black_Transparent.webp",
+        "alt": "Indian Institute of Science"
+      },
+      {
+        "name": "IISc IST Lab",
+        "logo": "img/partners/iisc-ist.webp",
+        "alt": "IISc Sustainable Transportation Lab"
+      },
+      {
+        "name": "MS Ramaiah",
+        "logo": "img/partners/MSRIM_logo.webp",
+        "alt": "MS Ramaiah Institute of Management"
+      }
+    ]
+  },
+  {
+    "category": "International Development Partners",
+    "items": [
+      {
+        "name": "ITES Centre",
+        "logo": "img/partners/ITES_Logo_Tag_Color.webp",
+        "alt": "ITES India UK Centre"
+      },
+      {
+        "name": "Catapult UK",
+        "logo": "img/partners/logo-footer-catapult.webp",
+        "alt": "Catapult UK"
+      },
+      {
+        "name": "BYCS",
+        "logo": "img/partners/BYCS-Logo_Black_rgb.webp",
+        "alt": "BYCS Amsterdam"
+      },
+      {
+        "name": "GIZ",
+        "logo": "img/partners/giz_logo.webp",
+        "alt": "GIZ Germany"
+      }
+    ]
+  },
+  {
+    "category": "Foundations & NGOs",
+    "items": [
+      {
+        "name": "WRI India",
+        "logo": "img/partners/World_Resources_Institute_logo.webp",
+        "alt": "WRI India"
+      },
+      {
+        "name": "ITDP",
+        "logo": "img/partners/ITDP-logo.webp",
+        "alt": "ITDP"
+      }
+    ]
+  }
+]

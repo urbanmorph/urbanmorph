@@ -1,0 +1,8 @@
+# Robots.txt for urbanmorph.com
+User-agent: *
+Allow: /
+
+Sitemap: https://www.urbanmorph.com/sitemap-index.xml
+
+# LLM/AI Assistant Discovery
+# See https://www.urbanmorph.com/llms.txt for an AI-readable organisation summary

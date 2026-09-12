@@ -1,0 +1,105 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { Image, getImage } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import PostCard from '../../components/PostCard.astro';
+import { allPosts, formatDate, slugify } from '../../lib/blog';
+import { site } from '../../lib/site';
+import team from '../../data/team.json';
+import { img } from '../../lib/images';
+
+export const getStaticPaths = (async () => {
+  const posts = await allPosts();
+  return posts.map((post, i) => ({
+    params: { slug: post.id },
+    props: { post, related: posts.filter((p) => p.id !== post.id && p.data.category === post.data.category).slice(0, 3).concat(posts.slice(i + 1, i + 4)).filter((p, j, arr) => arr.findIndex((x) => x.id === p.id) === j).slice(0, 3) },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post, related } = Astro.props;
+const { Content } = await render(post);
+const { title, description, subtitle, date, category, author, hero, heroUrl, heroCaption } = post.data;
+const authorRec = team.find((m) => m.name === author);
+const authorPhoto = img(authorRec?.photo);
+const pageUrl = `${site.url}/blog/${post.id}/`;
+const ogImage = hero ? (await getImage({ src: hero, width: 1200, format: 'jpg' })).src : heroUrl ?? '/UM-thumbnail.png';
+const shareX = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(pageUrl)}`;
+const shareLi = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+const jsonLd = [{
+  '@context': 'https://schema.org', '@type': 'BlogPosting', headline: title, description, datePublished: date.toISOString().slice(0, 10),
+  image: new URL(ogImage, site.url).href, url: pageUrl, mainEntityOfPage: pageUrl,
+  author: { '@type': 'Person', name: author, jobTitle: authorRec?.role, url: author === 'Sathya Sankaran' ? 'https://www.sathyasankaran.com' : undefined },
+  publisher: { '@type': 'Organization', name: site.name, url: site.url, logo: { '@type': 'ImageObject', url: `${site.url}/UM-thumbnail.png` } },
+}, {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: site.url + '/' }, { '@type': 'ListItem', position: 2, name: 'Blog', item: site.url + '/blog/' }, { '@type': 'ListItem', position: 3, name: title, item: pageUrl }],
+}];
+---
+
+<Base title={title} description={description || subtitle || title} type="article" image={ogImage} jsonLd={jsonLd}>
+  <article>
+    <header class="post-head">
+      <div class="container container--narrow">
+        <a class="chip chip--soft" href={`/blog/category/${slugify(category)}/`}>{category}</a>
+        <h1>{title}</h1>
+        {subtitle && <p class="post-head__sub">{subtitle}</p>}
+        <div class="byline">
+          {authorPhoto && <Image class="byline__photo" src={authorPhoto} alt="" width="48" height="48" />}
+          <div>
+            <p class="byline__name">{author}</p>
+            <p class="meta">{authorRec?.role ?? 'Urban Morph'} · <time datetime={date.toISOString()}>{formatDate(date)}</time></p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {(hero || heroUrl) && (
+      <figure class="post-hero container container--narrow">
+        {hero ? <Image src={hero} alt={heroCaption ? '' : title} widths={[640, 960, 1400]} sizes="(max-width: 820px) 100vw, 780px" loading="eager" quality={70} /> : <img src={heroUrl} alt="" loading="eager" />}
+        {heroCaption && <figcaption class="meta">{heroCaption}</figcaption>}
+      </figure>
+    )}
+
+    <div class="container container--narrow">
+      <div class="prose">
+        <Content />
+      </div>
+
+      <footer class="post-foot">
+        <div class="share">
+          <span class="label">Share</span>
+          <a class="btn btn--secondary" href={shareX} target="_blank" rel="noopener"><Icon name="simple-icons:x" size={14} /> Post on X</a>
+          <a class="btn btn--secondary" href={shareLi} target="_blank" rel="noopener"><Icon name="simple-icons:linkedin" size={14} /> Share on LinkedIn</a>
+        </div>
+        <a class="back" href="/blog/"><Icon name="tabler:arrow-left" size={15} /> Back to all articles</a>
+      </footer>
+    </div>
+  </article>
+
+  {related.length > 0 && (
+    <section class="section section--paper section--rule">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Keep reading</p><h2>Related articles</h2></div>
+        <div class="grid grid--3">{related.map((p) => <PostCard post={p} />)}</div>
+      </div>
+    </section>
+  )}
+</Base>
+
+<style>
+  .post-head { background: var(--white); padding-block: clamp(2rem, 5vw, 3.5rem) 2rem; border-bottom: 3px solid var(--ink-2); }
+  .post-head h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-top: 1rem; }
+  .post-head__sub { font-style: italic; color: var(--gray); font-size: var(--text-lg); margin-top: 0.75rem; }
+  .byline { display: flex; align-items: center; gap: 0.8rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); }
+  .byline__photo { border-radius: 50%; width: 48px; height: 48px; object-fit: cover; border: 2px solid var(--teal); }
+  .byline__name { font-weight: 700; font-family: var(--font-display); }
+  .post-hero { margin: 2.5rem auto 0; }
+  .post-hero img { display: block; width: 100%; border-radius: var(--radius); border: 1px solid var(--rule); }
+  .post-hero figcaption { text-align: center; margin-top: 0.6rem; font-style: italic; text-transform: none; letter-spacing: 0; }
+  .prose { margin: 2.5rem auto 0; }
+  .post-foot { margin: 3rem 0 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 1.5rem; }
+  .share { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
+  .back { display: inline-flex; align-items: center; gap: 0.4rem; min-height: var(--tap); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; }
+</style>

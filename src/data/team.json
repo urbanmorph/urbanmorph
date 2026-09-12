@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Sathya Sankaran",
+    "role": "Co-Founder & Director",
+    "photo": "img/team/sathya.webp",
+    "links": [
+      {
+        "type": "website",
+        "url": "https://www.sathyasankaran.com"
+      },
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sathyasankaran/"
+      },
+      {
+        "type": "x",
+        "url": "https://www.x.com/bicyclemayorblr/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:sathya@urbanmorph.com"
+      },
+      {
+        "type": "rss",
+        "url": "https://www.urbanmorph.com/blog.html"
+      }
+    ],
+    "bio": "Computer Science graduate with a postgraduate degree in Public Policy. Three decades of experience using technology and data to solve urban issues in mobility and energy. CEO of  <a href=\"https://rainmatter.org\">Rainmatter Foundation</a> . Architect of  <a href=\"https://altmo.app\">AltMo</a> , a GPS-verified mobility intelligence platform, and  <a href=\"synthesys.html\">SyntheSYS</a> , Urban Morph's AI-native urban services.",
+    "details": "<p>Author of <a href=\"https://www.breaktheblock.in\" target=\"_blank\">\"Break the Block: Lessons from Bengaluru's Rail Battle\"</a>, the playbook drawn from the decade-long Namma Railu campaign for Bengaluru's suburban rail. Learn more at <a href=\"https://www.sathyasankaran.com\" target=\"_blank\">sathyasankaran.com</a>.</p><p>AltMo's data drove a 342% increase in the allocation for cycling and walking in Bengaluru's Comprehensive Master Plan, helped put up more than 20 km of cycle tracks and won Silvassa Smart City an award for Excellence in Innovation. It is now <a href=\"https://org.altmo.app\" target=\"_blank\">helping corporates</a> meet their ESG goals. His <a href=\"https://youtu.be/hXJ6El7VQWE\" target=\"_blank\">Relief Riders</a> initiative during the COVID pandemic mobilised 725 volunteer cyclists across 12 Indian cities, won the <a href=\"https://bangaloremirror.indiatimes.com/bangalore/others/bengalurus-good-riders-bag-honour-for-corona-relief/articleshow/86025441.cms\" target=\"_blank\">2021 UN World Bicycle Day Special Award</a> and was nominated for the 2022 Nobel Peace Prize. He is the <strong>host</strong> of <a href=\"https://podcast.oorulabs.com\" target=\"_blank\">OoruLabs podcast</a>, India's premier urban affairs podcast. As <strong>CEO</strong> of <a href=\"https://rainmatter.org\" target=\"_blank\">Rainmatter Foundation</a>, his mandate is enabling climate-resilient places across urban, rural and wild India. He is an <strong>advisor and director</strong> at WattsNext Energy, which is redefining how power is delivered for vehicles and built form, and at <a href=\"https://bioman.tech/\" target=\"_blank\">Bioman</a>, a circular-economy waste management startup. He is <strong>adjunct faculty</strong> teaching urban governance and public problem solving to masters students in public policy at <a href=\"https://www.kspp.edu.in\" target=\"_blank\">Kautilya School</a>, Hyderabad and <a href=\"https://mccblr.edu.in/humanities/economics/ma-public-policy/\" target=\"_blank\">Mount Carmel</a>, Bengaluru. A founding-team member of Cycle Day, India's longest-running community-driven open-streets event, he is the <strong>Bicycle Mayor</strong> of Bengaluru.</p>"
+  },
+  {
+    "name": "Sonal S Kulkarni",
+    "role": "Co-Founder",
+    "photo": "img/team/sonal.webp",
+    "links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/sonalkulkarni/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:sonal@urbanmorph.com"
+      }
+    ],
+    "bio": "Bachelors in Architecture and Masters in Urban Planning from the School of Policy, Planning and Development at the University of Southern California. Over the past 10+ years she has worked extensively in the government on infrastructure for sustainable mobility.",
+    "details": "<p>She led the team from the <a href=\"https://dult.karnataka.gov.in/en\" target=\"_blank\">Directorate of Urban Land Transport</a>, Government of Karnataka in the <a href=\"https://smartnet.niua.org/indiacyclechallenge/cities/bengaluru/\" target=\"_blank\">Smart Cities Mission's Cycles for Change</a> initiative where Bengaluru was chosen as one of the winners for planning and executing cycling infrastructure during the COVID times. She was part of strategizing and designing the first dockless bicycle sharing system in Bengaluru through the permit system. She started her career in the government by anchoring community outreach activities like the longest running Open streets campaign in the country, <a href=\"https://www.facebook.com/blrcycleday\" target=\"_blank\">Cycle Day</a> and Open Streets and assisted in designing the unique Sustainable Mobility Accords which empowers communities through innovative funding towards taking action to make their neighbourhoods move towards sustainable mobility. She has played a key role in bringing to the city UMI award winning <a href=\"https://www.facebook.com/churchstreetfirst\" target=\"_blank\">Church Street First</a>, a fully pedestrianised street piloted in the CBD of Bengaluru. She currently serves as the Chief Research and Innovation Officer at the Directorate of Urban Land Transport, Government of Karnataka heading the Centre for Research &amp; Innovation (CERI) to provide the necessary impetus to support research initiatives and accelerate innovation in sustainable urban mobility in the State of Karnataka. She is also the Director of Strategic Partnerships, Marketing and External Communications at the <a href=\"https://bycs.org/\" target=\"_blank\">BYCS India Foundation</a>.</p>"
+  },
+  {
+    "name": "Subbaiah TS",
+    "role": "Co-Founder & Director",
+    "photo": "img/team/subbaiah.webp",
+    "links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/subbaiah-ts-51a42511/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:subbaiah@urbanmorph.com"
+      }
+    ],
+    "bio": "Bachelors in Architecture and Masters in Design from IISc, Bangalore. He has been running successful Architecture, Design and Waste management businesses which have brought positive change in the lives of many people.",
+    "details": "<p>Over the past 10 years he has been working on civic change and public participation. As a trustee of <a href=\"https://www.cifos.org/\" target=\"_blank\">Citizens for Sustainability</a> he worked on multiple initiatives that have transformed neighbourhoods in the city. He coordinated the transformation of a 3 km street in Sanjaynagar and a Hebbal improvement challenge. He has held the post of Secretary at Indian Institute of Architects for many years. In his current stint as Co-Founder of waste management company <a href=\"https://bioman.tech/\" target=\"_blank\">Bioman</a>, he has been championing the Zero waste to landfill program aiming to transform the impact waste management will have on the city. Bioman has transformed the way wet waste is processed and is constantly spending on R&amp;D to get the best out of waste.</p>"
+  },
+  {
+    "name": "Knerav Kodolikar",
+    "role": "Product Manager",
+    "photo": "img/team/knerav.webp",
+    "links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/knerav-kodolikar-2a620517a/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:knerav@urbanmorph.com"
+      }
+    ],
+    "bio": "Bachelors in Economics from Christ University, Bengaluru. With expertise around multiple open source tech stacks, he drives product strategy and development for  <a href=\"https://altmo.app\">AltMo</a>  platform. An avid cyclist, he has completely switched to riding a bicycle or using the bus for commute.",
+    "details": "<p>Apart from driving Altmo to be a game changer for transforming mobility in cities, he has raced his bicycle for the Equipe Goa amateur racing team and at the Indian National Championships.</p>"
+  },
+  {
+    "name": "Susheel Nair",
+    "role": "Creative Director",
+    "photo": "img/team/susheel.webp",
+    "links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/susheel-nair-30799517/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:susheel@urbanmorph.com"
+      }
+    ],
+    "bio": "Susheel quit the consumer goods industry and dedicated himself to public impact story telling. For more than a decade he has been pushing the creative canvas for public change making. You can see his work scattered across the city of Bengaluru, whether it is the cycle stands on Church street, Malleshwaram, HSR or marquee programs like the Church Street First.",
+    "details": "<p>The Church Street First pedestrianised an entire street in the city for over 6 months on weekends. At Urban Morph he is the Creative Director for campaigns &amp; programs, like <a href=\"https://www.pedaluru.in\" target=\"_blank\">Pedaluru</a> and engaging colleges in changemaking. He also runs a creative agency called <a href=\"https://www.artand.in\" target=\"_blank\">Artand</a>.</p>"
+  },
+  {
+    "name": "Renuka Kulkarni",
+    "role": "Design Consultant",
+    "photo": "img/team/renuka.webp",
+    "links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/renuka-kulkarni-3a9408a6/"
+      },
+      {
+        "type": "email",
+        "url": "mailto:renuka@urbanmorph.com"
+      }
+    ],
+    "bio": "Bachelors in Public Relations, Advertising and Applied Communications. Led branding and design solutions at agencies like Dentsu Webchutney, DDB Mudra, Schbang, and Rio. Consults on graphic design for  <a href=\"https://www.altmo.app\">AltMo</a>  and other projects at Urban Morph. She also runs a design agency called Studio Ikigai.",
+    "details": ""
+  },
+  {
+    "name": "Ashwin Mahesh",
+    "role": "Advisor",
+    "photo": "img/team/ashwin.webp",
+    "links": [
+      {
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ashwin_Mahesh"
+      }
+    ],
+    "bio": "Ashwin advises Urban Morph on urban development and civic technology. An urbanist, social technologist, and Ashoka Fellow, he has founded multiple ventures including Mapunity, Lithium (India's first 100% EV transport service), and LVBL Accelerator.",
+    "details": "<p>Former NASA research faculty studying Antarctic climate, he holds a PhD in atmospheric science from the University of Washington. Co-founder of B.PAC and listed in Wired UK's \"Smart List 2012: 50 people whose ideas will change the world.\" He has led bus service rationalisation, traffic management, and lake restoration initiatives in Bengaluru.</p>"
+  },
+  {
+    "name": "Rajeev Kulkarni",
+    "role": "Advisor",
+    "photo": "img/team/rajeev.webp",
+    "links": [
+      {
+        "type": "linkedin",
+        "url": "https://in.linkedin.com/in/rajeev-kulkarni-0335824"
+      }
+    ],
+    "bio": "Rajeev advises Urban Morph on the direction of the AI offering, SyntheSYS. He is a Data Scientist with more than 20 years of delivering AI & ML models for multinational corporations especially in the area of health.",
+    "details": "<p>With a Masters in Electrical Engineering from Michigan Technological University, USA, he has authored multiple publications on Multi Agent AI, ML for oncology, Clinical trials, and telecom spectrum allocation and sharing.</p>"
+  },
+  {
+    "name": "Manju George",
+    "role": "Advisor",
+    "photo": "img/team/manju.webp",
+    "links": [
+      {
+        "type": "linkedin",
+        "url": "https://www.linkedin.com/in/manju-george/"
+      }
+    ],
+    "bio": "Manju advises Urban Morph on gender-responsive urban design and inclusive mobility. She is a Senior Program Manager at WRI India leading MobiliseHER, with two decades of experience in sustainable urban mobility and community engagement.",
+    "details": "<p>Previously Community Engagement Specialist at the Directorate of Urban Land Transport (DULT), Karnataka, and a Director on the BYCS India Board. She holds an M.Phil in Psychiatric Social Work from NIMHANS and a Master of Social Work from the University of Kerala. Recognised as one of the women changemakers in Bengaluru for her contributions to sustainable mobility.</p>"
+  }
+]

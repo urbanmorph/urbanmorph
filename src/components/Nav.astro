@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/img/UM-thumbnail.png';
+import Icon from './Icon.astro';
+import { site } from '../lib/site';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => {
+  const h = href.replace(/\/$/, '') || '/';
+  if (h === '/') return path === '/';
+  if (h.startsWith('/#')) return false;
+  return path === h || path.startsWith(h + '/');
+};
+---
+
+<header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="nav container" aria-label="Main">
+    <a class="brand" href="/">
+      <Image src={logo} alt="" width="36" height="40" loading="eager" />
+      <span>Urban Morph</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+      <Icon name="tabler:menu-2" size={24} />
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <ul id="nav-menu" class="nav-menu">
+      {site.nav.map((item) => (
+        <li>
+          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>{item.label}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    menu?.classList.toggle('is-open', !open);
+  });
+</script>
+
+<style>
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--ink-2); color: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 68px; }
+  .brand {
+    display: inline-flex; align-items: center; gap: 0.6rem; color: #fff; text-decoration: none;
+    font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; min-height: var(--tap);
+  }
+  .brand img { width: 30px; height: auto; }
+  .nav-toggle {
+    display: none; background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.4); border-radius: 4px;
+    width: var(--tap); height: var(--tap); align-items: center; justify-content: center; cursor: pointer;
+  }
+  .nav-menu { list-style: none; margin: 0; padding: 0; display: flex; gap: 0.25rem; }
+  .nav-menu a {
+    display: inline-flex; align-items: center; min-height: var(--tap); padding: 0 0.9rem;
+    color: rgba(255,255,255,0.82); text-decoration: none;
+    font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+  }
+  .nav-menu a:hover { color: #fff; }
+  .nav-menu a[aria-current="page"] { color: #fff; border-bottom-color: var(--yellow); }
+  @media (max-width: 860px) {
+    .nav { flex-wrap: wrap; }
+    .nav-toggle { display: inline-flex; }
+    .nav-menu { display: none; width: 100%; flex-direction: column; padding-block: 0.5rem 1rem; border-top: 1px solid rgba(255,255,255,0.15); }
+    .nav-menu.is-open { display: flex; }
+    .nav-menu a { width: 100%; padding: 0 0.5rem; }
+  }
+</style>

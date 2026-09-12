@@ -1,0 +1,372 @@
+[
+  {
+    "category": "infrastructure",
+    "categoryName": "Infrastructure",
+    "categoryDescription": "Building the physical foundation for sustainable urban mobility through cycling infrastructure, pedestrian facilities, and integrated transport systems.",
+    "title": "Bicycle Parking Facilities",
+    "description": "Planning and implementing secure bicycle parking infrastructure across the city to support cycling as a viable mode of transportation.",
+    "image": "img/projects/bicycle-parking.webp",
+    "alt": "Bicycle parking facilities",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "infrastructure",
+    "categoryName": "Infrastructure",
+    "categoryDescription": "Building the physical foundation for sustainable urban mobility through cycling infrastructure, pedestrian facilities, and integrated transport systems.",
+    "title": "Innovating for Transport and Energy Systems (ITES)",
+    "description": "Strategic partner to India-UK Joint Center of Excellence between Energy Systems Catapult, UK and Indian Institute of Science. Research and innovation initiative focused on developing sustainable transport and energy solutions for urban environments.",
+    "image": "img/projects/ITES.webp",
+    "alt": "ITES",
+    "link": {
+      "label": "Visit Project",
+      "url": "https://www.ites.org"
+    },
+    "credits": null
+  },
+  {
+    "category": "infrastructure",
+    "categoryName": "Infrastructure",
+    "categoryDescription": "Building the physical foundation for sustainable urban mobility through cycling infrastructure, pedestrian facilities, and integrated transport systems.",
+    "title": "Active Mobility Center of Excellence (AMCOE)",
+    "description": "Establishing a center of excellence dedicated to research, innovation, and capacity building in active mobility. Setup under an MoU between Urban Morph and Indian Institute of Science Sustainable Transport Lab.",
+    "image": "img/projects/amcoe.webp",
+    "alt": "AMCOE",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "infrastructure",
+    "categoryName": "Infrastructure",
+    "categoryDescription": "Building the physical foundation for sustainable urban mobility through cycling infrastructure, pedestrian facilities, and integrated transport systems.",
+    "title": "Sustainable Practices - Handbook for Museums in India",
+    "description": "Developing guidelines for sustainable practices in cultural institutions, including mobility and accessibility recommendations.",
+    "image": "img/projects/Sustainable Practices.webp",
+    "alt": "Sustainable Museums",
+    "link": {
+      "label": "View Flipbook",
+      "url": "https://heyzine.com/flip-book/8ac2dea4d3.html"
+    },
+    "credits": "By Subbaiah TS, Nidhi KS, Karthik SK"
+  },
+  {
+    "category": "infrastructure",
+    "categoryName": "Infrastructure",
+    "categoryDescription": "Building the physical foundation for sustainable urban mobility through cycling infrastructure, pedestrian facilities, and integrated transport systems.",
+    "title": "Altmo Digest",
+    "description": "Released on June 3rd World Bicycle Day 2023, with a foreword from the Commissioner of Directorate of Urban Land Transport, Government of Karnataka, takes you through the journey of all the cycling related progress Bengaluru has made.",
+    "image": "img/projects/AltMo-digest.webp",
+    "alt": "Altmo Digest",
+    "link": {
+      "label": "View Flipbook",
+      "url": "https://heyzine.com/flip-book/72286145b0.html"
+    },
+    "credits": "By Sathya Sankaran, Nidhi KS, Anoushka S"
+  },
+  {
+    "category": "infrastructure",
+    "categoryName": "Infrastructure",
+    "categoryDescription": "Building the physical foundation for sustainable urban mobility through cycling infrastructure, pedestrian facilities, and integrated transport systems.",
+    "title": "Slow Streets",
+    "description": "Initiative to create slow-speed streets prioritizing pedestrians and cyclists over motorized traffic in residential neighborhoods.",
+    "image": "img/projects/slow-streets.webp",
+    "alt": "Slow Streets",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "infrastructure",
+    "categoryName": "Infrastructure",
+    "categoryDescription": "Building the physical foundation for sustainable urban mobility through cycling infrastructure, pedestrian facilities, and integrated transport systems.",
+    "title": "OoruLabs Podcasts",
+    "description": "India's premier Urban affairs podcast hosted by Sathya Sankaran. A series of conversations exploring urban issues, mobility challenges, and innovative solutions for building better cities.",
+    "image": "img/projects/OoruLabs.webp",
+    "alt": "OoruLabs Podcasts",
+    "link": {
+      "label": "Watch on YouTube",
+      "url": "https://www.youtube.com/@oorulabs"
+    },
+    "credits": "By Sathya Sankaran"
+  },
+  {
+    "category": "technology",
+    "categoryName": "Technology",
+    "categoryDescription": "Leveraging digital solutions and data-driven platforms to enable smarter, more sustainable urban mobility systems.",
+    "title": "Altmo",
+    "description": "Alternative Mobility initiative promoting sustainable transportation solutions and active mobility across Bengaluru. Employee engagement and climate action platform helping companies manage transport emissions.",
+    "image": "img/projects/AltMo.webp",
+    "alt": "Altmo",
+    "link": {
+      "label": "Visit Platform",
+      "url": "https://www.altmo.app"
+    },
+    "credits": null
+  },
+  {
+    "category": "technology",
+    "categoryName": "Technology",
+    "categoryDescription": "Leveraging digital solutions and data-driven platforms to enable smarter, more sustainable urban mobility systems.",
+    "title": "Sustainable Mobility Network Map",
+    "description": "Mapping existing and planned cycling routes, pedestrian pathways, and public transit to create an integrated mobility network.",
+    "image": "img/projects/mobility-map.webp",
+    "alt": "Mobility Map",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "technology",
+    "categoryName": "Technology",
+    "categoryDescription": "Leveraging digital solutions and data-driven platforms to enable smarter, more sustainable urban mobility systems.",
+    "title": "EV Infrastructure Planning Dashboard",
+    "description": "Digital dashboard for planning and tracking electric vehicle charging infrastructure deployment across the city.",
+    "image": "img/projects/ev-dashboard.webp",
+    "alt": "EV Dashboard",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "The Altmo Challenge",
+    "description": "A challenge campaign encouraging citizens to adopt alternative modes of transportation and reduce car dependency.",
+    "image": "img/projects/altmo-challenge.webp",
+    "alt": "Altmo Challenge",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "Personal2Public via Cycles",
+    "description": "Exploring the transition from personal to public spaces through cycling initiatives and infrastructure development.",
+    "image": "img/projects/p2p.webp",
+    "alt": "Personal2Public",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "School Streets Pilot (ASRTS)",
+    "description": "Pilot project implementing school streets to create safer, car-free zones around schools during drop-off and pick-up times.",
+    "image": "img/projects/school-streets.webp",
+    "alt": "School Streets",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "Bicycle Heroes",
+    "description": "Celebrating and highlighting individuals and organizations championing cycling and sustainable mobility in Bengaluru.",
+    "image": "img/projects/bicycle-heroes.webp",
+    "alt": "Bicycle Heroes",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "Pedal Shaale",
+    "description": "Educational program teaching cycling skills and road safety to children and adults, promoting cycling as a safe mode of transport.",
+    "image": "img/projects/pedal-shaale.webp",
+    "alt": "Pedal Shaale",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "Cycle Days",
+    "description": "Regular community cycling events bringing together residents to explore neighborhoods and promote cycling as a daily transport option.",
+    "image": "img/projects/cycle-days.webp",
+    "alt": "Cycle Days",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "Let's Move Bengaluru",
+    "description": "Comprehensive campaign encouraging Bengaluru residents to adopt active mobility and sustainable transportation choices.",
+    "image": "img/projects/lets-move.webp",
+    "alt": "Let's Move Bengaluru",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "Altmo Rideschool",
+    "description": "Training program providing cycling education, safety skills, and confidence building for new and returning cyclists.",
+    "image": "img/projects/Altmo-rideschool.webp",
+    "alt": "Altmo Rideschool",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "Active Mobility Councillors",
+    "description": "Engaging with local elected representatives to promote active mobility initiatives and sustainable transportation policies at the ward and city level.",
+    "image": "img/projects/councillors.webp",
+    "alt": "Active Mobility Councillors",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "CFAM Newsletter",
+    "description": "Regular newsletter sharing updates, insights, and stories from the Coalition for Active Mobility community.",
+    "image": "img/projects/cfam-newsletter.webp",
+    "alt": "CFAM Newsletter",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "My 15 Minute City",
+    "description": "Exploring the 15-minute city concept where essential services and amenities are accessible within a short walk or bike ride.",
+    "image": "img/projects/15-minute-city.webp",
+    "alt": "15 Minute City",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "Innovating for Clean Air",
+    "description": "Initiative focused on reducing air pollution through promoting active mobility and sustainable transportation alternatives.",
+    "image": "img/projects/cleanair_street.webp",
+    "alt": "Clean Air",
+    "link": {
+      "label": "Testbed Report",
+      "url": "Documents/Clean Air Street Test Bed Report.pdf"
+    },
+    "credits": null
+  },
+  {
+    "category": "campaigns",
+    "categoryName": "Campaigns",
+    "categoryDescription": "Community-driven initiatives and advocacy campaigns to promote behavior change and build support for sustainable urban mobility.",
+    "title": "Hejje Gala",
+    "description": "Active mobility challenge launched by Greater Bengaluru Authority promoting walking and cycling for corporate workforce to make Bengaluru more pedestrian-friendly.",
+    "image": "img/projects/hejje-gala.webp",
+    "alt": "Hejje Gala",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "events",
+    "categoryName": "Events",
+    "categoryDescription": "Bringing communities together through events, workshops, and public engagement activities that promote sustainable urban mobility.",
+    "title": "India Energy Week 2025",
+    "description": "Participation and engagement in India Energy Week 2025, showcasing sustainable mobility and energy solutions.",
+    "image": "img/projects/IEW.webp",
+    "alt": "India Energy Week",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "events",
+    "categoryName": "Events",
+    "categoryDescription": "Bringing communities together through events, workshops, and public engagement activities that promote sustainable urban mobility.",
+    "title": "Active Mobility Bill - Panel Discussion",
+    "description": "Panel discussions and advocacy efforts around the Active Mobility Bill to promote policy changes for better cycling and walking infrastructure.",
+    "image": "img/projects/mobility-bill.webp",
+    "alt": "Mobility Bill",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "events",
+    "categoryName": "Events",
+    "categoryDescription": "Bringing communities together through events, workshops, and public engagement activities that promote sustainable urban mobility.",
+    "title": "Pedaluru Jan 2025",
+    "description": "Community cycling event bringing together cycling enthusiasts and advocates to celebrate and promote cycling culture.",
+    "image": "img/projects/pedaluru.webp",
+    "alt": "Pedaluru",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "events",
+    "categoryName": "Events",
+    "categoryDescription": "Bringing communities together through events, workshops, and public engagement activities that promote sustainable urban mobility.",
+    "title": "#Keep Me Safe",
+    "description": "Safety campaign focused on protecting cyclists and pedestrians through awareness, infrastructure improvements, and policy advocacy.",
+    "image": "img/projects/keep-me-safe.webp",
+    "alt": "Keep Me Safe",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "events",
+    "categoryName": "Events",
+    "categoryDescription": "Bringing communities together through events, workshops, and public engagement activities that promote sustainable urban mobility.",
+    "title": "Namma Raste",
+    "description": "Community-driven initiative to reclaim and improve neighborhood streets for walking, cycling, and social interaction.",
+    "image": "img/projects/namma-raste.webp",
+    "alt": "Namma Raste",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "events",
+    "categoryName": "Events",
+    "categoryDescription": "Bringing communities together through events, workshops, and public engagement activities that promote sustainable urban mobility.",
+    "title": "Dutch PM Visits Bengaluru",
+    "description": "Engagement with the Dutch Prime Minister's visit to showcase Bengaluru's cycling initiatives and learn from Dutch cycling expertise.",
+    "image": "img/projects/dutch-pm.webp",
+    "alt": "Dutch PM Visit",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "events",
+    "categoryName": "Events",
+    "categoryDescription": "Bringing communities together through events, workshops, and public engagement activities that promote sustainable urban mobility.",
+    "title": "Relief Riders",
+    "description": "During COVID-19, mobilised 725 volunteer cyclists for 11,000+ rides across 12 Indian cities, delivering medicines and essentials and safely transporting healthcare and essential service workers.",
+    "image": "img/projects/relief-riders.webp",
+    "alt": "Relief Riders",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "events",
+    "categoryName": "Events",
+    "categoryDescription": "Bringing communities together through events, workshops, and public engagement activities that promote sustainable urban mobility.",
+    "title": "Church Street First",
+    "description": "India's first pop-up pedestrianization project designed and executed in collaboration with DULT Bengaluru, transforming urban streets.",
+    "image": "img/projects/church-street.webp",
+    "alt": "Church Street First",
+    "link": null,
+    "credits": null
+  },
+  {
+    "category": "events",
+    "categoryName": "Events",
+    "categoryDescription": "Bringing communities together through events, workshops, and public engagement activities that promote sustainable urban mobility.",
+    "title": "WRI India Collaboration",
+    "description": "Partnership with World Resources Institute India on sustainable urban mobility research and implementation projects.",
+    "image": "img/projects/wri-india.webp",
+    "alt": "WRI India",
+    "link": null,
+    "credits": null
+  }
+]

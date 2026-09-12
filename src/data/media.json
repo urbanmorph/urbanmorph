@@ -1,0 +1,257 @@
+[
+  {
+    "title": "Featured Stories",
+    "tag": "MAJOR INITIATIVES",
+    "items": [
+      {
+        "featured": true,
+        "badge": "Product",
+        "title": "Altmo: Mobility intelligence platform quantifying sustainable transport for climate action",
+        "summary": "Evolved from CycleTo.Work in January 2023, Altmo is an employee engagement and mobility intelligence platform that helps organizations quantify and promote sustainable transport choices to achieve climate change goals. Integrated with Strava, the platform uses gamification and real-time tracking to enable employees to log bicycle trips, public transit usage, and other eco-friendly commute options, providing instant insights on CO2 offset and fuel saved while contributing to corporate ESG targets and Scope 3 emissions reduction.",
+        "source": "Multiple Sources",
+        "date": "January 2023 - October 2025",
+        "coverage": [
+          {
+            "label": "Blog",
+            "url": "https://www.urbanmorph.com/blog.html"
+          },
+          {
+            "label": "Deccan Herald",
+            "url": "https://www-deccanherald-com.translate.goog/india/karnataka/bengaluru/towards-connecting-the-last-mile-in-bengaluru-2644944?_x_tr_sl=en&_x_tr_tl=kn&_x_tr_hl=kn&_x_tr_pto=tc"
+          },
+          {
+            "label": "Bangalore Mirror",
+            "url": "https://bangaloremirror.indiatimes.com/bangalore/others/foldable-cycles-in-metro-what-was-the-rule-again/articleshow/103587243.cms"
+          }
+        ]
+      },
+      {
+        "featured": true,
+        "badge": "Milestone",
+        "title": "India's first Centre of Excellence for Active Mobility to be established in Bengaluru",
+        "summary": "IISc Sustainable Transportation Lab and Urban Morph signed an MoU to establish India's first Centre of Excellence for Active Mobility, focusing on research, planning, and evaluation of non-motorised transport systems like cycling and walking to solve first and last-mile transportation challenges.",
+        "source": "Multiple Sources",
+        "date": "September 5, 2024",
+        "coverage": [
+          {
+            "label": "Deccan Herald",
+            "url": "https://www.deccanherald.com/india/karnataka/bengaluru/iisc-urban-morph-to-set-up-first-of-its-kind-coe-for-active-mobility-in-bengaluru-3178885"
+          },
+          {
+            "label": "Moneycontrol",
+            "url": "https://www.moneycontrol.com/news/india/iisc-urban-morph-to-establish-indias-first-coe-for-active-mobility-in-bengaluru-12813761.html"
+          },
+          {
+            "label": "The Hindu",
+            "url": "https://www.thehindu.com/news/cities/bangalore/first-of-its-kind-active-mobility-centre-of-excellence-to-be-set-up-in-bengaluru/article68602090.ece"
+          }
+        ]
+      },
+      {
+        "featured": true,
+        "badge": "Product",
+        "title": "Hejje Gala: GBA's active mobility challenge promotes walking and cycling for corporate workforce",
+        "summary": "Greater Bengaluru Authority launched Hejje Gala (footsteps celebration), an innovative active mobility challenge targeting corporate employees to promote walking and cycling for short commutes. The initiative aims to make Bengaluru more pedestrian-friendly while encouraging sustainable transport choices among the city's corporate workforce, contributing to reduced carbon emissions and improved public health.",
+        "source": "Multiple Sources",
+        "date": "January 2026",
+        "coverage": [
+          {
+            "label": "Deccan Herald",
+            "url": "https://www.deccanherald.com/india/karnataka/bengaluru/gba-launches-hejje-gala-an-active-mobility-challenge-for-corporate-workforce-3863776"
+          },
+          {
+            "label": "Times of India",
+            "url": "https://timesofindia.indiatimes.com/city/bengaluru/mobility-challenge-gbas-hejje-gala-to-promote-walking-cycling-for-short-commute/articleshow/126551160.cms"
+          },
+          {
+            "label": "Bangalore Mirror",
+            "url": "https://bangaloremirror.indiatimes.com/bangalore/civic/hejje-gala-drives-corporate-walking-cycling-across-city/articleshow/126552942.cms"
+          },
+          {
+            "label": "New Indian Express",
+            "url": "https://www.newindianexpress.com/states/karnataka/2026/Jan/16/gba-to-make-bengaluru-pedestrian-friendly-launches-hejje-gala"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Award-Winning Initiatives",
+    "tag": "INTERNATIONAL RECOGNITION",
+    "items": [
+      {
+        "featured": false,
+        "badge": "Award Winning",
+        "title": "Relief Riders: Volunteer cyclists deliver essential supplies during COVID-19 pandemic",
+        "summary": "Relief Riders, initiated by Bicycle Mayor Sathya Sankaran and CycleToWork ambassadors under Urban Morph in March 2020, mobilized volunteer cyclists to deliver groceries, medicines, and essentials to elderly and vulnerable populations during COVID-19 lockdowns. The movement was nominated for the 2022 Nobel Peace Prize and won the 2021 UN World Bicycle Day Special Award.",
+        "source": "Multiple Sources",
+        "date": "March 2020 - December 2021",
+        "coverage": [
+          {
+            "label": "Residents Watch",
+            "url": "https://www.residentswatch.in/coronavirus-cyclists-deliver-groceries-to-senior-citizens-in-bangalore/"
+          },
+          {
+            "label": "Indian Express",
+            "url": "https://indianexpress.com/article/india/bengalurus-bicycle-mayor-wants-govt-to-encourage-employees-to-use-bicycles-during-lockdown-6371164/"
+          },
+          {
+            "label": "Citizen Matters",
+            "url": "https://citizenmatters.in/bengaluru-relief-riders-cyclists-home-delivery-essentials-medicines-to-senior-citizens/"
+          }
+        ]
+      },
+      {
+        "featured": false,
+        "badge": "Award Winning",
+        "title": "Church Street First: India's pioneering pedestrianisation initiative transforms Bengaluru's urban landscape",
+        "summary": "Led by DULT in partnership with IISc, Catapult UK, and Urban Morph, Church Street First transformed a 750-meter CBD stretch into a weekend pedestrian-only zone from November 2020 to May 2021. The initiative won the Ministry of Housing and Urban Affairs Urban Mobility India 2021 Commendation Award and Volvo Innovation Awards 2021.",
+        "source": "Multiple Sources",
+        "date": "November 2020 - October 2021",
+        "coverage": [
+          {
+            "label": "The News Minute",
+            "url": "https://www.thenewsminute.com/article/bengalurus-church-street-bans-vehicles-weekends-kicks-clean-air-initiative-137156"
+          },
+          {
+            "label": "Deccan Herald",
+            "url": "https://www.deccanherald.com/india/karnataka/bengaluru/church-st-style-weekends-planned-across-bengaluru-923056.html"
+          },
+          {
+            "label": "Citizen Matters",
+            "url": "https://bengaluru.citizenmatters.in/church-street-pedestrianisation-impact-study-quality-of-life-68445"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Community Programs",
+    "tag": "GRASSROOTS ENGAGEMENT",
+    "items": [
+      {
+        "featured": false,
+        "badge": "Program",
+        "title": "Pedaluru: Five-year citizen campaign to transform Bengaluru into India's cycling capital",
+        "summary": "Launched by Bicycle Mayor Sathya Sankaran, Pedaluru is a comprehensive five-year citizen-led campaign aimed at transforming Bengaluru into India's cycling capital through infrastructure development, policy advocacy, and community engagement. Pedaluru 2024 saw over 550 cyclists gather at Kanteerava Stadium with support from CFAM, GIZ, Bengaluru Traffic Police, and Ministry of Housing and Urban Affairs.",
+        "source": "Multiple Sources",
+        "date": "June 2024 - May 2025",
+        "coverage": [
+          {
+            "label": "Bangalore Mirror",
+            "url": "https://bangaloremirror.indiatimes.com/bangalore/others/bengaluru-pedals-forward-with-cycling-vision/articleshow/121386441.cms"
+          },
+          {
+            "label": "Deccan Herald",
+            "url": "https://www.deccanherald.com/india/karnataka/bengaluru/pedaluru-2025-annual-cycling-event-gives-a-glimpse-into-sustainable-mobility-3366646"
+          }
+        ]
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "Cycling in Bengaluru: What's the way forward?",
+        "summary": "Communities celebrate Cycle Day events, but questions remain about whether this movement has prompted meaningful change in attitudes towards cyclists in Bengaluru.",
+        "source": "Deccan Herald",
+        "date": "June 14, 2024",
+        "coverage": []
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "The biker's guide to the galaxy",
+        "summary": "CFAM and volunteers created a comprehensive map of bicycle-friendly routes in Bengaluru with data from 150-200 regular cyclists, marking less congested secondary routes to help cyclists reach metro stations safely.",
+        "source": "Bangalore Mirror",
+        "date": "September 20, 2023",
+        "coverage": []
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "More people in Bengaluru are turning to recreational cycling",
+        "summary": "Recreational cycling in Bengaluru increased four times during the pandemic with the number of cyclists rising from 21,673 in July 2019 to 51,685 in July 2021.",
+        "source": "The News Minute",
+        "date": "August 14, 2021",
+        "coverage": []
+      }
+    ]
+  },
+  {
+    "title": "Bicycle Mayor Bengaluru",
+    "tag": "LEADERSHIP & VISION",
+    "items": [
+      {
+        "featured": false,
+        "badge": "",
+        "title": "'Bicycle mayor' faces an uphill task in Bengaluru",
+        "summary": "Sathya Sankaran faces significant challenges as Bengaluru's Bicycle Mayor in a city of 8 million motor vehicles with choked roads and limited safe cycling infrastructure.",
+        "source": "The National",
+        "date": "July 6, 2021",
+        "coverage": []
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "Pedalling his way to change: Sathya Sankaran becomes Bengaluru's first bicycle mayor",
+        "summary": "Sathya Sankaran was selected as Bengaluru's first Bicycle Mayor and plans to start education programmes in schools teaching the science of cycling and promoting sustainable mobility.",
+        "source": "The News Minute",
+        "date": "May 28, 2021",
+        "coverage": []
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "Bengaluru's first Bicycle Mayor to set up a 'Council' to boost cycling in city",
+        "summary": "Sathya Sankaran plans to bring together nominees and cycling advocates to form a Council for Change to actively improve the cycling culture in Bengaluru.",
+        "source": "Citizen Matters",
+        "date": "May 22, 2018",
+        "coverage": []
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "Bengaluru gets its first 'Bicycle Mayor'",
+        "summary": "42-year-old civic activist Satya Shankaran was announced as Bengaluru's first Bicycle Mayor, making it the third city in India to have one after Vadodara and Guwahati.",
+        "source": "The Hindu",
+        "date": "May 22, 2018",
+        "coverage": []
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "Meet Sathya Shankaran, first bicycle Mayor of Bengaluru",
+        "summary": "Sathya Shankaran will work with the state government and NGOs to achieve the goal of 50% bicycle use in the city by 2030.",
+        "source": "Bangalore Mirror",
+        "date": "May 21, 2018",
+        "coverage": []
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "Who'll be bicycle mayor?",
+        "summary": "Six finalists were shortlisted for Bengaluru's first Bicycle Mayor position, including Sathya Sakaran, an urbanist with 10 years of civic activism experience.",
+        "source": "Bangalore Mirror",
+        "date": "May 8, 2018",
+        "coverage": []
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "Now Bengaluru's very own Bicycle Mayor",
+        "summary": "Bengaluru will have its first 'Bicycle Mayor' in May with 19 cycling enthusiasts vying for the honorary two-year position to promote cycling and advocacy with the government.",
+        "source": "The Hindu",
+        "date": "April 30, 2018",
+        "coverage": []
+      },
+      {
+        "featured": false,
+        "badge": "",
+        "title": "Cycling around the globe: Bicycle Mayors",
+        "summary": "Sathya Sankaran, Bengaluru's Bicycle Mayor, discusses challenges of promoting cycling in a city of 12 million inhabitants and 8 million motor vehicles.",
+        "source": "Intertraffic",
+        "date": "Published online",
+        "coverage": []
+      }
+    ]
+  }
+]

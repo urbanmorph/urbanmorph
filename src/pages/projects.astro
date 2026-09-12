@@ -1,0 +1,84 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { img } from '../lib/images';
+import projects from '../data/projects.json';
+
+const categories = [...new Map(projects.map((p) => [p.category, { key: p.category, name: p.categoryName, description: p.categoryDescription }])).values()];
+const byCat = (key: string) => projects.filter((p) => p.category === key);
+const title = 'Projects';
+const description = `${projects.length} projects across infrastructure, technology, campaigns and events: bicycle parking, AltMo, Church Street First, Relief Riders, Cycle Days and more, delivered with cities, institutions and communities across India.`;
+---
+
+<Base title={title} description={description}>
+  <section class="page-head">
+    <div class="container">
+      <p class="eyebrow">What we have delivered</p>
+      <h1>Our projects</h1>
+      <p class="lede">Transforming cities through infrastructure, technology, campaigns and community engagement.</p>
+      <p class="meta">{projects.length} projects across {categories.length} categories</p>
+    </div>
+  </section>
+
+  <nav class="filters" aria-label="Project categories">
+    <div class="container filters__inner">
+      {categories.map((c) => <a href={`#${c.key}`}>{c.name} <span>{byCat(c.key).length}</span></a>)}
+    </div>
+  </nav>
+
+  {categories.map((c, ci) => (
+    <section class:list={['section', ci % 2 === 0 ? 'section--paper' : 'section--white']} id={c.key}>
+      <div class="container">
+        <div class="cat-head">
+          <h2>{c.name}</h2>
+          <p>{c.description}</p>
+        </div>
+        <div class="grid grid--3">
+          {byCat(c.key).map((p, i) => {
+            const image = img(p.image);
+            return (
+              <article class="card reveal">
+                <div class:list={['card__media', { 'card__media--contain': image && image.width / image.height < 1.15 }]}>
+                  {image && <Image src={image} alt={p.alt || p.title} widths={[400, 640, 900]} quality={65} sizes="(max-width: 600px) 100vw, (max-width: 991px) 50vw, 33vw" loading={ci === 0 && i < 3 ? 'eager' : 'lazy'} />}
+                </div>
+                <div class="card__body">
+                  <h3>{p.title}</h3>
+                  <p>{p.description}</p>
+                  {p.credits && <p class="meta">{p.credits}</p>}
+                  {p.link && (
+                    <a class="card__link" href={p.link.url.startsWith('http') ? p.link.url : `/${p.link.url}`} target="_blank" rel="noopener">
+                      {p.link.label} <Icon name="tabler:arrow-right" size={15} />
+                    </a>
+                  )}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  ))}
+</Base>
+
+<style>
+  .page-head { background: var(--white); padding-block: clamp(2.5rem, 6vw, 4.5rem) 2rem; text-align: center; }
+  .page-head .lede { margin: 0.75rem auto 0; text-align: center; }
+  .page-head .meta { margin-top: 1rem; }
+  .filters { position: sticky; top: 68px; z-index: 40; background: var(--white); border-top: 1px solid var(--rule); border-bottom: 2px solid var(--ink-2); }
+  .filters__inner { display: flex; gap: 0.5rem; overflow-x: auto; padding-block: 0.6rem; scrollbar-width: none; }
+  .filters__inner a { flex: none; display: inline-flex; align-items: center; gap: 0.5rem; min-height: var(--tap); padding: 0 1rem; border: 1px solid var(--ink-2); border-radius: 4px; text-decoration: none; color: var(--ink-2); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; }
+  .filters__inner a span { color: var(--muted); }
+  .filters__inner a:hover { background: var(--ink-2); color: #fff; }
+  .cat-head { max-width: 640px; margin-bottom: 2rem; }
+  .cat-head h2 { display: inline-block; padding-bottom: 0.4rem; border-bottom: 4px solid var(--yellow); margin-bottom: 0.75rem; }
+  .cat-head p { color: var(--gray); }
+  .card__media { aspect-ratio: 16 / 10; background: var(--teal-soft); border-bottom: 3px solid var(--teal); }
+  .card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card__media--contain { background: var(--white); padding: 1rem; }
+  .card__media--contain img { object-fit: contain; }
+  .card h3 { font-size: 1.2rem; line-height: 1.3; }
+  .card__body p { font-size: var(--text-sm); }
+  .card__link { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 0.4rem; min-height: 36px; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; font-weight: 700; }
+  section[id] { scroll-margin-top: 130px; }
+</style>

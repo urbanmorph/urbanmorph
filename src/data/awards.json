@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Urban Mobility Institute Award",
+    "year": "2021",
+    "description": "Clean Air Street testbed receives DULT, Urban Mobility Institute Commendation Award",
+    "logo": "img/partners/mohua.webp",
+    "logoAlt": "UMI Award"
+  },
+  {
+    "title": "Volvo Innovation Award",
+    "year": "2021",
+    "description": "Clean Air Street testbed receives the Volvo Innovation Awards",
+    "logo": "img/partners/volvo-logo.webp",
+    "logoAlt": "Volvo Award"
+  },
+  {
+    "title": "Excellence in Innovation",
+    "year": "2022",
+    "description": "Cycle To Work campaign helps Silvassa Smart City win India Digital Empowerment Award",
+    "logo": "img/partners/apac-award.webp",
+    "logoAlt": "APAC Award"
+  },
+  {
+    "title": "Mobility Symposium Award",
+    "year": "2025",
+    "description": "Using Altmo to deliver Active Mobility transformation in companies",
+    "logo": "img/partners/movinsync.webp",
+    "logoAlt": "Mobility Symposium"
+  }
+]

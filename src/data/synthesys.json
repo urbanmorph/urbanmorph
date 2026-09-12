@@ -1,0 +1,220 @@
+{
+  "platforms": [
+    {
+      "name": "KDEM — Karnataka Digital Economy Mission",
+      "badge": "District & Vertical Dashboards",
+      "icon": "fa-chart-line",
+      "description": "Strategic dashboard for Karnataka's journey from a $198B digital economy today to $414B by 2032, digital economy and biotechnology combined. Every figure is sourced to MoSPI, RBI and state data, and the Beyond Bengaluru view tracks the emerging clusters that have to carry the growth.",
+      "features": [
+        "Live GSDP, digital-export and target-gap tracking for a $345B state",
+        "Beyond Bengaluru: district and vertical views for emerging clusters",
+        "Sources tab linking every number to its public origin"
+      ],
+      "image": "img/synthesys/kdem-screenshot.webp",
+      "alt": "KDEM - Karnataka Digital Economy Mission Dashboard",
+      "url": "https://kdem.vercel.app",
+      "cta": "View Dashboard"
+    },
+    {
+      "name": "India Together",
+      "badge": "Revived · Since 1998",
+      "icon": "fa-newspaper",
+      "description": "The news in proportion. India's independent public-interest journalism archive, publishing since 1998 and now revived with technology support from Urban Morph: reports, opinions, interviews and reviews searchable by topic, state and writer, with new reporting on cities, transport, environment and governance.",
+      "features": [
+        "3,790 articles from 1998 to 2026 across 91 subjects and 26 states",
+        "Reports, opinions, reviews, interviews and editorials by named writers",
+        "Articles remain the copyright of their authors"
+      ],
+      "image": "img/synthesys/indiatogether-screenshot.webp",
+      "alt": "India Together - independent journalism since 1998",
+      "url": "https://indiatogether.org",
+      "cta": "Read India Together"
+    },
+    {
+      "name": "mapunitygroups",
+      "badge": "Revived · Since 2007",
+      "icon": "fa-map-marked-alt",
+      "description": "Nineteen years of what people counted. MapUnity's community mapping platform, revived: a group decides what is worth recording, members map it, and every place keeps its own history so you can see what changed and when. From public works in South Bengaluru to food-safety incidents across the country.",
+      "features": [
+        "50,622 records across 872 groups from 314 contributors",
+        "Layers, places and photos, with a change history for every place",
+        "Open or member-only groups, searchable by category and place"
+      ],
+      "image": "img/synthesys/mapunitygroups-screenshot.webp",
+      "alt": "mapunitygroups - community mapping since 2007",
+      "url": "https://mapunitygroups.com",
+      "cta": "Explore Groups"
+    },
+    {
+      "name": "Praja",
+      "badge": "Revived · Since 2007",
+      "icon": "fa-comments",
+      "description": "A bridge between those who serve us and those of us who care and want to participate. An internet-driven community for active and concerned citizens working at the local level, running since 2007 and revived with its full history intact. Most of what is here is not the posts; it is what people said back.",
+      "features": [
+        "36,856 comments across 5,155 posts from 1,265 people",
+        "Threads organised by sector: transport, energy, governance, planning",
+        "Nineteen years of civic discussion, still active in 2026"
+      ],
+      "image": "img/synthesys/praja-screenshot.webp",
+      "alt": "Praja - citizen community since 2007",
+      "url": "https://praja.in",
+      "cta": "Join the Conversation"
+    },
+    {
+      "name": "NOTF — Neighbourhoods of the Future",
+      "badge": "AI Assistant · Multilingual",
+      "icon": "fa-brain",
+      "description": "A framework for citizens to take charge of the common good at the neighbourhood level: steer infrastructure and behaviour, connect with experts, and build neighbourhoods resilient to climate shock. Now a network across 13 cities, with an AI assistant that finds communities and resources.",
+      "features": [
+        "65+ tonnes of waste diverted, 60,000+ kg of CO₂ prevented, 12,000+ trees planted",
+        "15 climate projects in the catalogue and 10+ city climate action plans",
+        "NOTF Assistant to find communities and resources, with a language switcher"
+      ],
+      "image": "img/synthesys/notf-screenshot.webp",
+      "alt": "NOTF - Neighbourhoods of the Future",
+      "url": "https://www.notf.in",
+      "cta": "View Platform"
+    },
+    {
+      "name": "GreensBrowns",
+      "badge": "Circular Waste Network",
+      "icon": "fa-recycle",
+      "description": "Every leaf has a second life. Bengaluru's circular network for green waste connects apartments and tech parks with processors who need organic waste for composting: verified pickups, real-time tracking and complete compliance from the building's garden to the processor's facility. Built by A-Gain, powered by Urban Morph.",
+      "features": [
+        "22+ partner communities, 14 vehicles in the fleet, 3 active processors",
+        "100% trackable waste with verified pickups and geo-located handovers",
+        "Role-based dashboards for generators, transporters and processors"
+      ],
+      "image": "img/synthesys/greensbrowns-screenshot.webp",
+      "alt": "GreensBrowns - circular marketplace for green waste",
+      "url": "https://greensbrowns.vercel.app",
+      "cta": "View Platform"
+    },
+    {
+      "name": "CFAM — Council for Active Mobility",
+      "badge": "Policy to Programs",
+      "icon": "fa-landmark",
+      "description": "Streets for people, built into law. India's National Active Mobility Framework turns policy into programmes: a model framework for states, a tracker of who has notified rules and who has not, and the campaign to table the Karnataka Active Mobility Bill, the flagship state-level instrument.",
+      "features": [
+        "State tracker: 1 state notified, 35 yet to act",
+        "Karnataka Bill: 2.5 m minimum footpaths in school zones, 1.5 m cyclist overtaking distance",
+        "Ecosystem of partner organisations across seven work tracks, with the Altmo app for participation"
+      ],
+      "image": "img/synthesys/cfam-screenshot.webp",
+      "alt": "CFAM - Council for Active Mobility",
+      "url": "https://cfam.in",
+      "cta": "View Platform"
+    }
+  ],
+  "tools": [
+    {
+      "name": "mdshare",
+      "tag": "Open Source",
+      "description": "Markdown sharing with the widest surface area: paste in the browser, edit from Obsidian, commit from VS Code, or drive it from AI coding agents via MCP. Four permission tiers, threaded comments anchored to text, real-time sync and instant link revocation.",
+      "url": "https://mdshare.live",
+      "host": "mdshare.live"
+    },
+    {
+      "name": "bharatlas",
+      "tag": "Open Atlas · No Signup",
+      "description": "India's open atlas. 100+ map layers: administrative boundaries from state down to village, wards for 30+ cities, plus rivers, forests, highways, groundwater, floods and seismic zones. Slice any layer and download it as GeoJSON, Shapefile, Parquet or PMTiles, or drop your own geo file and share it by link.",
+      "url": "https://bharatlas.com",
+      "host": "bharatlas.com"
+    },
+    {
+      "name": "Irrational",
+      "tag": "MIT · No Login",
+      "description": "A field guide to the mistakes your mind makes. Describe a decision and Irrational writes an adversarial prompt that argues the other side, refracting your choice through 22 cognitive biases: sunk cost, anchoring, overconfidence. Your own AI runs the audit; nothing is stored.",
+      "url": "https://irrational.pages.dev",
+      "host": "irrational.pages.dev"
+    },
+    {
+      "name": "Mugilu",
+      "tag": "Open Sky · No Login",
+      "description": "The open sky of India. Name any place and Mugilu reads what the air is doing to you right now: AQI with the full pollutant breakdown and years of life lost, heat and wet-bulb stress, wind, fog, dust, crop-burn smoke, UV, and any live NDMA or IMD warning overhead. Search in Indian languages or use your location.",
+      "url": "https://mugilu.live",
+      "host": "mugilu.live"
+    },
+    {
+      "name": "twelveswaras",
+      "tag": "CC-BY · No Login",
+      "description": "Shazam for raagas. Hold your phone to Carnatic music and twelveswaras names the raaga: the top three matches with confidence, the tonic pinned from the tanpura drone, and plain-language cues for training your own ear. Audio is read on the spot and never stored.",
+      "url": "https://twelveswaras.com",
+      "host": "twelveswaras.com"
+    }
+  ],
+  "stories": [
+    {
+      "title": "Influence the Rule, Not the Bird",
+      "tag": "Commons · Emergence",
+      "teaser": "How to use emergence to steer action in the commons. Birds in formation follow a few simple rules, and the formation is what emerges. Money and effort mostly add speed; only the rules change direction.",
+      "url": "https://not-the-bird.surge.sh"
+    },
+    {
+      "title": "The Question They Made Optional",
+      "tag": "Business · Biodiversity",
+      "teaser": "786 of India's biggest listed companies operate beside a forest, wetland or coast. Just 33 said what they actually do there. The question was optional, so the rest broke no rule.",
+      "url": "https://made-optional.surge.sh"
+    },
+    {
+      "title": "The Best-Measured Soil in the World",
+      "tag": "Soil · Agriculture",
+      "teaser": "India tests its farmland more thoroughly than any country on Earth: over 5 million samples, 12 readings each. More than half comes back low on carbon, and there is no second opinion to check the readings against.",
+      "url": "https://dead-reckoning.surge.sh"
+    },
+    {
+      "title": "The Register No One Reads",
+      "tag": "Biodiversity · Governance",
+      "teaser": "India built 2.72 lakh People's Biodiversity Registers to put villages in charge of the nature around them. Two have been formally approved.",
+      "url": "https://pbr-story.surge.sh"
+    },
+    {
+      "title": "The Ground Beneath the Report Card",
+      "tag": "Rural India · Sustainability",
+      "teaser": "India grades 2.6 lakh villages on how they're doing today, not whether they can last. Its showcase grain belt is also the fastest at draining its own water.",
+      "url": "https://canitlast.surge.sh"
+    },
+    {
+      "title": "The Uncounted",
+      "tag": "Wildlife · Human Conflict",
+      "teaser": "India logs over 100,000 human-wildlife conflict incidents a year across 88 species, yet keeps a national death count for just two.",
+      "url": "https://the-uncounted.surge.sh"
+    },
+    {
+      "title": "Whose Forest Is It?",
+      "tag": "Forests · CFR Rights",
+      "teaser": "India mapped 3.46 crore hectares of community forest that local communities could govern. Less than 3% has been recognised.",
+      "url": "https://whose-forest.surge.sh"
+    },
+    {
+      "title": "The Hollow Collective",
+      "tag": "Agriculture · FPOs",
+      "teaser": "India helped small farmers form nearly 50,000 companies they own together. Just 4% employ even one paid manager.",
+      "url": "https://fpo-story.surge.sh"
+    },
+    {
+      "title": "The Ground They Stand On",
+      "tag": "Livelihoods · Women · SHGs",
+      "teaser": "India's self-help groups are the world's largest financial-inclusion effort: 9 crore women across 8.6 million groups. Yet even the best-served state leaves 71% stuck at saving, never reaching credit.",
+      "url": "https://shg-story.surge.sh"
+    }
+  ],
+  "capabilities": [
+    {
+      "title": "Knowledge Synthesis",
+      "text": "LLMs process government open data, economic surveys, and field research into actionable baselines and development roadmaps at district, state, and national scale."
+    },
+    {
+      "title": "Intelligent Automation",
+      "text": "AI classifies, routes, and prioritises civic inputs — from municipal complaints to waste management logistics — without constantly altering rules."
+    },
+    {
+      "title": "Multi-Scale Monitoring",
+      "text": "Ward-level to nation-level progress tracking with role-based views for district collectors, ministers, urban planners, and citizens alike."
+    }
+  ],
+  "vision": [
+    "SyntheSYS combines the rigour of synthesis — the combining of diverse conceptions into a coherent whole — with systems thinking to help governments, philanthropies, and citizens understand progress and take action. It is an offering in service of people, planet, and progress in the age of AI.",
+    "By harnessing Large Language Models to process open government data, field research, and community intelligence, SyntheSYS creates actionable baselines and development roadmaps at every scale: from individual wards and neighbourhoods to districts, states, and the nation."
+  ]
+}

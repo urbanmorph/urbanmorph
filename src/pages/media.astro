@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import media from '../data/media.json';
+
+const total = media.reduce((n, s) => n + s.items.length, 0);
+const title = 'Media coverage';
+const description = `${total} stories on Urban Morph's work in the press: AltMo, the Active Mobility Centre of Excellence, Relief Riders, Church Street First, Cycle Days and Bengaluru's Bicycle Mayor.`;
+const badgeClass = (b: string) => (b.startsWith('Award') ? 'chip--yellow' : b === 'Milestone' ? 'chip' : 'chip--soft');
+---
+
+<Base title={title} description={description}>
+  <section class="masthead">
+    <div class="container">
+      <p class="eyebrow">Urban Morph in the press</p>
+      <h1>Media chronicle</h1>
+      <div class="masthead__rule"><span>Bengaluru, Karnataka</span><span>{total} stories</span><span>2018 – 2026</span></div>
+    </div>
+  </section>
+
+  {media.map((sec, si) => (
+    <section class:list={['section', si % 2 === 0 ? 'section--white' : 'section--paper']}>
+      <div class="container">
+        <div class="sec-head">
+          <h2>{sec.title}</h2>
+          <span class="label">{sec.tag}</span>
+        </div>
+        <div class="stories">
+          {sec.items.map((a) => (
+            <article class:list={['story reveal', { 'story--featured': a.featured }]}>
+              {a.badge && <span class:list={['chip', badgeClass(a.badge)]}>{a.badge}</span>}
+              <h3>{a.title}</h3>
+              <p>{a.summary}</p>
+              <p class="meta"><strong>{a.source}</strong>{a.date && <> · {a.date}</>}</p>
+              {a.coverage.length > 0 && (
+                <ul class="coverage" aria-label="Coverage">
+                  {a.coverage.map((c) => <li><a href={c.url} target="_blank" rel="noopener">{c.label} <Icon name="tabler:arrow-up-right" size={12} /></a></li>)}
+                </ul>
+              )}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+</Base>
+
+<style>
+  .masthead { background: var(--white); text-align: center; padding-block: clamp(2.5rem, 6vw, 4.5rem) 0; border-bottom: 3px double var(--ink-2); }
+  .masthead h1 { font-size: clamp(2.6rem, 8vw, 5rem); letter-spacing: 0.02em; text-transform: uppercase; }
+  .masthead__rule { display: flex; justify-content: space-between; gap: 1rem; margin-top: 1.5rem; padding-block: 0.75rem; border-top: 1px solid var(--rule); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 3px solid var(--ink-2); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+  .sec-head h2 { font-size: var(--text-xl); text-transform: uppercase; letter-spacing: 0.04em; }
+  .stories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3rem; }
+  .story { padding-block: 1.5rem; border-bottom: 1px solid var(--rule); display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-start; }
+  .story--featured { grid-column: 1 / -1; }
+  .story h3 { font-size: 1.35rem; line-height: 1.3; }
+  .story--featured h3 { font-size: var(--text-2xl); font-weight: 900; }
+  .story p { color: var(--gray); font-size: var(--text-sm); text-align: justify; hyphens: auto; }
+  .story--featured p { font-size: var(--text-base); }
+  .story .meta strong { color: var(--ink-2); font-style: italic; font-family: var(--font-body); font-size: var(--text-sm); letter-spacing: 0; }
+  .coverage { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .coverage a { display: inline-flex; align-items: center; gap: 0.25rem; min-height: 32px; padding: 0 0.7rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--white); text-decoration: none; font-family: var(--font-mono); font-size: var(--text-xs); }
+  .coverage a:hover { border-color: var(--teal); }
+  @media (max-width: 800px) { .stories { grid-template-columns: 1fr; } .story p { text-align: left; } .masthead__rule { flex-direction: column; align-items: center; gap: 0.25rem; } }
+</style>

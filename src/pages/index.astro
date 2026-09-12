@@ -1,0 +1,247 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import TeamCard from '../components/TeamCard.astro';
+import { img } from '../lib/images';
+import { site, outcomes, products } from '../lib/site';
+import home from '../data/home.json';
+import testimonials from '../data/testimonials.json';
+import awards from '../data/awards.json';
+import partners from '../data/partners.json';
+import team from '../data/team.json';
+
+const founders = team.slice(0, 3);
+const staff = team.slice(3, 6);
+const advisors = team.slice(6);
+const serviceIcons = ['tabler:bulb', 'tabler:topology-star-3', 'tabler:rocket'];
+const contactActions = [
+  { href: `mailto:${site.email}`, label: 'Send an enquiry', icon: 'tabler:mail' },
+  { href: `mailto:${site.email}?subject=${encodeURIComponent('Joining Urban Morph')}`, label: 'Write to us', icon: 'tabler:users' },
+  { href: site.mapsUrl, label: 'Open in Maps', icon: 'tabler:map-pin', external: true },
+];
+const title = 'Urban Morph | Sustainable urban mobility solutions & urban-tech studio';
+const jsonLd = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: site.url, description: site.description }];
+---
+
+<Base title={title} description={site.description} jsonLd={jsonLd}>
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="eyebrow">{site.tagline}</p>
+      <h1>Making Indian cities walkable, cycleable and climate-ready.</h1>
+      <p class="lede">We build the platforms and run the programmes: AltMo for organisations that want to cut commute emissions, SyntheSYS for governments and philanthropies that need to see progress, and on-ground delivery with cities and communities.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="https://www.altmo.app" target="_blank" rel="noopener">Explore AltMo <Icon name="tabler:arrow-up-right" size={16} /></a>
+        <a class="btn btn--secondary" href="/synthesys/">See SyntheSYS</a>
+        <a class="hero__talk" href="#contact">Talk to us <Icon name="tabler:arrow-right" size={15} /></a>
+      </div>
+    </div>
+    <div class="container">
+      <dl class="outcomes">
+        {outcomes.map((o) => (
+          <div>
+            <dd>{o.value}</dd>
+            <dt>{o.label}</dt>
+            <p>{o.detail}</p>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section section--white" id="products">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">What we build</p>
+        <h2>Two platforms and an energy venture</h2>
+      </div>
+      <div class="grid grid--3">
+        {products.map((p) => (
+          <article class="product reveal">
+            <span class="product__icon"><Icon name={p.icon} size={26} /></span>
+            <p class="label">{p.kicker}</p>
+            <h3>{p.name}</h3>
+            <p>{p.description}</p>
+            {p.url && <a class="product__link" href={p.url} target={p.url.startsWith('http') ? '_blank' : undefined} rel="noopener">{p.cta} <Icon name="tabler:arrow-right" size={15} /></a>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper section--rule" id="offer">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">What we offer</p>
+        <h2>Innovate, orchestrate, execute</h2>
+        <p set:html={home.about} />
+      </div>
+      <div class="grid grid--3">
+        {home.services.map((s, i) => (
+          <article class="service reveal">
+            <span class="service__icon"><Icon name={serviceIcons[i]} size={28} /></span>
+            <h3>{s.title}</h3>
+            <p>{s.intro}</p>
+            <ul class="service__items">
+              {s.items.map((it) => (
+                <li>
+                  <h4>{it.title.replace(/^[^\w]+/, '')}</h4>
+                  <p set:html={it.html} />
+                </li>
+              ))}
+            </ul>
+            {s.footer && <p class="service__foot" set:html={s.footer} />}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white section--rule">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">What our partners say</p>
+        <h2>Trusted by leading organisations</h2>
+      </div>
+      <div class="grid grid--3">
+        {testimonials.map((t) => {
+          const logo = img(t.logo);
+          return (
+            <blockquote class="quote reveal">
+              <Icon name="tabler:quote" size={28} class="quote__mark" />
+              <p>{t.quote}</p>
+              <footer>
+                {logo && <Image src={logo} alt={t.logoAlt} width={140} height={Math.round((140 * logo.height) / logo.width)} loading="lazy" />}
+                <cite>{t.author}</cite>
+              </footer>
+            </blockquote>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper section--rule" id="recognition">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Recognition</p>
+        <h2>Awards and partners</h2>
+      </div>
+      <ul class="awards">
+        {awards.map((a) => (
+          <li class="reveal">
+            <Icon name="tabler:trophy" size={22} class="awards__icon" />
+            <div>
+              <h3>{a.title} <span class="meta">{a.year}</span></h3>
+              <p>{a.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <div class="partners">
+        {partners.map((group) => (
+          <div class="partners__group">
+            <h3 class="label">{group.category}</h3>
+            <ul>
+              {group.items.map((p) => {
+                const logo = img(p.logo);
+                return <li>{logo && <Image src={logo} alt={p.alt || p.name} width={160} height={Math.round((160 * logo.height) / logo.width)} loading="lazy" />}<span>{p.name}</span></li>;
+              })}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white section--rule" id="team">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Meet our team</p>
+        <h2>Passionate urban innovators driving sustainable change</h2>
+      </div>
+      <div class="grid grid--3">
+        {founders.map((m) => <div class="reveal"><TeamCard member={m} /></div>)}
+        {staff.map((m) => <div class="reveal"><TeamCard member={m} /></div>)}
+      </div>
+      <h3 class="advisors-title">Advisors</h3>
+      <div class="grid grid--3">
+        {advisors.map((m) => <div class="reveal"><TeamCard member={m} compact /></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Let's shape the future together</p>
+        <h2>Ready to transform your city?</h2>
+        <p>Get in touch with us.</p>
+      </div>
+      <div class="grid grid--3">
+        {home.contact.map((c, i) => (
+          <div class="contact__card reveal">
+            <span class="contact__icon"><Icon name={contactActions[i].icon} size={24} /></span>
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+            {i === 2 && <p class="contact__address">{site.address}</p>}
+            <a class="btn btn--primary" href={contactActions[i].href} target={contactActions[i].external ? '_blank' : undefined} rel="noopener">{contactActions[i].label}</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { background: var(--white); border-bottom: 3px solid var(--ink-2); padding-block: clamp(3rem, 8vw, 6rem) 0; }
+  .hero__inner { max-width: 880px; display: flex; flex-direction: column; gap: 1.25rem; }
+  .hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin-top: 0.5rem; }
+  .hero__talk { display: inline-flex; align-items: center; gap: 0.4rem; min-height: var(--tap); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; font-weight: 700; }
+  .outcomes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin: 3rem 0 0; padding: 2rem 0 2.5rem; border-top: 1px solid var(--rule); }
+  .outcomes div { display: flex; flex-direction: column; }
+  .outcomes dd { margin: 0; order: -1; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; line-height: 1; color: var(--teal); font-variant-numeric: tabular-nums; }
+  .outcomes dt { margin-top: 0.6rem; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); font-weight: 700; }
+  .outcomes p { margin-top: 0.3rem; font-size: var(--text-sm); color: var(--muted); }
+  .product, .service { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; height: 100%; }
+  .product { background: var(--paper); }
+  .product__icon, .service__icon, .contact__icon { width: 56px; height: 56px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--yellow-soft); color: var(--ink-2); }
+  .product__icon { background: var(--teal-soft); color: var(--teal); }
+  .product h3 { font-size: 1.5rem; }
+  .product p, .service > p { color: var(--gray); }
+  .product .label { margin-bottom: -0.4rem; }
+  .product__link { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 0.4rem; min-height: var(--tap); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; font-weight: 700; }
+  .service__items { list-style: none; margin: 0.5rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 1rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+  .service__items h4 { font-size: 1.05rem; margin-bottom: 0.2rem; }
+  .service__items p { font-size: var(--text-sm); color: var(--gray); }
+  .service__foot { margin-top: auto; padding-top: 1rem; border-top: 2px solid var(--paper); font-size: var(--text-sm); }
+  .service__foot :global(a), .service__items :global(a) { font-weight: 700; text-decoration: none; }
+  .quote { margin: 0; background: var(--paper); border: 1px solid var(--rule); border-left: 4px solid var(--teal); padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 1rem; height: 100%; }
+  .quote :global(.quote__mark) { color: var(--teal); }
+  .quote p { font-style: italic; color: var(--ink-2); flex: 1; }
+  .quote footer { display: flex; flex-direction: column; gap: 0.6rem; }
+  .quote img { max-height: 44px; width: auto; object-fit: contain; object-position: left; }
+  .quote cite { font-style: normal; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); font-weight: 700; }
+  .awards { list-style: none; margin: 0 0 3rem; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 2rem; }
+  .awards li { display: flex; gap: 1rem; padding: 1.25rem 1.5rem; background: var(--white); border: 1px solid var(--rule); border-left: 4px solid var(--yellow); }
+  .awards :global(.awards__icon) { color: var(--yellow); flex: none; margin-top: 0.15rem; }
+  .awards h3 { font-size: 1.1rem; }
+  .awards h3 .meta { margin-left: 0.4rem; }
+  .awards p { font-size: var(--text-sm); color: var(--gray); margin-top: 0.25rem; }
+  .partners { display: flex; flex-direction: column; gap: 1.75rem; }
+  .partners__group h3 { margin-bottom: 0.75rem; }
+  .partners__group ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .partners__group li { display: flex; align-items: center; gap: 0.75rem; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 0.6rem 1rem; min-height: 64px; }
+  .partners__group img { max-height: 40px; width: auto; max-width: 110px; object-fit: contain; }
+  .partners__group span { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-2); }
+  .advisors-title { margin: 2.5rem 0 1rem; font-size: var(--text-lg); }
+  .contact { background: linear-gradient(135deg, var(--pink), var(--yellow)); padding-block: var(--section); }
+  .contact .section-head p { color: var(--ink-2); }
+  .contact__card { background: var(--white); border-radius: var(--radius); padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; height: 100%; }
+  .contact__card p { color: var(--gray); }
+  .contact__address { font-size: var(--text-sm); }
+  .contact__card .btn { margin-top: auto; }
+  @media (max-width: 900px) { .outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); } .awards { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .outcomes { grid-template-columns: 1fr; } }
+</style>

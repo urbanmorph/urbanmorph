@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Absolute or root-relative image for social cards. */
+  image?: string;
+  type?: 'website' | 'article';
+  /** Extra JSON-LD objects to embed. */
+  jsonLd?: Record<string, unknown>[];
+  noindex?: boolean;
+}
+const { title, description, image = '/UM-thumbnail.png', type = 'website', jsonLd = [], noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const ogImage = new URL(image, site.url).href;
+const fullTitle = title.includes('Urban Morph') ? title : `${title} | Urban Morph`;
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: site.name,
+  legalName: site.legalName,
+  url: site.url,
+  logo: new URL('/UM-thumbnail.png', site.url).href,
+  email: site.email,
+  address: { '@type': 'PostalAddress', streetAddress: '41, Vishnu Nivas, NGEF Colony, Sanjaynagar', addressLocality: 'Bengaluru', addressRegion: 'Karnataka', postalCode: '560094', addressCountry: 'IN' },
+  sameAs: site.social.map((s) => s.url),
+  founder: site.founders.map((f) => ({ '@type': 'Person', ...f })),
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" type="image/png" href="/UM-thumbnail.png" />
+    <link rel="apple-touch-icon" href="/UM-thumbnail.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preload" href="/fonts/playfair-display-900.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/pt-serif-400.woff2" as="font" type="font/woff2" crossorigin />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="google-site-verification" content="k4X5XjLvu5ZXStl2LZOsk-tBAjAfm4UKFLwAWWRgdGI" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json" set:html={JSON.stringify(organization)} />
+    {jsonLd.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.gaId}`}></script>
+    <script is:inline define:vars={{ gaId: site.gaId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gaId);
+    </script>
+  </head>
+  <body>
+    <Nav />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  body { min-height: 100vh; display: flex; flex-direction: column; }
+</style>

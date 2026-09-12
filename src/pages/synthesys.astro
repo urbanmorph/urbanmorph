@@ -1,0 +1,190 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { img } from '../lib/images';
+import data from '../data/synthesys.json';
+
+const iconMap: Record<string, string> = {
+  'fa-chart-line': 'tabler:chart-line', 'fa-newspaper': 'tabler:news', 'fa-map-marked-alt': 'tabler:map-2',
+  'fa-comments': 'tabler:messages', 'fa-brain': 'tabler:brain', 'fa-recycle': 'tabler:recycle', 'fa-landmark': 'tabler:building-bank',
+};
+const capIcons = ['tabler:brain', 'tabler:sparkles', 'tabler:building-community'];
+const title = 'SyntheSYS';
+const description = "Urban Morph's AI-native urban services: live platforms for active mobility policy, Karnataka's digital economy and neighbourhood climate action, revived civic archives, five open tools and nine data stories, from ward to nation.";
+const jsonLd = [{
+  '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'SyntheSYS', applicationCategory: 'BusinessApplication', operatingSystem: 'Web',
+  description, url: 'https://www.urbanmorph.com/synthesys/', author: { '@type': 'Organization', name: 'Urban Morph', url: 'https://www.urbanmorph.com' },
+}];
+---
+
+<Base title={title} description={description} jsonLd={jsonLd} image="/og/synthesys.png">
+  <section class="hero">
+    <div class="container hero__inner">
+      <p class="eyebrow">Urban Morph presents</p>
+      <h1>Synthe<span>SYS</span></h1>
+      <p class="hero__tagline">AI-native urban services</p>
+      <p class="lede">AI-powered services for orchestrating and coordinating urban solutions, and accelerating progress at scale, ward to nation.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#platforms">Explore platforms <Icon name="tabler:arrow-right" size={16} /></a>
+        <a class="btn btn--secondary" href="/blog/synthesys-orchestrating-progress/">Read the origin story</a>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>Live platforms</dt><dd>{data.platforms.length}</dd></div>
+        <div><dt>Open tools</dt><dd>{data.tools.length}</dd></div>
+        <div><dt>Data stories</dt><dd>{data.stories.length}</dd></div>
+        <div><dt>Archive since</dt><dd>1998</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container container--narrow vision">
+      <p class="eyebrow">The vision</p>
+      <h2>Synthesis of data, systems thinking and AI</h2>
+      {data.vision.map((v) => <p set:html={v} />)}
+    </div>
+  </section>
+
+  <section class="section section--paper section--rule">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Core capabilities</p>
+        <h2>How AI powers SyntheSYS</h2>
+      </div>
+      <div class="grid grid--3">
+        {data.capabilities.map((c, i) => (
+          <div class="cap reveal">
+            <span class="cap__icon"><Icon name={capIcons[i] ?? 'tabler:sparkles'} size={26} /></span>
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="platforms">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">The platforms</p>
+        <h2>Built for impact at every scale</h2>
+      </div>
+      {data.platforms.map((p, i) => {
+        const image = img(p.image);
+        return (
+          <article class:list={['platform reveal', { 'platform--flip': i % 2 === 1 }]}>
+            <div class="platform__media">
+              {image && <Image src={image} alt={p.alt} widths={[480, 800, 1200]} sizes="(max-width: 900px) 100vw, 50vw" loading={i === 0 ? 'eager' : 'lazy'} quality={70} />}
+            </div>
+            <div class="platform__body">
+              <span class="chip"><Icon name={iconMap[p.icon] ?? 'tabler:sparkles'} size={14} /> {p.badge}</span>
+              <h3>{p.name}</h3>
+              <p>{p.description}</p>
+              <ul class="platform__features">{p.features.map((f) => <li>{f}</li>)}</ul>
+              <a class="btn btn--secondary" href={p.url} target="_blank" rel="noopener">{p.cta} <Icon name="tabler:external-link" size={15} /></a>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="section section--paper section--rule" id="tools">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Built for the public</p>
+        <h2>Five open tools you can use right now</h2>
+        <p>Free, no login, open source, built by Urban Morph co-founder Sathya Sankaran as public goods. Most are queryable from AI assistants via MCP, so the same public data that powers SyntheSYS is available to anyone.</p>
+      </div>
+      <div class="grid grid--3">
+        {data.tools.map((t) => (
+          <a class="tool reveal" href={t.url} target="_blank" rel="noopener">
+            <span class="label">{t.tag}</span>
+            <h3>{t.name}</h3>
+            <p>{t.description}</p>
+            <span class="tool__link">{t.host} <Icon name="tabler:arrow-up-right" size={14} /></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="stories">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Stories &amp; investigations</p>
+        <h2>Nine data stories on how India actually works</h2>
+        <p>Data-driven investigations into forests, farmers, livelihoods and rights: what the official numbers say once you read all of them together.</p>
+      </div>
+      <div class="grid grid--3">
+        {data.stories.map((s) => (
+          <a class="story reveal" href={s.url} target="_blank" rel="noopener">
+            <span class="label story__tag">{s.tag}</span>
+            <h3>{s.title}</h3>
+            <p>{s.teaser}</p>
+            <span class="story__link">Read the story <Icon name="tabler:arrow-up-right" size={14} /></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta__inner">
+      <h2>Ready to understand your district, city or state better?</h2>
+      <p>SyntheSYS is in service of people, planet and progress. Let's build intelligence for your region.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="mailto:contact@urbanmorph.com">Get in touch <Icon name="tabler:mail" size={16} /></a>
+        <a class="btn btn--secondary" href="/projects/">See our projects</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { background: var(--white); border-bottom: 3px solid var(--ink-2); padding-block: clamp(3rem, 8vw, 5.5rem) 3rem; text-align: center; }
+  .hero__inner { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .hero h1 { font-size: clamp(3rem, 9vw, 5.5rem); letter-spacing: -0.02em; }
+  .hero h1 span { color: var(--teal); }
+  .hero__tagline { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.3em; text-transform: uppercase; color: var(--gray); }
+  .hero .lede { text-align: center; }
+  .hero__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 0.5rem; }
+  .hero__stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem 3rem; margin: 2rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--rule); width: 100%; max-width: 760px; }
+  .hero__stats div { display: flex; flex-direction: column-reverse; align-items: center; min-width: 110px; }
+  .hero__stats dd { margin: 0; font-family: var(--font-display); font-size: 2.5rem; font-weight: 900; line-height: 1; }
+  .hero__stats dt { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 0.5rem; }
+  .vision p { color: var(--gray); line-height: 1.85; }
+  .vision p + p { margin-top: 1.25rem; }
+  .cap { background: var(--white); border: 1px solid var(--rule); border-top: 4px solid var(--teal); padding: 2.5rem 1.75rem; text-align: center; }
+  .cap__icon { width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--teal), var(--green)); color: #fff; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+  .cap h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+  .cap p { color: var(--gray); font-size: var(--text-sm); }
+  .platform { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; padding-block: 3rem; border-bottom: 1px solid var(--rule); }
+  .platform:last-of-type { border-bottom: 0; }
+  .platform--flip .platform__media { order: 2; }
+  .platform__media img { border-radius: var(--radius); border: 2px solid var(--rule); box-shadow: var(--shadow); display: block; }
+  .platform__body { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .platform__body p { color: var(--gray); }
+  .platform__features { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .platform__features li { position: relative; padding-left: 1.4rem; font-size: var(--text-sm); }
+  .platform__features li::before { content: ''; position: absolute; left: 0; top: 0.65em; width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+  .tool, .story { display: flex; flex-direction: column; gap: 0.6rem; padding: 2rem 1.75rem; text-decoration: none; color: inherit; height: 100%; }
+  .tool { background: var(--white); border: 1px solid var(--rule); border-left: 4px solid var(--teal); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .tool:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-left-color: var(--yellow); }
+  .tool .label { color: var(--teal); }
+  .tool h3 { font-size: 1.3rem; }
+  .tool p { color: var(--gray); font-size: var(--text-sm); flex: 1; }
+  .tool__link, .story__link { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.35rem; }
+  .story { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.14); color: #fff; transition: transform 0.3s ease, background 0.3s ease; }
+  .story:hover { background: rgba(255,255,255,0.08); border-color: var(--yellow); transform: translateY(-4px); }
+  .story__tag { color: var(--yellow); }
+  .story h3 { font-size: 1.3rem; color: #fff; }
+  .story p { color: rgba(255,255,255,0.75); font-size: var(--text-sm); flex: 1; }
+  .story__link { color: var(--yellow); }
+  .cta { background: linear-gradient(135deg, var(--pink), var(--yellow)); padding-block: var(--section); text-align: center; }
+  .cta__inner { max-width: 680px; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .cta p { color: var(--ink-2); }
+  @media (prefers-reduced-motion: reduce) { .tool, .story { transition: none; } .tool:hover, .story:hover { transform: none; } }
+  @media (max-width: 900px) { .platform { grid-template-columns: 1fr; gap: 1.5rem; } .platform--flip .platform__media { order: 0; } }
+</style>

@@ -1,0 +1,16 @@
+---
+title: "Rethinking road safety"
+description: "Road safety campaigns focus on helmets and seatbelts for motor vehicle passengers, but ignore pedestrians and cyclists. A MoRTH report showed a 34% increase in pedestrian and cyclist fatalities while car and motorbike deaths decreased by 4%."
+date: 2018-12-04
+category: "Urban Policy"
+author: "Sathya Sankaran"
+subtitle: "The mention of road safety brings out mentions of helmets, seat belts, airbags, signboards. What we don't realise is these are attributes of the safety of a passenger driving a motor vehicle. None of these focus on the others who share the road with the vehicle."
+hero: "./_images/rethinking-road-safety/hero.jpg"
+heroCaption: "Pic: motoroids.com"
+---
+
+The mention of road safety brings out mentions of helmets, seat belts, airbags, signboards. What we don't realise is these are attributes of the safety of a passenger driving a motor vehicle. None of these focus on the others who share the road with the vehicle. We assume if the passenger in a motor vehicle adopted some measure appropriate to his vehicle, all are safe on the roads. This assumption completely ignores the pedestrian who isn't wearing any seatbelt or helmet. Or even the cyclist whose helmet only protects him from a fall and not from a collision. These are the vulnerable users of the road who are completely ignored in this line of thinking. The result of such thinking is for all to see. A MoRTH report in 2017 pointed to a 34% increase in fatalities of pedestrians and cyclists from 2016 while car and motorbike fatalities decreased by 4% in the same period.
+
+Its important to note that fatalities of the vulnerable are a negative externality caused by the lack of provisioning of road safety mechanisms on the automobile as opposed to passenger safety devices. Such a market failure needs government action to correct and bring equity on the streets. The future of autonomous vehicles depends on the decisions it makes when faced with obstacles on the road in the form of pedestrians and cyclists among others. There are moral choices to be made by algorithms in these vehicles and it has become an imperative. There are two components to such features. One is detection and the other is decision making. While the algorithms for decision making in a driverless vehicle is being fine-tuned, automobile companies will do well to decouple and roll out the detection part to current human-powered vehicles. This will help fine tune the detection algorithms and allow drivers to spot cyclists in the blind spots, provide early warning of pedestrians or stray animals getting in the way.
+
+For the foreseeable future, it's important to focus road safety campaigns on the environment external to the vehicle — the road and all its users. The messaging of empathy and awareness of how to prevent harassment of pedestrians and cyclists is very important. Especially, in a country like India where defensive driving is lacking both in training and practice. So the next time you think of a road safety campaign don't look at helmetless drivers or car drivers without seat belts. Look at the ones you miss, the cyclist and pedestrian and think of what the solution to bring down their fatalities can be.
