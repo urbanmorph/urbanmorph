@@ -5,4 +5,3 @@
 /blog.html             /blog/           301
 /news_articles.html    /media/          301
 /blog/:slug.html       /blog/:slug/     301
-/sitemap.xml           /sitemap-index.xml 301
