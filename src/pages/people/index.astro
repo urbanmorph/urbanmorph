@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import { img } from '../../lib/images';
+import team from '../../data/team.json';
+
+const groups = [
+  { key: 'founders', label: 'Founders' },
+  { key: 'team', label: 'Team' },
+  { key: 'advisors', label: 'Advisors' },
+];
+const description = `The ${team.length} people behind Urban Morph: founders, team and advisors, with what each of them has built, led and written.`;
+---
+
+<Base title="People" description={description}>
+  <div class="container stack">
+    <section class="section">
+      <h1>The crew</h1>
+      <p class="lede">{team.length} people. A row is a name, a designation and one line; the profile behind it is facts you can scan, not a paragraph behind a toggle.</p>
+    </section>
+    <section class="panel panel--asphalt on-dark crew">
+      {groups.map((g) => (
+        <div class="crew__group">
+          <h2 class="crew__label">{g.label}</h2>
+          <div class="roster">
+            {team.filter((m) => m.group === g.key).map((m) => {
+              const photo = img(m.photo);
+              return (
+                <a class="roster__row" href={`/people/${m.slug}/`}>
+                  {photo && <Image src={photo} alt="" width={112} height={112} quality={70} loading="lazy" />}
+                  <b>{m.name}</b><em>{m.role}</em><span>{m.line}</span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </section>
+  </div>
+</Base>
+
+<style>
+  .crew { padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; gap: 32px; }
+  .crew__label { font-size: 1rem; font-weight: 600; color: var(--muted-dark); margin-bottom: 8px; font-stretch: 100%; }
+</style>

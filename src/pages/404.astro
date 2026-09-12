@@ -1,26 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
-import Icon from '../components/Icon.astro';
 ---
 
 <Base title="Page not found" description="The page you were looking for has moved or never existed." noindex>
-  <section class="nf">
-    <div class="container nf__inner">
-      <p class="eyebrow">404</p>
-      <h1>This street doesn't go anywhere.</h1>
-      <p class="lede">The page has moved or never existed. Older links from the previous site redirect automatically, so if you typed the address, check it, or start from one of these.</p>
+  <div class="container stack">
+    <section class="board on-yellow nf">
+      <h1>No such street.</h1>
+      <p class="lede">The page has moved or never existed. Older links from the previous site redirect on their own, so if you typed the address, check it, or start from one of these.</p>
       <div class="nf__links">
-        <a class="btn btn--primary" href="/"><Icon name="tabler:home" size={16} /> Home</a>
-        <a class="btn btn--secondary" href="/projects/">Projects</a>
-        <a class="btn btn--secondary" href="/blog/">Blog</a>
-        <a class="btn btn--secondary" href="/synthesys/">SyntheSYS</a>
+        <a class="btn btn--dark" href="/">Home</a>
+        <a class="btn btn--white" href="/projects/">Projects</a>
+        <a class="btn btn--white" href="/blog/">Blog</a>
+        <a class="btn btn--white" href="/synthesys/">SyntheSYS</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </Base>
 
 <style>
-  .nf { padding-block: clamp(4rem, 12vw, 8rem); background: var(--white); }
-  .nf__inner { max-width: 640px; display: flex; flex-direction: column; gap: 1rem; }
-  .nf__links { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+  .nf { padding: clamp(28px, 5vw, 64px); display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+  .nf__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
 </style>

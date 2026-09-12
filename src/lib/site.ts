@@ -15,12 +15,18 @@ export const site = {
     { type: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/urbanmorph/' },
   ],
   nav: [
-    { label: 'Home', href: '/' },
     { label: 'SyntheSYS', href: '/synthesys/' },
     { label: 'Projects', href: '/projects/' },
     { label: 'Media', href: '/media/' },
     { label: 'Blog', href: '/blog/' },
+    { label: 'People', href: '/people/' },
     { label: 'Contact', href: '/#contact' },
+  ],
+  /** Station-board kicker: state language, Hindi, English. */
+  kicker: [
+    { text: 'ನಮ್ಮ ಊರು', lang: 'kn' },
+    { text: 'हमारा शहर', lang: 'hi' },
+    { text: 'Our city', lang: 'en' },
   ],
   founders: [
     { name: 'Sathya Sankaran', jobTitle: 'Co-Founder & Director', url: 'https://www.sathyasankaran.com' },

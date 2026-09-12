@@ -1,66 +1,56 @@
 ---
 import Base from '../layouts/Base.astro';
-import Icon from '../components/Icon.astro';
 import media from '../data/media.json';
 
 const total = media.reduce((n, s) => n + s.items.length, 0);
-const title = 'Media coverage';
 const description = `${total} stories on Urban Morph's work in the press: AltMo, the Active Mobility Centre of Excellence, Relief Riders, Church Street First, Cycle Days and Bengaluru's Bicycle Mayor.`;
-const badgeClass = (b: string) => (b.startsWith('Award') ? 'chip--yellow' : b === 'Milestone' ? 'chip' : 'chip--soft');
+const badgeClass = (b: string) => (b.startsWith('Award') ? 'tag--yellow' : b === 'Milestone' ? 'tag--green' : 'tag--blue');
 ---
 
-<Base title={title} description={description}>
-  <section class="masthead">
-    <div class="container">
-      <p class="eyebrow">Urban Morph in the press</p>
-      <h1>Media chronicle</h1>
-      <div class="masthead__rule"><span>Bengaluru, Karnataka</span><span>{total} stories</span><span>2018 – 2026</span></div>
-    </div>
-  </section>
+<Base title="Media coverage" description={description}>
+  <div class="container stack">
+    <section class="panel panel--blue head">
+      <div>
+        <h1>In the press</h1>
+        <p class="lede">{total} stories from 2018 to 2026 on the work, the platforms and Bengaluru's Bicycle Mayor.</p>
+      </div>
+    </section>
 
-  {media.map((sec, si) => (
-    <section class:list={['section', si % 2 === 0 ? 'section--white' : 'section--paper']}>
-      <div class="container">
-        <div class="sec-head">
-          <h2>{sec.title}</h2>
-          <span class="label">{sec.tag}</span>
-        </div>
+    {media.map((sec) => (
+      <section class="section">
+        <div class="section__head"><h2>{sec.title}</h2><span class="muted">{sec.tag.charAt(0) + sec.tag.slice(1).toLowerCase()}</span></div>
         <div class="stories">
           {sec.items.map((a) => (
-            <article class:list={['story reveal', { 'story--featured': a.featured }]}>
-              {a.badge && <span class:list={['chip', badgeClass(a.badge)]}>{a.badge}</span>}
+            <article class:list={['story', { 'story--featured': a.featured }]}>
+              {a.badge && <span class:list={['tag', badgeClass(a.badge)]}>{a.badge}</span>}
               <h3>{a.title}</h3>
               <p>{a.summary}</p>
-              <p class="meta"><strong>{a.source}</strong>{a.date && <> · {a.date}</>}</p>
+              <p class="story__meta"><strong>{a.source}</strong>{a.date && <>, {a.date}</>}</p>
               {a.coverage.length > 0 && (
                 <ul class="coverage" aria-label="Coverage">
-                  {a.coverage.map((c) => <li><a href={c.url} target="_blank" rel="noopener">{c.label} <Icon name="tabler:arrow-up-right" size={12} /></a></li>)}
+                  {a.coverage.map((c) => <li><a class="tab" href={c.url} target="_blank" rel="noopener">{c.label}</a></li>)}
                 </ul>
               )}
             </article>
           ))}
         </div>
-      </div>
-    </section>
-  ))}
+      </section>
+    ))}
+  </div>
 </Base>
 
 <style>
-  .masthead { background: var(--white); text-align: center; padding-block: clamp(2.5rem, 6vw, 4.5rem) 0; border-bottom: 3px double var(--ink-2); }
-  .masthead h1 { font-size: clamp(2.6rem, 8vw, 5rem); letter-spacing: 0.02em; text-transform: uppercase; }
-  .masthead__rule { display: flex; justify-content: space-between; gap: 1rem; margin-top: 1.5rem; padding-block: 0.75rem; border-top: 1px solid var(--rule); font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
-  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-bottom: 3px solid var(--ink-2); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
-  .sec-head h2 { font-size: var(--text-xl); text-transform: uppercase; letter-spacing: 0.04em; }
-  .stories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 3rem; }
-  .story { padding-block: 1.5rem; border-bottom: 1px solid var(--rule); display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-start; }
+  .head { padding: clamp(24px, 3.5vw, 44px); }
+  .head .lede { margin-top: 12px; color: var(--white); }
+  .stories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; border-top: 2px solid var(--asphalt); }
+  .story { padding: 22px 0; border-bottom: 1px solid var(--rule); display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
   .story--featured { grid-column: 1 / -1; }
-  .story h3 { font-size: 1.35rem; line-height: 1.3; }
-  .story--featured h3 { font-size: var(--text-2xl); font-weight: 900; }
-  .story p { color: var(--gray); font-size: var(--text-sm); text-align: justify; hyphens: auto; }
-  .story--featured p { font-size: var(--text-base); }
-  .story .meta strong { color: var(--ink-2); font-style: italic; font-family: var(--font-body); font-size: var(--text-sm); letter-spacing: 0; }
-  .coverage { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.35rem; }
-  .coverage a { display: inline-flex; align-items: center; gap: 0.25rem; min-height: 32px; padding: 0 0.7rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--white); text-decoration: none; font-family: var(--font-mono); font-size: var(--text-xs); }
-  .coverage a:hover { border-color: var(--teal); }
-  @media (max-width: 800px) { .stories { grid-template-columns: 1fr; } .story p { text-align: left; } .masthead__rule { flex-direction: column; align-items: center; gap: 0.25rem; } }
+  .story h3 { font-size: 1.5rem; }
+  .story--featured h3 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; font-stretch: 85%; }
+  .story p { max-width: 80ch; }
+  .story__meta { font-size: 0.95rem; color: var(--muted); }
+  .story__meta strong { color: var(--asphalt); }
+  .coverage { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .coverage .tab { min-height: 40px; padding: 0 14px; font-size: 0.9rem; }
+  @media (max-width: 800px) { .stories { grid-template-columns: 1fr; } }
 </style>

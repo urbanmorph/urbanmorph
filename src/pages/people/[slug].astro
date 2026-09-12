@@ -1,0 +1,68 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { Image, getImage } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import { img } from '../../lib/images';
+import { site } from '../../lib/site';
+import team from '../../data/team.json';
+
+export const getStaticPaths = (async () => {
+  return team.map((m, i) => ({ params: { slug: m.slug }, props: { member: m, prev: team[(i + team.length - 1) % team.length], next: team[(i + 1) % team.length] } }));
+}) satisfies GetStaticPaths;
+
+const { member, prev, next } = Astro.props;
+const photo = img(member.photo);
+const og = photo ? (await getImage({ src: photo, width: 1200, format: 'jpg' })).src : '/UM-thumbnail.png';
+const linkLabel: Record<string, string> = { linkedin: 'LinkedIn', x: 'X', email: 'Email', website: 'Website', rss: 'Blog', wikipedia: 'Wikipedia', instagram: 'Instagram', youtube: 'YouTube' };
+const links = member.links.map((l) => ({ ...l, label: l.type === 'website' ? l.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : linkLabel[l.type] ?? 'Link' }));
+const description = `${member.name}, ${member.role} at Urban Morph. ${member.line}`;
+const jsonLd = [{ '@context': 'https://schema.org', '@type': 'Person', name: member.name, jobTitle: member.role, image: new URL(og, site.url).href, worksFor: { '@type': 'Organization', name: site.name, url: site.url }, sameAs: member.links.filter((l) => !l.url.startsWith('mailto:')).map((l) => l.url) }];
+---
+
+<Base title={member.name} description={description} image={og} jsonLd={jsonLd}>
+  <div class="container stack">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/people/">The crew</a><span aria-hidden="true"> / </span><span>{member.name}</span></nav>
+
+    <article class="panel panel--white profile">
+      <div class="profile__head">
+        {photo && <Image class="profile__photo" src={photo} alt={member.name} width={400} height={400} quality={75} loading="eager" />}
+        <div class="profile__intro">
+          <h1>{member.name}</h1>
+          <p class="profile__role">{member.role}</p>
+          <div class="profile__bio" set:html={member.bio} />
+          {links.length > 0 && (
+            <ul class="profile__links">
+              {links.map((l) => <li><a class="btn btn--white btn--small" href={l.url} target={l.url.startsWith('mailto:') ? undefined : '_blank'} rel="noopener">{l.label}</a></li>)}
+            </ul>
+          )}
+        </div>
+      </div>
+      <dl class="board on-yellow facts">
+        {member.facts.map((f) => (<><dt>{f.label}</dt><dd>{f.text}</dd></>))}
+      </dl>
+    </article>
+
+    <nav class="pager" aria-label="Other people">
+      <a href={`/people/${prev.slug}/`}>Previous: {prev.name}</a>
+      <a href={`/people/${next.slug}/`}>Next: {next.name}</a>
+    </nav>
+  </div>
+</Base>
+
+<style>
+  .crumbs { font-size: 1rem; color: var(--muted); margin-bottom: calc(-1 * var(--block) + 16px); }
+  .profile { padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; gap: 28px; }
+  .profile__head { display: flex; gap: 28px; align-items: flex-start; }
+  .profile__photo { width: 200px; height: 200px; object-fit: cover; border-radius: var(--radius); border: 3px solid var(--asphalt); flex: none; }
+  .profile__intro { display: flex; flex-direction: column; gap: 10px; padding-top: 6px; }
+  .profile h1 { font-size: clamp(2.2rem, 4vw, 3rem); }
+  .profile__role { font-size: 1.15rem; font-weight: 600; color: var(--blue); }
+  .profile__bio { font-size: 1.1rem; line-height: 1.5; max-width: 60ch; }
+  .profile__bio :global(a) { font-weight: 600; }
+  .profile__links { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .facts { margin: 0; padding: 24px 28px; display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px 16px; font-size: 1.05rem; line-height: 1.45; }
+  .facts dt { color: var(--yellow-ink); font-weight: 600; }
+  .facts dd { margin: 0; }
+  .pager { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  @media (max-width: 620px) { .profile__head { flex-direction: column; } .facts { grid-template-columns: 1fr; gap: 2px 0; } .facts dd { margin-bottom: 10px; } }
+</style>

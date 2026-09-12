@@ -1,285 +1,149 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
-import Icon from '../components/Icon.astro';
-import TeamCard from '../components/TeamCard.astro';
 import { img } from '../lib/images';
 import { site, outcomes, focus, ventures } from '../lib/site';
-import home from '../data/home.json';
-import testimonials from '../data/testimonials.json';
-import awards from '../data/awards.json';
-import partners from '../data/partners.json';
 import team from '../data/team.json';
+import projects from '../data/projects.json';
 
-const founders = team.slice(0, 3);
-const staff = team.slice(3, 6);
-const advisors = team.slice(6);
-const serviceIcons = ['tabler:bulb', 'tabler:topology-star-3', 'tabler:rocket'];
-const contactActions = [
-  { href: `mailto:${site.email}`, label: 'Send an enquiry', icon: 'tabler:mail' },
-  { href: `mailto:${site.email}?subject=${encodeURIComponent('Joining Urban Morph')}`, label: 'Write to us', icon: 'tabler:users' },
-  { href: site.mapsUrl, label: 'Open in Maps', icon: 'tabler:map-pin', external: true },
-];
-const title = 'Urban Morph | AI-native policy & urban-tech venture studio, Bengaluru';
+const strandClass = ['panel--green', 'panel--blue', 'panel--asphalt'];
+const street = ['Church Street First', 'Bicycle Parking Facilities', 'Cycle Days']
+  .map((t) => projects.find((p) => p.title === t))
+  .filter((p): p is NonNullable<typeof p> => Boolean(p));
+const title = 'Urban Morph | AI-native policy and urban-tech venture studio, Bengaluru';
 const jsonLd = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: site.url, description: site.description }];
 ---
 
 <Base title={title} description={site.description} jsonLd={jsonLd}>
-  <section class="hero">
-    <div class="container hero__inner">
-      <p class="eyebrow">{site.tagline}</p>
-      <h1>Policy, platforms and programmes for Indian cities.</h1>
-      <p class="lede">Urban Morph is an AI-native, full-stack policy and urban-tech venture studio in Bengaluru. Mobility is our mainstay: cycling, walking and public transport. Urban governance and policy support run through everything we do, from campaigning for active-mobility law to building the dashboards a state government tracks its economy on.</p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="/projects/">See our work <Icon name="tabler:arrow-right" size={16} /></a>
-        <a class="btn btn--secondary" href="/synthesys/">Explore SyntheSYS</a>
-        <a class="hero__talk" href="#contact">Talk to us <Icon name="tabler:arrow-right" size={15} /></a>
-      </div>
-    </div>
-    <div class="container">
-      <ul class="outcomes">
-        {outcomes.map((o) => (
-          <li>
-            <strong>{o.value}</strong>
-            <span>{o.label}</span>
-            <p>{o.detail}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
+  <div class="container stack">
 
-  <section class="section section--white section--rule" id="ventures">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Ventures</p>
-        <h2>What we build and back</h2>
+    <section class="masthead" aria-label="Urban Morph">
+      <div class="board on-yellow masthead__board">
+        <div class="masthead__text">
+          <p class="masthead__kicker">
+            {site.kicker.map((k, i) => (
+              <><span lang={k.lang}>{k.text}</span>{i < site.kicker.length - 1 && <span class="masthead__slash" aria-hidden="true"> / </span>}</>
+            ))}
+          </p>
+          <h1>Policy, platforms and programmes for Indian cities.</h1>
+        </div>
+        <div class="masthead__aside">
+          <span><strong>Urban Morph</strong></span>
+          <span>AI-native, full-stack policy and urban-tech venture studio</span>
+          <span>Bengaluru, and 135 cities where the work runs</span>
+        </div>
       </div>
-      <ul class="ventures">
-        {ventures.map((v) => (
-          <li>
-            <div class="ventures__head">
-              <h3>{v.name}</h3>
-              <span class:list={['chip', v.status === 'Live' ? 'chip--soft' : 'chip--yellow']}>{v.status}</span>
-            </div>
-            <p>{v.description}</p>
-            {v.url ? (
-              <a class="ventures__link" href={v.url} target={v.url.startsWith('http') ? '_blank' : undefined} rel="noopener">{v.host} <Icon name="tabler:arrow-up-right" size={14} /></a>
-            ) : (
-              <span class="ventures__link ventures__link--soon">{v.host}</span>
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
+      <div class="masthead__lede">
+        <p class="lede">Mobility is the mainstay: cycling, walking and public transport. Urban governance and policy support run through everything we do, from campaigning for active-mobility law to the dashboards a state government tracks its economy on.</p>
+        <div class="masthead__actions">
+          <a class="btn btn--dark" href="/projects/">See our work</a>
+          <a class="btn btn--white" href="#contact">Talk to us</a>
+        </div>
+      </div>
+    </section>
 
-  <section class="section section--paper" id="work">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">What we do</p>
-        <h2>Mobility, governance and AI-native urban services</h2>
-      </div>
+    <section class="section" id="ventures">
+      <h2>What we build and back</h2>
       <div class="grid grid--3">
-        {focus.map((f) => (
-          <article class="focus reveal">
-            <span class="focus__icon"><Icon name={f.icon} size={26} /></span>
-            <p class="label">{f.kicker}</p>
+        {ventures.map((v) => (
+          <article class="panel panel--white venture">
+            <div class="venture__head"><h3>{v.name}</h3><span class="tag">{v.status}</span></div>
+            <p>{v.description}</p>
+            {v.url ? <a href={v.url} target={v.url.startsWith('http') ? '_blank' : undefined} rel="noopener">{v.host}</a> : <span class="muted">{v.host}</span>}
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <h2>What we do</h2>
+      <div class="grid grid--3">
+        {focus.map((f, i) => (
+          <article class:list={['panel', strandClass[i], 'strand', i === 2 ? 'on-dark' : '']}>
             <h3>{f.name}</h3>
             <p>{f.description}</p>
-            <ul class="focus__links">
-              {f.links.map((l) => (
-                <li><a href={l.href} target={l.href.startsWith('http') ? '_blank' : undefined} rel="noopener">{l.label} <Icon name="tabler:arrow-right" size={14} /></a></li>
-              ))}
+            <ul class="links">
+              {f.links.map((l) => <li><a href={l.href} target={l.href.startsWith('http') ? '_blank' : undefined} rel="noopener">{l.label}</a></li>)}
             </ul>
           </article>
         ))}
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section--paper section--rule" id="offer">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">What we offer</p>
-        <h2>Innovate, orchestrate, execute</h2>
-        <p set:html={home.about} />
-      </div>
-      <div class="grid grid--3">
-        {home.services.map((s, i) => (
-          <article class="service reveal">
-            <span class="service__icon"><Icon name={serviceIcons[i]} size={28} /></span>
-            <h3>{s.title}</h3>
-            <p>{s.intro}</p>
-            <ul class="service__items">
-              {s.items.map((it) => (
-                <li>
-                  <h4>{it.title.replace(/^[^\w]+/, '')}</h4>
-                  <p set:html={it.html} />
-                </li>
-              ))}
-            </ul>
-            {s.footer && <p class="service__foot" set:html={s.footer} />}
-          </article>
+    <section class="section" aria-label="Outcomes">
+      <ul class="grid grid--4 outcomes">
+        {outcomes.map((o) => (
+          <li class="stat"><b>{o.value.replace('1st', 'First')}</b><span>{o.label}</span><small>{o.detail}</small></li>
         ))}
-      </div>
-    </div>
-  </section>
+      </ul>
+    </section>
 
-  <section class="section section--white section--rule">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">What our partners say</p>
-        <h2>Trusted by leading organisations</h2>
-      </div>
+    <section class="section" id="street">
+      <div class="section__head"><h2>From the street</h2><a href="/projects/">All {projects.length} projects</a></div>
       <div class="grid grid--3">
-        {testimonials.map((t) => {
-          const logo = img(t.logo);
+        {street.map((p) => {
+          const image = img(p.image);
           return (
-            <blockquote class="quote reveal">
-              <Icon name="tabler:quote" size={28} class="quote__mark" />
-              <p>{t.quote}</p>
-              <footer>
-                {logo && <Image src={logo} alt={t.logoAlt} width={140} height={Math.round((140 * logo.height) / logo.width)} loading="lazy" />}
-                <cite>{t.author}</cite>
-              </footer>
-            </blockquote>
+            <article class="card">
+              <div class="card__media">{image && <Image src={image} alt={p.alt || p.title} widths={[400, 640, 900]} sizes="(max-width: 620px) 100vw, 33vw" quality={65} loading="lazy" />}</div>
+              <div class="card__body"><h3>{p.title}</h3><p>{p.description}</p></div>
+            </article>
           );
         })}
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section--paper section--rule" id="recognition">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Recognition</p>
-        <h2>Awards and partners</h2>
+    <section class="panel panel--asphalt on-dark crew" id="crew">
+      <div class="section__head"><h2>The crew</h2><a href="/people/">Profiles</a></div>
+      <div class="roster">
+        {team.map((m) => {
+          const photo = img(m.photo);
+          return (
+            <a class="roster__row" href={`/people/${m.slug}/`}>
+              {photo && <Image src={photo} alt="" width={112} height={112} quality={70} loading="lazy" />}
+              <b>{m.name}</b><em>{m.role}</em><span>{m.line}</span>
+            </a>
+          );
+        })}
       </div>
-      <ul class="awards">
-        {awards.map((a) => (
-          <li class="reveal">
-            <Icon name="tabler:trophy" size={22} class="awards__icon" />
-            <div>
-              <h3>{a.title} <span class="meta">{a.year}</span></h3>
-              <p>{a.description}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <div class="partners">
-        {partners.map((group) => (
-          <div class="partners__group">
-            <h3 class="label">{group.category}</h3>
-            <ul>
-              {group.items.map((p) => {
-                const logo = img(p.logo);
-                return <li>{logo && <Image src={logo} alt="" width={160} height={Math.round((160 * logo.height) / logo.width)} loading="lazy" />}<span>{p.name}</span></li>;
-              })}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section section--white section--rule" id="team">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Meet our team</p>
-        <h2>Passionate urban innovators driving sustainable change</h2>
+    <section class="board on-yellow contact" id="contact">
+      <div>
+        <h2>Talk to us</h2>
+        <p class="contact__text">For governments, philanthropies and partners. Write to <a href={`mailto:${site.email}`}>{site.email}</a>, or find us at <a href={site.mapsUrl} target="_blank" rel="noopener">41 Vishnu Nivas, NGEF Colony, Sanjaynagar, Bengaluru 560094</a>.</p>
       </div>
-      <div class="grid grid--3">
-        {founders.map((m) => <div class="reveal"><TeamCard member={m} /></div>)}
-        {staff.map((m) => <div class="reveal"><TeamCard member={m} /></div>)}
-      </div>
-      <h3 class="advisors-title">Advisors</h3>
-      <div class="grid grid--3">
-        {advisors.map((m) => <div class="reveal"><TeamCard member={m} compact /></div>)}
-      </div>
-    </div>
-  </section>
+      <a class="btn btn--dark" href={`mailto:${site.email}`}>Write to us</a>
+    </section>
 
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Let's shape the future together</p>
-        <h2>Ready to transform your city?</h2>
-        <p>Get in touch with us.</p>
-      </div>
-      <div class="grid grid--3">
-        {home.contact.map((c, i) => (
-          <div class="contact__card reveal">
-            <span class="contact__icon"><Icon name={contactActions[i].icon} size={24} /></span>
-            <h3>{c.title}</h3>
-            <p>{c.text}</p>
-            {i === 2 && <p class="contact__address">{site.address}</p>}
-            <a class="btn btn--primary" href={contactActions[i].href} target={contactActions[i].external ? '_blank' : undefined} rel="noopener">{contactActions[i].label}</a>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+  </div>
 </Base>
 
 <style>
-  .hero { background: var(--white); border-bottom: 3px solid var(--ink-2); padding-block: clamp(3rem, 8vw, 6rem) 0; }
-  .hero__inner { max-width: 880px; display: flex; flex-direction: column; gap: 1.25rem; }
-  .hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
-  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin-top: 0.5rem; }
-  .hero__talk { display: inline-flex; align-items: center; gap: 0.4rem; min-height: var(--tap); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; font-weight: 700; }
-  .outcomes { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; margin: 3rem 0 0; padding: 2rem 0 2.5rem; border-top: 1px solid var(--rule); }
-  .outcomes li { display: flex; flex-direction: column; }
-  .outcomes strong { display: block; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900; line-height: 1; color: var(--teal); font-variant-numeric: tabular-nums; }
-  .outcomes span { display: block; margin-top: 0.6rem; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); font-weight: 700; }
-  .outcomes p { margin-top: 0.3rem; font-size: var(--text-sm); color: var(--muted); }
-  .ventures { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
-  .ventures li { display: flex; flex-direction: column; gap: 0.6rem; padding-top: 1rem; border-top: 2px solid var(--ink-2); }
-  .ventures__head { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
-  .ventures h3 { font-size: 1.5rem; }
-  .ventures p { color: var(--gray); flex: 1; }
-  .ventures__link { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 40px; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; font-weight: 700; }
-  .ventures__link--soon { color: var(--muted); }
-  @media (max-width: 900px) { .ventures { grid-template-columns: 1fr; } }
-  .focus, .service { background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; height: 100%; }
-  .focus { background: var(--paper); }
-  .focus__icon, .service__icon, .contact__icon { width: 56px; height: 56px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--yellow-soft); color: var(--ink-2); }
-  .focus__icon { background: var(--teal-soft); color: var(--teal); }
-  .focus h3 { font-size: 1.5rem; }
-  .focus > p, .service > p { color: var(--gray); }
-  .focus .label { margin-bottom: -0.4rem; }
-  .focus__links { list-style: none; margin: auto 0 0; padding: 0.75rem 0 0; border-top: 1px solid var(--rule); display: flex; flex-direction: column; }
-  .focus__links a { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 40px; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; font-weight: 700; }
-  .service__items { list-style: none; margin: 0.5rem 0 0; padding: 0; display: flex; flex-direction: column; gap: 1rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
-  .service__items h4 { font-size: 1.05rem; margin-bottom: 0.2rem; }
-  .service__items p { font-size: var(--text-sm); color: var(--gray); }
-  .service__foot { margin-top: auto; padding-top: 1rem; border-top: 2px solid var(--paper); font-size: var(--text-sm); }
-  .service__foot :global(a), .service__items :global(a) { font-weight: 700; text-decoration: none; }
-  .quote { margin: 0; background: var(--paper); border: 1px solid var(--rule); border-left: 4px solid var(--teal); padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 1rem; height: 100%; }
-  .quote :global(.quote__mark) { color: var(--teal); }
-  .quote p { font-style: italic; color: var(--ink-2); flex: 1; }
-  .quote footer { display: flex; flex-direction: column; gap: 0.6rem; }
-  .quote img { max-height: 44px; width: auto; object-fit: contain; object-position: left; }
-  .quote cite { font-style: normal; font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); font-weight: 700; }
-  .awards { list-style: none; margin: 0 0 3rem; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 2rem; }
-  .awards li { display: flex; gap: 1rem; padding: 1.25rem 1.5rem; background: var(--white); border: 1px solid var(--rule); border-left: 4px solid var(--yellow); }
-  .awards :global(.awards__icon) { color: var(--yellow); flex: none; margin-top: 0.15rem; }
-  .awards h3 { font-size: 1.1rem; }
-  .awards h3 .meta { margin-left: 0.4rem; }
-  .awards p { font-size: var(--text-sm); color: var(--gray); margin-top: 0.25rem; }
-  .partners { display: flex; flex-direction: column; gap: 1.75rem; }
-  .partners__group h3 { margin-bottom: 0.75rem; }
-  .partners__group ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.75rem; }
-  .partners__group li { display: flex; align-items: center; gap: 0.75rem; background: var(--white); border: 1px solid var(--rule); border-radius: var(--radius); padding: 0.6rem 1rem; min-height: 64px; }
-  .partners__group img { max-height: 40px; width: auto; max-width: 110px; object-fit: contain; }
-  .partners__group span { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-2); }
-  .advisors-title { margin: 2.5rem 0 1rem; font-size: var(--text-lg); }
-  .contact { background: linear-gradient(135deg, var(--pink), var(--yellow)); padding-block: var(--section); }
-  .contact .section-head p { color: var(--ink-2); }
-  .contact__card { background: var(--white); border-radius: var(--radius); padding: 2rem 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; align-items: flex-start; height: 100%; }
-  .contact__card p { color: var(--gray); }
-  .contact__address { font-size: var(--text-sm); }
-  .contact__card .btn { margin-top: auto; }
-  @media (max-width: 900px) { .outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); } .awards { grid-template-columns: 1fr; } }
-  @media (max-width: 480px) { .outcomes { grid-template-columns: 1fr; } }
+  .masthead { display: flex; flex-direction: column; }
+  .masthead__board { border-radius: var(--radius) var(--radius) 0 0; padding: clamp(24px, 3.5vw, 48px); display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: end; }
+  .masthead__text { display: flex; flex-direction: column; gap: 22px; }
+  .masthead__kicker { font-size: clamp(1.25rem, 2.2vw, 1.75rem); font-weight: 600; line-height: 1.3; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.2em; }
+  .masthead__slash { font-weight: 400; }
+  .masthead h1 { max-width: 12ch; }
+  .masthead__aside { display: flex; flex-direction: column; gap: 6px; font-size: 1rem; line-height: 1.45; border-left: 3px solid var(--asphalt); padding-left: 18px; }
+  .masthead__lede { background: var(--white); border: 6px solid var(--asphalt); border-top: 0; border-radius: 0 0 var(--radius) var(--radius); padding: clamp(20px, 2.5vw, 30px) clamp(24px, 3.5vw, 48px); display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .masthead__actions { display: flex; gap: 12px; flex: none; flex-wrap: wrap; }
+  .venture { padding: 26px 28px 28px; display: flex; flex-direction: column; gap: 10px; }
+  .venture__head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .venture h3 { font-size: 1.8rem; }
+  .venture p { flex: 1; }
+  .strand { padding: 32px 30px 30px; display: flex; flex-direction: column; gap: 14px; }
+  .strand h3 { font-size: clamp(1.8rem, 2.6vw, 2.5rem); font-stretch: 90%; }
+  .strand p { flex: 1; }
+  .outcomes { list-style: none; margin: 0; padding: 0; }
+  .crew { padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; gap: 20px; }
+  .contact { padding: clamp(24px, 3vw, 44px); display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+  .contact__text { margin-top: 10px; max-width: 60ch; font-size: 1.1rem; }
+  .contact a:not(.btn) { color: var(--asphalt); }
+  @media (max-width: 991px) {
+    .masthead__board { grid-template-columns: 1fr; }
+    .masthead__aside { border-left: 0; border-top: 3px solid var(--asphalt); padding: 14px 0 0; }
+    .masthead__lede, .contact { flex-direction: column; align-items: flex-start; }
+  }
 </style>
