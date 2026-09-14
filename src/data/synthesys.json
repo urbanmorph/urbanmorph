@@ -145,6 +145,12 @@
   ],
   "stories": [
     {
+      "title": "Upwind",
+      "tag": "Air · Waste",
+      "teaser": "Only 30 percent of Delhi's winter air is its own. Seven of the eleven coal plants within 300 km are exempt from sulphur controls, and six of those seven sit upwind of the city being blamed.",
+      "url": "https://upwind.surge.sh"
+    },
+    {
       "title": "Influence the Rule, Not the Bird",
       "tag": "Commons · Emergence",
       "teaser": "How to use emergence to steer action in the commons. Birds in formation follow a few simple rules, and the formation is what emerges. Money and effort mostly add speed; only the rules change direction.",

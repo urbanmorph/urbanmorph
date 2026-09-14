@@ -6,7 +6,7 @@ import data from '../data/synthesys.json';
 
 const badgeClass: Record<string, string> = { 'fa-chart-line': 'tag--blue', 'fa-newspaper': 'tag--blue', 'fa-map-marked-alt': 'tag--green', 'fa-comments': 'tag--blue', 'fa-brain': 'tag--green', 'fa-recycle': 'tag--green', 'fa-landmark': 'tag--blue' };
 const title = 'SyntheSYS';
-const description = "Urban Morph's AI-native urban services: live platforms for active mobility policy, Karnataka's digital economy and neighbourhood climate action, revived civic archives, five open tools and nine data stories, from ward to nation.";
+const description = "Urban Morph's AI-native urban services: live platforms for active mobility policy, Karnataka's digital economy and neighbourhood climate action, revived civic archives, five open tools and ten data stories, from ward to nation.";
 const ogSrc = img('img/synthesys/kdem-screenshot.webp');
 const ogImage = ogSrc ? (await getImage({ src: ogSrc, width: 1200, format: 'jpg' })).src : '/UM-thumbnail.png';
 const jsonLd = [{ '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'SyntheSYS', applicationCategory: 'BusinessApplication', operatingSystem: 'Web', description, url: 'https://www.urbanmorph.com/synthesys/', author: { '@type': 'Organization', name: 'Urban Morph', url: 'https://www.urbanmorph.com' }, offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', price: '0', priceCurrency: 'INR' } }];
@@ -67,7 +67,7 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'SoftwareApplicatio
     </section>
 
     <section class="section" id="stories">
-      <div class="section__head"><h2>Nine data stories</h2><span class="muted">Data-driven investigations into forests, farmers, livelihoods and rights</span></div>
+      <div class="section__head"><h2>Ten data stories</h2><span class="muted">Data-driven investigations into air, forests, farmers, livelihoods and rights</span></div>
       <div class="grid grid--3">
         {data.stories.map((s) => (
           <a class="panel panel--blue story" href={s.url} target="_blank" rel="noopener">
