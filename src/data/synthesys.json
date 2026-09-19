@@ -145,6 +145,12 @@
   ],
   "stories": [
     {
+      "title": "Where India's Food Goes",
+      "tag": "Food · Agriculture",
+      "teaser": "India grows more food than it needs and throws away a tenth of it. The farmer who grew your vegetables keeps about a third of what you pay. And owning the chain does not save the soil or the aquifer.",
+      "url": "https://same-heap.surge.sh"
+    },
+    {
       "title": "Upwind",
       "tag": "Air · Waste",
       "teaser": "Only 30 percent of Delhi's winter air is its own. Seven of the eleven coal plants within 300 km are exempt from sulphur controls, and six of those seven sit upwind of the city being blamed.",
