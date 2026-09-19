@@ -72,8 +72,18 @@ button { font: inherit; }
 .panel--asphalt { background: var(--asphalt); color: var(--paper); }
 .panel--yellow { background: var(--yellow); color: var(--asphalt); }
 .board { background: var(--yellow); color: var(--asphalt); border: 6px solid var(--asphalt); border-radius: var(--radius); }
-.panel--green a, .panel--blue a { color: var(--white); }
-.panel--asphalt a { color: var(--yellow); }
+/* A link can sit inside a coloured panel or BE one (story cards, roster rows).
+   Both cases must keep the surface's text colour, including on hover: the
+   global a:hover colour otherwise wins and the text turns unreadable. */
+.panel--green a, .panel--blue a, a.panel--green, a.panel--blue,
+.panel--green a:hover, .panel--blue a:hover,
+a.panel--green:hover, a.panel--blue:hover { color: var(--white); }
+.panel--asphalt a, a.panel--asphalt,
+.panel--asphalt a:hover, a.panel--asphalt:hover { color: var(--yellow); }
+.board a, a.board, .board a:hover, a.board:hover { color: var(--asphalt); }
+/* Hover feedback on a link-panel is the surface, not the text colour. */
+a.panel--blue:hover { background: var(--blue-ink); }
+a.panel--green:hover, a.panel--asphalt:hover { filter: brightness(1.12); }
 .panel--asphalt h2, .panel--asphalt h3 { color: var(--paper); }
 .panel--green h2, .panel--green h3, .panel--blue h2, .panel--blue h3 { color: var(--white); }
 
