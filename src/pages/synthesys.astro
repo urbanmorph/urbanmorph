@@ -6,10 +6,10 @@ import data from '../data/synthesys.json';
 
 const badgeClass: Record<string, string> = { 'fa-chart-line': 'tag--blue', 'fa-newspaper': 'tag--blue', 'fa-map-marked-alt': 'tag--green', 'fa-comments': 'tag--blue', 'fa-brain': 'tag--green', 'fa-recycle': 'tag--green', 'fa-landmark': 'tag--blue' };
 const title = 'SyntheSYS';
-const description = "Urban Morph's AI-native urban services: live platforms for active mobility policy, Karnataka's digital economy and neighbourhood climate action, revived civic archives, five open tools and ten data stories, from ward to nation.";
-const numberWord = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve'];
+const numberWord = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen'];
 const storyCount = numberWord[data.stories.length] ?? String(data.stories.length);
 const toolCount = numberWord[data.tools.length] ?? String(data.tools.length);
+const description = `Urban Morph's AI-native urban services: live platforms for active mobility policy, Karnataka's digital economy and neighbourhood climate action, revived civic archives, ${toolCount.toLowerCase()} open tools and ${storyCount.toLowerCase()} data stories, from ward to nation.`;
 const ogSrc = img('img/synthesys/kdem-screenshot.webp');
 const ogImage = ogSrc ? (await getImage({ src: ogSrc, width: 1200, format: 'jpg' })).src : '/UM-thumbnail.png';
 const jsonLd = [{ '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'SyntheSYS', applicationCategory: 'BusinessApplication', operatingSystem: 'Web', description, url: 'https://www.urbanmorph.com/synthesys/', author: { '@type': 'Organization', name: 'Urban Morph', url: 'https://www.urbanmorph.com' }, offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', price: '0', priceCurrency: 'INR' } }];

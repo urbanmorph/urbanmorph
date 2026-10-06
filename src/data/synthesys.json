@@ -145,6 +145,12 @@
   ],
   "stories": [
     {
+      "title": "Land Ledger",
+      "tag": "Land · Water · Map",
+      "teaser": "One map that brings seven stories on India's soil, water, food and farmers together, district by district. For every 100 kg of nitrogen that goes onto the fields, the harvest carries away about 48, and soil-test labs disagree with each other more than the soils do.",
+      "url": "https://land-ledger.surge.sh"
+    },
+    {
       "title": "Where India's Food Goes",
       "tag": "Food · Agriculture",
       "teaser": "India grows more food than it needs and throws away a tenth of it. The farmer who grew your vegetables keeps about a third of what you pay. And owning the chain does not save the soil or the aquifer.",

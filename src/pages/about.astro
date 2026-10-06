@@ -4,6 +4,9 @@ import { site, ventures, outcomes } from '../lib/site';
 import home from '../data/home.json';
 import awards from '../data/awards.json';
 import team from '../data/team.json';
+import synthesys from '../data/synthesys.json';
+const numberWord = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen'];
+const n = (k: number) => numberWord[k] ?? String(k);
 
 const founders = team.filter((m) => m.group === 'founders');
 const faqs = [
@@ -21,7 +24,7 @@ const faqs = [
   },
   {
     q: 'What is SyntheSYS?',
-    a: 'SyntheSYS is Urban Morph\'s AI-native urban services practice: live platforms such as the Council for Active Mobility (cfam.in), the Karnataka Digital Economy Mission dashboard, Neighbourhoods of the Future and GreensBrowns; revived civic archives India Together, Praja and mapunitygroups; five free open tools; and ten data stories on how India works.',
+    a: `SyntheSYS is Urban Morph's AI-native urban services practice: live platforms such as the Council for Active Mobility (cfam.in), the Karnataka Digital Economy Mission dashboard, Neighbourhoods of the Future and GreensBrowns; revived civic archives India Together, Praja and mapunitygroups; ${n(synthesys.tools.length)} free open tools; and ${n(synthesys.stories.length)} data stories on how India works.`,
   },
   {
     q: 'What is SaralCare?',

@@ -20,7 +20,21 @@ Cycling, walking and public transport: India's first pop-up pedestrian street (C
 Support for governments, legislators and citizens: a model framework and campaign for the Karnataka Active Mobility Bill, strategic dashboards for the Karnataka Digital Economy Mission, revived civic archives (India Together, Praja, mapunitygroups), and thesis-led advisory for philanthropies, regranters and CSR programmes deploying capital in cities.
 
 ### AI-native urban services (SyntheSYS)
-Live platforms: CFAM (cfam.in), the KDEM dashboard (kdem.vercel.app), Neighbourhoods of the Future (notf.in), GreensBrowns (greensbrowns.vercel.app), India Together (indiatogether.org), Praja (praja.in), mapunitygroups (mapunitygroups.com). Five free open tools: mdshare (mdshare.live), bharatlas (bharatlas.com), Irrational (irrational.pages.dev), Mugilu (mugilu.live), twelveswaras (twelveswaras.com). Eleven data stories on how India works: the food chain from field to plate, Delhi's winter air and upwind coal, the commons, corporate nature disclosure, soil health, biodiversity registers, village sustainability, wildlife conflict, forest rights, farmer collectives and women's self-help groups.
+Live platforms: CFAM (cfam.in), the KDEM dashboard (kdem.vercel.app), Neighbourhoods of the Future (notf.in), GreensBrowns (greensbrowns.vercel.app), India Together (indiatogether.org), Praja (praja.in), mapunitygroups (mapunitygroups.com). Five free open tools: mdshare (mdshare.live), bharatlas (bharatlas.com), Irrational (irrational.pages.dev), Mugilu (mugilu.live), twelveswaras (twelveswaras.com). Twelve data stories on how India works: a district map of India's land, the food chain from field to plate, Delhi's winter air and upwind coal, the commons, corporate nature disclosure, soil health, biodiversity registers, village sustainability, wildlife conflict, forest rights, farmer collectives and women's self-help groups.
+
+Data stories:
+- Land Ledger (land-ledger.surge.sh)
+- Where India's Food Goes (same-heap.surge.sh)
+- Upwind (upwind.surge.sh)
+- Influence the Rule, Not the Bird (not-the-bird.surge.sh)
+- The Question They Made Optional (made-optional.surge.sh)
+- The Best-Measured Soil in the World (dead-reckoning.surge.sh)
+- The Register No One Reads (pbr-story.surge.sh)
+- The Ground Beneath the Report Card (canitlast.surge.sh)
+- The Uncounted (the-uncounted.surge.sh)
+- Whose Forest Is It? (whose-forest.surge.sh)
+- The Hollow Collective (fpo-story.surge.sh)
+- The Ground They Stand On (shg-story.surge.sh)
 
 ## Ventures
 
