@@ -49,7 +49,19 @@ AI-native services for orchestrating and coordinating urban solutions and accele
 - GreensBrowns (greensbrowns.vercel.app): Bengaluru's circular green-waste network, built by A-Gain and powered by Urban Morph
 - Revived civic archives: India Together (indiatogether.org, journalism since 1998, 3,790 articles), Praja (praja.in, citizen forum since 2007, 5,155 posts and 36,856 comments) and mapunitygroups (mapunitygroups.com, community mapping since 2007, 50,622 records in 872 groups)
 - Open tools, free and no login: mdshare (mdshare.live), bharatlas (bharatlas.com), Irrational (irrational.pages.dev), Mugilu (mugilu.live), twelveswaras (twelveswaras.com)
-- Data stories: nine data-driven investigations into how India works, covering the commons, corporate nature disclosure, soil health, biodiversity registers, village sustainability, wildlife conflict, forest rights, farmer collectives and women's SHGs
+- Data stories: twelve data-driven investigations into how India works, covering a district map of India's land (Land Ledger), food, air and waste, the commons, corporate nature disclosure, soil health, biodiversity registers, village sustainability, wildlife conflict, forest rights, farmer collectives and women's SHGs:
+  - Land Ledger (land-ledger.surge.sh)
+  - Where India’s Food Goes (same-heap.surge.sh)
+  - Upwind (upwind.surge.sh)
+  - Influence the Rule, Not the Bird (not-the-bird.surge.sh)
+  - The Question They Made Optional (made-optional.surge.sh)
+  - The Best-Measured Soil in the World (dead-reckoning.surge.sh)
+  - The Register No One Reads (pbr-story.surge.sh)
+  - The Ground Beneath the Report Card (canitlast.surge.sh)
+  - The Uncounted (the-uncounted.surge.sh)
+  - Whose Forest Is It? (whose-forest.surge.sh)
+  - The Hollow Collective (fpo-story.surge.sh)
+  - The Ground They Stand On (shg-story.surge.sh)
 
 ## Key Projects & Accomplishments
 
