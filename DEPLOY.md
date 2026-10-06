@@ -6,7 +6,7 @@
 |---|---|
 | Live site | https://www.urbanmorph.com |
 | Served by | Cloudflare Worker `urbanmorph` (static assets from `dist/`) |
-| Production branch | **`astro`** |
+| Production branch | **`astro`** (the repository's default branch) |
 | Deploys when | anything is pushed to `astro`, automatically, via GitHub Actions |
 | Preview URL | https://urbanmorph.knerav.workers.dev |
 
@@ -18,8 +18,8 @@ This repository holds two separate sites with no shared history:
 
 - **`astro`** — this site. Astro, built to `dist/`, deployed to the Worker. **This is production.**
 - **`master`** — the retired hand-written Jekyll site (`index.html`, `synthesys.html`, `_config.yml`).
-  It is no longer served: the domain points at Cloudflare, not GitHub Pages.
-  Editing files there changes nothing on the live site.
+  GitHub Pages is switched off and the domain points at Cloudflare, so editing files there changes
+  nothing on the live site. Its README carries the same warning.
 
 If you edited `synthesys.html` or another `.html` file at the repository root, you were on `master`
 and the change will not appear. The same content lives under `src/` on `astro`:
