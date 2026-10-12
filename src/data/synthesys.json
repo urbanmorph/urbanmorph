@@ -205,7 +205,8 @@
       "tag": "Biodiversity · Governance",
       "teaser": "India built 2.72 lakh People's Biodiversity Registers to put villages in charge of the nature around them. Two have been formally approved.",
       "url": "https://pbr-story.surge.sh",
-      "keywords": "People's Biodiversity Registers, Biological Diversity Act, biodiversity governance, gram panchayats"
+      "keywords": "People's Biodiversity Registers, Biological Diversity Act, biodiversity governance, gram panchayats",
+      "image": "https://pbr-story.surge.sh/og.jpg"
     },
     {
       "title": "The Ground Beneath the Report Card",
@@ -228,21 +229,24 @@
       "tag": "Forests · CFR Rights",
       "teaser": "India mapped 3.46 crore hectares of community forest that local communities could govern. Less than 3% has been recognised.",
       "url": "https://whose-forest.surge.sh",
-      "keywords": "Community Forest Rights, Forest Rights Act, gram sabha, forest governance, tribal rights"
+      "keywords": "Community Forest Rights, Forest Rights Act, gram sabha, forest governance, tribal rights",
+      "image": "https://whose-forest.surge.sh/og.jpg"
     },
     {
       "title": "The Hollow Collective",
       "tag": "Agriculture · FPOs",
       "teaser": "India helped small farmers form nearly 50,000 companies they own together. Just 4% employ even one paid manager.",
       "url": "https://fpo-story.surge.sh",
-      "keywords": "Farmer Producer Organisations, FPOs, farmer collectives, agriculture, cooperatives"
+      "keywords": "Farmer Producer Organisations, FPOs, farmer collectives, agriculture, cooperatives",
+      "image": "https://fpo-story.surge.sh/og.jpg"
     },
     {
       "title": "The Ground They Stand On",
       "tag": "Livelihoods · Women · SHGs",
       "teaser": "India's self-help groups are the world's largest financial-inclusion effort: 9 crore women across 8.6 million groups. Yet even the best-served state leaves 71% stuck at saving, never reaching credit.",
       "url": "https://shg-story.surge.sh",
-      "keywords": "self-help groups, SHGs, women, financial inclusion, DAY-NRLM, livelihoods"
+      "keywords": "self-help groups, SHGs, women, financial inclusion, DAY-NRLM, livelihoods",
+      "image": "https://shg-story.surge.sh/og.jpg"
     }
   ],
   "capabilities": [
