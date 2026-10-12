@@ -9,10 +9,20 @@ const title = 'SyntheSYS';
 const numberWord = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen'];
 const storyCount = numberWord[data.stories.length] ?? String(data.stories.length);
 const toolCount = numberWord[data.tools.length] ?? String(data.tools.length);
-const description = `Urban Morph's AI-native urban services: live platforms for active mobility policy, Karnataka's digital economy and neighbourhood climate action, revived civic archives, ${toolCount.toLowerCase()} open tools and ${storyCount.toLowerCase()} data stories, from ward to nation.`;
+const description = `Urban Morph's AI-native urban services: live platforms, civic archives, ${toolCount.toLowerCase()} open tools and ${storyCount.toLowerCase()} data stories on how India works, ward to nation.`;
 const ogSrc = img('img/synthesys/kdem-screenshot.webp');
 const ogImage = ogSrc ? (await getImage({ src: ogSrc, width: 1200, format: 'jpg' })).src : '/UM-thumbnail.png';
-const jsonLd = [{ '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'SyntheSYS', applicationCategory: 'BusinessApplication', operatingSystem: 'Web', description, url: 'https://www.urbanmorph.com/synthesys/', author: { '@type': 'Organization', name: 'Urban Morph', url: 'https://www.urbanmorph.com' }, offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', price: '0', priceCurrency: 'INR' } }];
+const jsonLd: Record<string, unknown>[] = [{ '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'SyntheSYS', applicationCategory: 'BusinessApplication', operatingSystem: 'Web', description, url: 'https://www.urbanmorph.com/synthesys/', author: { '@type': 'Organization', name: 'Urban Morph', url: 'https://www.urbanmorph.com' }, offers: { '@type': 'Offer', availability: 'https://schema.org/InStock', price: '0', priceCurrency: 'INR' } }];
+// The data stories as an ItemList of Articles, so search and AI crawlers read each one with its author, topic and image
+const storyAuthor = { '@type': 'Person', name: 'Sathya Sankaran', url: 'https://www.sathyasankaran.com' };
+const storyPublisher = { '@type': 'Organization', name: 'Urban Morph', url: 'https://www.urbanmorph.com' };
+jsonLd.push({
+  '@context': 'https://schema.org', '@type': 'ItemList', '@id': 'https://www.urbanmorph.com/synthesys/#stories', name: 'SyntheSYS data stories', numberOfItems: data.stories.length,
+  itemListElement: data.stories.map((s, i) => ({
+    '@type': 'ListItem', position: i + 1,
+    item: { '@type': 'Article', headline: s.title, name: s.title, description: s.teaser, url: `${s.url}/`, ...(s.image ? { image: s.image } : {}), keywords: s.keywords, genre: 'Data journalism', inLanguage: 'en-IN', isAccessibleForFree: true, about: { '@type': 'Place', name: 'India' }, author: storyAuthor, publisher: storyPublisher },
+  })),
+} as Record<string, unknown>);
 ---
 
 <Base title={title} description={description} jsonLd={jsonLd} image={ogImage}>
@@ -70,7 +80,7 @@ const jsonLd = [{ '@context': 'https://schema.org', '@type': 'SoftwareApplicatio
     </section>
 
     <section class="section" id="stories">
-      <div class="section__head"><h2>{storyCount} data stories</h2><span class="muted">Data-driven investigations into food, air, forests, farmers, livelihoods and rights</span></div>
+      <div class="section__head"><h2>{storyCount} data stories</h2><span class="muted">Data-driven investigations into climate, food, air, forests, farmers, livelihoods and rights</span></div>
       <div class="grid grid--3">
         {data.stories.map((s) => (
           <a class="panel panel--blue story" href={s.url} target="_blank" rel="noopener">
