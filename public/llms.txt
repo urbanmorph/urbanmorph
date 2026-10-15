@@ -20,9 +20,10 @@ Cycling, walking and public transport: India's first pop-up pedestrian street (C
 Support for governments, legislators and citizens: a model framework and campaign for the Karnataka Active Mobility Bill, strategic dashboards for the Karnataka Digital Economy Mission, revived civic archives (India Together, Praja, mapunitygroups), and thesis-led advisory for philanthropies, regranters and CSR programmes deploying capital in cities.
 
 ### AI-native urban services (SyntheSYS)
-Live platforms: CFAM (cfam.in), the KDEM dashboard (kdem.vercel.app), Neighbourhoods of the Future (notf.in), GreensBrowns (greensbrowns.vercel.app), India Together (indiatogether.org), Praja (praja.in), mapunitygroups (mapunitygroups.com). Five free open tools: mdshare (mdshare.live), bharatlas (bharatlas.com), Irrational (irrational.pages.dev), Mugilu (mugilu.live), twelveswaras (twelveswaras.com). Thirteen data stories on how India works: El Niño and India's monsoon, a district map of India's land, the food chain from field to plate, Delhi's winter air and upwind coal, the commons, corporate nature disclosure, soil health, biodiversity registers, village sustainability, wildlife conflict, forest rights, farmer collectives and women's self-help groups.
+Live platforms: CFAM (cfam.in), the KDEM dashboard (kdem.vercel.app), Neighbourhoods of the Future (notf.in), GreensBrowns (greensbrowns.vercel.app), India Together (indiatogether.org), Praja (praja.in), mapunitygroups (mapunitygroups.com). Five free open tools: mdshare (mdshare.live), bharatlas (bharatlas.com), Irrational (irrational.pages.dev), Mugilu (mugilu.live), twelveswaras (twelveswaras.com). Fourteen data stories on how India works: the species India's records overlook, El Niño and India's monsoon, a district map of India's land, the food chain from field to plate, Delhi's winter air and upwind coal, the commons, corporate nature disclosure, soil health, biodiversity registers, village sustainability, wildlife conflict, forest rights, farmer collectives and women's self-help groups.
 
 Data stories:
+- The Overlooked Species, what India's biodiversity records leave out (overlooked-species.surge.sh)
 - The Bill Arrives on Time, El Niño and India's monsoon (el-nino.surge.sh)
 - Land Ledger (land-ledger.surge.sh)
 - Where India's Food Goes (same-heap.surge.sh)

@@ -145,6 +145,14 @@
   ],
   "stories": [
     {
+      "title": "The Overlooked Species",
+      "tag": "Biodiversity · Open data",
+      "teaser": "96% of India's 6.38 crore public biodiversity records are of birds, yet only 1,633 of the 49,398 species on record are birds. Almost 9 in 10 of India's known beetle species have no public record.",
+      "url": "https://overlooked-species.surge.sh",
+      "keywords": "biodiversity data, GBIF, iNaturalist, museum specimens, insects, plants, IUCN Red List, open data",
+      "image": "https://overlooked-species.surge.sh/share-card.png"
+    },
+    {
       "title": "The Bill Arrives on Time",
       "tag": "Climate · Monsoon · Agriculture",
       "teaser": "El Niño is the one climate shock India sees coming months ahead, and the bill still arrives in full. 9 of 15 El Niño summers since 1950 ended in drought. The 2026 kharif crop bill could be about ₹1.1 lakh crore.",
