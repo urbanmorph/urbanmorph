@@ -148,6 +148,13 @@
       "description": "India's species from every public source, in one list. Overlooked joins GBIF, iNaturalist, the Zoological and Botanical Surveys of India, Kew and the IUCN Red List to show, species by species and state by state, what has been observed, what has a confirmed name and what is threatened, and what changes each month. An experimental page gives people who identify iNaturalist photos a short list of names to check.",
       "url": "https://overlooked-india.pages.dev",
       "host": "overlooked-india.pages.dev"
+    },
+    {
+      "name": "Chaalwise",
+      "tag": "Offline · No Login",
+      "description": "Strategy lessons for people who run things, or are learning to. Chaalwise teaches thinking ahead, weighing odds, sizing a risk and keeping a cool head: each idea shown in chess, poker or a game-theory lab, used on cases from work and study, and brought back until it sticks. Against the computer only, with no money, no account and progress kept on your device.",
+      "url": "https://chaalwise.com",
+      "host": "chaalwise.com"
     }
   ],
   "stories": [

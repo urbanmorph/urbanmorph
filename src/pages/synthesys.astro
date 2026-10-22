@@ -124,6 +124,8 @@ jsonLd.push({
   .tools { padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 16px; }
   .tools__intro { max-width: 70ch; }
   .tools__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 8px; }
+  /* A tool left alone on the last row takes the whole row. */
+  @media (min-width: 992px) { .tools__grid > :last-child:nth-child(3n + 1) { grid-column: 1 / -1; } }
   .tool { display: flex; flex-direction: column; gap: 6px; border-top: 2px solid var(--asphalt); padding-top: 12px; }
   .tool h3 { font-size: 1.35rem; }
   .tool p { font-size: 0.95rem; line-height: 1.45; flex: 1; }
