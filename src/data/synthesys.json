@@ -141,6 +141,13 @@
       "description": "Shazam for raagas. Hold your phone to Carnatic music and twelveswaras names the raaga: the top three matches with confidence, the tonic pinned from the tanpura drone, and plain-language cues for training your own ear. Audio is read on the spot and never stored.",
       "url": "https://twelveswaras.com",
       "host": "twelveswaras.com"
+    },
+    {
+      "name": "Overlooked",
+      "tag": "CC BY · No Login",
+      "description": "India's species from every public source, in one list. Overlooked joins GBIF, iNaturalist, the Zoological and Botanical Surveys of India, Kew and the IUCN Red List to show, species by species and state by state, what has been observed, what has a confirmed name and what is threatened, and what changes each month. An experimental page gives people who identify iNaturalist photos a short list of names to check.",
+      "url": "https://overlooked-india.pages.dev",
+      "host": "overlooked-india.pages.dev"
     }
   ],
   "stories": [
