@@ -164,7 +164,9 @@
       "teaser": "96% of India's 6.38 crore public biodiversity records are of birds, yet only 1,633 of the 49,398 species on record are birds. Almost 9 in 10 of India's known beetle species have no public record.",
       "url": "https://overlooked-species.surge.sh",
       "keywords": "biodiversity data, GBIF, iNaturalist, museum specimens, insects, plants, IUCN Red List, open data",
-      "image": "https://overlooked-species.surge.sh/share-card.png"
+      "image": "https://overlooked-species.surge.sh/share-card.png",
+      "topic": "the species India's records overlook",
+      "subtitle": "what India's biodiversity records leave out"
     },
     {
       "title": "The Bill Arrives on Time",
@@ -172,7 +174,9 @@
       "teaser": "El Niño is the one climate shock India sees coming months ahead, and the bill still arrives in full. 9 of 15 El Niño summers since 1950 ended in drought. The 2026 kharif crop bill could be about ₹1.1 lakh crore.",
       "url": "https://el-nino.surge.sh",
       "keywords": "El Niño, Indian monsoon, drought, kharif crops, ENSO, climate adaptation, heat action plans",
-      "image": "https://el-nino.surge.sh/og.png"
+      "image": "https://el-nino.surge.sh/og.png",
+      "topic": "El Niño and India's monsoon",
+      "subtitle": "El Niño and India's monsoon"
     },
     {
       "title": "Land Ledger",
@@ -180,7 +184,8 @@
       "teaser": "One map that brings seven stories on India's soil, water, food and farmers together, district by district. For every 100 kg of nitrogen that goes onto the fields, the harvest carries away about 48, and soil-test labs disagree with each other more than the soils do.",
       "url": "https://land-ledger.surge.sh",
       "keywords": "soil nutrients, nitrogen balance, groundwater, irrigation, soil carbon, district map",
-      "image": "https://land-ledger.surge.sh/og.png"
+      "image": "https://land-ledger.surge.sh/og.png",
+      "topic": "a district map of India's land"
     },
     {
       "title": "Where India's Food Goes",
@@ -188,7 +193,8 @@
       "teaser": "India grows more food than it needs and throws away a tenth of it. The farmer who grew your vegetables keeps about a third of what you pay. And owning the chain does not save the soil or the aquifer.",
       "url": "https://same-heap.surge.sh",
       "keywords": "food system, food waste, farmer share, dairy cooperatives, fertiliser subsidy, food processing",
-      "image": "https://same-heap.surge.sh/og.png"
+      "image": "https://same-heap.surge.sh/og.png",
+      "topic": "the food chain from field to plate"
     },
     {
       "title": "Upwind",
@@ -196,7 +202,8 @@
       "teaser": "Only 30 percent of Delhi's winter air is its own. Seven of the eleven coal plants within 300 km are exempt from sulphur controls, and six of those seven sit upwind of the city being blamed.",
       "url": "https://upwind.surge.sh",
       "keywords": "air pollution, Delhi NCR, PM2.5, airshed, coal power plants, crop burning",
-      "image": "https://upwind.surge.sh/og.png"
+      "image": "https://upwind.surge.sh/og.png",
+      "topic": "Delhi's winter air and upwind coal"
     },
     {
       "title": "Influence the Rule, Not the Bird",
@@ -204,7 +211,8 @@
       "teaser": "How to use emergence to steer action in the commons. Birds in formation follow a few simple rules, and the formation is what emerges. Money and effort mostly add speed; only the rules change direction.",
       "url": "https://not-the-bird.surge.sh",
       "keywords": "emergence, commons, climate finance, philanthropy, subsidiarity, systems change",
-      "image": "https://not-the-bird.surge.sh/og.png"
+      "image": "https://not-the-bird.surge.sh/og.png",
+      "topic": "the commons"
     },
     {
       "title": "The Question They Made Optional",
@@ -212,7 +220,8 @@
       "teaser": "786 of India's biggest listed companies operate beside a forest, wetland or coast. Just 33 said what they actually do there. The question was optional, so the rest broke no rule.",
       "url": "https://made-optional.surge.sh",
       "keywords": "biodiversity disclosure, BRSR, listed companies, ESG reporting, ecologically sensitive areas",
-      "image": "https://made-optional.surge.sh/share-card.png"
+      "image": "https://made-optional.surge.sh/share-card.png",
+      "topic": "corporate nature disclosure"
     },
     {
       "title": "The Best-Measured Soil in the World",
@@ -220,7 +229,8 @@
       "teaser": "India tests its farmland more thoroughly than any country on Earth: over 5 million samples, 12 readings each. More than half comes back low on carbon, and there is no second opinion to check the readings against.",
       "url": "https://dead-reckoning.surge.sh",
       "keywords": "Soil Health Card, soil organic carbon, soil testing, fertiliser subsidy, urea",
-      "image": "https://dead-reckoning.surge.sh/og.png"
+      "image": "https://dead-reckoning.surge.sh/og.png",
+      "topic": "soil health"
     },
     {
       "title": "The Register No One Reads",
@@ -228,7 +238,8 @@
       "teaser": "India built 2.72 lakh People's Biodiversity Registers to put villages in charge of the nature around them. Two have been formally approved.",
       "url": "https://pbr-story.surge.sh",
       "keywords": "People's Biodiversity Registers, Biological Diversity Act, biodiversity governance, gram panchayats",
-      "image": "https://pbr-story.surge.sh/og.jpg"
+      "image": "https://pbr-story.surge.sh/og.jpg",
+      "topic": "biodiversity registers"
     },
     {
       "title": "The Ground Beneath the Report Card",
@@ -236,7 +247,8 @@
       "teaser": "India grades 2.6 lakh villages on how they're doing today, not whether they can last. Its showcase grain belt is also the fastest at draining its own water.",
       "url": "https://canitlast.surge.sh",
       "keywords": "Panchayat Advancement Index, rural sustainability, groundwater, villages, gram panchayats",
-      "image": "https://canitlast.surge.sh/og.png"
+      "image": "https://canitlast.surge.sh/og.png",
+      "topic": "village sustainability"
     },
     {
       "title": "The Uncounted",
@@ -244,7 +256,8 @@
       "teaser": "India logs over 100,000 human-wildlife conflict incidents a year across 88 species, yet keeps a national death count for just two.",
       "url": "https://the-uncounted.surge.sh",
       "keywords": "human-wildlife conflict, wildlife, elephants, compensation, conservation",
-      "image": "https://the-uncounted.surge.sh/share-card.png"
+      "image": "https://the-uncounted.surge.sh/share-card.png",
+      "topic": "wildlife conflict"
     },
     {
       "title": "Whose Forest Is It?",
@@ -252,7 +265,8 @@
       "teaser": "India mapped 3.46 crore hectares of community forest that local communities could govern. Less than 3% has been recognised.",
       "url": "https://whose-forest.surge.sh",
       "keywords": "Community Forest Rights, Forest Rights Act, gram sabha, forest governance, tribal rights",
-      "image": "https://whose-forest.surge.sh/og.jpg"
+      "image": "https://whose-forest.surge.sh/og.jpg",
+      "topic": "forest rights"
     },
     {
       "title": "The Hollow Collective",
@@ -260,7 +274,8 @@
       "teaser": "India helped small farmers form nearly 50,000 companies they own together. Just 4% employ even one paid manager.",
       "url": "https://fpo-story.surge.sh",
       "keywords": "Farmer Producer Organisations, FPOs, farmer collectives, agriculture, cooperatives",
-      "image": "https://fpo-story.surge.sh/og.jpg"
+      "image": "https://fpo-story.surge.sh/og.jpg",
+      "topic": "farmer collectives"
     },
     {
       "title": "The Ground They Stand On",
@@ -268,7 +283,8 @@
       "teaser": "India's self-help groups are the world's largest financial-inclusion effort: 9 crore women across 8.6 million groups. Yet even the best-served state leaves 71% stuck at saving, never reaching credit.",
       "url": "https://shg-story.surge.sh",
       "keywords": "self-help groups, SHGs, women, financial inclusion, DAY-NRLM, livelihoods",
-      "image": "https://shg-story.surge.sh/og.jpg"
+      "image": "https://shg-story.surge.sh/og.jpg",
+      "topic": "women's self-help groups"
     }
   ],
   "capabilities": [

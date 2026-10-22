@@ -5,8 +5,8 @@ import home from '../data/home.json';
 import awards from '../data/awards.json';
 import team from '../data/team.json';
 import synthesys from '../data/synthesys.json';
-const numberWord = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen'];
-const n = (k: number) => numberWord[k] ?? String(k);
+import { countWord } from '../lib/count';
+const n = (k: number) => countWord(k).toLowerCase();
 
 const founders = team.filter((m) => m.group === 'founders');
 const faqs = [

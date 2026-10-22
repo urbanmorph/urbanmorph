@@ -3,12 +3,12 @@ import { Image, getImage } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import { img } from '../lib/images';
 import data from '../data/synthesys.json';
+import { countWord } from '../lib/count';
 
 const badgeClass: Record<string, string> = { 'fa-chart-line': 'tag--blue', 'fa-newspaper': 'tag--blue', 'fa-map-marked-alt': 'tag--green', 'fa-comments': 'tag--blue', 'fa-brain': 'tag--green', 'fa-recycle': 'tag--green', 'fa-landmark': 'tag--blue' };
 const title = 'SyntheSYS';
-const numberWord = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen'];
-const storyCount = numberWord[data.stories.length] ?? String(data.stories.length);
-const toolCount = numberWord[data.tools.length] ?? String(data.tools.length);
+const storyCount = countWord(data.stories.length);
+const toolCount = countWord(data.tools.length);
 const description = `Urban Morph's AI-native urban services: live platforms, civic archives, ${toolCount.toLowerCase()} open tools and ${storyCount.toLowerCase()} data stories on how India works, ward to nation.`;
 const ogSrc = img('img/synthesys/kdem-screenshot.webp');
 const ogImage = ogSrc ? (await getImage({ src: ogSrc, width: 1200, format: 'jpg' })).src : '/UM-thumbnail.png';
