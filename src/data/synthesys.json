@@ -155,6 +155,13 @@
       "description": "Strategy lessons for people who run things, or are learning to. Chaalwise teaches thinking ahead, weighing odds, sizing a risk and keeping a cool head: each idea shown in chess, poker or a game-theory lab, used on cases from work and study, and brought back until it sticks. Against the computer only, with no money, no account and progress kept on your device.",
       "url": "https://chaalwise.com",
       "host": "chaalwise.com"
+    },
+    {
+      "name": "inference-vitals",
+      "tag": "MIT · On Your Machine",
+      "description": "One screen for running and fine-tuning AI models on your own computer. It puts the model and the machine on the same timeline: how fast it writes, how close it is to running out of memory, how hot the GPU is, how much of the energy was the AI's (and on a laptop, how long the battery lasts), and while fine-tuning, whether the model is still learning or has started memorising. Works with Ollama, LM Studio, llama.cpp, MLX or your own code, on an Apple Silicon Mac or Linux with NVIDIA. Nothing leaves your machine.",
+      "url": "https://github.com/urbanmorph/inference-vitals",
+      "host": "github.com/urbanmorph/inference-vitals"
     }
   ],
   "stories": [
