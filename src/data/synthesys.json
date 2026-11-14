@@ -143,11 +143,11 @@
       "host": "twelveswaras.com"
     },
     {
-      "name": "Overlooked",
+      "name": "yellide",
       "tag": "CC BY · No Login",
-      "description": "India's species from every public source, in one list. Overlooked joins GBIF, iNaturalist, the Zoological and Botanical Surveys of India, Kew and the IUCN Red List to show, species by species and state by state, what has been observed, what has a confirmed name and what is threatened, and what changes each month. An experimental page gives people who identify iNaturalist photos a short list of names to check.",
-      "url": "https://overlooked-india.pages.dev",
-      "host": "overlooked-india.pages.dev"
+      "description": "Every species documented from India, from every public source, in one list. yellide (Kannada for \u201cwhere is it?\u201d) joins the Zoological and Botanical Surveys of India, Kew, GBIF, iNaturalist and the IUCN Red List to show, species by species and state by state, which have an open record, which wait for a name and which are threatened, updated each week. A Shortlists page gives people who identify iNaturalist photos a short list of names to check. Formerly Overlooked.",
+      "url": "https://yellide.com",
+      "host": "yellide.com"
     },
     {
       "name": "Chaalwise",
@@ -160,8 +160,8 @@
       "name": "inference-vitals",
       "tag": "MIT · On Your Machine",
       "description": "One screen for running and fine-tuning AI models on your own computer. It puts the model and the machine on the same timeline: how fast it writes, how close it is to running out of memory, how hot the GPU is, how much of the energy was the AI's (and on a laptop, how long the battery lasts), and while fine-tuning, whether the model is still learning or has started memorising. Works with Ollama, LM Studio, llama.cpp, MLX or your own code, on an Apple Silicon Mac or Linux with NVIDIA. Nothing leaves your machine.",
-      "url": "https://github.com/urbanmorph/inference-vitals",
-      "host": "github.com/urbanmorph/inference-vitals"
+      "url": "https://vitals.urbanmorph.com",
+      "host": "vitals.urbanmorph.com"
     }
   ],
   "stories": [
