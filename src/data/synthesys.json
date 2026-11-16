@@ -112,56 +112,64 @@
       "tag": "Open Source",
       "description": "Markdown sharing with the widest surface area: paste in the browser, edit from Obsidian, commit from VS Code, or drive it from AI coding agents via MCP. Four permission tiers, threaded comments anchored to text, real-time sync and instant link revocation.",
       "url": "https://mdshare.live",
-      "host": "mdshare.live"
+      "host": "mdshare.live",
+      "icon": "/tools/mdshare.png"
     },
     {
       "name": "bharatlas",
       "tag": "Open Atlas · No Signup",
-      "description": "India's open atlas. 100+ map layers: administrative boundaries from state down to village, wards for 30+ cities, plus rivers, forests, highways, groundwater, floods and seismic zones. Slice any layer and download it as GeoJSON, Shapefile, Parquet or PMTiles, or drop your own geo file and share it by link.",
+      "description": "India's open atlas: every boundary in India, one search away. Find your ward, district or village, or browse nearly 150 open map layers: wards for 3,300+ towns, villages, forests, water, schools, health and public money. View any layer on a map, ask it a question, or download it as GeoJSON, Shapefile, Parquet or PMTiles.",
       "url": "https://bharatlas.com",
-      "host": "bharatlas.com"
+      "host": "bharatlas.com",
+      "icon": "/tools/bharatlas.svg"
     },
     {
       "name": "Irrational",
       "tag": "MIT · No Login",
       "description": "A field guide to the mistakes your mind makes. Describe a decision and Irrational writes an adversarial prompt that argues the other side, refracting your choice through 22 cognitive biases: sunk cost, anchoring, overconfidence. Your own AI runs the audit; nothing is stored.",
       "url": "https://irrational.pages.dev",
-      "host": "irrational.pages.dev"
+      "host": "irrational.pages.dev",
+      "icon": "/tools/irrational.svg"
     },
     {
       "name": "Mugilu",
       "tag": "Open Sky · No Login",
       "description": "The open sky of India. Name any place and Mugilu reads what the air is doing to you right now: AQI with the full pollutant breakdown and years of life lost, heat and wet-bulb stress, wind, fog, dust, crop-burn smoke, UV, and any live NDMA or IMD warning overhead. Search in Indian languages or use your location.",
       "url": "https://mugilu.live",
-      "host": "mugilu.live"
+      "host": "mugilu.live",
+      "icon": "/tools/mugilu.svg"
     },
     {
       "name": "twelveswaras",
       "tag": "CC-BY · No Login",
       "description": "Shazam for raagas. Hold your phone to Carnatic music and twelveswaras names the raaga: the top three matches with confidence, the tonic pinned from the tanpura drone, and plain-language cues for training your own ear. Audio is read on the spot and never stored.",
       "url": "https://twelveswaras.com",
-      "host": "twelveswaras.com"
+      "host": "twelveswaras.com",
+      "icon": "/tools/twelveswaras.svg"
     },
     {
       "name": "yellide",
       "tag": "CC BY · No Login",
       "description": "Every species documented from India, from every public source, in one list. yellide (Kannada for \u201cwhere is it?\u201d) joins the Zoological and Botanical Surveys of India, Kew, GBIF, iNaturalist and the IUCN Red List to show, species by species and state by state, which have an open record, which wait for a name and which are threatened, updated each week. A Shortlists page gives people who identify iNaturalist photos a short list of names to check. Formerly Overlooked.",
       "url": "https://yellide.com",
-      "host": "yellide.com"
+      "host": "yellide.com",
+      "icon": "/tools/yellide.svg"
     },
     {
       "name": "Chaalwise",
       "tag": "Offline · No Login",
       "description": "Strategy lessons for people who run things, or are learning to. Chaalwise teaches thinking ahead, weighing odds, sizing a risk and keeping a cool head: each idea shown in chess, poker or a game-theory lab, used on cases from work and study, and brought back until it sticks. Against the computer only, with no money, no account and progress kept on your device.",
       "url": "https://chaalwise.com",
-      "host": "chaalwise.com"
+      "host": "chaalwise.com",
+      "icon": "/tools/chaalwise.svg"
     },
     {
       "name": "inference-vitals",
       "tag": "MIT · On Your Machine",
       "description": "One screen for running and fine-tuning AI models on your own computer. It puts the model and the machine on the same timeline: how fast it writes, how close it is to running out of memory, how hot the GPU is, how much of the energy was the AI's (and on a laptop, how long the battery lasts), and while fine-tuning, whether the model is still learning or has started memorising. Works with Ollama, LM Studio, llama.cpp, MLX or your own code, on an Apple Silicon Mac or Linux with NVIDIA. Nothing leaves your machine.",
       "url": "https://vitals.urbanmorph.com",
-      "host": "vitals.urbanmorph.com"
+      "host": "vitals.urbanmorph.com",
+      "icon": "/tools/inference-vitals.svg"
     }
   ],
   "stories": [
