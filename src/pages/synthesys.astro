@@ -71,7 +71,7 @@ jsonLd.push({
       <div class="tools__grid">
         {data.tools.map((t) => (
           <div class="tool">
-            <h3>{t.name}</h3>
+            <h3><img class="tool__icon" src={t.icon} alt="" width="40" height="40" loading="lazy" />{t.name}</h3>
             <p>{t.description}</p>
             <a href={t.url} target="_blank" rel="noopener">{t.host}</a>
           </div>
@@ -132,7 +132,8 @@ jsonLd.push({
     .tools__grid > :nth-last-child(2):nth-child(3n + 1), .tools__grid > :last-child:nth-child(3n + 2) { grid-column: span 3; }
   }
   .tool { display: flex; flex-direction: column; gap: 6px; border-top: 2px solid var(--asphalt); padding-top: 12px; }
-  .tool h3 { font-size: 1.35rem; }
+  .tool h3 { font-size: 1.35rem; display: flex; align-items: center; gap: 12px; }
+  .tool__icon { width: 40px; height: 40px; flex: none; border-radius: 9px; box-shadow: 0 1px 0 rgba(26, 24, 21, 0.12); }
   .tool p { font-size: 0.95rem; line-height: 1.45; flex: 1; }
   .story { padding: 26px 24px; display: flex; flex-direction: column; gap: 10px; min-height: 220px; text-decoration: none; font-weight: 400; }
   .story:hover .story__title { text-decoration: underline; }

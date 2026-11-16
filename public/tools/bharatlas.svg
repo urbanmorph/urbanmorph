@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="bharatlas">
+  <!-- bharatlas app icon: the three-layer mark (saffron, white, India green) on white.
+       Generated from geodata/shared/brand.mjs (faviconSvg) so it matches bharatlas.com. -->
+  <rect width="64" height="64" rx="14" fill="#FFFFFF"/>
+  <g transform="translate(8 8) scale(1.2)"><path d="M20 22 L36 30 L20 38 L4 30 Z" fill="#12804A"/><path d="M20 14 L36 22 L20 30 L4 22 Z" fill="#FFFFFF" stroke="#0B1B3F" stroke-width="2.4" stroke-linejoin="round"/><path d="M20 4 L36 12 L20 20 L4 12 Z" fill="#F28C28"/></g>
+</svg>
